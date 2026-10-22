@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01.css_rule</title>
+
+    <!-- 第一種寫樣式: 外部樣式表 -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- 第二種寫樣式:style 標簽是文本的樣式 -->
+    <style>
+        h1 {
+            color: blue;
+            background-color: aqua;
+            font-size: 28px;
+        }
+
+        /* 標題選擇器 */
+        p {
+            font-weight: bold;
+            font-family: "微軟正黑體";
+            color: rgb(255, 0, 43);
+        }
+
+        /* 群組檢查器 */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: rgb(43, 226, 61);
+        }
+
+        img {
+            border: border 5px solid color green;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <H1>標題</H1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aperiam ut assumenda modi, provident magni
+        commodi architecto molestiae quos vitae nostrum qui exercitationem dolores. Officiis doloribus ipsum illum
+        exercitationem rerum?</p>
+
+    <hr>
+
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h3>Lorem ipsum dolor sit amet.</h3>
+    <h4>Lorem ipsum dolor sit amet.</h4>
+    <h5>Lorem ipsum dolor sit amet.</h5>
+    <h6>Lorem ipsum dolor sit amet.</h6>
+
+    <!-- 第三種樣式:行内樣式 inline style，用標簽的 style 屬性 -->
+    <!-- picsum 假圖 -->
+    <img src="https://picsum.photos/300/200/?random=10">
+    <img src="https://picsum.photos/300/200/?random=10">
+    <img src="https://picsum.photos/300/200/?random=10" style="border:5px solid deepskyblue;">
+
+</body>
+
+</html>

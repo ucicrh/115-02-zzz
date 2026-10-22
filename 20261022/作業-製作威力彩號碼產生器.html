@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製作威力彩號碼產生器</title>
+</head>
+
+<body>
+    <script>
+        const rand = (min, max) => {
+            return Math.round(Math.random() * (max - min)) + min
+        }
+
+        for (let i = 0; i < 100; i++) {
+            const random = rand(10, 50)
+            document.write(random + '<br>')
+            if (random === 10 || random === 50) {
+                console.log(random)
+            }
+        }
+    </script>
+</body>
+
+</html>

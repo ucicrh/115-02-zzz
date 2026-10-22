@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#102e28">
+    <title>浮光花境 · CSS 背景實驗室</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Serif+TC:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            color-scheme: dark;
+            --night: #102e28;
+            --pine: #19483b;
+            --moss: #9bb387;
+            --gold: #e9c981;
+            --cream: #fff5df;
+            --muted: #c7ceb9;
+            --glass: rgba(20, 43, 35, .67);
+            --serif: "Noto Serif TC", "PMingLiU", serif;
+        }
+
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            color: var(--cream);
+            background-color: var(--night);
+            background-image:
+                radial-gradient(ellipse at 16% 12%, rgba(220, 188, 112, .15), transparent 35%),
+                radial-gradient(ellipse at 88% 42%, rgba(87, 135, 91, .22), transparent 34%),
+                linear-gradient(160deg, #102e28, #142e28 54%, #0b211e);
+            background-attachment: fixed;
+            font-family: var(--serif);
+            line-height: 1.8;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+            opacity: .11;
+            background-image: url("pica.png");
+            background-size: 190px;
+            background-repeat: repeat;
+            mask-image: linear-gradient(to bottom, black, transparent 78%);
+        }
+
+        a { color: inherit; text-decoration: none; }
+        .shell { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+        .topbar { display: flex; justify-content: space-between; align-items: center; padding: 22px 0; border-bottom: 1px solid rgba(255,245,223,.16); }
+        .brand { display: flex; align-items: center; gap: 11px; font-size: .84rem; letter-spacing: .18em; }
+        .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid rgba(233,201,129,.65); border-radius: 50%; color: var(--gold); }
+        .nav { display: flex; gap: 25px; color: var(--muted); font-size: .8rem; }
+        .nav a { transition: color .2s; }
+        .nav a:hover { color: var(--gold); }
+
+        .hero { position: relative; min-height: 640px; display: grid; align-items: center; padding: 82px 0 100px; overflow: hidden; }
+        .hero::before { content: ""; position: absolute; inset: 26px -14% 0 30%; border-radius: 50% 50% 0 0; background:
+            linear-gradient(180deg, rgba(9,27,23,.04), rgba(9,27,23,.14) 36%, rgba(9,27,23,.86)),
+            url("pica.png") center 44% / min(75vw, 760px) auto no-repeat,
+            radial-gradient(ellipse at 52% 43%, #7f8d55, #344b37 45%, #19372f 74%);
+            filter: saturate(.82); opacity: .78; mask-image: linear-gradient(90deg, transparent, black 22%, black 82%, transparent); }
+        .hero::after { content: "✦"; position: absolute; top: 115px; right: 16%; color: var(--gold); font-size: 1.6rem; text-shadow: 0 0 28px #f3d68c; animation: shimmer 3s ease-in-out infinite; }
+        .hero-content { position: relative; z-index: 1; max-width: 600px; }
+        .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--gold); letter-spacing: .28em; text-transform: uppercase; font-size: .72rem; }
+        .eyebrow::before { content: ""; width: 34px; height: 1px; background: var(--gold); }
+        h1 { margin: 20px 0 10px; font-size: clamp(3.2rem, 8vw, 6.5rem); font-weight: 500; line-height: 1.12; letter-spacing: .12em; text-shadow: 0 8px 36px rgba(0,0,0,.35); }
+        h1 span { display: block; color: var(--gold); font-size: .37em; letter-spacing: .34em; margin-top: 15px; }
+        .hero-copy { max-width: 420px; margin: 27px 0 32px; color: #d4d9ca; font-size: .96rem; }
+        .button { display: inline-flex; align-items: center; gap: 13px; padding: 12px 20px; border: 1px solid rgba(233,201,129,.68); color: var(--gold); letter-spacing: .12em; font-size: .8rem; transition: .25s; }
+        .button:hover { color: var(--night); background: var(--gold); box-shadow: 0 8px 30px rgba(233,201,129,.19); }
+        .button span { font-size: 1.2rem; }
+
+        .intro { display: grid; grid-template-columns: 1fr minmax(280px, 1.5fr) 1fr; gap: 34px; align-items: center; padding: 26px 0 90px; text-align: center; }
+        .intro-rule { height: 1px; background: linear-gradient(90deg, transparent, rgba(233,201,129,.55), transparent); }
+        .intro p { margin: 0; color: var(--muted); font-size: .88rem; letter-spacing: .08em; }
+        .intro strong { display: block; margin-bottom: 5px; color: var(--gold); font-weight: 500; letter-spacing: .22em; }
+        .section-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 28px; }
+        .section-kicker { color: var(--gold); letter-spacing: .24em; font-size: .72rem; }
+        h2 { margin: 6px 0 0; font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 500; letter-spacing: .14em; }
+        .section-note { max-width: 280px; color: var(--muted); font-size: .78rem; text-align: right; }
+
+        .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 18px; padding-bottom: 100px; }
+        .card { --card-image: url("pica.png"); position: relative; min-height: 290px; grid-column: span 4; overflow: hidden; border: 1px solid rgba(255,245,223,.17); background-color: #375044; isolation: isolate; }
+        .card::before { content: ""; position: absolute; inset: 0; z-index: -2; background-image: linear-gradient(180deg, rgba(9,25,21,.08), rgba(9,25,21,.1) 35%, rgba(9,25,21,.89)), var(--card-image); background-position: center, center; background-size: cover, 185px; background-repeat: no-repeat, repeat; transition: transform .6s cubic-bezier(.2,.7,.2,1), background-size .6s; }
+        .card:hover::before { transform: scale(1.075); }
+        .card::after { content: ""; position: absolute; z-index: -1; inset: 11px; border: 1px solid rgba(255,245,223,.3); pointer-events: none; }
+        .card-content { position: absolute; inset: auto 28px 24px; }
+        .card-label { color: var(--gold); font-family: "DM Serif Display", Georgia, serif; font-size: .77rem; letter-spacing: .17em; text-transform: uppercase; }
+        .card h3 { margin: 7px 0 4px; font-size: 1.3rem; font-weight: 500; letter-spacing: .1em; }
+        .card p { margin: 0; color: #d0d5c9; font-size: .76rem; }
+        .card.wide { grid-column: span 8; }
+        .card.tall { min-height: 390px; }
+        .card.color { --card-image: none; background-color: #93775c; background-image: linear-gradient(135deg, #d5b786, #806d5d 47%, #263d34); }
+        .card.repeat { --card-image: url("pica.png"); }
+        .card.cover { --card-image: url("pica.png"); background-color: #796852; }
+        .card.cover::before { background-size: cover, cover; background-position: center, 64% center; }
+        .card.contain { --card-image: url("pica.png"); }
+        .card.contain::before { background-size: cover, contain; background-position: center, center; background-color: #66785e; }
+        .card.position { --card-image: url("pica.png"); }
+        .card.position::before { background-size: cover, 210px; background-position: center, right 25px bottom 24px; background-repeat: no-repeat, no-repeat; }
+        .card.layers { --card-image: url("pica.png"); }
+        .card.layers::before { background-image: linear-gradient(180deg, rgba(9,25,21,.04), rgba(9,25,21,.85)), url("pica.png"), url("pica.png"), radial-gradient(ellipse at center, #71824d, #25483b); background-repeat: no-repeat, no-repeat, no-repeat, no-repeat; background-size: cover, 150px, 210px, cover; background-position: center, 20% 26%, 88% 82%, center; }
+        .card.gradient { --card-image: none; background-image: linear-gradient(145deg, rgba(18,43,36,.1), rgba(10,30,25,.42)), radial-gradient(circle at 75% 26%, #e8c97f 0 1px, transparent 2px), radial-gradient(circle at 24% 37%, #e8c97f 0 1.5px, transparent 2.5px), radial-gradient(circle at 52% 18%, #e8c97f 0 1px, transparent 2px), linear-gradient(125deg, #536e4e, #213c36 54%, #926c5a); background-size: auto, auto, auto, auto, auto; }
+        .card.gradient::before { background-image: linear-gradient(180deg, transparent 20%, rgba(9,25,21,.92)), repeating-linear-gradient(135deg, rgba(233,201,129,.12) 0 1px, transparent 1px 14px); background-size: cover, auto; }
+        .card.gradient:hover::before { transform: scale(1.03); }
+
+        .quote { position: relative; margin: 0 0 100px; padding: 50px 30px; text-align: center; border-block: 1px solid rgba(233,201,129,.26); background: linear-gradient(90deg, transparent, rgba(233,201,129,.055), transparent); }
+        .quote-mark { color: var(--gold); font-family: Georgia, serif; font-size: 3rem; line-height: .7; }
+        .quote p { max-width: 650px; margin: 17px auto; color: #e5e5d8; font-size: clamp(1.1rem, 2.5vw, 1.45rem); letter-spacing: .12em; }
+        .quote small { color: var(--gold); letter-spacing: .2em; font-size: .72rem; }
+        footer { padding: 25px 0 34px; display: flex; justify-content: space-between; gap: 18px; color: #aeb9a8; font-size: .72rem; letter-spacing: .09em; border-top: 1px solid rgba(255,245,223,.13); }
+        footer span:last-child { color: var(--gold); }
+        @keyframes shimmer { 0%, 100% { opacity: .45; transform: scale(.85) rotate(0); } 50% { opacity: 1; transform: scale(1.12) rotate(45deg); } }
+        @media (max-width: 760px) {
+            .shell { width: min(100% - 32px, 600px); }
+            .nav { gap: 13px; font-size: .7rem; }
+            .hero { min-height: 610px; padding: 75px 0; }
+            .hero::before { inset: 100px -57% 0 9%; opacity: .5; }
+            .hero-content { padding-top: 50px; }
+            .intro { grid-template-columns: 1fr; gap: 16px; padding-bottom: 70px; }
+            .intro-rule { width: 80px; margin: auto; }
+            .section-head { display: block; }
+            .section-note { text-align: left; }
+            .gallery { gap: 12px; padding-bottom: 70px; }
+            .card, .card.wide { grid-column: span 6; min-height: 275px; }
+            .card.tall { min-height: 340px; }
+            .card-content { inset: auto 20px 18px; }
+        }
+        @media (max-width: 480px) {
+            .topbar { align-items: flex-start; }
+            .brand { font-size: .7rem; }
+            .nav { gap: 10px; }
+            .nav a:first-child { display: none; }
+            .hero { min-height: 570px; }
+            .card, .card.wide, .card.tall { grid-column: span 12; min-height: 300px; }
+            .card.tall { min-height: 350px; }
+            footer { display: block; text-align: center; }
+            footer span { display: block; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="shell topbar">
+        <a class="brand" href="#top" aria-label="浮光花境首頁"><span class="brand-mark">✿</span> CSS BACKGROUND STUDIO</a>
+        <nav class="nav" aria-label="主要導覽">
+            <a href="#garden">花境導覽</a>
+            <a href="#experiments">背景實驗</a>
+            <a href="#about">關於作品</a>
+        </nav>
+    </header>
+
+    <main id="top">
+        <section class="shell hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <div class="eyebrow">A little garden of CSS</div>
+                <h1 id="hero-title">浮光花境<span>把背景，變成一場風景</span></h1>
+                <p class="hero-copy">走進一座由色彩、光影與花紋編織而成的夢境。每一層背景，都藏著一種讓畫面更有故事的方式。</p>
+                <a class="button" href="#experiments">開始漫遊 <span>↗</span></a>
+            </div>
+        </section>
+
+        <section class="shell intro" id="garden">
+            <div class="intro-rule"></div>
+            <p><strong>背景的魔法</strong>從一抹底色出發，讓圖案重複、延伸、疊合，最後化成屬於自己的花境。</p>
+            <div class="intro-rule"></div>
+        </section>
+
+        <section class="shell" id="experiments">
+            <div class="section-head">
+                <div><div class="section-kicker">THE BACKGROUND COLLECTION</div><h2>六種方式，描繪一座花園</h2></div>
+                <p class="section-note">將滑鼠移到卡片上，看看背景如何悄悄呼吸。</p>
+            </div>
+            <div class="gallery">
+                <article class="card color tall">
+                    <div class="card-content"><div class="card-label">01 / COLOR</div><h3>大地的底色</h3><p>background-color · 為畫面定下溫柔基調</p></div>
+                </article>
+                <article class="card repeat wide">
+                    <div class="card-content"><div class="card-label">02 / REPEAT</div><h3>花紋的迴響</h3><p>background-image · background-repeat · 圖案連成一片花海</p></div>
+                </article>
+                <article class="card cover wide">
+                    <div class="card-content"><div class="card-label">03 / COVER</div><h3>鋪展的暮色</h3><p>background-size: cover · 讓背景完整覆蓋畫布</p></div>
+                </article>
+                <article class="card contain">
+                    <div class="card-content"><div class="card-label">04 / CONTAIN</div><h3>留白的花影</h3><p>contain · 在完整圖案與留白之間取得平衡</p></div>
+                </article>
+                <article class="card position">
+                    <div class="card-content"><div class="card-label">05 / POSITION</div><h3>角落的驚喜</h3><p>background-position · 把視線引向想說的地方</p></div>
+                </article>
+                <article class="card layers wide">
+                    <div class="card-content"><div class="card-label">06 / LAYERS</div><h3>疊起一場夢</h3><p>多重背景 · 同時描繪前景花紋、光影與遠方色彩</p></div>
+                </article>
+                <article class="card gradient wide">
+                    <div class="card-content"><div class="card-label">BONUS / GRADIENT</div><h3>光落下的地方</h3><p>linear-gradient · radial-gradient · 用漸層收藏傍晚的最後一束光</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="shell quote" id="about">
+            <div class="quote-mark">“</div>
+            <p>一個背景不只是裝飾；它是故事開始的地方。</p>
+            <small>— NOTES FROM THE GARDEN —</small>
+        </section>
+    </main>
+
+    <footer class="shell"><span>浮光花境 · CSS 背景練習作品</span><span>COLOR · IMAGE · REPEAT · SIZE · POSITION · GRADIENT</span></footer>
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+{
+  "main": {
+    "id": "766f3b7b0a01c5b2",
+    "type": "split",
+    "children": [
+      {
+        "id": "9eaefb90900a7096",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "41fd4b8aef6e501c",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新分頁"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "b86884104e3fdb2d",
+    "type": "split",
+    "children": [
+      {
+        "id": "46dd5f2deb16a7c8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1594fe3043b63ae1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "檔案瀏覽器"
+            }
+          },
+          {
+            "id": "9a9e9ec074ce07e3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜尋"
+            }
+          },
+          {
+            "id": "b17de0aaf1a7441f",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "書籤"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "d369182784992348",
+    "type": "split",
+    "children": [
+      {
+        "id": "297db0193b5b3036",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d0145c698b35d783",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "12.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向連結"
+            }
+          },
+          {
+            "id": "d8bdb0065e14c463",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "12.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "對外連結"
+            }
+          },
+          {
+            "id": "14ac9f5205391af7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "標籤"
+            }
+          },
+          {
+            "id": "e315a724366a1ff9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "所有屬性"
+            }
+          },
+          {
+            "id": "9e95f372707eda95",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "12.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大綱"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:開啟快速切換": false,
+      "graph:查看關聯圖": false,
+      "canvas:建立新畫布": false,
+      "daily-notes:開啟今天的每日筆記": false,
+      "templates:插入模板": false,
+      "command-palette:開啟命令面板": false,
+      "bases:建立新的 base": false
+    }
+  },
+  "active": "41fd4b8aef6e501c",
+  "lastOpenFiles": [
+    "12.md",
+    "1002.md",
+    "20261002/demo/tv03.jpg",
+    "20261002/demo/tv02.jpg",
+    "20261002/demo/tv01.jpg",
+    "20261002/demo/Thumbs.db",
+    "20261002/demo/pin.jpg",
+    "20261002/demo",
+    "20261002/01數位相片編修基礎/Thumbs.db",
+    "20261002/01數位相片編修基礎/01-13.jpg",
+    "20261002/01數位相片編修基礎/01-12.jpg",
+    "20261002/01數位相片編修基礎/01-11.jpg",
+    "20261002/01數位相片編修基礎/01-10.jpg",
+    "20261002/01數位相片編修基礎/01-09.jpg",
+    "20261002/01數位相片編修基礎/01-08.jpg",
+    "20261002/01數位相片編修基礎",
+    "20261001/12 (2).pdf",
+    "20261001/32.pdf",
+    "20261001/31.pdf",
+    "2026-10-01.md",
+    "20261001/12.docx",
+    "20261001/~$Doc1.docx",
+    "20261001/~WRD0000.tmp"
+  ]
+}

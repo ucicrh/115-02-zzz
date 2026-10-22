@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW"><!-- 文件語言設為繁體中文 -->
+
+<head><!-- 放網頁的設定資訊，例如編碼、標題、樣式 -->
+    <meta charset="UTF-8"><!-- 設定網頁編碼為 UTF-8，才能正確顯示中文 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 讓網頁在手機等裝置上依螢幕寬度縮放 -->
+    <title>陣列 - 尋找</title><!-- 瀏覽器分頁上顯示的標題 -->
+    <!-- 內嵌的 CSS 樣式 -->
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            /* 寬高計算包含 padding 與 border */
+        }
+    </style>
+</head>
+
+<body><!-- 網頁的可見內容區 -->
+    <!-- 內嵌的 JavaScript 程式，執行後結果輸出到主控台 -->
+    <script>
+        const numbers = [100, 200, 300, 400, 500, 100] // 定義一個陣列，內容為六個數字（100 出現兩次）
+
+        const includes = numbers.includes(100) // 檢查陣列中是否包含 100，結果為 true
+        console.log('includes', includes) // 在主控台輸出 includes 的結果
+
+        const indexOf = numbers.indexOf(100) // 回傳第一個 100 的索引位置，結果為 0
+        console.log('indexOf', indexOf) // 在主控台輸出 indexOf 的結果
+
+        numbers.forEach((value, index, array) => { // 逐一走訪陣列每個元素，value 是值、index 是索引、array 是原陣列
+            console.log('forEach', value, index) // 輸出每個元素的值與索引（forEach 沒有回傳值）
+        })
+
+        const some = numbers.some((value, index, array) => { // 檢查是否「至少一個」元素符合條件
+            return value > 300 // 條件：元素值大於 300；400 與 500 符合，所以結果為 true
+        })
+        console.log('some', some) // 在主控台輸出 some 的結果
+
+        const every = numbers.every((value, index, array) => { // 檢查是否「所有」元素都符合條件
+            return value > 300 // 條件：元素值大於 300；100、200 不符合，所以結果為 false
+        })
+        console.log('every', every) // 在主控台輸出 every 的結果
+
+        const find = numbers.find((value, index, array) => { // 回傳「第一個」符合條件的元素值
+            return value > 300 // 條件：元素值大於 300；第一個符合的是 400
+        })
+        console.log('find', find) // 在主控台輸出 find 的結果（400）
+
+        const findIndex = numbers.findIndex((value, index, array) => { // 回傳「第一個」符合條件的元素索引
+            return value > 300 // 條件：元素值大於 300；400 的索引是 3
+        })
+        console.log('findIndex', findIndex) // 在主控台輸出 findIndex 的結果（3）
+
+        const filter = numbers.filter((value, index, array) => { // 回傳「所有」符合條件的元素，組成新陣列
+            return value > 300 // 條件：元素值大於 300；400 與 500 符合
+        })
+        console.log('filter', filter) // 在主控台輸出 filter 的結果（[400, 500]）
+
+        const data = [
+            { text: 'aaa' },
+            { text: 'bbb' }
+        ]
+        console.log(data.includes({ text: 'aaa' }))
+
+        const someText = data.some(value => {
+            return value.text === 'aaa'
+        })
+        console.log(someText)
+    </script>
+</body>
+
+</html>

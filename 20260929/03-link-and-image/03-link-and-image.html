@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模組 03 : 超鏈接與圖片</title>
+</head>
+
+<body>
+    <h1>超鏈接，圖片與路徑使用</h1>
+
+    <h2 id="top">目錄導覽</h2>
+
+    <ul>
+        <li><a href="#links">1.超鏈接應用</a></li>
+        <li><a href="#paths">2.圖片應用</a></li>
+        <li><a href="#footer">3.頁尾區域</a></li>
+    </ul>
+
+    <h2 id="links">1.超鏈接應用</h2>
+    <h3>外部鏈接</h3>
+    <p id="test">
+        <!-- 絕對路徑，從該文件前往其他網域的位置或者資源 -->
+        <!-- 元素可能擁有屬性，是以attributeName=“value”顯示，值的習慣用雙引號 -->
+        <!--  -->
+        前往<a href="https://www.google.com">Google</a>
+        <!-- target="_blank" “blank” 開啓一個新的分頁-->
+        前往<a href="https://www.google.com" target="_blank">Google</a>
+    </p>
+
+    <!-- 相對路徑 ./ 從該文件前往某個目錄的資源（HTML, CSS,js,圖片...） -->
+    <h3>内部鏈接跳轉</h3>
+    <p>
+
+        前往<a href="./pages/subpage.html">pages/subpage.html</a>
+    </p>
+    <p>
+        前往<a href="./pages/news.html">最新公告消息</a>
+    </p>
+    <p>
+        前往<a href="../02-text-elements/02-text-elements.html">02-text-elements.html</a>
+    </p>
+    <p>
+        <a href="#top">回頂端</a>
+    </p>
+    <h2 id="paths">2.圖片應用</h2>
+
+    <!-- 絕對路徑 -->
+    <!-- alt 替代文字，當圖片鏈接失效時出現的文字 -->
+    <!-- title 圖片名稱，滑鼠移上圖片顯示 -->
+    <!-- width, height 只要設定一個，另一個瀏覽器會自動調整 -->
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO68_zhiPdyTTonJYg-jk2rnv7f_ATTXQJnE9OvUyH3Q&s=10"
+        alt="今天午餐" title="高蛋白" width="300">
+    <!-- 相對路徑 -->
+    <img src="./images/content_68365fa3-a15f-41ca-8e6d-bc48659a5b49.avif" alt="鄰居的貓" title="緬因貓" width="300">
+
+    <hr>
+    <p>
+        <a href="#top">回頂端</a>
+    </p>
+    <h2>使用iframe嵌入頁面</h2>
+    <h3>Google 地圖</h3>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28915.976640495322!2d121.41199359999999!3d25.051136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a7c3055ebb7f%3A0x25f7f09da69817f0!2z5aSp5Li75pWZ6LyU5LuB5aSn5a246ZmE6Kit6Yar6Zmi!5e0!3m2!1szh-TW!2stw!4v1790658647592!5m2!1szh-TW!2stw"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin" width="500">
+    </iframe>
+
+    <h3>載入頁面到指定 iframe</h3>
+    <!-- 預設頁設定爲 subpage.html -->
+    <!-- frameborder 外框顯示 -->
+    <a href="./pages/news.html" target="demo-frame">將news嵌入到iframe</a><br>
+    <iframe src="./pages/subpage.html" frameborder="1" width="800" height="800" name="demo-frame">
+    </iframe>
+
+
+    <hr>
+
+    <h2 id="footer">3.頁尾區域</h2>
+    <p>
+        <a href="#top">回頂端</a>
+    </p>
+    <p>
+        <a href="#test">回測試</a>
+    </p>
+    <hr>
+    <p>
+        前往<a href="../04-table-and-form/04-table.html">下一個單元 04 table</a>
+    </p>
+
+</body>
+
+</html>

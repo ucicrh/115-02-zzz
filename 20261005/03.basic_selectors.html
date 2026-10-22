@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.basic_selectors</title>
+    <style>
+        /* class 命名規則
+         1. 以據點開始
+         2.允許使用英文.數字,連字號-和底綫
+         3.不可以數字開頭
+         4.可使用中文,但不建議
+         5.有區分大小寫
+         */
+        .mycolor {
+            color: tomato;
+        }
+
+        .abd {
+            color: blue;
+            font-family: "微軟正黑體";
+            background: yellow;
+        }
+
+        .ac {
+            text-align: center;
+        }
+
+        #myname {
+            width: 300px;
+            height: 200px;
+            border: 5px solid #333;
+            padding: 20px;
+        }
+
+        /* 後代選擇器,用半型空白表示 */
+        nav p {
+            color: blue;
+        }
+
+        /* 子代選擇器,用 > 表示 */
+        nav>p {
+            color: blueviolet;
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="mycolor">class 選擇器</h1>
+    <p>class具有重複使用的特性,也是使用率最高的的選擇器</p>
+
+    <h2 class="abd">重複使用</h2>
+    <p class="abd">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia temporibus labore aliquam
+        accusamus, minima eaque quos molestiae laboriosam quod illum ipsam deserunt itaque eos autem ex soluta, dolores
+        necessitatibus ipsa.</p>
+
+    <h3 class="ac">Lorem ipsum dolor sit amet.</h3>
+    <p class="ac">Lorem ipsum dolor sit amet.</p>
+    <p class="ac">
+        <img src="https://picsum.photos/300/200/?random=10">
+    </p>
+
+    <hr>
+
+    <h1>ID 選擇器</h1>
+    <ul>
+        <li>一份文件裏面,只允許一個獨一無二的id名稱,具有唯一性,就像身份證一樣</li>
+        <li>對程式來説,id最簡單,最快速,最直接的選擇方式</li>
+    </ul>
+
+    <div id="myname">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dignissimos enim quas in quibusdam dolore ea
+            reprehenderit. Iusto laudantium sed, unde soluta ab consectetur tenetur, at quisquam corrupti ratione
+            repellendus.</p>
+    </div>
+
+    <hr>
+
+    <h2>ID 很適合為網頁區塊來命名</h2>
+    <div id="header"></div>
+    <div id="mian"></div>
+    <div id="sidebar"></div>
+    <div id="footer"></div>
+
+    <h1>後代,子代選擇器</h1>
+    <nav>
+        <p>Lorem ipsum dolor sit.</p>
+        <div>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </nav>
+
+    <script>
+        // 用 getElement 抓到 id 叫 myname 的區塊
+        const myname = document.getElementById("myname")
+        // 改變它的文字顔色
+        myname.style.color = "red"
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>區塊與行内元素</title>
+    <style>
+        .menu {
+            /* reset ul 的預設屬性 */
+            list-style: none;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 10px;
+
+            /* 有設定寬度，加上 margin: 0 auto;可以水平居中 */
+            margin: 0 auto;
+            background-color: #777;
+            width: 1004px;
+            /* 處理幽靈空白，在頂層設定 font-size： 0 */
+            font-size: 0;
+            text-align: center;
+            border-radius: 50%;
+        }
+
+        .menu li {
+            /* 轉型 inline-block 讓 li 水平排列*/
+            background-color: rgb(203, 226, 67);
+            display: inline-block;
+            width: 200px;
+            /* 再設定 font-size: 1em  */
+            font-size: 1rem;
+            border-radius: 30%;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            background-color: purple;
+            /* 將 a 轉型 block,可以填滿 li 空間， 而且 padding 才能推擠 ul 背景顏色 */
+            display: block;
+            border-radius: 50%;
+        }
+
+        .menu a:hover {
+            background-color: chocolate;
+            text-decoration: underline;
+        }
+
+        .menu li+li {
+            border-left: 1px solid white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>盒子類型與轉型</h1>
+    <p>css 是盒子的世界，分爲區塊盒和行内盒兩種基本類型</p>
+
+    <h2>1.區塊盒（blockbox）</h2>
+    <h3>分別以下區別</h3>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <span>Lorem ipsum dolor sit amet.</span>
+
+    <hr>
+
+    <h3>加上背景色</h3>
+    <div style="background-color: blue;">Lorem ipsum dolor sit amet.</div>
+    <span style="background-color: blueviolet;">Lorem ipsum dolor sit amet.</span>
+
+    <hr>
+
+    <h3>區塊盒的特性</h3>
+    <p>例子：div h1~h6 p ul li table...</p>
+    <ul>
+        <li><b>預設狀況</b>，會正常占據父元素空間，前後會換行，無法與其他元素并排</li>
+        <li>可以正常使用盒模型的 width height margin padding 屬性, margin 對正常流向(normal flow)的其他元素有實質空間的推移特性</li>
+        <li>不會被 vertical-align 影響</li>
+    </ul>
+
+    <div style="background-color: gold;">Lorem ipsum dolor sit amet.</div>
+    <div style="background-color: gold;">Lorem ipsum dolor sit amet.</div>
+    <div style="background-color: gold; width: 300px;">Lorem ipsum dolor sit amet.</div>
+    <div style="background-color: gold; width: 500px;">Lorem ipsum dolor sit amet.</div>
+
+    <h3>行内盒的特性</h3>
+    <p>例子：span a strong em</p>
+    <ul>
+        <li>前後不會斷行，内容和寬度一樣，設定 width 與 height 無效，也不會換行</li>
+        <li>會依據文件流向(normal flow)的特性由左而右，由上而下排列</li>
+        <li>padding border 可以正常顯示，但 top bottom 沒有推擠空間效果</li>
+        <li>可以被 vertical-align 控制</li>
+    </ul>
+
+    <span style="background-color: #0ff">Lorem.</span>
+    <span style="background-color: #0ff">Lorem.</span>
+    <span style="background-color: #0ff">Lorem.</span>
+    <span style="background-color: #0ff">Lorem.</span>
+    <span style="background-color: #0ff">Lorem.</span>
+    <span style="background-color: #0ff">Lorem.</span>
+    <span style="background-color: #0ff">Lorem.</span>
+
+    <h3>轉型 display 屬性</h3>
+    <p>可以使用 display:inline-block;將 li 轉換爲行内區塊元素</p>
+    <p>inline-block 取行内與區塊的優勢特性，行内可以</p>
+    ul.menu>li*5>a{item$}
+    <ul class="menu">
+        <li><a href="">item1</a></li>
+        <li><a href="">item2</a></li>
+        <li><a href="">item3</a></li>
+        <li><a href="">item4</a></li>
+        <li><a href="">item5</a></li>
+    </ul>
+
+</body>
+
+</html>

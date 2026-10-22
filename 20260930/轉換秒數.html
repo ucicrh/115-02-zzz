@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const seconds = 10000
+        const secondsLeft = seconds % 3600
+        console.log(secondsLeft)
+        const hours = (seconds - secondsLeft) / 3600
+        console.log(hours)
+        const minutesLeft = secondsLeft % 60
+        const minutes = (secondsLeft - minutesLeft) / 60
+        console.log(minutes)
+        console.log(minutesLeft)
+
+        document.write('10000秒是' + hours + '小時' + minutes + '分' + secondsLeft % 60 + '秒')
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const dinner = prompt('晚餐吃什麼')
+        if (dinner === '牛排' || dinner === '披薩') {
+            document.write('<p>晚餐好耶</p>')
+        }
+        else {
+            document.write('<p>晚餐不開心</p>')
+        }
+
+        const rain = confirm('今天下雨嗎?')
+        const thunder = confirm('今天打雷嗎?')
+        if (!rain && !thunder) {
+            document.write('<p>今天好天氣</p>')
+        }
+        else {
+            document.write('<p>今天天氣不太好</p>')
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        section {
+            /*  */
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        section:nth-child(odd) {
+            background: lightblue;
+        }
+
+        section:nth-child(even) {
+            background: lightgreen;
+        }
+
+        h1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .dashed {
+            display: inline-block;
+            border: 5px dashed black;
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            color: white;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* 
+        1. transform 必須作用在塊級元素（block,flex...）與
+           置換元素(replaced element 置換原件（<img>, <input>, <video>...)
+        2. 行内元素（inline）不能使用 transform
+        */
+
+        .translate {
+            transform: translate(50px, 50px);
+            /* transform-origin 對 translate 沒有作用 */
+            transform: translateX(50px);
+            transform: translateY(50px);
+        }
+
+        .scale {
+            /* 倍數，不用單位 */
+            transform: scale(2);
+            /* 改變原點（除了 translate 其他三種都可以設定 transform-origin） */
+            /* 預設 center(50%) center(50%) 如果省略一個會用 center（50%）代替 */
+            /* 值還可以設定 left right top bottom */
+            transform-origin: left top;
+        }
+
+        .rotate {
+            transform: rotate(360deg);
+            transform: rotateX(360deg);
+            transform: rotateY(360deg);
+            transform-origin: left top;
+        }
+
+        .skew {
+            transform: skew(45deg, 0deg);
+            /* transform: skewX(45deg); */
+            /* transform: skewY(45deg); */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- transform 有四種狀態：translate, scale, rotate, skew -->
+    <section>
+        <h1>translate(移動)</h1>
+        <div class="dashed">
+            <div class="box translate">translate(移動)</div>
+        </div>
+    </section>
+
+    <section>
+        <h1>scale(縮放)</h1>
+        <div class="dashed">
+            <div class="box scale">scale(縮放)</div>
+        </div>
+    </section>
+
+    <section>
+        <h1>rotate(旋轉)</h1>
+        <div class="dashed">
+            <div class="box rotate">rotate(旋轉)</div>
+        </div>
+    </section>
+
+    <section>
+        <h1>skew(傾斜)</h1>
+        <div class="dashed">
+            <div class="box skew">skew(傾斜)</div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

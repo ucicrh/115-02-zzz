@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="height: 100vh;">
+    <!-- 父元素要設定實際的高度，子元素的高度百分比才有用 -->
+    <!-- 高度一直是css探討的問題，寬度百分比是沒有問題的 -->
+    <div style="width: 800px;height: 800px;background-color: blue;">
+        <div style="height: 50%;background-color: darkgreen;"></div>
+    </div>
+
+    <div style="width: 50%;height: 100%;background-color: red;">1</div>
+</body>
+
+</html>

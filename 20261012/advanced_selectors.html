@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        class .{...}
+        id #abc{...}
+        h1,h2,h3{...}
+        h1{...}
+        h1 > p{...}
+        h1 p{...}
+        */
+
+
+        .case1 h2+p {
+            color: red
+        }
+
+        .case2 h2~p {
+            color: blue;
+        }
+
+        .menu1 {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: lightblue;
+            /* BFC 機制 overflow 是其中一種 */
+            overflow: hidden;
+            width: 1000px;
+            margin: auto;
+        }
+
+        .menu1 li {
+            /* float 獨立出去，并且讓元素變成 block，例如 span */
+            float: left;
+            width: 100px;
+            text-align: center;
+            background-color: deeppink;
+            width: 20%;
+            /* 20% * 5 + 2培訓*4 超過100% 空間不足 最後一個會往下掉 設定 border-box 讓 border 計算在 width 内 */
+            box-sizing: border-box;
+        }
+
+        .menu1 li+li {
+            border-left: 2px solid red;
+        }
+
+        .menu1 li~li {
+            border-left: 2px solid red;
+        }
+
+        .menu1 a {
+            color: white;
+            background-color: black;
+            display: block;
+            text-decoration: none;
+            padding: 10px 0;
+            border-radius: 1rem;
+        }
+
+        .menu1 a:hover {
+            background-color: darkgreen;
+            text-decoration: underline;
+        }
+
+        input[type="text"] {
+            width: 100px;
+            transition: 1s;
+        }
+
+        input[type="text"]:focus {
+            width: 350px;
+            background-color: lightblue;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            appearance: none;
+            border: 1px solid #333;
+            width: 20px;
+            height: 20px;
+            vertical-align: -4px;
+            transform: rotate(45deg);
+        }
+
+        input[type="checkbox"]:checked,
+        input[type="radio"]:checked {
+            background-color: black;
+        }
+
+        #child div:first-child {
+            color: aquamarine;
+        }
+
+        #child div:last-child {
+            color: blueviolet;
+        }
+
+        #nthhchild div:nth-child(3) {
+            font: size 2rem;
+        }
+
+        #nthchild div:nth-last-child(3) {
+            color: blueviolet;
+        }
+
+        #nth-of-type-2 div:nth-of-type(odd) {
+            color: red
+        }
+
+        #nth-of-type-2 p:nth-of-type(odd) {
+            color: green
+        }
+
+        #nth-of-type-2 div:nth-of-type(even) {
+            color: blue
+        }
+
+        #nth-of-type-2 div:nth-of-type(even) {
+            color: orange
+        }
+
+        #pseudo-element::first-letter {
+            float: left;
+            font-size: 5rem;
+            padding: 0 1rem 1rem 0;
+        }
+
+        #pseudo-element::first-line {
+            color: blue;
+        }
+
+        #pseudo-element::selection {
+            color: yellow;
+            background: green;
+        }
+
+        input::placeholder {
+            text-align: right;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>同層相鄰選擇器 a + b</h1>
+    <p>選擇a元素同層關係後面所有 b 元素</p>
+    <div class="case1">
+        <h2>aaa</h2>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+        <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+
+        <h1>同層相鄰選擇器 a ~ b</h1>
+        <p>選擇a元素同層關係後面所有 b 元素</p>
+        <div class="case2">
+            <h2>aaa</h2>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+            <p>bbbbbbbbbbbbbbbbbbbbbbbb</p>
+            <h2>例子：選單</h2>
+            <ul class="menu1">
+                <li><a href="#">LIST01</a></li>
+                <li><a href="#">LIST02</a></li>
+                <li><a href="#">LIST03</a></li>
+                <li><a href="#">LIST04</a></li>
+                <li><a href="#">LIST05</a></li>
+            </ul>
+            <h1>虛擬類別（僞類）選擇器：（）但冒號</h1>
+            <p>虛擬類別是一個大家族，它可以讓元素在選擇結構，狀態上賦予樣式。</p>
+
+            <h2>:focus</h2>
+            <p>當表單或元素屬性成爲焦點時套用樣式</p>
+            <input type="text">
+
+            <h2>:checked</h2>
+            <p>表單勾選時套用樣式</p>
+            <h3>在 checkbox 使用</h3>
+            <label for="c1">
+                <input id=c1 type="checkbox" name="hobby">寫網頁
+            </label>
+            <label for="c2">
+                <input id=c2 type="checkbox" name="bobby">吃大餐
+            </label>
+            <label for="c3">
+                <input id=c3 type="checkbox" name="hobby">看電影
+            </label>
+            <h3>在 radio 使用</h3>
+            <label for="c1">
+                <input id=c1 type="radio" name="gender">男
+            </label>
+            <label for="r2">
+                <input id=r2 type="radio" name="gender">女
+            </label>
+
+            <hr>
+            <h2>以位置或類型來選擇元素</h2>
+            <h3>:first-child,:last-child</h3>
+            <div id="child">
+                <div>Lorem ipsum dolor sit amet.</div>
+                <div>Lorem ipsum dolor sit amet.</div>
+                <div>Lorem ipsum dolor sit amet.</div>
+                <div>Lorem ipsum dolor sit amet.</div>
+                <div>Lorem ipsum dolor sit amet.</div>
+            </div>
+        </div>
+
+        <h3>:nth-child</h3>
+        <p>還有:nth-lastchild 從最後面選擇</p>
+        <div id="nthchild">
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+            <div>Lorem ipsum dolor sit amet.</div>
+        </div>
+    </div>
+    <h3>nth-of-type</h3>
+    <p>nth-last-of-type</p>
+    <div id="nth-of-type">
+        <div>標題</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>標題</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>標題</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>標題</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>標題</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div>標題</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <h1>虛擬元素（僞元素）：：雙冒號</h1>
+        <p>虛擬元素是一個小家族::first-line::selection::placeholder...還有2個特殊元素::before 和 ::after</p>
+
+        <h2>::first-letter, ::first-line</h2>
+        <p id="pseudo-element">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus quibusdam autem
+            officia labore sit quidem
+            animi culpa aspernatur quos eaque vero veritatis illum, porro accusantium totam tempora maxime rem
+            temporibus?Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quasi nisi id quas voluptates
+            obcaecati cum incidunt temporibus libero beatae, neque sapiente culpa iure. Soluta recusandae cumque labore
+            quaerat asperiores! </p>
+
+        <h3>::placeholder占位文字選擇</h3>
+        <input type="text" placeholder="請輸入帳號">
+    </div>
+</body>
+
+</html>

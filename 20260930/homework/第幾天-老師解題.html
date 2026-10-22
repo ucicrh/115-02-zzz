@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const year = parseInt(prompt('年'))
+    const month = parseInt(prompt('月'))
+    const day = parseInt(prompt('日'))
+
+    let count = 0
+
+    for (let i = 1; i <= month - 1; i++) {
+      // 2 月
+      if (i == 2) {
+        // 閏年
+        if (
+          (year % 4 == 0 && year % 100 != 0) ||
+          (year % 400 == 0)
+        ) {
+          count += 29
+        }
+        // 平年
+        else {
+          count += 28
+        }
+      }
+      // 7 月前奇數和 8 月後偶數是 31
+      else if (
+        (i <= 7 && i % 2 == 1) ||
+        (i >= 8 && i % 2 == 0)
+      ) {
+        count += 31
+      }
+      // 其他月分
+      else {
+        count += 30
+      }
+    }
+
+    count += day
+
+    document.write(count)
+  </script>
+</body>
+</html>

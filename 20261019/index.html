@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAISHAN 職人精品烘焙咖啡</title>
+    <!-- reset css 格式化 -->
+    <link rel="stylesheet" href="./reset.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Damion&family=Fira+Code:wght@300..700&family=Isometra&family=LXGW+WenKai+Mono+TC&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <!-- fontawsome icon -->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css'
+        integrity='sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=='
+        crossorigin='anonymous' />
+
+    <!-- 自己的 css -->
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <!-- 
+1. 先觀察整個 layout 的佈局，有哪些是固定定位或是可以提取相同的類別
+2. 將網頁大家可以使用的顔色，文字屬性...寫成原生變數，寫在 :root
+3. 思考 html 結構如何去包内容，要用幾層去包   
+-->
+
+
+    <!-- 導覽頁：浮動靠右 -->
+    <header class="top-navbar">
+        <div class="nav-brand">
+            <a href="#section-hero"><i class="fa-solid fa-mug-hot"></i> TAISHAN COFFEE</a>
+        </div>
+        <nav class="nav-menu">
+            <a href="#section-hero" class="nav-item active">
+                <i class="fa-solid fa-mug-hot"></i>首頁</a>
+            <a href="#section-about" class="nav-item">
+                <i class="fa-solid fa-person-digging"> </i>職人工藝</a>
+            <a href="#section-beans" class="nav-item">
+                <i class="fa-solid fa-seedling"></i>莊園產區</a>
+            <a href="#section-brewing" class="nav-item">
+                <i class="fa-solid fa-filter"></i>沖煮指南</a>
+        </nav>
+    </header>
+
+    <!-- 1F 滿版 banner -->
+    <section id="section-hero" class="page-section">
+        <div class="section-center-box">
+            <span class="hero-tag"><i class="fa-solid fa-certificate"></i>2026 年度手冲極選批次</span>
+            <h1 class="hero-title">淬鍊一滴純粹之味 · 尋訪全球微氣候莊園</h1>
+            <div class="hero-desc">
+                堅持日本直火慢烘工藝，喚醒每顆咖啡豆深層的明亮花香與細緻果酸。
+            </div>
+            <a href="#section-about" class="btn-cta
+            "><i class="fa-solid fa-angles-down"></i>探索職人手沖之旅
+            </a>
+        </div>
+    </section>
+
+    <!-- 2F 職人工藝 -->
+    <section id="section-about" class="page-section">
+        <div class="layout-container">
+            <!-- 標題 -->
+            <div class="section-header">
+                <h2 class="title-text"><i class="fa-solid fa-fire-flame-curved"></i>日本直火慢烘 · 時間與溫度的藝術</h2>
+                <p class="subtitle-text">以傳統手藝打磨極致風味，在時間與火候的交界處淬鍊芳醇香氣</p>
+            </div>
+            <!-- 一列兩欄 -->
+            <div class="split-row">
+                <div class="info-card">
+                    <h3><i class="fa-solid fa-temperature-half"></i>0.1 度極限烘焙曲線調控</h3>
+                    <p>承襲百年職人匠心，依生豆含水率調控烘焙曲線，於一爆最飽滿之剎那降溫鎖香。</p>
+                    <ul class="feature-bullets">
+                        <li><i class="fa-solid fa-check"></i>嚴選高海拔硬豆，手工逐顆剔除瑕疵</li>
+                        <li><i class="fa-solid fa-check"></i>日本鑄鐵機慢烘，釋放焦糖堅果香</li>
+                        <li><i class="fa-solid fa-check"></i>黃金 72 小時靜置，鎖住頂級芳香酯質</li>
+                    </ul>
+                </div>
+                <div class="poster-card">
+                    <img src="https://picsum.photos/id/1060/600/400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 三樓 -->
+    <section id="section-beans" class="page-section">
+        <div class="layout-container">
+            <!-- 標題 -->
+            <div class="section-header">
+                <h2 class="title-text"><i class="fa-solid fa-fire-flame-curved"></i>2026 嚴選微批次莊園單品</h2>
+                <p class="subtitle-text">尋訪全球卓越微氣候產區，捕捉風土與生豆處理法交織的純淨花果風味</p>
+            </div>
+
+            <div class="bean-grid">
+                <div class="bean-card">
+                    <span class="badge-tag">藝伎日曬</span>
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    <div class="card-details">
+                        <h4 class="card-title">巴拿馬 · 翡翠莊園 綠標藝伎</h4>
+                        <p class="card-flavor">風味：佛手柑、白花香、荔枝甜感</p>
+                    </div>
+                </div>
+                <div class="bean-card">
+                    <span class="badge-tag">厭氧水洗</span>
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    <div class="card-details">
+                        <h4 class="card-title">衣索比亞 · 耶加雪菲 歌姬</h4>
+                        <p class="card-flavor">風味：完熟檸檬、藍莓果醬、伯爵紅茶</p>
+                    </div>
+                </div>
+                <div class="bean-card">
+                    <span class="badge-tag">雙重水洗</span>
+                    <img src="https://picsum.photos/300/200/?random=10">
+                    <div class="card-details">
+                        <h4 class="card-title">肯亞 · 涅里產區 雙重水洗 AA</h4>
+                        <p class="card-flavor">風味：黑醋栗、烏梅酒香、蔗糖甘醇</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer class="site-footer">
+        <div class="layout-container">
+            <!-- 列 -->
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4 class="footer-title"><i class="fa-solid fa-mub-hot"></i>TAISHAN COFFEE</h4>
+                    <p>百年匠心與直火慢烘工藝，專注於全球微氣候莊園精品咖啡生豆選品與手工點滴萃取。</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title"><i class="fa-solid fa-mub-hot"></i>職人旗艦門市</h4>
+                    <p>門市地址：
+                        新北市泰山區貴子里貴子里致遠新村 55 之 1 號
+                        營業時間：週一至週日 09:00 - 18:00</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title"><i class="fa-solid fa-mub-hot"></i>關注我們</h4>
+                    <p>追蹤官方社群，第一時間掌握每月限定微批次生豆與杯測講座最新消息。</p>
+                    <div class="social-links">
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href=""><i class="fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="fa-brands fa-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 TAISHAN 精品烘焙咖啡工坊. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const bendons = [
+            { name: '椒麻雞飯', price: '138' },
+            { name: '炸排骨飯', price: '125' },
+            { name: '白飯', price: '15' },
+        ]
+        document.write('<ul>')
+        for (let i = 0; i < bendons.length; i++) {
+            document.write(`<li>${bendons[i].name}, ${bendons[i].price}</li>`)
+        }
+        document.write('</ul>')
+
+        const fountainpen = {
+            name: 'fountainpen',
+            url: 'https://www.montblanc.com',
+            products: [
+                { name: 'fountainpen(1)', price: 14999 },
+                { name: 'fountainpen(2)', price: 13999 },
+                { name: 'fountainpen(3)', price: 16999 },
+                { name: 'fountainpen(4)', price: 18999 },
+                { name: 'fountainpen(5)', price: 24999 },
+            ]
+        }
+
+        document.write('<table border = 1>')
+        document.write('<caption>')
+        document.write(`<a href="${fountainpen.url}">${fountainpen.name}</a>`)
+        document.write('</caption>')
+        for (i = 0; i < fountainpen.products.length; i++) {
+            document.write('<tr>')
+            document.write('<tr>')
+
+
+
+            document.write('</tr>')
+
+        }
+        document.write('<table border = 1>')
+        document.write('<table border = 1>')
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表單</title>
+</head>
+
+<body>
+    <h1>注冊表單</h1>
+    <form action="">
+        <fieldset>
+            <legend>基本賬號資訊</legend>
+            <p>
+                <!-- labl 的 for 必須完全對應 input 的 id 值 -->
+                <label for="username">使用者賬戶（必填）</label>
+                <!-- type 有很多種類，text 是文字欄位 -->
+                <!-- placeholder占位文字 -->
+                <!-- required 欄位是必填 -->
+                <input id="username" type="text" placeholder="請輸入6-12英文或數字" size="30" maxlength="12" name="username"
+                    required>
+            </p>
+            <p>
+                <label for="password">設定密碼（必填）</label>
+                <input id="password" type="password" placeholder="請輸入密碼" name="password" required>
+            </p>
+            <p>
+                <label for="email">電子信箱（必填）</label>
+                <input id="emailemail" type="emailemail" placeholder="example@email.com" name="email" required>
+            </p>
+            <p>
+                <input type="submit" value="送出">
+                <input type="reset" value="重填">
+            </p>
+            <p>
+                <label for="age">年齡</label>
+                <!-- number 可以限制最小，最大以及預設值 -->
+                <input id="age" type="number" name="age" min="12" max="100" value="18">
+            </p>
+            <p>
+                <label for="birthday">生日</label>
+                <input id="birthday" type="date" name="birthday">
+            </p>
+
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <p>性別</p>
+            <p>
+                <!-- 單選用 radio ，復選用 checkbox-->
+                <input id="female" type="radio" name="gender" value="female" checked>
+                <label for="female">女性</label>
+                <input id="male" type="radio" name="gender" value="male">
+                <label for="male">男性</label>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <p>興趣</p>
+            <p>
+                <input id="swim" type="checkbox" name="hobby" value="swim">
+                <label for="swim">游泳</label>
+                <input id="ski" type="checkbox" name="hobby" value="ski">
+                <label for="swim">划雪</label>
+                <input id="basketballbasketball" type="checkbox" name="hobby" value="basketball">
+                <label for="basketballbasketball">籃球</label>
+            </p>
+            <p>
+                <label for="city">居住城市</label>
+                <select name="city" id="city">
+                    <option value="">--請選擇居住城市--</option>
+                    <option value="taipei">臺北市</option>
+                    <option value="new-taipei">新北市</option>
+                    <option value="taichung">臺中市</option>
+                    <option value="kao">高雄市</option>
+                </select>
+            </p>
+            <p>
+                <label for="bio">自我介紹</label>
+                <!-- 多行文字輸入 -->
+                <textarea name="bio" id="bio" rows="15" cols="100" placeholder="請自我介紹"></textarea>
+            </p>
+        </fieldset>
+
+        <p>
+            <input type="submit" value="送出">
+            <input type="reset" value="重填">
+        </p>
+    </form>
+    <p>
+        回到<a href="../04-table-and-form/04-table.html">上一個單元：表格</a>
+        回到<a href="../01-web-concept/01-structure.html">01</a>
+    </p>
+</body>
+
+</html>

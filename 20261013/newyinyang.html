@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>太極轉場</title>
+    <style>
+        @property --left-color {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: black;
+        }
+
+        @property --right-color {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: white;
+        }
+
+        .taichi {
+            --left-color: black;
+            --right-color: white;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 保留置中位移 */
+            transform: translate(-50%, -50%) rotate(0deg);
+            /* 確保圓形邊界與陰影形狀正確 */
+            box-shadow: 0 0 10px black;
+            /* 兩個顏色與旋轉同時以 2 秒平滑過渡 */
+            transition:
+                --left-color 2s,
+                --right-color 2s,
+                transform 2s;
+        }
+
+        .yinyang {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            border-radius: 50%;
+            background: linear-gradient(to right,
+                    var(--left-color) 50%,
+                    var(--right-color) 50%);
+        }
+
+        .yinyang::before,
+        .yinyang::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .yinyang::before {
+            width: 200px;
+            height: 200px;
+            left: 100px;
+            top: 0;
+            background: var(--right-color);
+            box-shadow: 0 200px 0 var(--left-color);
+        }
+
+        .yinyang::after {
+            width: 50px;
+            height: 50px;
+            left: 175px;
+            top: 75px;
+            background: var(--left-color);
+            box-shadow: 0 200px 0 var(--right-color);
+        }
+
+        .taichi:hover {
+            --left-color: white;
+            --right-color: black;
+            /* 修正：同時保留 translate(-50%, -50%) 並執行旋轉 */
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="taichi">
+        <div class="yinyang"></div>
+    </div>
+</body>
+
+</html>

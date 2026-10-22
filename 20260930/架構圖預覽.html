@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>轉換秒數 架構與邏輯流程圖</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h2 {
+      color: #333;
+      margin-bottom: 24px;
+    }
+    .svg-container {
+      background: #fff;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      max-width: 100%;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h2>⏱️ 轉換秒數.html 程式架構與邏輯圖</h2>
+  <div class="svg-container">
+    <svg width="860" height="320" viewBox="0 0 860 320" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="#495057" />
+        </marker>
+        <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+          <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.1" />
+        </filter>
+      </defs>
+
+      <!-- 區塊 1: 輸入 -->
+      <g filter="url(#shadow)">
+        <rect x="20" y="40" width="180" height="100" rx="10" fill="#e7f5ff" stroke="#1971c2" stroke-width="2"/>
+        <text x="110" y="75" font-size="16" font-weight="bold" fill="#1864ab" text-anchor="middle">輸入資料</text>
+        <text x="110" y="105" font-size="14" fill="#333" text-anchor="middle">seconds = 10000</text>
+      </g>
+
+      <!-- 箭頭 1 -> 2 -->
+      <line x1="200" y1="90" x2="250" y2="90" stroke="#495057" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- 區塊 2: 小時計算 -->
+      <g filter="url(#shadow)">
+        <rect x="250" y="25" width="260" height="130" rx="10" fill="#ebfbee" stroke="#2f9e44" stroke-width="2"/>
+        <text x="380" y="55" font-size="15" font-weight="bold" fill="#2b8a3e" text-anchor="middle">1. 小時與剩餘秒計算</text>
+        <text x="380" y="85" font-size="13" fill="#444" text-anchor="middle">secondsLeft = 10000 % 3600</text>
+        <text x="380" y="108" font-size="13" fill="#2b8a3e" font-weight="bold" text-anchor="middle">➔ 2800 秒 (不足1小時的餘數)</text>
+        <text x="380" y="132" font-size="13" fill="#444" text-anchor="middle">hours = (10000 - 2800) / 3600 = 2</text>
+      </g>
+
+      <!-- 箭頭 2 -> 3 -->
+      <line x1="510" y1="90" x2="560" y2="90" stroke="#495057" stroke-width="2" marker-end="url(#arrow)" />
+
+      <!-- 區塊 3: 分鐘與秒數計算 -->
+      <g filter="url(#shadow)">
+        <rect x="560" y="25" width="280" height="130" rx="10" fill="#fff4e6" stroke="#e67700" stroke-width="2"/>
+        <text x="700" y="55" font-size="15" font-weight="bold" fill="#d9480f" text-anchor="middle">2. 分鐘與最終秒數計算</text>
+        <text x="700" y="85" font-size="13" fill="#444" text-anchor="middle">minutesLeft = 2800 % 60</text>
+        <text x="700" y="108" font-size="13" fill="#d9480f" font-weight="bold" text-anchor="middle">➔ 40 秒 (最終剩餘秒數)</text>
+        <text x="700" y="132" font-size="13" fill="#444" text-anchor="middle">minutes = (2800 - 40) / 60 = 46</text>
+      </g>
+
+      <!-- 箭頭 3 -> 4 折線導向輸出 -->
+      <path d="M 700 155 L 700 200 L 460 200 L 460 220" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#arrow)"/>
+      <path d="M 380 155 L 380 180 L 410 180 L 410 220" fill="none" stroke="#495057" stroke-width="2" marker-end="url(#arrow)"/>
+
+      <!-- 區塊 4: 最終輸出 -->
+      <g filter="url(#shadow)">
+        <rect x="250" y="220" width="360" height="80" rx="10" fill="#f3f0ff" stroke="#7950f2" stroke-width="2"/>
+        <text x="430" y="250" font-size="15" font-weight="bold" fill="#5f3dc4" text-anchor="middle">3. 頁面渲染與輸出 (DOM Output)</text>
+        <text x="430" y="278" font-size="14" fill="#333" font-weight="bold" text-anchor="middle">document.write: 10000秒是2小時46分40秒</text>
+      </g>
+    </svg>
+  </div>
+</body>
+</html>

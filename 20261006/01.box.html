@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>盒模型</title>
+    <style>
+        body {
+            font-family: 微軟正黑體, sans-serif;
+            background-color: #f8f8f8;
+            color: #1e293b;
+            line-height: 1.6;
+        }
+
+        hr {
+            margin: 30px 0;
+            border: 0;
+            border-top: 1px dashed #cbd5e1;
+        }
+
+        h2 {
+            color: #0369a1;
+            font-size: 1.15rem;
+            margin-bottom: 6px;
+        }
+
+        .desc {
+            font-size: 13px;
+            color: #64748b;
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .box1 {
+            width: 300px;
+            height: 500px;
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        .box2 {
+            width: 300px;
+            background-color: #fbdfe8;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 120px;
+            background-color: #efdfe8;
+            overflow: auto;
+            padding: 10px;
+        }
+
+        .box4 {
+            width: 300px;
+            background-color: rgb(110, 19, 189);
+            margin-top: 50px;
+            margin-right: 50px;
+            margin-bottom: 50px;
+            margin-left: 50px;
+            /* top right bottom left 順時針 */
+            margin: 50px 50px 50px 50px;
+            /* top bottom */
+            margin: 50px 50px;
+            /* 四個邊 */
+            margin: 50px;
+            padding: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+            padding-left: 20px;
+            /* top right bottom left 順時針 */
+            padding: 20px 20px 20px 20px;
+            /* top bottom */
+            padding: 20px 20px;
+            /* 四個邊 */
+            padding: 20px;
+            /* solid dotted dashed double... */
+            border-top: 5px solid #000;
+            border-right: 10px solid #000;
+            border-bottom: 5px solid #000;
+            border-left: 10px solid #000;
+            /* 四邊一樣 */
+            border: 10px dotted #121212;
+
+            outline: 10px double #121212;
+        }
+
+        .box5 {
+            width: 300px;
+            height: 60px;
+            background-color: #0ff;
+            margin-bottom: 30px;
+        }
+
+        .box6 {
+            width: 300px;
+            height: 60px;
+            background-color: rgb(192, 47, 105);
+            margin-top: 100px;
+        }
+
+        .box7-traditional {
+            /* content-box 是預設，可以不寫 */
+            width: 300px;
+            /* 水平空間： 300 + 40 +10 + 20 = 370 */
+            box-sizing: content-box;
+            padding: 20px;
+            border: 5px solid #0369a1;
+            margin: 10px;
+            background-color: #0ff;
+        }
+
+        .box7-modern {
+            /* 計算改爲 border-box */
+            width: 300px;
+            /* 水平空間： 300 - 40 -10 = 250 */
+            /* border-box 模式，width 和 height 會包含 padding 及 border */
+            box-sizing: border-box;
+            padding: 20px;
+            border: 5px solid #0369a1;
+            margin: 100px;
+            background-color: #0ff;
+        }
+
+        .box8 {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /* 左上 右上 右下 左下*/
+            /* border-radius: 50%; */
+            border-radius: 0px 150px 150px 150px;
+            border: 5px dashed #000;
+            outline: auto;
+            /* 讓一個有寬度的block可以用 margin:auto 水平居中 */
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h1>盒模型</h1>
+    <h2>1.box 畫一個盒子，設定寬高背後景顔色/h2>
+        <p class="desc">content area</p>
+        <div class="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti ullam veniam ratione odio
+            soluta nihil dolorem provident necessitatibus maxime earum dolore, quae, laboriosam numquam dicta? At libero
+            debitis suscipit?
+        </div>
+
+        <hr>
+
+        <h2>2.box2 不設定高度，高度會以内容高度爲主/h2>
+            <p class="desc">content area</p>
+            <div class="box2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus deleniti ullam veniam ratione odio
+                soluta nihil dolorem provident necessitatibus maxime earum dolore, quae, laboriosam numquam dicta? At
+                libero
+                debitis suscipit?
+            </div>
+
+            <hr>
+
+            <h2>3.box3 設定高度，當内容產出溢出，設定 overflow 解決</h2>
+            <p class="desc">設定高度塞入大量文字，設定 overflow:auto 讓瀏覽器產生</p>
+            <div class="box3">
+                <p style="width: 500px;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt earum ad ut
+                    dolor quos Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero ut provident, fuga dolore
+                    asperiores quos veniam totam dolorum temporibus molestiae laudantium rem similique reprehenderit
+                    accusantium distinctio! Animi repudiandae harum necessitatibus.
+                    quaerat deleniti molestias architecto soluta ex fugit, exercitationem in quas quae adipisci nobis ab
+                    suscipit odit.</p>
+            </div>
+
+            <hr>
+
+            <h2>4.box4 設定盒子 padding border margin</h2>
+            <p class="desc">margin 可以為負數，padding 不行</p>
+            <p class="desc">outline 不影響盒模型空間的計算，只有外觀呈現</p>
+            <div class="box4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi pariatur expedita non odio
+                quod corporis voluptates suscipit eligendi cum quibusdam dolorem asperiores eaque reiciendis doloribus
+                autem debitis magni, repellendus laborum.</div>
+
+            <h2>5.box5 外据重叠現象</h2>
+            <p class="desc">外距重叠現象只發現生在上下，左右沒有，大的會覆蓋小的，兩者不會相加</p>
+            <div class="box5"></div>
+            <div class="box6"></div>
+
+            <h2>6.box7計算盒子的空間</h2>
+            <p class="desc"></p>
+            <div class="box7-traditional"></div>
+            <div class="box7-modern"></div>
+
+            <h2>7.box 8 設定圓角，畫圓形，水平中</h2>
+            <div class="box8"></div>
+
+</body>
+
+</html>

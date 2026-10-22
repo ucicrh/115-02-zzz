@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bear</title>
+    <style>
+        body {
+            min-height: 100vh;
+            /* 最小高度為視窗高度，確保頁面至少填滿整個畫面 */
+            margin: 0;
+            /* 移除瀏覽器預設的頁面外距 */
+            display: grid;
+            /* 將 body 設為 Grid 容器 */
+            place-items: center;
+            /* 讓子元素在水平與垂直方向置中 */
+        }
+
+        .bearBody {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: black;
+            position: fixed;
+        }
+
+        .bearEyes,
+        .bearV,
+        .bearCheek,
+        .bearNose {
+            position: absolute;
+            inset: 0;
+        }
+
+        .bearBody::before,
+        .bearBody::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            border: 5px solid black;
+        }
+
+        .bearBody::before {
+            left: 75px;
+        }
+
+        .bearBody::after {
+            right: 75px;
+        }
+
+        .bearEyes::before,
+        .bearEyes::after {
+            content: "";
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            top: 90px;
+            background: black;
+            border-radius: 50%;
+            border: 10px solid white;
+        }
+
+        .bearEyes::before {
+            left: 90px;
+        }
+
+        .bearEyes::after {
+            right: 90px;
+        }
+
+        .bearV::before,
+        .bearV::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            top: 310px;
+            background: white;
+            transform-origin: bottom center;
+        }
+
+        .bearV::before {
+            left: 175px;
+            transform: skew(45deg);
+        }
+
+        .bearV::after {
+            right: 175px;
+            transform: skew(-45deg);
+        }
+
+        .bearCheek::before,
+        .bearCheek::after {
+            content: "";
+            position: absolute;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            top: 160px;
+            background: red;
+        }
+
+        .bearCheek::before {
+            left: -10px;
+        }
+
+        .bearCheek::after {
+            right: -10px;
+        }
+
+        .bearNose {
+            width: 160px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            inset: auto;
+            top: 230px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .bearNose::before,
+        .bearNose::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: black;
+        }
+
+        .bearNose::before {
+            width: 30px;
+            height: 20px;
+            top: 20px;
+        }
+
+        .bearNose::after {
+            width: 80px;
+            height: 30px;
+            top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bearBody">
+        <div class="bearEyes">
+            <div class="bearV">
+                <div class="bearCheek">
+                    <div class="bearNose">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

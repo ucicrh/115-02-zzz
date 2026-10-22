@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<!-- 設定網頁主要語言為繁體中文 -->
+
+<head>
+    <!-- head 放置網頁編碼、畫面設定與標題等資訊 -->
+    <meta charset="UTF-8">
+    <!-- 使用 UTF-8 編碼，讓中文能正確顯示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 讓網頁在手機上依裝置寬度顯示，初始縮放比例為 1 -->
+    <title>改陣列内容</title>
+    <!-- 設定瀏覽器分頁上顯示的標題 -->
+</head>
+
+<body>
+    <script>
+        // script 區塊內放置 JavaScript 程式碼
+        const alphabets = ['a', 'b', 'c', 'd'];
+        // 建立一個陣列，元素的索引依序是 0、1、2、3
+        alphabets[0] = 'aa';
+        // 將索引 0 的元素改成 'aa'
+        alphabets[1] = 'bb';
+        // 將索引 1 的元素改成 'bb'
+        alphabets[2] = 'cc';
+        // 將索引 2 的元素改成 'cc'
+        alphabets[3] = 'dd';
+        // 將索引 3 的元素改成 'dd'
+        document.write(alphabets);
+        // 把陣列內容寫到網頁上；陣列轉成文字時，元素通常以逗號分隔
+        document.write('<hr>');
+        // 在網頁上插入水平分隔線
+
+        const f2e = {
+            name: '前端',
+            year: 115,
+            semester: 2,
+            classroom: 1114
+        };
+        // 建立一個物件，包含課程名稱、學年、學期與教室等屬性
+        f2e.name = '前端AI';
+        // 修改物件的 name 屬性；const 不允許重新指定 f2e，但可修改其屬性
+        document.write(f2e.name);
+        // 讀取並顯示 f2e 的 name 屬性
+        document.write('<hr>');
+        // 插入水平分隔線
+
+        // 陣列與物件變數保存的是參照；這常被簡稱為「參照傳遞」
+        const a = [1, 2, 3];
+        // 建立陣列，變數 a 指向這個陣列
+        const b = a;
+        // 將同一個陣列的參照指定給 b，因此 a 和 b 指向同一個陣列
+        a[0] += 10;
+        // 把索引 0 的數值加 10；透過 a 修改，也會從 b 看到相同變化
+        document.write(a, ' ', b, ' ', a === b);
+        // 顯示兩個變數的陣列內容，並檢查它們是否指向同一個陣列（結果為 true）
+        document.write('<hr>');
+        // 插入水平分隔線
+
+        const c = [1, 2, 3];
+        // 建立第一個陣列
+        const d = [1, 2, 3];
+        // 建立另一個內容相同、但彼此獨立的陣列
+        document.write(c === d);
+        // 比較兩個陣列是否為同一個陣列；內容相同但參照不同，因此結果為 false
+
+        const e = { num: 1 };
+        // 建立物件 e，num 屬性的初始值為 1
+        const f = e;
+        // f 與 e 指向同一個物件
+        f.num = 100;
+        // 透過 f 修改 num；因為 e、f 指向同一個物件，e.num 也會是 100
+        console.log(e, f);
+        // 在瀏覽器開發者工具的主控台顯示兩個變數所指向的物件
+        document.write('<hr>');
+        // 插入水平分隔線
+
+        // 數字等基本型別的指定會複製值
+        let g = 1;
+        // 建立數字變數 g，初始值為 1
+        let h = g;
+        // 將 g 當下的數值複製給 h；此時 g、h 都是 1
+        g += 10;
+        // 只把 g 的值加 10；h 仍保留原本的值 1
+        document.write(g, ' ', h);
+        // 顯示結果為 11 1
+        // ================================================
+
+        const i = {
+            text: 'abc',
+            numbers: [1, 2, 3]
+        };
+        // 建立物件 i；其中 numbers 屬性的值本身也是一個陣列
+        const j = {
+            text: i.text,
+            numbers: i.numbers
+        };
+        // 建立物件 j：text 複製字串值，numbers 則指向 i.numbers 的同一個陣列
+        // 這種只複製第一層屬性的方式稱為淺層複製
+
+        j.text = 'abcdef';
+        // 修改 j.text；字串是基本型別，因此不會改變 i.text
+        j.numbers[0] = 100;
+        // 修改 j.numbers 指向的陣列；因為 i.numbers、j.numbers 共用陣列，i.numbers[0] 也變成 100
+
+        console.log(i, j, i === j);
+        // 在瀏覽器開發者工具主控台查看 i 和 j 的內容
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const calculate = (n, m) => {
+            // let sum = 0
+            // let count = 0
+            // let number = 0
+            // for (number = n; sum <= m; n++) {
+            //     sum += number
+            //     count++
+            // }
+            // return count
+            let sum = 0
+            let count = 0
+            while (sum <= m) {
+                count++
+                sum += n
+            }
+            return count
+        }
+        const number1 = parseInt(prompt('n'))
+        const number2 = parseInt(prompt('m'))
+        document.write(`從 n 開始數，小明數了 ${calculate(number1, number2)} 個數字後，數過的數字總和會超過 m。`)
+    </script>
+</body>
+
+</html>

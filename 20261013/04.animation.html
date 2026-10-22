@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.animation</title>
+    <style>
+        .container {
+            width: 75%;
+            margin: auto;
+            padding: 1rem;
+            border: 1px solid #333;
+        }
+
+        .wrap {
+            border: 5px dotted #333;
+            margin: 50px;
+            padding: 50px 0;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border-radius: 20%;
+            background-color: black;
+            color: white;
+            line-height: 100px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        @keyframes myAnimation {
+
+            /* from = 0% 初始狀態 也可以寫 0% */
+            from {
+                transform: translate(0, 0) rotate(0deg) scale(1);
+                background-color: red;
+            }
+
+            50% {
+                transform: rotate(90deg) scale(1.5);
+                background-color: green;
+            }
+
+            /* to = 100% */
+            to {
+                left: 100%;
+                transform: translate(50vw, 0) rotate(360deg) scale(1);
+                background-color: blue;
+            }
+        }
+
+        .animation {
+            /* animation-name: myAnimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-direction: normal;
+            animation-delay: 1s;
+            animation-fill-mode: both; */
+            animation: myAnimation 2s 1s infinite alternate cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>動畫</h1>
+        <h2>animation</h2>
+        <ul>
+            <li>可以設定關鍵幀(@keyframes)控制動畫進度的狀態，產生更複雜的動畫</li>
+            <li>網頁載入時自動播放，也可以觸發用新增，刪除 c;ass 的方式</li>
+            <li>可以循環重複來回播放</li>
+        </ul>
+        <div class="wrap">
+            <div class="box animation">hola</div>
+        </div>
+    </div>
+</body>
+
+</html>

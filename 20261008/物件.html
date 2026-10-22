@@ -1,0 +1,64 @@
+<!-- 宣告這份文件使用 HTML5 版本 -->
+<!DOCTYPE html>
+<!-- 開始 HTML 文件，設定語言為英文 -->
+<html lang="en">
+
+<!-- 開始網頁的 head 區塊，放置頁面資訊與設定 -->
+
+<head>
+    <!-- 指定字元編碼為 UTF-8，支援中文 -->
+    <meta charset="UTF-8">
+    <!-- 設定 viewport，讓頁面在手機上能正常縮放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 設定頁籤標題為 Document -->
+    <title>Document</title>
+</head>
+
+<!-- 開始網頁內容區 -->
+
+<body>
+    <!-- 開始 JavaScript 腳本區塊 -->
+    <script>
+        // 建立一個物件 f2e，儲存班級相關資訊
+        const f2e = {
+            // 班級名稱
+            name: '前端',
+            // 班級年度
+            year: 115,
+            // 學期數
+            semester: 2,
+            // 教室編號
+            classroom: 1114
+        }
+        // 透過點記法讀取物件的 name 屬性，並輸出到頁面
+        document.write(`<p>班級名稱：${f2e.name}</p>`)
+        // 透過中括號記法讀取 year 屬性，並輸出到頁面
+        document.write(`<p>班級年分：${f2e['year']}</p>`)
+
+        // 建立一個字串 key，值為 'classroom'，用來動態讀取屬性
+        const key = 'classroom'
+
+        // 用變數 key 讀取 f2e 裡的 classroom 屬性，並輸出到頁面
+        document.write(`<p>教室：${f2e[key]}</p>`)
+        // 嘗試用 f2e.key 讀取屬性，這會因為 key 不是物件的實際屬性名稱而得到 undefined
+        document.write(`<p>教室：${f2e.key}</p>`)
+
+        // Object.keys 會回傳物件所有屬性的名稱陣列
+        // Object.values 會回傳物件所有屬性的值陣列
+
+        // 顯示 f2e 的所有屬性名稱
+        console.log(Object.keys(f2e))
+        // 顯示 f2e 的所有屬性值
+        console.log(Object.values(f2e))
+
+        // 檢查 'abc' 是否為 f2e 的屬性名稱，結果會是 false
+        console.log('abc' in f2e)
+
+        document.write('abc' in f2e)
+
+    </script>
+</body>
+
+<!-- 結束 HTML 文件 -->
+
+</html>

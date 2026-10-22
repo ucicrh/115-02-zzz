@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        document.write('通貨膨脹練習題', '<br>');
+        const current = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        const quan = [1, 8, 3, 4, 5, 6, 7, 2, 9, 10]
+        let sum = 0
+        for (let i = 0; i < current.length; i++) {
+            sum += current[i] * quan[i]
+            document.write('小明第', i + 1, '天買', quan[i], '個饅頭花費的金額為', sum, '元', '<br>')
+        }
+        document.write('<span style="background-color: crimson;text-shadow: 1px 1px 1px;">小明買饅頭花費的總金額為', sum, '元', '</span><hr>')
+
+        // ================================================================
+
+        document.write('銷售練習題', '<br>');
+        const product = ['A', 'B', 'C', 'D', 'E'];
+        const price = [12, 16, 10, 14, 15]
+        const name = ['銷售員1', '銷售員2', '銷售員3']
+        const data = [
+            [33, 32, 56, 45, 33],
+            [77, 33, 68, 45, 23],
+            [43, 55, 43, 67, 65]
+        ];
+
+        let totalps = 0
+        for (let i = 0; i < product.length; i++) {
+            let ps = 0
+            for (j = 0; j < data.length; j++) {
+                ps += price[i] * data[j][i];
+            }
+            document.write(product[i], '產品', '的銷售總額為 ', ps, '元<br>')
+            totalps += ps
+        }
+        document.write('<span style="background-color: crimson;text-shadow: 1px 1px 1px;">產品的銷售總額為 ', totalps, '元</span><br>')
+
+        // -----------------------------------------------------------------
+        let total = 0
+        for (let i = 0; i < data.length; i++) {
+            let sales = 0
+
+            for (let j = 0; j < price.length; j++) {
+                sales += price[j] * data[i][j];
+            }
+            document.write(name[i], '的銷售總額為 ', sales, '元</span><br>')
+            total += sales
+        }
+        document.write('<span style="background-color: crimson;text-shadow: 1px 1px 1px;"> 縂銷售總額為 ', total, '元</span><br>')
+        document.write('<hr>')
+
+        // ================================================================
+
+        document.write('平均溫度練習題', '<br>');
+
+        const tempData = [
+            [18.2, 17.3, 15.0, 13.4],
+            [23.8, 25.1, 20.6, 17.8],
+            [20.6, 21.5, 18.4, 15.7]
+        ]
+        document.write('<table style border = 1>')
+        for (let i = 0; i < tempData.length; i++)
+
+            document.write('</table>')
+    </script>
+    </p>
+</body>
+
+</html>

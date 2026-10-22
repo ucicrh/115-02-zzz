@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const decrypt = (text) => {
+            // ... 在此寫你的程式碼
+            let result = ''
+            for (let i = 0; i < text.length - 1; i++) {
+                const difference = Math.abs(text.charCodeAt(i + 1) - text.charCodeAt(i))
+                document.write(difference, '<br>')
+                result += difference
+            }
+            return result
+        }
+
+        const input = prompt('輸入文字')
+        if (input !== null) {
+            document.write(decrypt(input) || '請重新輸入')
+        }
+
+    </script>
+</body>
+
+</html>

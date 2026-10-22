@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function Hello() {
+        //     document.write('早上好，我有冰淇淋')
+        // }
+        // Hello()
+
+        // function Hello(time = '早上', item = '冰淇淋') {
+        //     console.log(arguments)
+        //     document.write(`<p>${time}好，我有${item}</p>`)
+        // }
+        // Hello('早上', '冰淇淋', 123)
+        // Hello('中午', '便當')
+        // Hello('晚上', '炸鷄')
+        // Hello()
+        // Hello(undefined, 'ABC')
+        // Hello('ABC', undefined)
+        /*
+        function Hello(time = '早上', item = '冰淇淋') {
+            if (time == '半夜') {
+                return
+            }
+            return `${time}好，我有${item}`
+            console.log(123)
+        }
+        const morning = Hello()
+        console.log(morning)
+        document.write(morning)
+        document.write(Hello('半夜', '隨便'))
+        */
+
+        const Hello = (time = '早上', item = '冰淇淋') => {
+            if (time == '半夜') {
+                return
+            }
+            return `${time}好，我有${item}`
+        }
+        document.write(Hello())
+        // 箭頭只有一個參數的時候，可以不加（）
+        const isOdd = input => {
+            // if (input % 2 === 1) {
+            //     return true
+            // } else {
+            //     return false
+            // }
+            return input % 2 === 1
+        }
+
+
+        // 剛好只有一行 return 時，可以省略 {} 和 return
+        const isEven = input => input % 2 === 0
+        console.log(isEven(2))
+        // 如果簡寫 return 物件時，物件的 {} 會被當成 function 的 {}, 需要加 ()
+        const test = () => ({ a: 1, b: 2 })
+
+
+
+    </script>
+</body>
+
+</html>

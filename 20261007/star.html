@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let level = prompt('請輸入層數');
+
+        for (let i = 1; i <= level; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write('★')
+            }
+
+            document.write("<br>")
+
+        }
+
+        document.write("<hr>")
+
+        for (let i = 1; i <= level; i++) {
+            for (let j = 1; j <= level - i; j++) {
+                document.write('☆')
+            }
+            for (let j = 1; j <= i; j++) {
+                document.write('★')
+            }
+            document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+        for (let i = 1; i <= level; i++) {
+            for (let j = 1; j <= level - i; j++) {
+                document.write('☆')
+            }
+            for (let j = 1; j <= i * 2 - 1; j++) {
+                document.write('★')
+            }
+            for (let j = 1; j <= level - i; j++) {
+                document.write('☆')
+            }
+            document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+        for (let i = 1; i <= level; i++) {
+
+            for (let j = level - i + 1; j > 0; j--) {
+                document.write('☆')
+            }
+
+            for (let j = 1; j <= i * 2 - 1; j++) {
+
+                document.write('★')
+            }
+
+            for (let j = level - i + 1; j > 0; j--) {
+                document.write('☆')
+            }
+            document.write("<br>")
+        }
+
+
+        for (let i = 1; i <= level; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write(`${i * j}` + " ")
+            }
+            document.write("<br>")
+        }
+
+        document.write("<hr>")
+
+        for (let hundreds = 1; hundreds <= 4; hundreds++) {
+            for (let tens = 1; tens <= 4; tens++) {
+                for (let ones = 1; ones <= 4; ones++) {
+                    if (hundreds !== tens &&
+                        hundreds !== ones &&
+                        tens !== ones) {
+                        document.write(`${hundreds}${tens}${ones}<br>`);
+                    }
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迴文練習</title>
+</head>
+
+<body>
+    <script>
+        const isPalindrome = (text) => {
+            const reversed = text.split('').reverse().join('')
+            for (let i = 0; i < text.length / 2; i++) {
+                if (text[i] !== reversed[i] || text === null || text == 0)
+                    document.write(`不ok<br>`)
+                else {
+                    document.write(`第${i + 1}個字母ok<br>`)
+                    return false
+                }
+            }
+            return true
+        }
+        const result = isPalindrome(prompt('輸入文字'))
+        console.log(result)
+    </script>
+</body>
+
+</html>

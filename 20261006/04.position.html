@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        .relative-box {
+            width: 200px;
+            height: 200px;
+            /* line-height 與 text-align 配合使用讓文字 */
+            line-height: 200px;
+            text-align: center;
+            border-color: lightblue;
+            border: 2px solid deepskyblue;
+            margin-bottom: 30px;
+            /* 相對定位 */
+            position: relative;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        .absolute-box {
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color: aquamarine;
+            border-color: brown;
+            border: 2px solid red;
+            margin-bottom: 30px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .bigbox {
+            width: 500px;
+            height: 500px;
+            border: 5px solid black;
+            position: relative;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            border: 2px solid red;
+            border-radius: 10px;
+            box-shadow: 0 5px 5px #fff;
+            position: relative;
+
+        }
+
+        .card .sale-badge {
+            position: absolute;
+            background-color: red;
+            color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            top: 10px;
+            left: 10px;
+        }
+
+        .card .fav-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            line-height: 32px;
+            text-align: center;
+            background-color: rgb(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>相對定位與絕對定位</h1>
+    <h2>1.相對定位(position:relative)</h2>
+    <div class="relative-box">自我相對偏移</div>
+    <p>該段落沒有因爲相對定位而改變位置，而上移到 relative-box 的位置</p>
+    <p>相對定位移動後，原本的空間會依然存在</p>
+    <p>定位后會產生 to right bottom left 等屬性可以做位置的偏移</p>
+
+
+    <hr>
+
+    <h2>2.絕對定位(position-absolute)</h2>
+    <p>通常排版時會用子絕（absolute）父向（relative）來實現特定的佈局</p>
+    <p>絕對定位會脫離正常流向進入定位層，後面的元素會小上填滿原本絕對元素的空間</p>
+    <p>會進入定位層級（可以設置 Z-index）</p>
+    <div class="bigbox">
+        <div class="absolute-box">絕對定位</div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <hr>
+    <h2>卡片範例</h2>
+    <div class="card">
+        <div class="sale-badge">限時八折</div>
+        <div class="fav-btn">❤️</div>
+        <img src="https://picsum.photos/300/200/?random=10">
+        <div class="card-info"></div>
+        <h3>卡片標題</h3>
+        <p>NT$ 3,000</p>
+        <button class="cart-btn">購買</button>
+    </div>
+
+</body>
+
+</html>

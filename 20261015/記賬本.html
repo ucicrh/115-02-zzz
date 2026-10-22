@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // const ledger = []
+        // let sum = 0
+        // for (; ;) {
+        //     const input = prompt('請輸入數字（輸入 0 或按取消可結算支出）')
+        //     if (input === null || input == 0) break
+        //     ledger.push(input)
+        //     sum += (input * 1)
+        // }
+        // document.write(ledger.join(' + '))
+        // document.write(' = ', sum)
+
+        const ledger = []
+        let sum = 0
+        while (true) {
+            const input = prompt('請輸入數字（輸入 0 或按取消可結算支出）')
+            if (input === null || input == 0 || input.trim() === '') break
+            ledger.push(input * 1)
+            sum += (input * 1)
+        }
+        document.write(ledger.join(' + '))
+        document.write(' = ', sum)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let lang = ""
+
+        // navigator.language 瀏覽器的語言
+        // if (navigator.language === 'zh-TW') {
+        // lang = '中文'
+        // } else if (navigator.language === 'en' || navigator.language === 'en-US') {
+        // lang = '英文'
+        // } else if (navigator.language === 'ja') {
+        // lang = '日文'
+        // }
+
+        switch (navigator.language) {
+            case 'zh-TW':
+                lang = '中文'
+                break
+            case 'en':
+            case 'en-US':
+                lang = '英文'
+                break
+            case 'ja':
+                lang = '日文'
+            default:
+                lang = '不知道'
+        }
+        document.write(lang)
+    </script>
+</body>
+
+</html>

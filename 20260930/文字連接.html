@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //prompt 顯示的訊息文字，輸入欄位的預設值
+        //出現文字輸入對話框，如果用戶按取消會得到 null
+        const lunch = prompt('中午吃什麽？', '排骨飯')
+        //輸入數字，得到的資料還是文字屬性
+        console.log(lunch)
+
+        //在文件上寫文字
+        document.write('<h1>今天中午吃' + lunch + '</h1>')
+        document.write(`<h1>今天中午吃'${lunch}</h1>`)
+
+        const c = prompt('攝氏溫度', '25度')
+        f = c * 9 / 5 + 32
+        document.write('攝氏' + c + '等於華氏' + f + '度')
+
+        const seconds = 10000
+        const minuts = seconds % 60
+        const hours = minutes % 60
+        document.write('10000秒是' + hours)
+    </script>
+</body>
+
+</html>

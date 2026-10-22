@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // const person = {
+        //     firstName: 'aaa',
+        //     lastName: 'bbb',
+        //     fullName: function () {
+        //         // this 代表目前的物件本身
+        //         return this.firstName + this.lastName
+        //     }
+        // }
+
+        // hi() {
+        //     return 'Hi, I am ' + this.fullName()
+        // }
+
+        // bye: () => {
+        //     return this.firstName
+        // }
+
+        // console.log(person.fullName())
+        // console.log(person.hi())
+        // console.log(person.bye())
+
+        class Person {
+            firstName = ''
+            lastName = ''
+            constructor(firstName, lastName) {
+                this.firstName = firstName
+                this.lastName = lastName
+            }
+            fullName() {
+                return this.fullName + this.lastName
+            }
+        }
+        const p1 = new Person('aaa', 'AAA')
+        console.log(p1.fullName())
+        const p2 = new Person('bbb', 'BBB')
+        console.log(p2.fullName())
+    </script>
+</body>
+
+</html>

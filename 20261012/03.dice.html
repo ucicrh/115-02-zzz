@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .dice {
+            width: 200px;
+            height: 200px;
+            border: 1px;
+            border: 2px solid black;
+            display: inline-block;
+            border-radius: 1rem;
+            background-image: linear-gradient(45deg, #777, white);
+            /* 轉型inline-block 底部會產生空白， 可以用 vertical-align 清除，不要用 baseline */
+            vertical-align: middle;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: relative;
+        }
+
+        .point-red {
+            width: 40px;
+            height: 40px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .point-black {
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .left-top {
+            top: 10%;
+            left: 10%;
+        }
+
+        .right-top {
+            top: 10%;
+            right: 10%;
+        }
+
+        .right-center {
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+        }
+
+        .right-bottom {
+            bottom: 10%;
+            right: 10%;
+        }
+
+        .left-bottom {
+            bottom: 10%;
+            left: 10%;
+        }
+
+        .left-center {
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+
+        }
+
+        .center {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 一點 -->
+        <div class="dice">
+            <div class="point-red center"></div>
+        </div>
+        <!-- 二點 -->
+        <div class="dice">
+            <div class="point-black left-top"></div>
+            <div class="point-black right-bottom"></div>
+        </div>
+        <!-- 三點 -->
+        <div class="dice">
+            <div class="point-black left-top"></div>
+            <div class="point-black center"></div>
+            <div class="point-black right-bottom"></div>
+        </div>
+        <!-- 四點 -->
+        <div class="dice">
+            <div class="point-black left-top"></div>
+            <div class="point-black right-top"></div>
+            <div class="point-black right-bottom"></div>
+            <div class="point-black left-bottom"></div>
+        </div>
+        <!-- 五點 -->
+        <div class="dice">
+            <div class="point-black left-top"></div>
+            <div class="point-black right-top"></div>
+            <div class="point-black center"></div>
+            <div class="point-black right-bottom"></div>
+            <div class="point-black left-bottom"></div>
+        </div>
+        <!-- 六點 -->
+        <div class="dice">
+            <div class="point-black left-top"></div>
+            <div class="point-black right-top"></div>
+            <div class="point-black right-center"></div>
+            <div class="point-black right-bottom"></div>
+            <div class="point-black left-bottom"></div>
+            <div class="point-black left-center"></div>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>

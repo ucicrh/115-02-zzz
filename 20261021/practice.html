@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8"> <!-- 設定文件編碼為 UTF-8，讓中文能正確顯示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 設定視窗寬度跟隨裝置，讓手機也能正確縮放 -->
+    <title>Document</title> <!-- 設定瀏覽器分頁的標題 -->
+</head>
+
+<body>
+    <script>
+
+        const products = [ // 宣告商品陣列 products，內含六個商品物件
+            { id: 1, name: '無線滑鼠', price: 590, category: '周邊', stock: 12 }, // 商品 1：編號、名稱、價格、分類、庫存
+            { id: 2, name: '機械鍵盤', price: 2490, category: '周邊', stock: 0 }, // 商品 2：庫存為 0，沒有貨
+            { id: 3, name: '27 吋螢幕', price: 6990, category: '螢幕', stock: 5 }, // 商品 3
+            { id: 4, name: 'USB 隨身碟', price: 350, category: '儲存', stock: 30 }, // 商品 4
+            { id: 5, name: '外接硬碟', price: 1990, category: '儲存', stock: 0 }, // 商品 5：庫存為 0，沒有貨
+            { id: 6, name: '網路攝影機', price: 1290, category: '周邊', stock: 8 } // 商品 6：最後一項，後面不加逗號
+        ] // 陣列結束
+
+        const productsAvailable = products.filter((product) => { // 用 filter 篩選 products，回傳符合條件的商品組成新陣列，不會改動原陣列
+            return product.stock > 0 // 條件：庫存大於 0（有貨）的商品才保留
+        }) // filter 結束，productsAvailable 為有庫存的商品陣列
+        const inventory = productsAvailable.map((item) => item.name) // 用 map 取出每個商品的名稱，組成新的名稱陣列 inventory
+        document.write('有庫存的商品： ' + inventory.join('、')) // 用 join 以「、」串接名稱，寫入頁面
+        document.write('<hr>') // 寫入水平線，用來分隔區塊
+
+        const id3 = products.find((product) => product.id === 3) // 用 find 找出第一個 id 為 3 的商品，找不到則為 undefined
+        document.write('id 為 3 的產品： ', id3.name) // 寫入 id 為 3 的商品名稱（document.write 可接受多個參數，依序寫入）
+        document.write('<hr>') // 寫入水平線，用來分隔區塊
+
+        const sortByPricing = products.toSorted((a, b) => { // 用 toSorted 依比較函式排序，回傳新陣列，不會改動原陣列
+            return a.price - b.price // 價格由低到高排列：小的排前面
+        }) // toSorted 結束，sortByPricing 為依價格排序後的商品陣列
+        const sortedNames = sortByPricing.map((product) => product.name) // 用 map 取出排序後每個商品的名稱，組成新陣列 sortedNames
+        document.write('價格排序： ' + sortedNames.join('、')) // 用 join 以「、」串接名稱，寫入頁面
+        document.write('<hr>') // 寫入水平線，用來分隔區塊
+
+        let totalStockValue = 0 // 宣告總庫存價值變數並設為 0，之後會用 += 累加，所以用 let
+        for (const product of products) { // 逐一取出 products 中的每個商品
+            totalStockValue += product.price * product.stock // 單價乘以庫存，加進總庫存價值
+        } // 迴圈結束，totalStockValue 為所有商品的庫存價值總和
+        document.write('庫存總價值： ' + totalStockValue) // 寫入庫存總價值
+        document.write('<hr>') // 寫入水平線，用來分隔區塊
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const fruits = ['蘋果', '西瓜', '香蕉']
+
+        // forEach()
+        // 陣列每個東西都執行提供的function
+        // 三個參數按照順序是值，索引陣列本身
+        fruits.forEach((value, index, array) => {
+            console.log(value, index, array)
+        })
+
+        fruits.push('草莓')
+        console.log(fruits, fruits.length)
+        fruits.push('橘子', '牛油果')
+        console.log(fruits)
+
+        const otherFruits = ['葡萄', '柿子']
+        fruits.push(...otherFruits) //...把陣列攤開
+        console.log(fruits)
+
+        // .unshift 新增到前面
+        fruits.unshift('木瓜')
+        console.log(fruits)
+
+        // .pop 移除最後一個并回傳
+        const last = fruits.pop()
+        console.log(last, fruits)
+
+        // .shift 移除第一個并回傳
+        const first = fruits.shift()
+        console.log(first, fruits)
+
+        // .splice(索引，刪除數量，插入内容...)
+        fruits.splice(1, 2, '榴蓮', '火龍果')
+        console.log(fruits)
+
+        // .slice
+        // 將結果變成新的陣列，不會動原始陣列
+        const newFruits = fruits.slice(0, 3)
+        console.log(fruits, newFruits)
+
+        // .toReversed 產生顛倒的新陣列
+        // .reverse 直接顛倒原始陣列
+        const reverse = fruits.toReversed()
+        console.log(fruits, reverse)
+
+        // .join（連接文字）
+        document.write(fruits, '-')
+
+    </script>
+</body>
+
+</html>

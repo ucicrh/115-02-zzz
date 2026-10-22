@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const a = [1, 2, 3]
+        const b = a.slice(0)
+        a[0] += 10
+        console.log(a, b)
+
+        const c = [
+            { text: 'aaa', num: 100 },
+            { text: 'bbb', num: 200 },
+        ]
+
+        const d = c.slice(0)
+        d[0].text = 'AAA'
+        d.push({ text: 'ccc', num: 300 })
+        console.log(c, d)
+
+        const e = [
+            { text: 'aaa', num: 100 },
+            { text: 'bbb', num: 200 },
+        ]
+
+        const stringify = JSON.stringify(e)
+        console.log(stringify)
+        const parse = JSON.parse(stringify)
+        console.log(parse)
+        e(0).text = 'AAA'
+        e.push({ test: 'ccc', num: 300 })
+        console.log(e, parse)
+
+    </script>
+</body>
+
+</html>

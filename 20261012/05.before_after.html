@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除樣式 */
+        /* 全域選擇器 */
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            color: aliceblue;
+            background-color: burlywood;
+            margin: 2px auto;
+            /* 將僞元素鎖在容器内 */
+            position: relative;
+        }
+
+
+        .box::before {
+            /* 一定要content屬性 ，但是通常是”“空的*/
+            content: "";
+            width: 100px;
+            height: 100px;
+            transition: 0.5s;
+            background-color: black;
+            /* absolute 會將僞元素 由 inline 轉爲 box，就可以設定寬高 */
+            position: absolute;
+            left: -100px;
+        }
+
+        .box::after {
+            /* 一定要content屬性 */
+            content: "";
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /* absolute 會將僞元素 由 inline 轉爲 box，就可以設定寬高 */
+            position: absolute;
+            right: -100px;
+            top: 0;
+            transition: 0.5s;
+        }
+
+        .box:hover::before {
+            left: 100%;
+            transform: rotate(360deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .box:hover::after {
+            right: 100%;
+            transform: rotate(-360deg);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>僞元素</h1>
+    <p>主要用於裝飾或清除浮動，讓主元素擁有兩個分身來做事情</p>
+    <div class="box">
+        <!-- before -->
+        <div class="content">Lorem</div>
+        <!-- after -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮動 - float</title>
+    <style>
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 20px;
+            margin: auto;
+            border: 1px solid #000;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px #777;
+            display: flow-root;
+            margin-bottom: 20px;
+        }
+
+        .article-box {
+            background-color: #eaf2ff;
+            border: 1px solid #000;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .img-left {
+            float: left;
+            margin: 0 10px 10px 0;
+        }
+
+        .img-right {
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+
+        p {
+            margin: 0 0 10px;
+            color: rgb(28, 126, 211);
+        }
+
+        .clear-both {
+            clear: both;
+        }
+
+        .row .col {
+            float: left;
+            width: 33.3333%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+        .row img {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-shadow:2px 2px 2px #777;">浮動</h1>
+
+    <div class="container">
+        <h2>圖片靠左浮動</h2>
+        <div class="article-box">
+            <img class="img-left" src="https://picsum.photos/300/200/?random=10" alt="隨機示例圖片">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae reiciendis ut similique? Non eius
+                voluptatum
+                tempora corporis iusto placeat voluptas magnam iste fugit assumenda, aut reiciendis quidem explicabo.
+                Nam
+                assumenda ratione atque vero, veniam quisquam voluptatibus? Similique vero asperiores quam eum soluta
+                perspiciatis qui est architecto error, velit accusamus voluptate quod aspernatur iste aliquam nemo.
+                Aperiam
+                eveniet explicabo porro laudantium ut, officia hic consequuntur vero consequatur nostrum facere quidem
+                est
+                sunt
+                laborum unde veritatis earum voluptate corporis pariatur, ipsa at mollitia minus similique! Perferendis,
+                libero
+                accusantium. Animi excepturi unde voluptatem laborum, expedita provident eligendi odio est libero
+                consectetur
+                illum suscipit dolores, ipsum vero facere asperiores nemo aspernatur dolorum aperiam ducimus eos iste
+                pariatur
+                consequuntur quam! Quas, hic et reprehenderit facere sequi ipsa dicta sed facilis id qui sit, reiciendis
+                odit
+                unde nemo blanditiis vero maxime fuga consequatur? Deserunt placeat ullam dolorem provident ducimus
+                accusantium
+                asperiores excepturi, laboriosam eligendi voluptatibus minus natus aperiam eveniet animi magnam. Veniam
+                iure
+                ea
+                molestiae reprehenderit cum, quod hic corrupti quasi iusto pariatur sit, nobis eaque placeat nulla magni
+                officia
+                obcaecati rem vero suscipit reiciendis temporibus aspernatur excepturi soluta quisquam? Obcaecati
+                voluptatibus
+                laboribus esse, doloremque commodi earum accusamus</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>圖片靠右浮動與清除浮動</h2>
+
+        <div class="article-box">
+            <img class="img-right" src="https://picsum.photos/300/200/?random=10" alt="隨機示例圖片">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vel nihil nostrum dolorem esse libero
+                modi.
+                Tempore repellendus quasi deleniti sequi fugit? Harum odit animi obcaecati voluptatibus, quibusdam
+                facilis
+                itaque.</p>
+            <p class="clear-both">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum quidem amet minima laborum. Voluptatum
+                recusandae consectetur adipisci odit obcaecati delectus harum corporis nemo, a est itaque hic quibusdam
+                odio
+                consequatur ipsa aperiam sequi modi tempora debitis voluptate quam aspernatur? Possimus, soluta! Quos
+                magnam
+                voluptate consequuntur a doloribus beatae dolorum maiores.
+            </p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" alt="隨機示例圖片">
+                    <h3>卡片標題</h3>
+                    <p>人力工作工廠今日再度街道戰士註冊時間口氣資訊上班，就會這時婦女兩位硬體吸引提示訊息，已被出口表面，頭銜傳播中間為你自主走進出來進入互動臨床留學動物想到請求，姓名說明保健核心高雄並且舉行樹林打印豪華小學多種呼吸親自宣佈，相同聯想，授權開發商，人士現在，優惠。
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" alt="隨機示例圖片">
+                    <h3>卡片標題</h3>
+                    <p>人力工作工廠今日再度街道戰士註冊時間口氣資訊上班，就會這時婦女兩位硬體吸引提示訊息，已被出口表面，頭銜傳播中間為你自主走進出來進入互動臨床留學動物想到請求，姓名說明保健核心高雄並且舉行樹林打印豪華小學多種呼吸親自宣佈，相同聯想，授權開發商，人士現在，優惠。
+                    </p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://picsum.photos/300/200/?random=10" alt="隨機示例圖片">
+                    <h3>卡片標題</h3>
+                    <p>人力工作工廠今日再度街道戰士註冊時間口氣資訊上班，就會這時婦女兩位硬體吸引提示訊息，已被出口表面，頭銜傳播中間為你自主走進出來進入互動臨床留學動物想到請求，姓名說明保健核心高雄並且舉行樹林打印豪華小學多種呼吸親自宣佈，相同聯想，授權開發商，人士現在，優惠。
+                    </p>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

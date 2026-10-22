@@ -1,0 +1,89 @@
+<!DOCTYPE html> <!-- 宣告這是一份 HTML5 網頁 -->
+<html lang="zh-TW"> <!-- 設定網頁主要語言為繁體中文 -->
+
+<head>
+    <meta charset="UTF-8"> <!-- 設定文字編碼，避免中文亂碼 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 讓網頁在手機上依螢幕寬度顯示 -->
+    <title>Document</title> <!-- 設定瀏覽器分頁上的標題 -->
+</head>
+
+<body>
+    <script>
+        // 輸入年份、月份和日期。
+        let year = Number(prompt('請輸入西元年份'))
+        let month = Number(prompt('請輸入西元月份'))
+        let date = Number(prompt('請輸入西元日期'))
+
+        // 先假設不是閏年；可被 4 整除且不可被 100 整除，或者能被 400 整除時是閏年。
+        let feb = 28
+        if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+            feb = 29
+        }
+
+        document.write('<h2>閏年計算規則</h2>')
+        document.write('規則：<br>')
+        document.write('1. 能被 4 整除，且不能被 100 整除<br>')
+        document.write('2. 或者能被 400 整除<br><br>')
+
+        // 依月份決定該月有幾天。
+        let maxDate = 31
+        if (month === 2) {
+            maxDate = feb
+        } else if (month === 4 || month === 6 || month === 9 || month === 11) {
+            maxDate = 30
+        }
+
+        // 檢查輸入的年份、月份和日期是否有效。
+        if (year < 1 || month < 1 || month > 12 || date < 1 || date > maxDate ||
+            !Number.isInteger(year) || !Number.isInteger(month) || !Number.isInteger(date)) {
+            document.write('請重新輸入');
+        } else {
+            if (feb = 29) {
+                document.write(`${year} 年是閏年，二月有 ${feb} 天`)
+            } else {
+                document.write(`${year} 年是閏年，二月有 ${feb} 天`)
+            }
+
+            // 將日期加上前面月份的天數，算出這天是全年第幾天。
+            let dayOfYear = date
+            if (month > 1) {
+                dayOfYear = dayOfYear + 31
+            }
+            if (month > 2) {
+                dayOfYear = dayOfYear + feb
+            }
+            if (month > 3) {
+                dayOfYear = dayOfYear + 31
+            }
+            if (month > 4) {
+                dayOfYear = dayOfYear + 30
+            }
+            if (month > 5) {
+                dayOfYear = dayOfYear + 31
+            }
+            if (month > 6) {
+                dayOfYear = dayOfYear + 30
+            }
+            if (month > 7) {
+                dayOfYear = dayOfYear + 31
+            }
+            if (month > 8) {
+                dayOfYear = dayOfYear + 31
+            }
+            if (month > 9) {
+                dayOfYear = dayOfYear + 30
+            }
+            if (month > 10) {
+                dayOfYear = dayOfYear + 31
+            }
+            if (month > 11) {
+                dayOfYear = dayOfYear + 30
+            }
+            document.write(`<br>  ${month}  月  ${date}  日是  ${year}  年的第   ${dayOfYear + date}  天`)
+        }
+
+        document.write('<hr>')
+    </script>
+</body>
+
+</html>

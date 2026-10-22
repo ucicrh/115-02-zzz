@@ -1,0 +1,69 @@
+<!-- 宣告這份文件使用 HTML5 版本 -->
+<!DOCTYPE html>
+<!-- 開始 HTML 文件，語言設定為英文 -->
+<html lang="en">
+
+<!-- 開始 head 區塊，放置文件資訊 -->
+
+<head>
+    <!-- 設定字元編碼為 UTF-8，以支援中文 -->
+    <meta charset="UTF-8">
+    <!-- 讓頁面在手機裝置上能正確縮放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 頁籤上顯示的標題 -->
+    <title>Document</title>
+</head>
+
+<!-- body 區塊是網頁內容顯示區 -->
+
+<body>
+    <!-- 開始 JavaScript 腳本 -->
+    <script>
+        // 建立一個陣列 alphabets，內容為 ['a', 'b', 'c', 'd']
+        const alphabets = ['a', 'b', 'c', 'd']
+        // 陣列索引位置對應：0, 1, 2, 3
+        // .................0....1....2....3
+
+        // 這段註解展示原本的寫法：逐一取值
+        // const apple = alphabets[0]
+        // const banana = alphabets[1]
+        // const others = [alphabets[2], alphabets[3]]
+
+        // 使用陣列解構賦值，將第一個值給 apple，第二個值給 banana，剩餘值收集到 others
+        const [apple, banana, ...others] = alphabets
+        // 顯示 apple 的值，結果為 a
+        document.write(`<p>apple: ${apple}</p>`)
+        // 顯示 banana 的值，結果為 b
+        document.write(`<p>banana: ${banana}</p>`)
+        // others 會變成 ['c', 'd']，陣列轉字串後會顯示 c,d
+        document.write(`<p>others: ${others}</p>`)
+
+        // 插入一條水平分隔線
+        document.write('<hr>')
+
+        // 建立一個物件 f2e，保存班級資訊
+        const f2e = {
+            // 班級名稱
+            name: '前端',
+            // 班級年度
+            year: 115,
+            // 學期數
+            semester: 2,
+            // 教室編號
+            classroom: 1114
+        }
+
+        // 使用物件解構賦值，取出 name 和 year，其他屬性收集到 f2eothers
+        const { name, year, ...f2eothers } = f2e
+        // 顯示拿出的 name，結果為 前端
+        document.write(`<p>name: ${name}</p>`)
+        // 顯示拿出的 year，結果為 115
+        document.write(`<p>year: ${year}</p>`)
+        // f2eothers 會剩下 { semester: 2, classroom: 1114 }
+        // 直接輸出物件會變成 [object Object]，所以要先用 JSON.stringify 轉成字串
+        document.write(`<p>其他資料: ${JSON.stringify(f2eothers)}</p>`)
+
+    </script>
+</body>
+
+</html>

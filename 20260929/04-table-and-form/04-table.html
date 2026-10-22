@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表格</title>
+</head>
+
+<body>
+    <h1>biaoge</h1>
+    <h2>範例一:一個完整的表格(包含thead,tbody,tfoot)</h2>
+    <table border="1" width="400">
+        <caption>成績表</caption>
+
+        <!-- 表格的頭 -->
+        <thead>
+            <!-- tr table row -->
+            <tr>
+                <th>學號</th>
+                <th>姓名</th>
+                <td>HTML</td>
+                <td>CSS</td>
+            </tr>
+        </thead>
+
+        <!-- 表格的身體 -->
+        <tbody>
+            <!-- 用 emmet 快速輸入結構 -->
+            <!-- tr>td*3 -->
+            <tr>
+
+                <td>A001</td>
+                <td>小明</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>A002</td>
+                <td>小華</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>A003</td>
+                <td>大寶</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+
+        <!-- 表格的脚 -->
+        <tfoot>
+            <tr>
+                <td></td>
+                <td>全班平均</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <hr>
+
+
+    <h2>範例二：表格合并</h2>
+    <!-- 6 x 6 表格 -->
+    <!-- table>tr*6>td*6 -->
+    <!-- table>tr*6>td{$}*6 -->
+    <!-- cellspacing 儲存格之間的距離 -->
+    <!-- cellpadding 儲存格的内距 -->
+    <p>colspan(欄合并):左吃右,右消失,colspan="吃幾個+自己"</p>
+    <p>rowspan(列合并):上吃下,下消失,rowspan="吃幾個+自己"</p>
+    <table border="1" width="600" align="center" cellspacing="10" cellpadding="20">
+        <tr align="center">
+            <td colspan="3">45555666644</td>
+            <td>45555666644</td>
+            <td>45555666644</td>
+            <td>45555666644</td>
+        </tr>
+        <tr align="center">
+            <td rowspan="4">1</td>
+            <td colspan="4">2</td>
+            <td rowspan="5">6</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr align="center">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <p>
+        回到<a href="../03-link-and-image/03-link-and-image.html">上一單元:模組03：超鏈接與圖片</a>
+    </p>
+    <p>
+        回到<a href="./05-form.html">下一單元:表單</a>
+    </p>
+
+</body>
+
+</html>

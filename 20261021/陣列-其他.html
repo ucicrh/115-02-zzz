@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const data = [
+            { text: 'aaa', num: 100 },
+            { text: 'bbb', num: 200 },
+            { text: 'ccc', num: 300 }
+        ]
+
+        const map = data.map(value => {
+            return value.num * 2
+        })
+        console.log('map', map)
+
+        const reduce = data.reduce((total, value) => {
+            console.log(total, value)
+            return total + value.num
+        }, 0)
+        console.log('reduce', reduce)
+
+        const numbers = [123, 123, 435, 78, 354, 123, 89, 34, 123, 980, 23, 42, 68, 13, 324, 546, 57, 68, 897, 908]
+        const sort = numbers.toSorted((a, b) => {
+            console.log(a, b)
+            return a - b
+        })
+        console.log('sort', sort)
+
+        const text = ['三', '七', '五', '九', '一', 'AA', 'a', '1', '10', '11', '9']
+        const sortText = text.sort((a, b) => {
+            return a.localeCompare(b, 'zh-TW')
+        })
+        console.log('sortText', sortText)
+    </script>
+</body>
+
+</html>

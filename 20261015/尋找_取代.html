@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const text = '豬排咖喱 鷄排咖喱'
+        // .includes()
+
+        console.log('includes', text.includes('豬排'))
+
+        console.log('indexOf', text.indexOf('咖喱'))
+
+        console.log('replace', text.replaceAll('咖喱', '便當'))
+
+        const email = 'aaa@gmail.com'
+        const regex = /^(?<user>[a-z0-9]+)@(?<domain>[a-z0-9.]+)$/
+        const match = email.match(/^(?<user>[a-z0-9]+)@([a-z0-9.]+)$/)
+        console.log('match', match['groups']['user'])
+
+        console.log(email.replace(regex, '賬號是 $<user>'))
+
+    </script>
+</body>
+
+</html>

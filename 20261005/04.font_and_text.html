@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.font_and_text</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Damion&family=LXGW+WenKai+Mono+TC&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Damion&family=Isometra&family=LXGW+WenKai+Mono+TC&family=Orbitron:wght@400..900&display=swap"
+        rel="stylesheet">
+    <style>
+        .font_style {
+            font-size: 20px;
+            /* 單位 px, rem, em... */
+            font-size: 1.5em;
+            font-style: italic;
+            /* 粗體 100~900, bold */
+            font-weight: bold;
+            /* 字形家族,依據客戶電腦擁有字形依序選擇使用 */
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        /* font-face 要定義font-family(自定義名稱)和 src (字形來源) */
+        @font-face {
+            font-family: "myFont";
+            src:
+                url("Ace Records.ttf"),
+                url("Adine Kirnberg.ttf"),
+                url("Antro_Vectra_Bolder.otf"),
+                url("waltograph42.otf");
+        }
+
+        .font_set {
+            font-family: "myFont";
+            font-size: 1.5em;
+        }
+
+        .google-font {
+            font-family: "Damion", cursive;
+            font-size: 2em;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .google-font2 {
+            font-family: "Orbitron";
+        }
+
+        .text-style {
+            /* 對齊方式 left, center, right */
+            text-align: left;
+            /* 文字裝飾 none, underline, overline, line-through */
+            text-decoration: underline;
+            /* 首行排縮 */
+            text-indent: 2rem;
+            /*  x偏移位, y偏移位, 模糊半徑, 顔色 */
+            text-shadow: 2px 2px 2px rgba(0, 77, 77, 0.3);
+            /* 英文字母或中文字間隔 */
+            letter-spacing: 2px;
+            /* 單子間隔,一定要空格,通常用於英文,中文沒有空格很難被影響 */
+            word-spacing: 30px;
+            /* 行高,預設16px */
+            /* 可以設定符合 css 單位,一般用 px, rem, % */
+            /* 如果使用無單位,表示相對於字體大小的倍數 */
+            line-height: 32px;
+            line-height: 2;
+        }
+
+        /* Link Visited  Hover Active 按照順序 LVHA(LoVe HAte) */
+
+        /* :是僞類(虛擬類別)家族 Pseudo-classes */
+        a:link {
+            color: aqua;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: black;
+            transition: 1s;
+        }
+
+        .box:hover {
+            background: purple;
+            width: 200px;
+            height: 200px;
+            transform: rotate(360deg);
+
+        }
+
+        /* 已拜訪過樣式 */
+        a:visited {
+            color: brown;
+        }
+
+        a:hover {
+            color: chocolate;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: black;
+
+        }
+
+        /* 預設大小 */
+        html {
+            font-size: 20px;
+        }
+
+        /* 根元素 */
+        :root {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    font-family: "LXGW WenKai Mono TC", monospace;
+
+    <h1>1. font 樣式設定</h1>
+    <p class="font_style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium dolore id ea qui nulla
+        necessitatibus animi,
+        saepe tempore ipsa provident numquam sit tempora doloribus quos molestiae quisquam inventore! Nisi, aut?</p>
+
+    <hr>
+
+    <div>
+        <p style="font-weight: bolder;font-size: 1.5em; font-style: italic;">Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit.
+            Corporis laudantium
+            consequuntur perferendis
+            dolores. Laboriosam incidunt atque nesciunt ea laborum aspernatur, illo rem, accusantium aliquam voluptas,
+            aperiam dignissimos nobis velit veniam?</p>
+    </div>
+
+    <h2>自定字形</h2>
+    <p class="font_set">Lorem ipsum dolor sit.</p>
+
+    <hr>
+    <p style="font-weight: 400; font-style: normal; letter-spacing: 5px;">
+        大力甚至人家沒人外貿因素要在不肯一句話，休息執行人員但他臺灣昨天都有工人處於先生在這土地個性編號，將在填寫普遍，電視台不會所說開關原創先進，糖尿病有所培訓爭取，平衡集團課程覺得精神施工不過不對適用晶片，任務功夫部門原始碼加入時間及其挑戰協會網站責任，影響。
+    </p>
+    <p class="google-font">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae sint sed voluptatum
+        vitae ad porro autem perferendis ab doloribus eligendi consequuntur fugiat cum iusto ipsam, exercitationem
+        suscipit minus voluptatibus temporibus.
+    </p>
+    <div>
+        <p class="google-font2" style="color: brown;">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Cupiditate,
+            ullam modi
+            ducimus nam
+            repudiandae totam libero nobis. At, officia id? Est quia, tempora quam eos repellendus nam repudiandae illum
+            neque.</p>
+    </div>
+    <h1>2.text 樣式設定</h1>
+    <p class="text-style">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nulla modi doloremque
+        adipisci, omnis harum doloribus eos laboriosam sint vitae quod ea praesentium fuga veniam placeat laudantium
+        sequi commodi tempore?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora laboriosam deleniti
+        aliquid
+        deserunt aperiam fugit perferendis, minima doloremque esse earum neque culpa in. Quam fugiat quaerat id tenetur
+        voluptatum in?</p>
+
+    <hr>
+
+    <h1>3. 連結變化</h1>
+    <a href="#">Google</a>
+
+    <div class="box">
+        <p align="center">Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <h1>REM 與 EM</h1>
+    <p>REM 為 root 預設 font-size 的倍數, 預設為 16px</p>
+    <div style="font-size: 1rem;">
+        font
+        <div style="font-size: 2rem;">
+            font
+            <div style="font-size: 3rem;">
+                font
+            </div>
+        </div>
+    </div>
+
+    <p>EM 可能為父層或祖先層級 font-size 的倍數</p>
+    <!--  -->
+    <div style="font-size: 1em;">
+        font
+        <div style="font-size: 2em;">
+            font
+            <div style="font-size: 3em;">
+                font
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

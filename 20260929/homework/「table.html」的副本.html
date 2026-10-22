@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【廢土連線】賽博超現實課表</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@600;900&display=swap');
+
+        :root {
+            --neon-cyan: #00f3ff;
+            --neon-pink: #ff0055;
+            --neon-yellow: #ffe600;
+            --wasteland-sand: #d4a373;
+            --rust-dark: #120e0c;
+            --panel-bg: rgba(20, 16, 15, 0.75);
+            --glitch-color: #00ff66;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--rust-dark);
+            /* 廢土粉塵與賽博網格混和背景 */
+            background-image:
+                radial-gradient(circle at 50% 30%, rgba(212, 163, 115, 0.15) 0%, transparent 70%),
+                linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+            background-size: 100% 100%, 30px 30px, 30px 30px;
+            color: #e0d8d0;
+            font-family: 'Share Tech Mono', 'Courier New', monospace;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* 全息掃描線效果 */
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            z-index: 10;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        /* 超現實漂浮標題 */
+        .title-container {
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.5rem;
+            color: var(--neon-cyan);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            text-shadow:
+                0 0 5px var(--neon-cyan),
+                0 0 15px rgba(0, 243, 255, 0.6),
+                2px 2px 0px var(--neon-pink);
+            animation: glitch-anim 3s infinite alternate;
+        }
+
+        .subtitle {
+            color: var(--wasteland-sand);
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* 破敗金屬外框容器 */
+        .table-wrapper {
+            background: var(--panel-bg);
+            border: 2px solid var(--wasteland-sand);
+            box-shadow:
+                0 0 15px rgba(212, 163, 115, 0.2),
+                inset 0 0 15px rgba(0, 0, 0, 0.8),
+                0 0 30px rgba(0, 243, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 10px;
+            position: relative;
+            clip-path: polygon(0 0, 97% 0, 100% 3%, 100% 100%, 3% 100%, 0 97%);
+        }
+
+        /* 廢土賽博風表格 */
+        table {
+            border-collapse: separate;
+            border-spacing: 6px;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            padding: 12px 10px;
+            text-align: center;
+            background: rgba(30, 22, 18, 0.6);
+            border: 1px solid rgba(212, 163, 115, 0.3);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        /* 標頭欄位 */
+        tr:first-child td {
+            background: rgba(0, 243, 255, 0.1);
+            border-color: var(--neon-cyan);
+            color: var(--neon-cyan);
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-shadow: 0 0 8px var(--neon-cyan);
+        }
+
+        /* 時間/節數欄 (修正這裡 rgba(ff,...) → rgba(255,...)) */
+        td:first-child {
+            background: rgba(255, 0, 85, 0.08);
+            border-color: rgba(255, 0, 85, 0.4);
+            color: var(--neon-pink);
+            font-weight: bold;
+            font-size: 0.85rem;
+            line-height: 1.4;
+        }
+
+        /* 休息時間特別樣式 */
+        tr:nth-child(2) td,
+        tr:nth-child(6) td {
+            background: rgba(255, 230, 0, 0.05);
+            border-style: dashed;
+            border-color: rgba(255, 230, 0, 0.3);
+            color: var(--neon-yellow);
+            letter-spacing: 5px;
+            font-size: 0.85rem;
+        }
+
+        /* 課程儲存格 hover 互動超現實效果 */
+        td:hover:not([colspan]) {
+            background: rgba(0, 243, 255, 0.2);
+            border-color: var(--neon-cyan);
+            transform: scale(1.03);
+            box-shadow: 0 0 15px var(--neon-cyan);
+            color: #fff;
+            z-index: 5;
+        }
+
+        /* 教師姓名樣式 */
+        td span.teacher {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--wasteland-sand);
+            margin-top: 4px;
+            opacity: 0.8;
+        }
+
+        /* 超現實故障動畫 */
+        @keyframes glitch-anim {
+            0% {
+                text-shadow: 0 0 5px var(--neon-cyan), 2px 2px 0px var(--neon-pink);
+                transform: translate(0);
+            }
+
+            20% {
+                text-shadow: -2px 0 0 var(--neon-pink), 2px 0 0 var(--neon-cyan);
+                transform: translate(-2px, 1px);
+            }
+
+            40% {
+                text-shadow: 0 0 8px var(--glitch-color);
+                transform: translate(1px, -1px);
+            }
+
+            60% {
+                text-shadow: 2px -2px 0px var(--neon-pink);
+                transform: translate(0);
+            }
+
+            100% {
+                text-shadow: 0 0 5px var(--neon-cyan), 2px 2px 0px var(--neon-pink);
+                transform: translate(0);
+            }
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            td {
+                padding: 8px 4px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="title-container">
+        <h1>全息課表 SYSTEM v4.04</h1>
+        <div class="subtitle">// WASTELAND SURREALISM TERMINAL //</div>
+    </div>
+
+    <div class="table-wrapper">
+        <table>
+            <tr>
+                <td>節數</td>
+                <td>一</td>
+                <td>二</td>
+                <td>三</td>
+                <td>四</td>
+                <td>五</td>
+            </tr>
+            <tr>
+                <td>早自習<br>0750~0830</td>
+                <td colspan="5">// 系統初始化與能量充能 //</td>
+            </tr>
+            <tr>
+                <td>第一節<br>0840~0920</td>
+                <td rowspan="2">國語<span class="teacher">劉展華</span></td>
+                <td colspan="3">數學<span class="teacher">劉展華</span></td>
+                <td>國語<span class="teacher">劉展華</span></td>
+            </tr>
+            <tr>
+                <td>第二節<br>0930~1010</td>
+                <td>自然<span class="teacher">黃新民</span></td>
+                <td>音樂<span class="teacher">萬巧如</span></td>
+                <td>國語<span class="teacher">劉展華</span></td>
+                <td>彈性<span class="teacher">劉展華</span></td>
+            </tr>
+            <tr>
+                <td>第三節<br>1030~1110</td>
+                <td>數學<span class="teacher">劉展華</span></td>
+                <td>健康<span class="teacher">潘文欽</span></td>
+                <td>國語<span class="teacher">劉展華</span></td>
+                <td>鄉土<span class="teacher">魏士欽</span></td>
+                <td rowspan="2">自然<span class="teacher">黃新民</span></td>
+            </tr>
+            <tr>
+                <td>第四節<br>1120~1200</td>
+                <td>英語<span class="teacher">黃定宜</span></td>
+                <td>彈性<span class="teacher">劉展華</span></td>
+                <td>社會<span class="teacher">劉展華</span></td>
+                <td>英語<span class="teacher">黃定宜</span></td>
+            </tr>
+            <tr>
+                <td>午休時間<br>1200~1320</td>
+                <td colspan="5">// 靜音模式．輻射冷卻中 //</td>
+            </tr>
+            <tr>
+                <td>第五節<br>1330~1410</td>
+                <td>社會<span class="teacher">劉展華</span></td>
+                <td rowspan="2">美勞<span class="teacher">許文杰</span></td>
+                <td rowspan="3"></td>
+                <td rowspan="3">綜合<span class="teacher">劉展華</span></td>
+                <td>體育<span class="teacher">潘文欽</span></td>
+            </tr>
+            <tr>
+                <td>第六節<br>1420~1500</td>
+                <td>體育<span class="teacher">潘文欽</span></td>
+                <td>國語<span class="teacher">劉展華</span></td>
+            </tr>
+            <tr>
+                <td>第七節<br>1520~1600</td>
+                <td colspan="2">彈性<span class="teacher">劉展華</span></td>
+                <td>社會<span class="teacher">劉展華</span></td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

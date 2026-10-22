@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const idNumber = prompt('請輸入身分證字號 A123456789')
+
+        if (idNumber !== null && idNumber.length === 10) {
+            // const part1 = idNumber.slice(0, 4)
+            // let part2 = idNumber.slice(4, 7)
+            // const part3 = idNumber.slice(7, 10)
+            // part2 = '***'
+            // const maskedIdNumber = [part1, part2, part3].join('')
+            // document.write(maskedIdNumber)
+            document.write(idNumber.slice(0, 4) + '***', idNumber.slice(7, 10))
+        } else {
+            document.write('請輸入 10 個字元的身分證字號')
+        }
+
+
+    </script>
+</body>
+
+</html>

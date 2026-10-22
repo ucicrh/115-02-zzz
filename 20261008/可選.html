@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const users = [
+            {
+                name: 'aaa',
+                info: {
+                    email: 'aaa@bbb.com'
+                }
+            },
+            {
+                name: 'aab',
+                info: {
+                    email: 'aab@bbb.com',
+                    address: {
+                        city: '臺北',
+                    }
+                }
+            }
+        ];
+
+        for (let i = 0; i < users.length; i++) {
+            document.write(`<p>${users[i].name} 住在 ${users[i].info.address?.city || '不知道'}</p>`);
+            // ?.
+            // 代表：
+            // 如果 users[i].info.address 不存在，就不會報錯
+            // 如果不存在，就回傳 undefined
+            // || '不知道'
+            // 表示如果 city 是空值，就顯示 '不知道'
+        }
+
+    </script>
+</body>
+
+</html>

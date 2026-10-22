@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12號 星座判斷 作業</title>
+</head>
+
+<body>
+
+    <script>
+        const month = prompt('請輸入出生月份(1月~12月)');
+        const date = prompt('請輸入出生日期(1日~31日)');
+        // 先排除無效的輸入，例如月份小於1或大於12，大於30或31及2月29的日期。
+        if (
+            month < 1 ||
+            month > 12 ||
+            month == 2 && date >= 30 ||
+            month == 3 && date >= 31 ||
+            month == 4 && date >= 31 ||
+            month == 6 && date >= 31 ||
+            month == 9 && date >= 31 ||
+            month == 11 && date >= 31 ||
+            date > 31
+        ) {
+            document.write('請重新輸入');
+        } else if (month == 1 && date <= 19 || month == 12 && date >= 22) {
+            document.write('摩羯宮 Capricornus ♑︎');
+        } else if (month == 2 && date <= 18 || month == 1 && date >= 20) {
+            document.write('水瓶宮 Aquarius ♒︎');
+        } else if (month == 3 && date <= 20 || month == 2 && date >= 19) {
+            document.write('雙魚宮 Pisces ♓︎');
+        } else if (month == 4 && date <= 19 || month == 3 && date >= 21) {
+            document.write('牡羊宮 Aries ♈︎');
+        } else if (month == 5 && date <= 20 || month == 4 && date >= 20) {
+            document.write('金牛宮 Taurus ♉︎');
+        } else if (month == 6 && date <= 21 || month == 5 && date >= 21) {
+            document.write('雙子宮 Gemini ♊︎');
+        } else if (month == 7 && date <= 22 || month == 6 && date >= 22) {
+            document.write('巨蟹宮 Cancer ♋︎');
+        } else if (month == 8 && date <= 22 || month == 7 && date >= 23) {
+            document.write('獅子宮 Leo ♌︎');
+        } else if (month == 9 && date <= 22 || month == 8 && date >= 23) {
+            document.write('處女宮 Virgo ♍︎');
+        } else if (month == 10 && date <= 23 || month == 9 && date >= 23) {
+            document.write('天秤宮 Libra ♎︎');
+        } else if (month == 11 && date <= 21 || month == 10 && date >= 24) {
+            document.write('天蠍宮 Scorpio ♏︎');
+        } else if (month == 12 && date <= 21 || month == 11 && date >= 22) {
+            document.write('射手宮 Sagittarius ♐︎');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.background</title>
+    <style>
+        body {
+            background-image: url("https://picsum.photos/1920/1920/?random=10");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .box {
+            width: 600px;
+            height: 400px;
+            border: 5px solid #333;
+            margin: 40px auto;
+            font-size: 2rem;
+            color: yellow;
+            text-shadow: 1px 1px 3px #000;
+            background-color: rgba(0, 0, 0, 0.4);
+            /* 讓盒子下方的背景有模糊效果 */
+            backdrop-filter: sepia(0.5) blur(5px);
+        }
+
+        .vh-center {
+            text-align: center;
+            line-height: 400px;
+        }
+
+        .bg-color {
+            background-color: lightpink
+        }
+
+        .bg-img {
+            background-image: url("pica.png");
+        }
+
+        .bg-img-size {
+            background-size: 200px;
+        }
+
+        .bg-repeat-x {
+            background-repeat: repeat-x;
+        }
+
+        .bg-repeat-y {
+            background-repeat: repeat-y;
+        }
+
+        .bg-repeat-n {
+            background-repeat: no-repeat;
+        }
+
+        .bg-size-contain {
+            background-size: contain;
+        }
+
+        .bg-size-cover {
+            background-size: cover;
+        }
+
+        .bg-size-custom {
+            background-size: 50% 50%;
+        }
+
+        .bg-position {
+            /* 雙直: 水平 垂直 */
+            /* left, center,right */
+            /* top, center, bottom */
+            background-position: center bottom;
+            background-position: top;
+            background-position: right;
+            background-position: center;
+            /* 可以用 px, %, em, rem... */
+            background-position: 100px 50px;
+        }
+
+        .bg-shorthand {
+            /* background-size 必須加上斜綫/且必須跟在 position 後面 */
+            /* background-color, background-image, background-repeat, background- position/background-size */
+            background-color: #fff url("pica.png no-repeat center center/cover")
+        }
+
+        .multi-bg {
+            background-color: lightslategray;
+            background-image: url("pica.png"), url("pica.png"), url("pica.png");
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: 200px 200px, 200px 200px, 200px 200px;
+            background-position: top left, bottom right, center center;
+        }
+
+        .linear-gradient {
+            /* 漸層是背景圖(background-image)的一種 */
+            /* 預設是上到下 180deg */
+            background-image: linear-gradient(red, yellow, purple);
+            background-image: linear-gradient(45deg, red, yellow, purple);
+            background-image: linear-gradient(to right, red, yellow, purple);
+            background-image: linear-gradient(to right, red 20%, yellow 30%, purple);
+            background-image: linear-gradient(to right, red 50%, yellow 50%, purple);
+            background-image: radial-gradient(red, orange, yellow, green, blue, cyan, purple);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box bg-color vh-center">1.background-color</div>
+    <div class="box bg-img vh-center bg-img-size">2.background-image</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-x">3.background-repeat-x</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-y">4.background-repeat-y</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-n">5.不重複</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-n bg-size-contain">6.background-size:contain</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-n bg-size-cover">7.background-size:contain</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-n bg-size-custom">8.background-size:custom</div>
+    <div class="box bg-img vh-center bg-img-size bg-repeat-n bg-size-custom bg-position">9.background-position</div>
+    <div class="box bg-img bg-img-size bg-shorthand">10.縮寫</div>
+    <div class="box multi-bg">11.</div>
+    <div class="box linear-gradient">12.漸層</div>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //var 全域變數
+        var a = 1
+        {
+            var a = 2
+            console.log(a)    //2
+        }
+        console.log(a)        //2
+
+        //let 區域變數
+        let b = 1
+        {
+            let b = 2
+            console.log(b)    //2
+        }
+        console.log(b)        //1
+        let c = 1             // 1. 在外層宣告變數 c，初始值為 1
+        {
+            c = 2             // 2. 由於區塊內沒有重新宣告 c，這裡會直接修改外層的 c，將其改為 2
+            console.log(c)    // 3. 輸出 2
+        }
+        console.log(c)        // 4. 離開區塊後，外層的 c 已經變成 2 了，所以這裡也會輸出 2
+    </script>
+</body>
+
+</html>
