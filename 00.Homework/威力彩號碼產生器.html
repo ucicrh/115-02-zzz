@@ -28,39 +28,73 @@
 
         // 製作威力彩號碼產生器
 
-        // const rand = (min, max) => {
-        //     const r = Math.random();
-        //     const scaled = r * ((max - min) + 1);
-        //     const whole = Math.floor(scaled);
-        //     const result = whole + min;
-        //     return result;
-        // }
+        const rand = (min, max) => {
+            const r = Math.random();                // 第 1 步：取得 0 到 1 之間的小數
+            const scaled = r * ((max - min) + 1);   // 第 2 步：放大到範圍的大小
+            const whole = Math.floor(scaled);       // 第 3 步：去掉小數
+            const result = whole + min;             // 第 4 步：平移到正確的起點
+            return result;                          // 第 5 步：交出結果
+        }
+        const sectionA = [];                        // A 區：準備一個空陣列放 6 個號碼
+        for (let i = 0; i < 6; i++) {               // 需要 6 個號碼，所以跑 6 圈
+            const n = rand(1, 38);                  // 抽一個 1~38 的號碼
+            if (
+                sectionA.includes(n)) {             // 如果這個號碼已經抽過（重複）
+                i--;                                // 這一圈不算，計數退回去，下一圈重抽
+            } else {
+                sectionA.push(n)                    // 沒重複就放進陣列
+            }
+        }
+        sectionA.sort((a, b) => {                   // 排序：回傳負數 a 排前面，正數 b 排前面
+            return a - b                            // a - b 代表由小到大
+        })
+        const sectionB = rand(1, 8)                 // B 區（第二區）：抽 1 個 1~8 的號碼，可與 A 區重複
+        document.write('A區 ' + sectionA + '<br>B區 ' + sectionB)   // 輸出到網頁：陣列會用逗號連接，<br> 換行
+
+        // 短板1
+        // const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
         // const sectionA = [];
-        // for (let i = 0; i < 6; i++) {
+        // while (sectionA.length < 6) {
         //     const n = rand(1, 38);
-        //     if (
-        //         section1.includes(n)) {
-        //         i--;
-        //     } else {
-        //         section1.push(n)
-        //     }
+        //     if (!sectionA.includes(n)) sectionA.push(n);
         // }
-        // sectionA.sort((a, b) => {
-        //     return a - b
-        // })
-        // const sectionB = rand(1, 8)
+        // sectionA.sort((a, b) => a - b);
+        // const sectionB = rand(1, 8);
         // document.write('A區 ' + sectionA + '<br>B區 ' + sectionB)
 
-        // 最短寫法
-        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-        const sectionA = [];
-        while (sectionA.length < 6) {
-            const n = rand(1, 38);
-            if (!sectionA.includes(n)) sectionA.push(n);
-        }
-        sectionA.sort((a, b) => a - b);
-        const sectionB = rand(1, 8);
-        document.write('A區 ' + sectionA + '<br>B區 ' + sectionB)
+        // 短板2
+        // 改動重點：
+        // 範圍 1 到 N 的亂數：Math.ceil(Math.random() * n) 就夠用。Math.random() 幾乎不會剛好是 0，所以結果是 1 到 n。
+        // Set 自動去重：不用 includes 判斷，也不用 if。
+        // [...A].sort(...)：展開成陣列後排序。
+        // const r = (n) => Math.ceil(Math.random() * n);
+        // const A = new Set();
+        // while (A.size < 6) A.add(r(38));
+        // document.write('A區 ' + [...A].sort((a, b) => a - b) + '<br>B區 ' + r(8));
+
+        // 短板3
+        // 這個版本省掉了括號和 + 串接，改用 new Set 不帶括號，以及模板字串。
+        // const r = n => Math.ceil(Math.random() * n), A = new Set;
+        // while (A.size < 6) A.add(r(38));
+        // document.write(`A區 ${[...A].sort((a, b) => a - b)}<br>B區 ${r(8)}`)
+
+        // 短倒不行
+        // 這個版本用了這些技巧：
+        // Math.random()*n+1|0：|0 等於 Math.floor，對正數有效，所以結果是 1 到 n 的整數。
+        // 不寫 const：直接用全域變數 r 和 A。
+        // for(A=new Set;…;)：把初始化放進 for，new Set 省掉括號。
+        // while 和 if 都不需要：Set.add 重複時會被忽略，迴圈只靠 size<6 結束。
+        // 模板字串：不用 + 串接。
+        // 逐行注解：
+        // r = n => Math.random() * n + 1 | 0;
+        //   r(n) 回傳 1 到 n 的整數：Math.random() * n 是 [0, n) 的小數，+ 1 變成 [1, n + 1)，| 0 去掉小數
+        // for (A = new Set; A.size < 6;)
+        //   A 是 Set（集合），會自動忽略重複的值；size < 6 表示還沒湊滿 6 個就繼續迴圈
+        //   A.add(r(38));
+        //   抽 1~38 加進 Set，重複的話 Set 不會變大，下一圈就自然再抽一次
+        // document.write(`A區 ${[...A].sort((a, b) => a - b)}<br>B區 ${r(8)}`)
+        //   [...A] 把 Set 展開成陣列（Set 沒有 sort）；sort((a, b) => a - b) 是數字由小到大排序
+        //   `${}` 是模板字串，把 A 區號碼（陣列會用逗號連接）和 B 區 r(8)（1~8）塞進文字，<br> 是換行
 
     </script>
 </body>
