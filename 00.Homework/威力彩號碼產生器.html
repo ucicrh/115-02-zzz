@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威力彩號碼產生器</title>
+</head>
+
+<body>
+    <script>
+        // 從 0 到 100 隨機取一個整數
+        // 一般的「範圍 N 到 M 的整數」公式是 Math.floor(Math.random() * (M - N + 1)) + N。這裡 N = 0、M = 100，所以是 * 101。數字個數是 M - N + 1，少算 1 就會漏掉上界。
+        // 原本檔案用的 Math.round(Math.random() * 100) 看起來也對，但 0 和 100 只有在[0, 0.5) 與[99.5, 100) 才會被取到，機率只有中間數字的一半。這種「邊界偏差」在抽獎程式中很容易被忽略。
+        // const n = Math.floor(Math.random() * 101)
+        // console.log(n)
+
+
+        // 製作隨機數字 function，提供最小整數和最大整數，回傳一個區間內的隨機整數
+        // const rand = (min, max) => {
+        //     const r = Math.random();            // 第 1 步：取得 0 到 1 之間的小數
+        //     const scaled = r * (max - min + 1); // 第 2 步：放大到範圍的大小
+        //     const whole = Math.floor(scaled);   // 第 3 步：去掉小數
+        //     const result = whole + min;         // 第 4 步：平移到正確的起點
+        //     return result;                      // 第 5 步：交出結果
+        // }
+        // console.log(rand(0, 100))
+
+        // 製作威力彩號碼產生器
+
+        // const rand = (min, max) => {
+        //     const r = Math.random();
+        //     const scaled = r * ((max - min) + 1);
+        //     const whole = Math.floor(scaled);
+        //     const result = whole + min;
+        //     return result;
+        // }
+        // const sectionA = [];
+        // for (let i = 0; i < 6; i++) {
+        //     const n = rand(1, 38);
+        //     if (
+        //         section1.includes(n)) {
+        //         i--;
+        //     } else {
+        //         section1.push(n)
+        //     }
+        // }
+        // sectionA.sort((a, b) => {
+        //     return a - b
+        // })
+        // const sectionB = rand(1, 8)
+        // document.write('A區 ' + sectionA + '<br>B區 ' + sectionB)
+
+        // 最短寫法
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+        const sectionA = [];
+        while (sectionA.length < 6) {
+            const n = rand(1, 38);
+            if (!sectionA.includes(n)) sectionA.push(n);
+        }
+        sectionA.sort((a, b) => a - b);
+        const sectionB = rand(1, 8);
+        document.write('A區 ' + sectionA + '<br>B區 ' + sectionB)
+
+    </script>
+</body>
+
+</html>

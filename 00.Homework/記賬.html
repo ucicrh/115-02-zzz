@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記賬</title>
+</head>
+
+<body>
+    <script>
+        // 連續輸入金額，最後輸入0或取消按鈕計算總額
+        // 要同時列出計算式
+
+        // const ledger = [] // 先設定一個空的陣列，用來儲存每一筆金額，後續用來列出計算式
+        // let sum = 0 // 設定初始總金額為0
+        // for (; ;) { // 不設定數值，可無限制循環，建立沒有預設結束條件的迴圈；程式會在判斷到停止條件時用 break 離開
+        //     const input = prompt('請輸入金額，輸入0或按取消計算總額')
+        //     if (input === null || input == 0 || input == '') break //設定取消按鈕， 輸入0， 或不輸入任何數值結算總額；輸入值通常是字串；按「取消」時則是 null
+        //     ledger.push(Number(input)) //將輸入金額轉爲數字後，合并入 ledger 陣列
+        //     sum += Number(input) // 將每次輸入金額轉為數字累加
+        // }
+        // document.write(ledger.join(' + ')) //寫出陣列的值， 并在每個值之間加 + 號
+        // document.write(' = ', sum) // 寫出等號及加總金額
+
+        // 用 while 寫一次
+        const ledger = [];
+        let sum = 0;
+        while (true) {
+            const input = prompt('請輸入金額，輸入0或按取消計算總額');
+            if (input == 0 || input == null) break;
+            const value = input;
+            let invalid = false;
+            for (const char of value) {
+                const code = char.charCodeAt(0);
+                if (code < 48 || code > 57) {
+                    invalid = true;
+                    break;
+                }
+            }
+            if (invalid) {
+                alert('請輸入只包含 0 到 9 的整數金額');
+                continue;
+            }
+            const amount = Number(value);
+            if (amount == 0) break;
+            ledger.push(amount);
+            sum += amount;
+        };
+        document.write(ledger.join(' + '));
+        document.write(' = ', sum);
+    </script>
+</body>
+
+</html>
