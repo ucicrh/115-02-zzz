@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            text-align: center;
+            /* 合并儲存格，邊緣去除 */
+            border-collapse: collapse;
+        }
+
+        .news {
+            width: 280px;
+            height: 460px;
+            border: 1px solid #999;
+            float: left;
+        }
+
+        .news h1 {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .news th {
+            background-color: #3399FF;
+            font-size: 14px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .news td {
+            font-size: 14px;
+            color: #000;
+            line-height: 2;
+            text-align: left;
+        }
+
+        .odd {
+            background-color: #FFFFCC;
+        }
+
+        .even {
+            background-color: #DDDDDD;
+        }
+
+
+        .photos {
+            width: 590px;
+            height: 460px;
+            padding-top: 10px;
+            border: 1px solid #999;
+            float: right;
+            background-color: #333333;
+            font-size: 14px;
+            text-align: center;
+            color: #FFFF00;
+        }
+
+        /* 寫程式，用id比較好抓取 */
+        /* 尺寸要記住，題目裏面沒有 */
+        #big {
+            width: 570px;
+            height: 340px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="news">
+        <h1>最新消息</h1>
+        <table>
+            <tr>
+                <!-- 改爲 th,會自動水平置中 -->
+                <th>主題</th>
+                <th>發布日期</th>
+            </tr>
+            <tr class="odd">
+                <td><img src="../images/0201.png">公告全國技能競賽相關事宜</td>
+                <td>115/11/27</td>
+            </tr>
+            <tr class="even">
+                <td><img src="../images/0201.png">公告即測即評及發證相關事宜</td>
+                <td>115/11/27</td>
+            </tr>
+            <tr class="odd">
+                <td><img src="../images/0201.png">公告網頁設計修題相關事宜</td>
+                <td>115/11/27</td>
+            </tr>
+            <tr class="even">
+                <td><img src="../images/0201.png">公告網路架設應檢相關事宜</td>
+                <td>115/11/27</td>
+            </tr>
+        </table>
+    </div>
+    <div class="photos">
+        <table>
+            <tr>
+                <td colspan="4">
+                    <img id="big" src="../images/0202A.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td><img class="small" src="../images/0202B.png" alt=""></td>
+                <td><img class="small" src="../images/0203B.png" alt=""></td>
+                <td><img class="small" src="../images/0204B.png" alt=""></td>
+                <td><img class="small" src="../images/0205B.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>第30屆倫敦奧運</td>
+                <td>許淑淨奪舉重銀牌</td>
+                <td>第26屆深圳世大運</td>
+                <td>第27屆喀山世大運</td>
+            </tr>
+        </table>
+    </div>
+    <!-- 引入jRuery 函式庫 -->
+    <script src="../others/jquery-2.1.4.min.js"></script>
+    <script>
+        // jQuery
+        // $() 起手式，一個叫 $() 的函式
+        // $()裏面可以放css選取器，會回傳一個物件，裏面有所有符合元素
+        // 點小圖換大圖
+        // 1.先抓到所有小圖，并且綁定點擊事件
+        // $('.small').each(function (index, img) {
+        //     //  index 當下小圖的索引， img 當下小圖的元素
+        //     // 2.替每張小圖加上點擊事件，注意img沒有引號
+        //     $(img).on('click', function () {
+        //         console.log(index)
+        //         $('#big').attr('src', `../images/020${index + 2}A.png`)
+        //     })
+
+        // })
+
+        // 另一種做法
+        $('.small').click(function () {
+            // 一個參數叫取值
+            // this 是當下小圖元素，并存到 small_pic 參數
+            // 例如 ../images/0202B.png
+            let small_pic = $(this).attr('src')
+            // 將 small_pic 的 B 改成 A，存到 big_pic 變數
+            // 例如 ../images/0202B.png => ../images/0202A.png
+            let big_pic = small_pic.replace('B', 'A')
+            // 兩個參數叫設定值
+            // 最後再將 big_pic 設定給大圖的 src 屬性
+            $('#big').attr('src', big_pic)
+        })
+
+        // 物件會有自己的屬性與方法
+        // 
+
+    </script>
+</body>
+
+</html>
