@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const rand = (min, max) => {
+      return Math.round(Math.random() * (max - min)) + min
+    }
+
+    const groupA = []
+
+    // 第一種
+    // while(groupA.length < 6) {
+    //   const num = rand(1, 38)
+    //   if (!groupA.includes(num)) {
+    //     groupA.push(num)
+    //   }
+    // }
+
+    // 第二種
+    // for (let i = 0; i < 6; i++) {
+    //   const num = rand(1, 38)
+    //   if (!groupA.includes(num)) {
+    //     groupA.push(num)
+    //   } else {
+    //     i--
+    //   }
+    // }
+
+    // 第三種
+    // 建立 1 ~ 38 數字陣列
+    // const numbers = []
+    // for (let i = 1; i <= 38; i++) {
+    //   numbers.push(i)
+    // }
+    const numbers = Array.from({ length: 38 }, (value, index) => {
+      return index + 1
+    })
+    // 取 6 次
+    for (let i = 0; i < 6; i++) {
+      // 隨機一個數字陣列的索引
+      const index = rand(0, numbers.length - 1)
+      // 將取到的索引對應的數字放入 A 區陣列
+      groupA.push(numbers[index])
+      // 將取到的索引從數字陣列移除
+      numbers.splice(index, 1)
+    }
+    document.write(groupA.join(','))
+  </script>
+</body>
+</html>
