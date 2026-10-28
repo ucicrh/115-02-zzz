@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #teat {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="title">文章標題</h1>
+    <h2>
+        <i>h2-1</i>
+    </h2>
+    <h2>
+        <i>h2-2</i>
+    </h2>
+    <h3 class="red">h3</h3>
+    <h3 class="red">h3</h3>
+    <h3 class="center">h3</h3>
+    <h3 class="center">h3</h3>
+    <p id="test">123456</p>
+
+    <script>
+        // 用 id 取元素
+        const title = document.getElementById('title')
+        // .innerText 裏面的文字
+        console.log(title.innerText)
+        title.innerText = '標題改成123'
+
+        // 用標簽名稱取元素，結果是陣列
+        const h2 = document.getElementsByTagName('h2')
+        console.log(h2, h2.length)
+        // .innerHTML 裏面的 html
+        console.log(h2[0].innerHTML.trim())
+        console.log(h2[0].innerText)
+        h2[0].innerHTML = '<dek>h2-123</del>'
+        // 不能使用 陣列.forEach
+        // h2.forEach(() => {})
+        for (let i = 0; i < h2.length; i++) {
+            console.log('for i', h2[i])
+        }
+
+        Array.from(h2).forEach((el) => {
+            console.log('foreach', el)
+        })
+
+        // 用 class 取元素
+        const red = document.getElementsByClassName('red')
+        for (const el of red) {
+            el.style.color = 'red'
+            console.log(el.style.color)
+
+            // 用 css 選擇器取元素
+            const center = document.querySelectorAll('.center')
+            for (const el of center) {
+                // el.style.textAlign = 'center'
+                el.style['text-align'] = 'center'
+            }
+        }
+        test = document.querySelector('#test')
+        //  .style 行内樣式，空白
+        console.log(test.style.color)
+        // 取最終結果
+        // getComputedStyle(元素，僞元素)
+        console.log(getComputedStyle(test).color)
+        console.log(getComputedStyle(test, '::before').content)
+
+
+    </script>
+</body>
+
+</html>

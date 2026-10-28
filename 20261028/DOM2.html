@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {
+            color: blue
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="links">
+        <a href="https://google.com">Google</a>
+        <a href="https://github.com">GitHub</a>
+    </div>
+    <ul id="list1">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ul id="list2">
+        <li>1</li>
+        <li>2</li>
+        <li id="list2li3">3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        // children 下一層所有元素，陣列
+        const links = document.getElementById('links').children
+        for (const el of links) {
+            // .屬性
+            console.log(el.href)
+            el.href = 'https://wdaweb.github.io'
+            el.innerText = '泰山職訓'
+            el.target = '_blank'
+        }
+
+        const list1 = document.getElementById('list1')
+        // firstElementChild    下一層第一個
+        // lastElementChild     下一層最後一個
+        // classList            class 很像陣列但不是陣列的東西
+        // classList.contains   有沒有 class
+        // className            所有的 class，用空白分隔
+        list1.firstElementChild.classList.add('blue', 'center')
+        const newClass = ['blue', 'center']
+        list1.lastElementChild.classList.add(...newClass)
+        console.log(list1.firstElementChild.classList)
+        console.log(list1.firstElementChild.classList[0])
+        console.log(list1.firstElementChild.classList.length)
+        console.log(list1.firstElementChild.classList.value)
+        console.log(list1.firstElementChild.classList.contains('blue'))
+        console.log(list1.firstElementChild.className)
+
+        const list2li3 = document.getElementById('list2li3')
+        // previousElementSibling 同一層前一個
+        // nextElementSibling     同一層後一個
+        list2li3.previousElementSibling.classList.add('blue', 'center')
+        list2li3.previousElementSibling.classList.remove('blue')
+        list2li3.nextElementSibling.classList.toggle('blue')
+
+        // parentElement 上一層
+        list2li3.parentElement.style.background = 'skyblue'
+    </script>
+</body>
+
+</html>

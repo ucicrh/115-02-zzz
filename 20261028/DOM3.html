@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="text">123456</p>
+    <div id="div1" style="border: 1px solid black">
+        <p>div1</p>
+    </div>
+    <div id="div2" style="border: 1px solid black">
+        <p>div2</p>
+    </div>
+    <div id="div3" style="border: 1px solid black">
+        <p>div3</p>
+    </div>
+    <script>
+        const div1 = document.getElementById('div1')
+        // 直接改 innerHTML
+        // div1.innerHTML += '<p>+=innerHTML</p>'
+        // 插入 html
+        div1.insertAdjacentHTML('beforebegin', '<p>beforebegin</p>')
+        div1.insertAdjacentHTML('afterbegin', '<p>afterbegin</p>')
+        div1.insertAdjacentHTML('beforeend', '<p>beforeend</p>')
+        div1.insertAdjacentHTML('afterend', '<p>afterend</p>')
+
+        const div2 = document.getElementById('div2')
+        const newP = document.createElement('p')
+        newP.innerText = 'new p'
+        // 已存在的元素會移動位置，新的元素會放上 DOM
+        div2.insertAdjacentElement('beforeend', newP)
+        const text = document.getElementById('text')
+        div2.insertAdjacentElement('beforeend', text)
+
+        const div3 = document.getElementById('div3')
+        const newImg = document.createElement('img')
+        newImg.width = 50
+        newImg.height = 50
+        newImg.src = 'https://github.com/wdaweb.png'
+        // .append  內層最後
+        // .prepend 內層最前
+        // 已存在的元素會移動位置，新的元素會放上 DOM
+        div3.prepend(newImg)
+    </script>
+</body>
+
+</html>

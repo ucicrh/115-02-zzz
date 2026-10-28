@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <script>
+        const list = document.getElementById('list')
+        // 直接清空
+        // list.innerHTML = ''
+
+        // 只刪1、3、5
+        // 因爲 HTMLCollection 是即時資料集合
+        // index 會動態變更
+        // for (const el of list.children) {
+        //     el.remove()
+        // }
+
+        // 正常刪除全部
+        // Array.from 靜態陣列
+        for (const el of Array.from(list.children)) {
+            el.remove()
+        } 
+    </script>
+</body>
+
+</html>
