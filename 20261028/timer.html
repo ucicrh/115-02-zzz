@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計時器練習</title>
+    <style>
+        body {
+            font-family: 標楷體;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="timer"></h1>
+    <script>
+        const input = prompt('請輸入秒數數字')
+        const n = Number(input)
+        if (input !== null && Number.isInteger(n) && n > 0) {
+            const timer = document.getElementById('timer')
+            let i = n
+            timer.textContent = `剩餘${i}秒`
+            const timeLeft = setInterval(() => {
+                i--
+                if (i > 0) {
+                    timer.textContent = `剩餘${i}秒`
+                } else {
+                    timer.style.color = 'red'
+                    timer.textContent = `時間到`
+                    clearInterval(timeLeft)
+                }
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>

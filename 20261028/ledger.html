@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>記賬練習</title>
+</head>
+
+<body>
+    <ul id="list"></ul>
+    <p id="total"></p>
+    <script>
+        const limit = 500
+        const list = document.getElementById('list')
+        const total = document.getElementById('total')
+        let sum = 0
+        for (; ;) {
+            const amount = Number(prompt('請輸入金額'));
+            if (amount == 0) break;
+            if (Number.isNaN(amount)) continue;
+            const color = amount > limit ? 'red' : 'black'
+            list.innerHTML += `<li style='color:${color}'>${amount}</li>`
+            sum += amount;
+        }
+        total.textContent = `總共${sum}元`
+    </script>
+</body>
+
+</html>
