@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 單字本</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>JavaScript 單字本</h1>
+        <p id="stat"></p>
+        <nav>
+            <button data-mode="list" class="on">單字表</button>
+            <button data-mode="card">單字卡</button>
+            <button data-mode="quiz">測驗</button>
+        </nav>
+    </header>
+
+    <section id="filters">
+        <input type="search" id="search" placeholder="搜尋單字、簡寫、中文…">
+        <select id="cat"></select>
+        <select id="lv">
+            <option value="0">全部等級</option>
+            <option value="1">Level 1 基礎</option>
+            <option value="2">Level 2 進階</option>
+            <option value="3">Level 3 高階</option>
+        </select>
+        <select id="known">
+            <option value="all">全部</option>
+            <option value="unknown">只看未熟</option>
+            <option value="known">只看已熟</option>
+        </select>
+    </section>
+
+    <main id="main"></main>
+
+    <script src="words.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="email">
+    <input type="range" id="range" min="0" max="100" step="1">
+    <script>
+        const email = document.getElementById('email')
+        // 聚焦
+        email.onfocus = () => {
+            console.log('focus')
+        }
+        // 取消聚焦點外面時
+        email.onblur = () => {
+            console.log('blur')
+        }
+        // 邊輸入邊觸發
+        email.oninput = () => {
+            console.log('input')
+            if (email.value.includes('@')) {
+                email.style.outline = '5px solid green'
+            } else {
+                email.style.outline = '5px solid red'
+            }
+        }
+        // 聚焦到取消聚焦之間，值有改變時觸發
+        email.onchange = () => {
+            console.log('change')
+            const range = document.getElementById('range')
+            range.oninput = () => {
+                console.log('range')
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            border: 1px solid black;
+            width: 200px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 180px;
+            height: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <img src="https://picsum.photos/300/200/?random=10" alt="">
+        <h2>c300</h2>
+        <p>230000</p>
+        <input type="button" value="加入購物車" data-name="c300" data-price="230000">
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/300/200/?random=100" alt="">
+        <h2>s550</h2>
+        <p>35000000</p>
+        <input type="button" value="加入購物車" data-name="s550" data-price="3500000">
+    </div>
+    <ul id="list"></ul>
+    <script>
+        const list = document.getElementById('list')
+        const btn = document.querySelectorAll('.card input')
+
+        for (const el of btn) {
+            el.onclick = () => {
+                const name = el.dataset.name
+                const price = el.dataset.price
+                const li = document.createElement('li')
+                li.inner
+            }
+        }
+    </script>
+</body>
+
+</html>

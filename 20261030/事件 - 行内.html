@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按鈕" onclick="alert('abcd')">
+    <!-- this 代表標簽本身 -->
+    <input type="button" value="0" onclick="this.value++">
+    <input type="button" value="0" onclick="this.value++;alert(this.value)">
+    <input type="button" value="按鈕" onclick="onBtnClick2()">
+    <input type="button" value="按鈕" onBtnClick2="onBtnClick2(this)">
+    <script>
+        const onBtnClick = () => {
+            alert('abcd')
+        }
+
+        const onBtnClick2 = (el) => {
+            el.style.color = 'red'
+            el.value = 'abcd'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>視差捲動</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .hero {
+            height: 100vh;
+            /* 一個螢幕高就夠,不需要 5000px */
+            background-image: url("https://picsum.photos/1200/800/?random=10");
+            background-repeat: no-repeat;
+            /* 分開寫,避免簡寫覆蓋圖片 */
+            background-size: cover;
+            /* 圖片鋪滿區塊 */
+            background-position: center 0px;
+            /* 初始位置,JS 會改第二個值 */
+        }
+
+        .content {
+            height: 3000px;
+            /* 製造可捲動的長度 */
+            background: #fff;
+            position: relative;
+            /* 讓它蓋在 hero 上面 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero"></div>
+    <div class="content">往下捲,看背景比內容慢</div>
+
+    <script>
+        const hero = document.querySelector('.hero')   // 要改的是 hero,不是 body
+
+        window.onscroll = () => {
+            const top = document.documentElement.scrollTop   // 已捲動的距離
+            // 背景往下偏移「捲動距離的一半」。
+            // 區塊本身以 1 倍速上移,背景相對區塊下移 0.5 倍,
+            // 所以背景實際只以 0.5 倍速上移,產生景深。
+            hero.style.backgroundPosition = `center ${top * 0.5}px`
+        }
+    </script>
+</body>
+
+</html>

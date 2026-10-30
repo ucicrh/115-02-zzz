@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+
+        #loading {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background: gray;
+            text-align: center;
+            transition: opacity 3s;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading">
+        <h1>載入中</h1>
+        <h2 id="loading-progress">0%</h2>
+    </div>
+    <img src="https://picsum.photos/768/1024?1" alt="">
+    <img src="https://picsum.photos/768/1024?2" alt="">
+    <img src="https://picsum.photos/768/1024?3" alt="">
+    <img src="https://picsum.photos/768/1024?4" alt="">
+    <img src="https://picsum.photos/768/1024?5" alt="">
+    <img src="https://picsum.photos/768/1024?6" alt="">
+    <img src="https://picsum.photos/768/1024?7" alt="">
+    <img src="https://picsum.photos/768/1024?8" alt="">
+    <img src="https://picsum.photos/768/1024?9" alt="">
+    <img src="https://picsum.photos/768/1024?10" alt="">
+    <img src="https://picsum.photos/768/1024?11" alt="">
+    <script>
+        document.onreadystatechange = () => {
+            console.log(document.readyState)
+        }
+
+        const img = document.getElementsByTagName('img')
+        const loadingProgress = document.getElementById('loading-progress')
+        const loading = document.getElementById('loading')
+        let loaded = 0
+        for (const el of img) {
+            el.onload = () => {
+                loaded++
+                loadingProgress.innerText = Math.round(loaded / img.length * 100) + '%'
+            }
+        }
+
+        window.onload = () => {
+            console.log('window')
+            loading.style.opacity = 0
+            document.body.style.overflow = 'auto'
+            setTimeout(() => {
+                loading.remove()
+            }, 3000)
+        }
+    </script>
+</body>
+
+</html>

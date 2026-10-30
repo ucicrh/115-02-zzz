@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="按鈕" class="btn">
+    <input type="button" value="按鈕" class="btn">
+    <input type="button" value="按鈕" class="btn">
+    <script>
+        const btn = document.getElementsByClassName('btn')
+        for (const el of btn) {
+            el.onclick = () => {
+                el.value = '點了按鈕'
+            }
+            // 解除事件綁定
+            // el.onclick = null
+        }
+    </script>
+
+</body>
+
+</html>
