@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威力彩第三天練習</title>
+    <style>
+        #drawBtn {
+            margin: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px black;
+            background-image: radial-gradient(circle at 30% 30%, white, tomato);
+        }
+
+        #lottery {
+            line-height: 2;
+            list-style: none;
+        }
+
+        .ball {
+            display: inline-block;
+            color: white;
+            text-shadow:
+                0px 1px black,
+                1px 0px black,
+                -1px 0px black,
+                0px -1px black,
+                1px 1px black,
+                1px -1px black,
+                -1px 1px black,
+                -1px -1px black;
+            ;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input id="drawBtn" type="button" value="抽獎">
+    <ul id="lottery"></ul>
+
+    <script>
+        // 設亂碼產生器
+        // 設號碼池陣列
+        // 設獎金池陣列（空）
+        // 設回圈，跑六次，每一次取得中獎號碼，立即將號碼從號碼池陣列剔除，並注入中獎池陣列
+        // 排序中獎池陣列
+
+        // 設定pad函數
+
+        // 取得 id 為 drawbtn 的按鈕。querySelector 用 CSS 選擇器語法,id 前面要加 #,
+        // 若寫成 'drawbtn' 會被當成找 <drawbtn> 標籤,結果是 null。
+        const drawBtn = document.querySelector('#drawBtn')
+        // 取得 id 為 lottery 的 <ul>,之後抽出來的結果會插入這裡。
+        const lottery = document.querySelector('#lottery')
+
+        // 亂數產生器:回傳 min ~ max 之間(含兩端)的隨機整數。
+        // Math.random() 回傳 0 <= x < 1 的小數。
+        // 乘上 (max - min + 1) 後範圍變成 0 <= x < 範圍大小。
+        // Math.floor 無條件捨去,得到 0 ~ (範圍大小 - 1) 的整數。
+        // 最後加上 min 平移到 min ~ max。例如 rand(1, 8):隨機 0~7,加 1 變成 1~8。
+        // 這裡 +1 是為了讓 max 也有機會被抽到。
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+
+        // 補零函數:把數字轉成字串,不足 2 位數就在左邊補 '0'。
+        // String(n) 先轉成字串,因為 padStart 是字串方法,數字沒有。
+        // padStart(2, '0'):目標長度 2,不足時用 '0' 補在前面。5 -> '05',12 -> '12'。
+        const pad = n => String(n).padStart(2, '0')
+
+        // 抽獎函數:抽出一組威力彩號碼,回傳 { 第一區六個號碼, 第二區一個號碼 }。
+        const draw = () => {
+            // 建立號碼池:1 ~ 38 共 38 個數字。
+            // Array.from({ length: 38 }, fn) 會建立長度 38 的陣列,每個位置呼叫 fn(值, 索引)。
+            // 第一個參數用不到,慣例寫成 _;i 是索引(0 ~ 37),所以 i + 1 得到 1 ~ 38。
+            // 放在 draw 裡面,每次按按鈕都會重新建立完整號碼池;
+            // 若放在外面,號碼被 splice 剔除後不會補回來,多按幾次就抽光了。
+            const numPool = Array.from({ length: 38 }, (_, i) => i + 1)
+            // 中獎池:一開始是空陣列,用來存抽到的六個第一區號碼。
+            const zone1Pool = []
+            // 迴圈跑 6 次,每次抽一個號碼。
+            for (let i = 0; i < 6; i++) {
+                // 隨機挑一個「索引」(不是號碼本身)。
+                // 範圍是 0 ~ numPool.length - 1,因為陣列索引從 0 開始;
+                // 且 numPool.length 每輪都會減 1,所以不會抽到已被剔除的位置。
+                const index = rand(0, numPool.length - 1)
+                // numPool.splice(index, 1) 從 index 位置刪除 1 個元素,
+                // 並以「陣列」形式回傳被刪掉的元素,例如 [17]。
+                // 後面的 [0] 取出陣列裡的第一個值 17。
+                // 一次完成「從號碼池剔除」與「取得號碼」,所以不會重複抽到同一個號碼。
+                // 再用 push 加到中獎池最後面。
+                zone1Pool.push(numPool.splice(index, 1)[0])
+            }
+            // 排序中獎池。sort 預設會把元素當字串比較(10 會排在 2 前面),
+            // 所以要傳入比較函數:a - b 為負數時 a 排前面,即由小到大。
+            // 注意 sort 會直接修改原陣列,不需要另外接收回傳值。
+            zone1Pool.sort((a, b) => a - b)
+            // 回傳一個物件,裡面有兩個屬性(這行就是你選取的那行):
+            //   zone1: zone1Pool.map(pad)
+            //     map 會對每個元素呼叫 pad,並回傳新陣列,例如 [3, 12, 7] -> ['03', '12', '07']。
+            //     map 把 (元素, 索引, 陣列) 三個值傳給 pad,
+            //     但 pad 只用第一個參數 n,其他會被忽略,所以可以直接寫 map(pad)。
+            //     冒號左邊 zone1 是回傳物件的屬性名(補零後的字串陣列),
+            //     右邊 zone1Pool 是上面的變數(數字陣列),兩者名稱分開,避免混淆。
+            //   zone2: pad(rand(1, 8))
+            //     第二區只抽 1 個號碼,範圍 1 ~ 8,不屬於第一區號碼池,
+            //     所以和第一區的號碼可以重複,不需要剔除。同樣補零成兩位數。
+            return { zone1: zone1Pool.map(pad), zone2: pad(rand(1, 8)) }
+        }
+
+        // 顯示函數:把一組號碼加到畫面上。
+        // 參數使用解構 ({ zone1, zone2 }):
+        // 呼叫時傳入的是 draw() 回傳的物件,這裡直接把它的兩個屬性取出成同名變數。
+        // 解構時的名稱必須和物件的屬性名稱一致,不能寫錯。
+        const result = ({ zone1, zone2 }) => {
+            // insertAdjacentHTML(位置, HTML字串):把 HTML 插入指定位置。
+            // 'afterbegin' 表示插在 <ul> 內部的最前面,所以最新的結果會顯示在最上面。
+            // (innerHTML 是屬性不是函數,不能寫成 innerHTML(...)。)
+            const balls = zone1.map(n => `<span class="ball">${n}</span>`).join('')
+            lottery.insertAdjacentHTML('afterbegin',
+                // 用反引號 ` 的模板字串,可以用 ${} 嵌入運算式。
+                // zone1.join(' '):把陣列用空格接成一個字串,例如 '03 07 12 20 25 31'。
+                // 兩個 </span> 與 <span> 之間的空格會顯示成一個空白,
+                // 如果寫成 ' ' 加上引號,引號會被當成文字直接印出來。
+                // class 的 ball 和 zone2 是留給 CSS 用的,目前 <style> 是空的,所以沒有樣式。
+                `<li>${balls}</span> <span class="ball zone2">${zone2}</span></li>`)
+        }
+
+        // 設定按鈕的點擊事件。onclick 是屬性,要「指定」一個函數給它,不能當函數呼叫。
+        // 若寫成 drawbtn.onclick(result(draw())),會在頁面載入時就立刻執行,而不是等到點擊。
+        // 箭頭函數 () => result(draw()) 包起來,點擊時才會執行:
+        // 先執行 draw() 抽號碼,把回傳的物件交給 result 顯示。
+        drawBtn.onclick = () => result(draw())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威力彩</title>
+    <style>
+        #btn {
+            margin: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: tomato;
+            font-weight: bold;
+            color: #fff;
+            text-shadow:
+                1px 0px black,
+                0px 1px black,
+                -1px 0px black,
+                0px -1px black,
+                1px 1px black,
+                1px -1px black,
+                -1px 1px black,
+                -1px -1px black;
+            box-shadow: 2px 2px 5px black;
+            background-image: radial-gradient(circle at 30% 30%, white 5%, darkorange 60%);
+        }
+
+        #lottery {
+            line-height: 2;
+            list-style: none;
+        }
+
+        .ball {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            text-shadow:
+                1px 0px black,
+                0px 1px black,
+                -1px 0px black,
+                0px -1px black,
+                1px 1px black,
+                1px -1px black,
+                -1px 1px black,
+                -1px -1px black;
+            border-radius: 50%;
+            background-image: radial-gradient(circle at 30% 30%, white 15%, darkorange 40%);
+        }
+
+        .sec2 {
+            margin-left: 20px;
+            background-image: radial-gradient(circle at 30% 30%, white 15%, red 40%);
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn" type="button" value="抽獎">
+    <ul id="lottery"></ul>
+    <script>
+        // 設定亂數產生器函數
+        // 設定號碼池陣列，包含1 - 38數字
+        // 設定第一區中獎池的空陣列
+        // 設定回圈，跑六次抽獎，每次將中獎號碼從號碼池中取出，加入第一區中獎池
+        // 將第一區中獎池號碼排序
+        // 回報第一區中獎池陣列，同時抽第二區號碼
+        // 將以上流程包含在抽獎函數内
+        // 設定展示中獎號碼函數
+        // 將中獎號碼插入頁面
+        // 設定抽獎按鈕，每次按下會重頭跑一次流程
+        // 用css設定中獎號碼球狀外觀，第一區為漸層番茄色，第二區為漸層紅色，白色數字用陰影做外框
+        const btn = document.querySelector('#btn')
+        const lottery = document.querySelector('#lottery')
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+        const pad = n => String(n).padStart(2, '0')
+        const draw = () => {
+            const pool = Array.from({ length: 38 }, (_, i) => i + 1)
+            const sec1 = []
+            for (let i = 0; i < 6; i++) {
+                const index = rand(0, pool.length - 1)
+                sec1.push(pool.splice(index, 1)[0])
+            }
+            sec1.sort((a, b) => a - b)
+            return { sec1, sec2: rand(1, 8) }
+        }
+        const present = ({ sec1, sec2 }) => {
+            const ball = n => `<span class="ball">${pad(n)}</span>`
+            lottery.insertAdjacentHTML('afterbegin', `<li>${sec1.map(ball).join(' ')} <span class="ball sec2">${pad(sec2)}</span></li>`)
+        }
+        btn.onclick = () => present(draw())
+    </script>
+</body>
+
+</html>

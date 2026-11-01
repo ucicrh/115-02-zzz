@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威力彩</title>
+    <style>
+        #btn {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="btn" type="button" value="抽獎">
+    <div id="result"></div>
+    <script>
+        const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min
+        const btn = document.querySelector('#btn')
+        const result = document.querySelector('#result')
+        const draw = () => {
+            const pool = Array.from({ length: 38 }, (_, i) => i + 1)
+            const sec1 = []
+            for (let i = 0; i < 6; i++) {
+                const index = rand(0, pool.length - 1)
+                sec1.push(pool.splice(index, 1)[0])
+            }
+            sec1.sort((a, b) => a - b)
+            return sec1.join(' , ') + '<br>' + rand(1, 8)
+        }
+        btn.onclick = () => {
+            result.innerHTML = draw()
+        }
+    </script>
+</body>
