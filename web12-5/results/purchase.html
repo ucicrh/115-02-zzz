@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: auto;
+            background-color: #ff9;
+            border-collapse: collapse;
+
+            tr {
+                height: 100px;
+
+                td {
+                    border: 1px solid black;
+                    width: 400px;
+                    text-align: center;
+                    vertical-align: middle;
+
+                    ul {
+                        margin: 0;
+                        padding: 0;
+                        list-style: none;
+
+                        li {
+                            display: inline-block;
+                        }
+
+                    }
+                }
+            }
+
+            tr:nth-child(2) {
+                height: 150px;
+
+                img {
+                    height: 150px;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>真皮皮包</td>
+                <td>真皮短夾</td>
+            </tr>
+            <tr>
+                <td><img src="../images/0403.jpg" alt=""></td>
+                <td><img src="../images/0404.jpg" alt=""></td>
+            </tr>
+            <tr>
+                <td>
+                    <ul>
+                        <li><input type="radio" name="r1" value="購買" checked>購買</li>
+                        <li><input type="radio" name="r1" value="不購買">不購買</li>
+                        <li><input type="radio" name="r1" value="考慮中">考慮中</li>
+                    </ul>
+                </td>
+                <td>
+
+                    <ul>
+                        <li><input type="radio" name="r2" value="購買">購買</li>
+                        <li><input type="radio" name="r2" value="不購買">不購買</li>
+                        <li><input type="radio" name="r3" value="考慮中" checked>考慮中</li>
+                    </ul>
+
+                </td>
+            </tr>
+        </table>
+        <p><input type="submit" value="送出" onclick="showMsg(form.r1.value, form.r2.value)">
+            <input type="reset" value="重置">
+        </p>
+    </form>
+
+    <script>
+        function showMsg(v1, v2) {
+            alert(`
+            流行皮件選購確認：
+            
+            ●真皮皮包：${v1}
+            ●真皮短夾：${v2}
+            `)
+        }
+    </script>
+</body>
+
+</html>

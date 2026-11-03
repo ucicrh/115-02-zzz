@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>勞動部勞動力發展署─運動廣場連結網</title>
+    <style>
+        body {
+            background-color: #42413C;
+        }
+
+        #main {
+            width: 1024px;
+            height: 768px;
+            margin: auto;
+            background-color: #fff;
+        }
+
+        #top {
+            width: 1024px;
+            height: 90px;
+            background-color: #00B0F0;
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                text-align: center;
+
+                .logo {
+                    padding: 0;
+                    width: 180px;
+                    height: 90px;
+                }
+
+                .bannerText {
+                    font-size: 52px;
+                    font-family: 標楷體;
+                    color: #fff;
+                    text-shadow: 10px 10px 15px #333;
+                }
+            }
+
+
+        }
+
+        #menu {
+            width: 1024px;
+            height: 25px;
+            /* background-color: aqua; */
+
+            table {
+                width: 100%;
+                table-layout: fixed;
+                text-align: center;
+                border-collapse: collapse;
+
+                td {
+                    padding: 0;
+                }
+
+                a {
+                    display: block;
+                    height: 25px;
+                    line-height: 25px;
+                    background-color: #eee;
+                    color: #000;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    background-color: #ff0;
+                    font-size: 14px;
+                    color: #f00;
+                    font-weight: bold;
+                }
+            }
+
+
+        }
+
+        #content {
+            width: 1024px;
+            height: calc(768px - 90px - 25px - 45px);
+            background-color: #fff;
+            font-size: 14px;
+            color: #000;
+            margin: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .iframe {
+            width: calc(1024px - 20px - 20px);
+            height: calc(768px - 90px - 25px - 45px - 20px - 20px);
+            background-color: white;
+        }
+
+        #footer {
+            width: 1024px;
+            height: 45px;
+            background-color: #ccc;
+            color: #fff;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="top">
+            <table>
+                <tr>
+                    <td class="logo"><a href="./index.html" alt="運動廣場連結網-回首頁" title="運動廣場連結網-回首頁"><img
+                                src="./images/logo.png" alt=""></a></td>
+                    <td class="bannerText">運動廣場連結網</td>
+                </tr>
+            </table>
+        </div>
+        <div id="menu">
+            <table>
+                <tr>
+                    <td><a href="./results/main.html" target="iframe">首頁</a></td>
+                    <td><a href="./results/health.html" target="iframe">健康天地</a></td>
+                    <td><a href="./results/basketball.html" target="iframe">籃球介紹</a></td>
+                    <td><a href="./results/baseball.html" target="iframe">棒球介紹</a></td>
+                    <td><a href="./results/swimming.html" target="iframe">游泳介紹</a></td>
+                    <td><a href="./results/msgboard.html" target="iframe">訪客留言</a></td>
+                    <td><a href="./results/reference.html" target="iframe">資料來源</a></td>
+                </tr>
+            </table>
+        </div>
+        <div id="content">
+            <iframe id="iframe" src="./results/main.html" frameborder="0"></iframe>
+        </div>
+        <div id="footer">網頁設計及維護：XX○○○」、「最近更新
+            日期：yyyy/mm/dd</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國家公園介紹網</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 標楷體;
+        }
+
+        #main {
+            width: 1024px;
+            height: 768px;
+            margin: auto;
+            outline: 1px solid #777;
+            outline-offset: -1px;
+        }
+
+        #top {
+            width: 100%;
+            height: 65px;
+            margin: auto;
+            background-color: #0000FF;
+            outline: 1px solid #777;
+            outline-offset: -1px;
+            text-align: center;
+        }
+
+        #left {
+            width: 200px;
+            height: calc(100% - 65px - 20px);
+            float: left;
+            margin-left: 12px;
+            background-color: #00FFFF;
+            text-align: center;
+            outline: 1px solid #777;
+            outline-offset: -1px;
+
+            table {
+                width: 100%;
+                text-align: center;
+
+                img {
+                    width: 120px;
+                    height: 40px;
+                }
+
+                img:hover {
+                    filter: hue-rotate(180deg);
+                }
+            }
+        }
+
+        #right {
+            width: 800px;
+            height: calc(100% - 65px - 20px);
+            float: right;
+            margin-right: 12px;
+            outline: 1px solid #777;
+            outline-offset: -1px;
+
+            marquee {
+                outline: 1px solid #777;
+                outline-offset: -1px;
+                background-color: white;
+                width: 800px;
+                height: 29px;
+                vertical-align: center;
+            }
+
+            iframe {
+                width: 800px;
+                height: calc(768px - 65px - 20px - 29px);
+            }
+        }
+
+        #footer {
+            clear: both;
+            width: calc(100% - 24px);
+            height: 20px;
+            margin: auto;
+            background-color: #fff;
+            font-size: 16px;
+            color: #000;
+            text-align: center;
+            outline: 1px solid #777;
+            outline-offset: -1px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="top"><a href="./index.html"><img src="./images/park.gif"></a></div>
+        <div id="left">
+            <table>
+                <tr>
+                    <td><a href="./park/yangmingshan.html" target="iframe">
+                            <img src="./images/park0302.jpg" alt="陽明山國家公園" title="陽明山國家公園"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><a href="./park/sheipa.html" target="iframe">
+                            <img src="./images/park0303.jpg" alt="雪霸國家公園" title="雪霸國家公園"></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="./images/park0304.jpg" alt="太魯閣國家公園" title="太魯閣國家公園"></td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="./images/park0305.jpg" alt="玉山國家公園" title="玉山國家公園"></td>
+                </tr>
+            </table>
+            <p><a href="./others/park.mp3" download>檔案下載</a></p>
+        </div>
+        <div id="right">
+            <marquee>歡迎進入國家公園介紹網，本網站有
+                詳細的國家公園介紹哦！</marquee>
+            <iframe src="./others/main.html" frameborder="0" name="iframe"></iframe>
+        </div>
+        <div id="footer">網頁設計及維護：18○○○、最近更新日期：
+            2026/11/02</div>
+    </div>
+</body>
+
+</html>

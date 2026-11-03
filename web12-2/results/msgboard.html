@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .location {
+            color: red;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        table {
+            margin: auto;
+            /* 儲存格合并=間距0 */
+            border-collapse: collapse;
+        }
+
+        td {
+            /* 儲存格與邊框距離 */
+            padding: 2px;
+            border: 1px solid #ddd;
+        }
+
+        td:nth-child(1) {
+            width: 120px;
+            text-align: center;
+        }
+
+        td:nth-child(2) {
+            width: 580px;
+        }
+    </style>
+</head>
+
+<body>
+    <marquee>謝謝蒞臨本網站，請給予我們支持、鼓勵與建言。
+    </marquee>
+    <div class="location">現在位置：首頁＞訪客留言</div>
+    <!-- table 要用 form 包住，不然 reset 無效 -->
+    <form>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td><input type="text" size="20"></td>
+            </tr>
+            <tr>
+                <td>電子郵件</td>
+                <td><input type="text" size="60"></td>
+            </tr>
+            <tr>
+                <td>性別</td>
+                <td><input type="radio" name="sex" checked>男
+                    <input type="radio" name="sex">女
+                </td>
+            </tr>
+            <tr>
+                <td>職業類別</td>
+                <td>
+                    <select>
+                        <option>-----------請選擇職業類別-----------
+                        </option>
+                        <option>1.現役軍人</option>
+                        <option>2.專業人員</option>
+                        <option>3.技術員及助理專業人員</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>留言內容</td>
+                <td>
+                    <textarea rows="10" cols="78"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <!-- html 的屬性值要用雙引號，裏面程式的字串要用單引號 -->
+                    <input type="submit" value="送出" onclick="alert('歡迎蒞臨本網站，您的寶貴意見我們會儘速處理與回覆，謝謝！')">
+                    <input type="reset" value="重寫">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
