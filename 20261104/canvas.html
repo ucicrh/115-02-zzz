@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    canvas 標籤寬高 = 畫布尺寸
+    canvas CSS寬高 = 顯示尺寸
+  -->
+    <canvas width="500" height="500" id="canvas"></canvas>
+    <input type="color" id="input-color">
+    <input type="range" id="input-size" min="1" max="100">
+    <script>
+        const canvas = document.getElementById('canvas')
+        const inputColor = document.getElementById('input-color')
+        const inputSize = document.getElementById('input-size')
+
+        // 取得 2d 繪圖參數
+        const ctx = canvas.getContext('2d')
+
+        // 填滿顏色 fillStyle
+        // 畫矩形 fillRect(x, y, 長, 寬)
+        // ctx.fillStyle = 'black'
+        // ctx.fillRect(50, 50, 100, 100)
+
+        // 開始一個路徑 beginPath()
+        // 畫圓 arc(x, y, 起始弧度, 結束弧度, 是否逆時針) 0.5PI 是 1/4 圓
+        // 填充路徑 fill()
+        // 線條顏色 strokeStyle
+        // 線條粗細 lineWidth
+        // 畫線 stroke()
+        // ctx.fillStyle = 'gray'
+        // ctx.strokeStyle = 'blue'
+        // ctx.lineWidth = 10
+        // ctx.beginPath()
+        // ctx.arc(300, 300, 100, 0, Math.PI*2)
+        // ctx.fill()
+        // ctx.stroke()
+
+        // 線條兩端的樣式lineCap 
+        // 移動到指定位置 moveTo()
+        // 畫線到指定位置 lineTo()
+        // ctx.strokeStyle = 'black'
+        // ctx.lineWidth = 10
+        // ctx.lineCap = 'round'
+        // ctx.beginPath()
+        // ctx.moveTo(50, 50)
+        // ctx.lineTo(250, 250)
+        // ctx.stroke()
+
+        // 因為 canvas 背景是透明的，需要自己填一個白色背景
+        ctx.fillStyle = 'white'
+        ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+        // 紀錄上一個滑鼠座標
+        const lastPos = {
+            x: 0, y: 0
+        }
+        canvas.onmousedown = event => {
+            // 當滑鼠按下時，紀錄座標
+            lastPos.x = event.offsetX
+            lastPos.y = event.offsetY
+        }
+        canvas.onmousemove = event => {
+            // event.buttons
+            // 0 沒有按鍵
+            // 1 左鍵
+            // 2 右鍵
+            if (event.buttons !== 1) return
+
+            // 滑鼠移動時，從上一個座標畫到目前座標
+            ctx.strokeStyle = inputColor.value
+            ctx.lineWidth = inputSize.value
+            ctx.lineCap = 'round'
+            ctx.beginPath()
+            ctx.moveTo(lastPos.x, lastPos.y)
+            ctx.lineTo(event.offsetX, event.offsetY)
+            ctx.stroke()
+
+            // 更新紀錄的座標
+            // lastPos.x = event.offsetX
+            // lastPos.y = event.offsetY
+        }
+    </script>
+</body>
+
+</html>

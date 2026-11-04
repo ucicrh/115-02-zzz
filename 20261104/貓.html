@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #game {
+            width: 1500px;
+            height: 800px;
+            box-sizing: border-box;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #cat {
+            position: absolute;
+            width: 300px;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="button" value="開始遊戲" id="btn-start">
+    <span id="text-time">0</span>
+    <br>
+    最高分: <span id="text-highplayer">沒有人</span>， <span id="text-hightime">0</span>
+    <hr>
+    <div id="game">
+        <img src="./cat.jpg" id="cat">
+    </div>
+    <script>
+        const btnStart = document.getElementById('btn-start')
+        const textTime = document.getElementById('text-time')
+        const game = document.getElementById('game')
+        const cat = document.getElementById('cat')
+        const textHighPlayer = document.getElementById('text-highplayer')
+        const textHighTime = document.getElementById('text-hightime')
+
+        // 經過時間
+        let time = 0
+        // 計時器
+        let timer = 0
+        // 貓的中心點
+        let catPos = {
+            x: 0,
+            y: 0
+        }
+        // 遊戲區域對角線距離，區域內兩點的最大距離
+        const maxDistance = Math.sqrt(
+            Math.pow(game.clientWidth, 2) +
+            Math.pow(game.clientHeight, 2)
+        )
+        // 貓叫聲
+        const audio = new Audio()
+        audio.src = './meow.mp3'
+
+        // 最高分
+        const highscore = {
+            name: '',
+            time: null
+        }
+        if (localStorage.cat) {
+            const data = JSON.parse(localStorage.cat)
+            highscore.name = data.name
+            highscore.time = data.time
+            textHighPlayer.innerText = highscore.name
+            textHighTime.innerText = highscore.time * 0.01
+        }
+
+        btnStart.onclick = () => {
+            // 停用開始按鈕
+            btnStart.disabled = true
+            // 重設時間
+            time = 0
+            // 隨機放貓
+            // clientWidth、clientHeight 內容區 + padding 的尺寸
+            // cat 本身有 .width .height，div 沒有，所以兩個用不同方式取尺寸
+            cat.style.left = Math.round(Math.random() * (game.clientWidth - cat.width)) + 'px'
+            cat.style.top = Math.round(Math.random() * (game.clientHeight - cat.height)) + 'px'
+            // 更新貓的中心點座標
+            // offsetLeft、offsetTop 相對於上層元素的座標
+            catPos.x = cat.offsetLeft + (cat.width / 2)
+            catPos.y = cat.offsetTop + (cat.height / 2)
+            // 隱藏貓
+            cat.style.opacity = 0
+            // 開始計時
+            timer = setInterval(() => {
+                // 兩秒播一次聲音
+                if (time % 200 === 0) {
+                    audio.play()
+                }
+                time++
+                textTime.innerText = time / 100
+            }, 10)
+        }
+
+        game.onmousemove = event => {
+            // 開始按鈕沒有停用，代表不在遊戲中，不做事
+            if (!btnStart.disabled) return
+
+            // 計算滑鼠跟貓的距離
+            // 滑鼠在貓上的時候，event.target 會是貓，所以直接將距離設定成 0
+            // 不在貓上時才需要計算距離
+            let distance = 0
+            if (event.target !== cat) {
+                distance = Math.sqrt(
+                    Math.pow(event.offsetX - catPos.x, 2) +
+                    Math.pow(event.offsetY - catPos.y, 2)
+                )
+            }
+
+            audio.volume = 1 - distance / maxDistance
+        }
+
+        cat.onclick = () => {
+            // 開始按鈕沒有停用，代表不在遊戲中，不做事
+            if (!btnStart.disabled) return
+
+            clearInterval(timer)
+            btnStart.disabled = false
+            cat.style.opacity = 1
+
+            if (highscore.time === null || time < highscore.time) {
+                const name = prompt() || '路人'
+                highscore.name = name
+                highscore.time = time
+                textHighPlayer.innerText = highscore.name
+                textHighTime.innerText = highscore.time * 0.01
+                localStorage.cat = JSON.stringify(highscore)
+            }
+        }
+    </script>
+</body>
+
+</html>

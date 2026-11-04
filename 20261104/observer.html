@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .padding {
+            height: 2000px;
+        }
+
+        #target {
+            height: 100px;
+            background-color: black;
+            outline: 100px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="padding"></div>
+    <div id="target"></div>
+    <div class="padding"></div>
+    <script>
+        const target = document.getElementById('target')
+        const observer = new IntersectionObserver((entries, owner) => {
+            for (const entry of entries) {
+                console.log(entry)
+            }
+        }, {
+            root: null,
+            // threshold:[0.5]
+            rootMargin: '100px'
+        })
+        observer.observe(target)
+    </script>
+</body>
+
+</html>

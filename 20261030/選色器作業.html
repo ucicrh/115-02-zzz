@@ -42,27 +42,33 @@
     </div>
     <ul>
         <li>
-            <span>R</span><input id="red-slider" type="range" min="0" max="255" step="1" value="0">
+            <span>R</span><input id="red-slider" type="range" min="0" max="255" step="1" value="255">
+            <span class="colorCode">255</span>
             <input id="randR" type="button" value="隨機">
         </li>
         <li>
-            <span>G</span><input id="green-slider" type="range" min="0" max="255" step="1" value="0">
+            <span>G</span><input id="green-slider" type="range" min="0" max="255" step="1" value="255">
+            <span class="colorCode">255</span>
             <input id="randG" type="button" value="隨機">
         </li>
         <li>
-            <span>B</span><input id="blue-slider" type="range" min="0" max="255" step="1" value="0">
+            <span>B</span><input id="blue-slider" type="range" min="0" max="255" step="1" value="255">
+            <span class="colorCode">255</span>
             <input id="randB" type="button" value="隨機">
         </li>
     </ul>
     <script>
+        const colorBox = document.getElementById('color-box')
         const r = document.getElementById('red-slider')
         const g = document.getElementById('green-slider')
         const b = document.getElementById('blue-slider')
-        const colorBox = document.getElementById('color-box')
+        const colorCode = document.getElementsByClassName('colorCode')
         const rand = () => Math.floor(Math.random() * 256)
+        // const pad = n => String(n).padStart(3, '0')
         const updateColor = () => {
             colorBox.style.backgroundColor = `rgb(${r.value} ${g.value} ${b.value})`
         }
+
         r.oninput = updateColor
         g.oninput = updateColor
         b.oninput = updateColor
@@ -78,6 +84,7 @@
             b.value = rand()
             updateColor()
         }
+        colorCode.innerText = ${ }
     </script>
 </body>
 

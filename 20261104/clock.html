@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #clock {
+            width: 300px;
+            height: 300px;
+            background-color: #777;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        #hours {
+            width: 20%;
+            height: 8px;
+            background-color: pink;
+            box-shadow: 0 0 5px yellowgreen;
+            position: absolute;
+            left: 30%;
+            top: calc(50% - 4px);
+            transform-origin: right center;
+        }
+
+        #minutes {
+            width: 30%;
+            height: 6px;
+            background-color: blue;
+            box-shadow: 0 0 5px lightskyblue;
+            position: absolute;
+            left: 20%;
+            top: calc(50% - 3px);
+            transform-origin: right center;
+        }
+
+        #seconds {
+            width: 40%;
+            height: 2px;
+            background-color: red;
+            box-shadow: 0 0 5px pink;
+
+            position: absolute;
+            left: 10%;
+            top: calc(50% - 1px);
+            transform-origin: right center;
+            transition: transform 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="clock">
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+    </div>
+    <script>
+        const hours = document.getElementById('hours')
+        const minutes = document.getElementById('minutes')
+        const seconds = document.getElementById('seconds')
+        const ms = Date.now()
+        const clock = () => {
+            const date = new Date()
+            const h = date.getHours()
+            const m = date.getMinutes()
+            const s = date.getSeconds()
+            hours.style.transform = `rotate(${(h * 30 + m * 0.5) + 90}deg)`
+            minutes.style.transform = `rotate(${(m * 6) + s * 0.1 + 90}deg)`
+        }
+        setInterval(clock, 1000)
+        clock()
+        for (; ;) {
+            let secondDeg = m * 6 + 90
+            seconds.style.transform = `rotate(${secondDeg}deg)`
+            secondDeg += 6
+        }
+
+    </script>
+</body>
+
+</html>
