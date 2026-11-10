@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const wait = (ms, ok) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (ok) {
+            resolve(ms + 'ok')
+          } else {
+            reject(new Error(ms + 'no ok'))
+          }
+        }, ms)
+      })
+    }
+
+    const main = async () => {
+      try {
+        // 10s，依照順序等待
+        // await wait(5000, true);
+        // await wait(5000, true);
+        
+        // 5s，同時開始，各自等待結束
+        // const a = wait(5000, true)
+        // const b = wait(5000, true)
+        // await a
+        // await b
+        // console.log('ok')
+
+        // Promise.all(Promise陣列)
+        // 同時開始，所有的成功才會 .then，會將所有結果變成陣列
+        // 只要有一個失敗就會 .catch，error 是錯誤的 Promise
+        // const all = await Promise.all([wait(1000, false), wait(3000, true)])
+        // console.log(all)
+        
+        // Promise.allSettled(Promise陣列)
+        // 同時開始，所有的有結果才會 .then，會將所有結果變成陣列，用 status 代表有沒有成功
+        // const allSettled = await Promise.allSettled([wait(1000, false), wait(3000, true)])
+        // console.log(allSettled)
+
+        // Promise.any(Promise陣列)
+        // 同時開始，取第一個成功到 .then，全部失敗才進 .catch
+        // const any = await Promise.any([wait(1000, false), wait(3000, true)])
+        // console.log(any)
+
+        // Promise.race(Promise陣列)
+        // 取第一個結果到 .then .catch
+        const race = await Promise.race([wait(1000, false), wait(3000, true)])
+        console.log(race)
+      } catch (error) {
+        console.log('catch', error)
+      }
+    }
+    main()
+  </script>
+</body>
+</html>

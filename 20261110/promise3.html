@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const wait = (ms, ok) => {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          if (ok) {
+            resolve('ok')
+          } else {
+            reject(new Error('no ok'))
+          }
+        }, ms)
+      })
+    }
+
+    // await = 等待 Promise 執行完畢
+    // await 後面只能放 Promise
+    // await 只能在 async function 使用
+    // async function 也是一種 Promise
+
+    // const test = async () => {}
+    // async function test () {}
+
+    const main = async () => {
+      try {
+        // 變數 = await Promise
+        // 變數 = Promise 內 resolve 帶出的資料
+        // Promise 發生 reject 時，會跳到 catch
+        // catch 的 error 就是 Promise reject 帶出的錯誤
+        const aaa = await wait(1000, true)
+        console.log(aaa)
+        const bbb = await wait(2000, false)
+      } catch (error) {
+        console.log('catch', error)
+      }
+    }
+    main()
+  </script>
+</body>
+</html>

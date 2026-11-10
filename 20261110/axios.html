@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios 範例</title>
+</head>
+
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>標題</th>
+                <th>摘要</th>
+                <th>時間地點</th>
+                <th>主辦單位</th>
+                <th>發布時間</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.21.1/axios.min.js'
+        integrity='sha512-YiweniDPqprdTP7mvKVpKWv3jMGTY9frHzOTmDqbutoqcypYCRo8nfKhhDKnSiXTTMN0kBrDtTozIlM11wqcAg=='
+        crossorigin='anonymous'></script>
+    <script>
+        // 找到要放資料的 tbody
+        const tbody = document.getElementById('tbody');
+
+        // 用 axios 取得活動資料
+        axios.get('https://kktix.com/events.json')
+            .then(function (response) {
+                // 活動清單放在 response.data.entry
+                const events = response.data.entry;
+                // console.log(Array.isArray(events), events);
+                // 一筆一筆處理
+                for (let i = 0; i < events.length; i++) {
+                    const event = events[i];
+
+                    // 把每個欄位先存成變數
+                    const url = event.url;
+                    const title = event.title;
+                    const summary = event.summary;
+                    const published = event.published;
+                    const authorUrl = event.author.url;
+                    const authorName = event.author.name;
+                    const content = event.content.replaceAll('(+0800)', '');
+
+                    // 組出一列 HTML 並加到表格
+                    tbody.innerHTML += `
+                        <tr>
+                            <td><a href="${url}" target="_blank">${title}</a></td>
+                            <td>${summary}</td>
+                            <td>${content}</td>
+                            <td><a href="${authorUrl}" target="_blank">${authorName}</a></td>
+                            <td>${new Date(published).toLocaleString('zh-TW')}</td>
+                        </tr>
+                    `;
+                }
+            })
+        // .catch(function (error) {
+        //     // 請求失敗時，在 console 顯示錯誤
+        //     console.log('請求失敗：', error);
+        // });
+    </script>
+</body>
+
+</html>

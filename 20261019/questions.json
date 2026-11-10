@@ -1,0 +1,8560 @@
+[
+ {
+  "item": "01 作業準備",
+  "no": 1,
+  "q": "「全球資訊網（WWW）」的英文為何？",
+  "options": [
+   "World Wide Web",
+   "Web Wide World",
+   "Web World Wide",
+   "World Web Wide"
+  ],
+  "answer": 1,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 2,
+  "q": "「超文字傳輸協定」的英文簡稱為何？",
+  "options": [
+   "HTTP",
+   "WWW",
+   "URL",
+   "TANET"
+  ],
+  "answer": 1,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 3,
+  "q": "「可擴展標記語言」的英文簡稱為何？",
+  "options": [
+   "HTML",
+   "YAML",
+   "JSON",
+   "XML"
+  ],
+  "answer": 4,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 4,
+  "q": "「內容服務供應商」的英文簡稱為何？",
+  "options": [
+   "ISP",
+   "ICP",
+   "ERP",
+   "LISP"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 5,
+  "q": "「中央處理單元」的英文簡稱為何？",
+  "options": [
+   "I/O",
+   "CPU",
+   "CCD",
+   "UPS"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 6,
+  "q": "「全球資源定位法」的英文簡稱為何？",
+  "options": [
+   "WWW",
+   "URL",
+   "HTTP",
+   "FTP"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 7,
+  "q": "「動態伺服器網頁」的英文簡稱為何？",
+  "options": [
+   "CGI",
+   "ASP",
+   "HTML",
+   "DHTML"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 8,
+  "q": "「決策支援系統」的英文簡稱為何？",
+  "options": [
+   "DBMS",
+   "DASD",
+   "DSS",
+   "IMS"
+  ],
+  "answer": 3,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 9,
+  "q": "「物聯網」的英文簡稱為何？",
+  "options": [
+   "Cloud",
+   "IT",
+   "IOT",
+   "AI"
+  ],
+  "answer": 3,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 10,
+  "q": "「動態主機配置協定」允許 IP 位址自動配置，其英文簡稱為何？",
+  "options": [
+   "WWW",
+   "TCP/IP",
+   "POP",
+   "DHCP"
+  ],
+  "answer": 4,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 11,
+  "q": "「資料庫管理系統」的英文簡稱為何？",
+  "options": [
+   "DBMS",
+   "PDA",
+   "DB",
+   "DVD"
+  ],
+  "answer": 1,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 12,
+  "q": "「電子郵件」的英文簡稱為何？",
+  "options": [
+   "C-mail",
+   "A-mail",
+   "B-mail",
+   "E-mail"
+  ],
+  "answer": 4,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 13,
+  "q": "「企業內部網路」的英文為何？",
+  "options": [
+   "Telnet",
+   "Extranet",
+   "Intranet",
+   "Internet"
+  ],
+  "answer": 3,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 14,
+  "q": "「階層式樣式表」的英文簡稱為何？",
+  "options": [
+   "CSS",
+   "CHSS",
+   "XLST",
+   "XSL"
+  ],
+  "answer": 1,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 15,
+  "q": "「非對稱數位用戶線路」的英文簡稱為何？",
+  "options": [
+   "AOL",
+   "ASP",
+   "ADSL",
+   "ATM"
+  ],
+  "answer": 3,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 16,
+  "q": "「網域名稱伺服器」的英文簡稱為何？",
+  "options": [
+   "ISDN",
+   "DNS",
+   "ISP",
+   "TCP"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 17,
+  "q": "「MIS」為何者的英文簡稱？",
+  "options": [
+   "決策支援系統",
+   "管理資訊系統",
+   "資料庫管理系統",
+   "辦公室自動化"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 18,
+  "q": "「ISDN」為何者的英文簡稱？",
+  "options": [
+   "廣域網路",
+   "整體服務數位網路",
+   "區域網路",
+   "加值型網路"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 19,
+  "q": "「LAN」為何者的英文簡稱？",
+  "options": [
+   "廣域網路",
+   "整體服務數位網路",
+   "區域網路",
+   "加值型網路"
+  ],
+  "answer": 3,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 20,
+  "q": "「MAN」最可能為何者的英文簡稱？",
+  "options": [
+   "廣域網路",
+   "都會網路",
+   "區域網路",
+   "加值型網路"
+  ],
+  "answer": 2,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 21,
+  "q": "「WAN」為何者的英文簡稱？",
+  "options": [
+   "廣域網路",
+   "整體服務數位網路",
+   "區域網路",
+   "加值型網路"
+  ],
+  "answer": 1,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 22,
+  "q": "「響（回）應式網頁設計」的英文簡稱為何？",
+  "options": [
+   "AWD",
+   "SWD",
+   "RWD",
+   "WFD"
+  ],
+  "answer": 3,
+  "page": 2,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 23,
+  "q": "電子商務中的「B2B」英文為何？",
+  "options": [
+   "Business to Business",
+   "Business to Boss",
+   "Boss to Business",
+   "Boss to Boss"
+  ],
+  "answer": 1,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 24,
+  "q": "「消費者對消費者」之間的電子商務關係，其英文簡稱為何？",
+  "options": [
+   "B2B",
+   "C2B",
+   "B2C",
+   "C2C"
+  ],
+  "answer": 4,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 25,
+  "q": "「企業對消費者」之間的電子商務關係，其英文簡稱為何？",
+  "options": [
+   "B2B",
+   "C2C",
+   "B2C",
+   "C2B"
+  ],
+  "answer": 3,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 26,
+  "q": "在「校園網路的實習商城」中，廠商提供多樣的購書選擇，使學生可以自行上網訂購書籍，此一交易模式係屬於「電子商務」中的何種模式？",
+  "options": [
+   "C2C",
+   "B2C",
+   "C2B",
+   "B2B"
+  ],
+  "answer": 2,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 27,
+  "q": "電子商務中所提到的「C2B」，其英文為何？",
+  "options": [
+   "Consumer to Business",
+   "Consumer to Boss",
+   "Commerce to Business",
+   "Commerce to Boss"
+  ],
+  "answer": 1,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 28,
+  "q": "網路商場中，當廠商收到客戶的訂單後，系統將自動對其上游供應商的訂貨系統下訂單，該兩廠商系統間的交易模式係屬於「電子商務」中的何種模式？",
+  "options": [
+   "C2C",
+   "B2C",
+   "C2B",
+   "B2B"
+  ],
+  "answer": 4,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 29,
+  "q": "使用資訊網路來做產品廣告行銷、網路訂購、付款等工作稱之為何？",
+  "options": [
+   "視訊會議",
+   "電子商務",
+   "虛擬實境",
+   "電子布告欄"
+  ],
+  "answer": 2,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 30,
+  "q": "透過 Internet 連線到網站購買商品，這是使用網際網路上的何種服務？",
+  "options": [
+   "視訊會議",
+   "虛擬實境",
+   "網路購物",
+   "線上遊戲"
+  ],
+  "answer": 3,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 31,
+  "q": "在「電子商務」中，廠商或業界經常採用的銷售管道為何？",
+  "options": [
+   "Telnet",
+   "Extranet",
+   "Intranet",
+   "Internet"
+  ],
+  "answer": 4,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 32,
+  "q": "網域名稱中表示「公司或行號」的頂級域名（TLD）為何？",
+  "options": [
+   ".edu",
+   ".gov",
+   ".com",
+   ".org"
+  ],
+  "answer": 3,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 33,
+  "q": "網域名稱中表示「政府機構」的頂級域名（TLD）為何？",
+  "options": [
+   ".edu",
+   ".gov",
+   ".com",
+   ".org"
+  ],
+  "answer": 2,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 34,
+  "q": "網域名稱中表示「教育單位」的頂級域名（TLD）為何？",
+  "options": [
+   ".edu",
+   ".gov",
+   ".com",
+   ".org"
+  ],
+  "answer": 1,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 35,
+  "q": "網域名稱中表示「個人」的頂級域名（TLD）為何？",
+  "options": [
+   ".edu",
+   ".idv",
+   ".com",
+   ".org"
+  ],
+  "answer": 2,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 36,
+  "q": "網域名稱中表示「組織單位或財團法人」的頂級域名（TLD）為何？",
+  "options": [
+   ".edu",
+   ".idv",
+   ".com",
+   ".org"
+  ],
+  "answer": 4,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 37,
+  "q": "網域名稱中表示「臺灣」的頂級域名（TLD）為何？",
+  "options": [
+   ".jp",
+   ".cn",
+   ".hk",
+   ".tw"
+  ],
+  "answer": 4,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 38,
+  "q": "關於「頂級網域名稱（Top-level Domain, TLD）」之敘述何者錯誤？",
+  "options": [
+   "gov 為政府機構",
+   "edu 為教育單位",
+   "org 為商業機構",
+   "mil 為軍方單位"
+  ],
+  "answer": 3,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 39,
+  "q": "負責臺灣網域（Domain）管理的單位為何？",
+  "options": [
+   "財團法人工業技術研究院（ITRI）",
+   "數位發展部（MODA）",
+   "財團法人資訊工業策進會（III）",
+   "財團法人台灣網路資訊中心（TWNIC）"
+  ],
+  "answer": 4,
+  "page": 3,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 40,
+  "q": "若以網址 https://www.wda.gov.tw/index.html 為例，其中「index.html」表示為何？",
+  "options": [
+   "網頁檔案名稱",
+   "目錄名稱",
+   "通訊協定名稱",
+   "伺服器網路位址"
+  ],
+  "answer": 1,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 41,
+  "q": "若以網址 https://www.wda.gov.tw/index.html 為例，其中「https」表示為何？",
+  "options": [
+   "網頁檔案名稱",
+   "目錄名稱",
+   "通訊協定名稱",
+   "伺服器網路位址"
+  ],
+  "answer": 3,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 42,
+  "q": "若以網址 https://www.wda.gov.tw/index.html 為例，其中「www.wda.gov.tw」表示為何？",
+  "options": [
+   "網頁檔案名稱",
+   "目錄名稱",
+   "通訊協定名稱",
+   "伺服器網域名稱"
+  ],
+  "answer": 4,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 43,
+  "q": "欲利用網路瀏覽器瀏覽「網址（URL）為 www.wda.gov.tw」且「埠號（Port）為 8080」的 Web 虛擬主機，應如何輸入？",
+  "options": [
+   "http://www.wda.gov.tw/",
+   "http://www.wda.gov.tw/default.htm",
+   "http://www.wda.gov.tw/8080",
+   "http://www.wda.gov.tw:8080/"
+  ],
+  "answer": 4,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 44,
+  "q": "網站的網址為 https://www.amis.idv.tw，通常表示該網站是屬於何種網站？",
+  "options": [
+   "教育網站",
+   "色情網站",
+   "個人網站",
+   "電台網站"
+  ],
+  "answer": 3,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 45,
+  "q": "以網址 https://www.ntnu.edu.tw/為例，哪一項代表國家或地理區域？",
+  "options": [
+   "www",
+   "ntnu",
+   "edu",
+   "tw"
+  ],
+  "answer": 4,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 46,
+  "q": "關於 URL 表示法何者錯誤？",
+  "options": [
+   "mms://www.mol.gov.tw/mol.wma",
+   "https://nol.ntu.edu.tw",
+   "ftp://ftp.mol.gov.tw",
+   "bbs://www.mol.gov.tw/"
+  ],
+  "answer": 4,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 47,
+  "q": "目前網際網路協定使用的 IPv4 位址是由幾個位元組（Byte）所組成？",
+  "options": [
+   "4",
+   "8",
+   "16",
+   "32"
+  ],
+  "answer": 1,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 48,
+  "q": "IPv4 位址為 255.255.255.0 其功用為何？",
+  "options": [
+   "自我迴路測試",
+   "廣播信號",
+   "網路遮罩",
+   "通訊閘位址"
+  ],
+  "answer": 3,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 49,
+  "q": "目前網際網路 IPv6 協定所定義的位址係由幾組 16 位元的片段（Segment）所構成？",
+  "options": [
+   "4",
+   "6",
+   "8",
+   "16"
+  ],
+  "answer": 3,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 50,
+  "q": "未來網際網路的下一個 IP 協定（Internet Protocol）是哪一個版本，它將解決目前 IP 不足的問題？",
+  "options": [
+   "2",
+   "4",
+   "5",
+   "6"
+  ],
+  "answer": 4,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 51,
+  "q": "何者 IPv4 位址不屬於私有位址（Private Address），供內部網路來使用？",
+  "options": [
+   "10.0.0.1",
+   "172.16.0.1",
+   "192.168.0.1",
+   "127.0.0.1"
+  ],
+  "answer": 4,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 52,
+  "q": "一個網際網路的 IPv4 位址為 140.*.*.*，它是屬於哪一類級位址？",
+  "options": [
+   "A",
+   "B",
+   "C",
+   "D"
+  ],
+  "answer": 2,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 53,
+  "q": "關於 IPv4（Internet Protocol Version 4）之敘述何者錯誤？",
+  "options": [
+   "區分為網路別碼與主機識別碼兩部分",
+   "長度為 32 個位元",
+   "劃分為 A、B、C、D 四個等級",
+   "一台電腦允許擁有兩個 IP"
+  ],
+  "answer": 2,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 54,
+  "q": "屬於 Class C 等級作為私用的 IPv4 範圍為何？",
+  "options": [
+   "1.0.0.0~126.255.255.255",
+   "10.0.0.0~10.255.255.255",
+   "172.16.0.0~172.31.255.255",
+   "192.168.0.0~192.168.255.255"
+  ],
+  "answer": 2,
+  "page": 4,
+  "figure": false,
+  "note": "原卷答案為 ②（10.0.0.0~10.255.255.255），但 Class C 私有位址是 192.168.0.0~192.168.255.255（④），原卷答案疑似有誤。"
+ },
+ {
+  "item": "01 作業準備",
+  "no": 55,
+  "q": "Class C 等級的 IPv4 每一區組數量有多少？",
+  "options": [
+   "256",
+   "512",
+   "1024",
+   "2048"
+  ],
+  "answer": 1,
+  "page": 4,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 56,
+  "q": "IPv4 屬於 Class C 等級的網路遮罩為何？",
+  "options": [
+   "255.255.255.255",
+   "255.255.255.0",
+   "255.255.0.0",
+   "255.0.0.0"
+  ],
+  "answer": 2,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 57,
+  "q": "安裝 IIS（Internet Information Services）網站伺服器之後，在網路瀏覽器的網址列上輸入哪一個 IPv4 位址，可測試 IIS 是否運作正常？",
+  "options": [
+   "100.0.0.1",
+   "107.0.0.1",
+   "117.0.0.1",
+   "127.0.0.1"
+  ],
+  "answer": 4,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 58,
+  "q": "在網際網路上，將網路主機名稱（如：www.mol.gov.tw）翻譯成 IP 位址的電腦設備為何？",
+  "options": [
+   "Proxy Server",
+   "File Server",
+   "Mail Server",
+   "DNS Server"
+  ],
+  "answer": 4,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 59,
+  "q": "IPv4 的每組數字是用哪個符號將其隔開的？",
+  "options": [
+   "，",
+   "：",
+   "；",
+   "."
+  ],
+  "answer": 4,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 60,
+  "q": "Internet 的 IPv4 位址中，何者的表示法錯誤？",
+  "options": [
+   "140.5.30.288",
+   "210.71.84.1",
+   "163.20.165.55",
+   "200.200.200.200"
+  ],
+  "answer": 1,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 61,
+  "q": "何者是以 4 個位元組的二進制數字來識別 Internet 上之主機位址的表示方法？",
+  "options": [
+   "TCP",
+   "IP",
+   "UTP",
+   "SMTP"
+  ],
+  "answer": 2,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 62,
+  "q": "「Internet」最初設計的目的為何？",
+  "options": [
+   "學術",
+   "行政",
+   "軍事",
+   "醫療"
+  ],
+  "answer": 3,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 63,
+  "q": "何者是目前國內最大的「學術性國際網路」服務機構？",
+  "options": [
+   "TANet",
+   "HiNet",
+   "SeedNet",
+   "BITNet"
+  ],
+  "answer": 1,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 64,
+  "q": "在一個區域網路中，主機利用一個實體 IP，讓其他電腦以虛擬 IP 對應，而可以通行於網際網路，該主機需具有何種服務或功能？",
+  "options": [
+   "NAT",
+   "WWW",
+   "FTP",
+   "PROXY"
+  ],
+  "answer": 1,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 65,
+  "q": "網站最常使用何種技術來記錄使用者的線上活動，以提供使用者個人化服務，或簡化連上網路的程式？",
+  "options": [
+   "Application",
+   "Pipe",
+   "Session",
+   "Cookie"
+  ],
+  "answer": 4,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 66,
+  "q": "1M 是 2 的幾次方？",
+  "options": [
+   "5",
+   "10",
+   "15",
+   "20"
+  ],
+  "answer": 4,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 67,
+  "q": "十進位數 20 轉換成十六進位後，其值為何？",
+  "options": [
+   "14",
+   "15",
+   "20",
+   "21"
+  ],
+  "answer": 1,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 68,
+  "q": "十進制數 50.875 以二進位表示，其值為何？",
+  "options": [
+   "110010.111",
+   "110010.110",
+   "110100.111",
+   "110100.110"
+  ],
+  "answer": 1,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 69,
+  "q": "二進位數 1011011111001110 以十六進位表示，其值為何？",
+  "options": [
+   "C7BE",
+   "B7CE",
+   "B9CE",
+   "C8EF"
+  ],
+  "answer": 2,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 70,
+  "q": "十六進位數 A5 轉換為二進位後，其值為何？",
+  "options": [
+   "10111001",
+   "10110101",
+   "10101000",
+   "10100101"
+  ],
+  "answer": 4,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 71,
+  "q": "二進位數值 11000101 之 2 的補數為何？",
+  "options": [
+   "11001010",
+   "00111011",
+   "00110101",
+   "00011010"
+  ],
+  "answer": 2,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 72,
+  "q": "二進位數值 11001101 之 1 的補數為何？",
+  "options": [
+   "11000010",
+   "00110010",
+   "00110011",
+   "000110010"
+  ],
+  "answer": 2,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 73,
+  "q": "若一年以 365 日計算，至少需使用多少位元才可表示該數目？",
+  "options": [
+   "7",
+   "8",
+   "9",
+   "10"
+  ],
+  "answer": 3,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 74,
+  "q": "英文字母「B」的十進位 ASCII 值為 66，字母「L」的十進位 ASCII 值為何？",
+  "options": [
+   "74",
+   "75",
+   "76",
+   "77"
+  ],
+  "answer": 3,
+  "page": 5,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 75,
+  "q": "在 ASCII Code 的表示法中，何者不是依照字元其內碼大小順序排列？",
+  "options": [
+   "c>b>a",
+   "A>B>C",
+   "3>2>1",
+   "p>g>e"
+  ],
+  "answer": 2,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 76,
+  "q": "個人電腦通常採用 ASCII 碼作為內部資料處理或數據傳輸方面的交換碼，其編碼方式為何？",
+  "options": [
+   "5 位元二進位碼",
+   "6 位元二進位碼",
+   "7 位元二進位碼",
+   "9 位元二進位碼"
+  ],
+  "answer": 3,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 77,
+  "q": "以 ASCII Code 來儲存字串\"administrator\"，不包含引號，至少佔用記憶體多少位元組（Byte）？",
+  "options": [
+   "9",
+   "13",
+   "18",
+   "25"
+  ],
+  "answer": 2,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 78,
+  "q": "關於編碼之敘述何者錯誤？",
+  "options": [
+   "「非壓縮（Unpacked）的 BCD 碼」係使用一組 4 位元來表示一個十進位制的數字",
+   "「中文標準交換碼」為我國之國家標準交換碼",
+   "「ASCII 碼」為常用的文數字資料的編碼",
+   "「BIG-5 碼」是中文的外碼"
+  ],
+  "answer": 4,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 79,
+  "q": "以 BIG-5 Code 來儲存字串\"電子化政府\"，不包含引號，共需使用記憶體多少位元組？",
+  "options": [
+   "7",
+   "10",
+   "11",
+   "12"
+  ],
+  "answer": 2,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 80,
+  "q": "何種內碼可以涵蓋世界各種不同的文字？",
+  "options": [
+   "ASCII 碼",
+   "BIG-5 碼",
+   "UNICODE 碼",
+   "EBCDIC 碼"
+  ],
+  "answer": 3,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 81,
+  "q": "同位檢查（Parity Checking）是一項資料錯誤檢查的技術，何者不具有偶同位性？",
+  "options": [
+   "110011110",
+   "101110101",
+   "010101001",
+   "011110100"
+  ],
+  "answer": 4,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 82,
+  "q": "二進位編碼所組成的資料在運用時，通常會加一個 bit，用來檢查資料是否正確，此 bit 稱之為何？",
+  "options": [
+   "Parity bit",
+   "Extended bit",
+   "Sign bit",
+   "Redundancy bit"
+  ],
+  "answer": 1,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 83,
+  "q": "若利用 8 位元（bits）來表達整數型態資料，且最左位元 0 代表正數，1 代表負數，負數與正數間互為 2 的補數，可表示之範圍為何？",
+  "options": [
+   "0～255",
+   "-128～127",
+   "-127～127",
+   "-128～128"
+  ],
+  "answer": 2,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 84,
+  "q": "電腦內部用何種方法表示負的整數？",
+  "options": [
+   "16 的補數表示法",
+   "10 的補數表示法",
+   "8 的補數表示法",
+   "2 的補數表示法"
+  ],
+  "answer": 4,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 85,
+  "q": "電腦處理小數問題時是採取何種方法自動調整小數點的位置？",
+  "options": [
+   "小數",
+   "標準",
+   "浮點",
+   "一般標記法"
+  ],
+  "answer": 3,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 86,
+  "q": "一個邏輯閘，若有任一輸入為 1 時，則輸出即為 0，此為何種邏輯閘？",
+  "options": [
+   "NOR 閘",
+   "AND 閘",
+   "XOR 閘",
+   "OR 閘"
+  ],
+  "answer": 1,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 87,
+  "q": "二進位數 00100011 和 11111100 做邏輯 AND 運算結果，表示成十進位為何？",
+  "options": [
+   "3",
+   "32",
+   "35",
+   "220"
+  ],
+  "answer": 2,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 88,
+  "q": "計算機使用的二進位運算法中，10111100、11000011 的互斥或（XOR）結果應為何？",
+  "options": [
+   "01111111",
+   "00001111",
+   "10000000",
+   "11111111"
+  ],
+  "answer": 1,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 89,
+  "q": "資料單位由小而大的排列順序為何？",
+  "options": [
+   "bit byte KB MB GB TB",
+   "bit MB KB TB GB Byte",
+   "bit GB byte KB TB MB",
+   "TB bit byte MB GB KB"
+  ],
+  "answer": 1,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 90,
+  "q": "一微秒（Micro seconds）是幾分之幾秒？",
+  "options": [
+   "萬分之一秒",
+   "十萬分之一秒",
+   "百萬分之一秒",
+   "千分之一秒"
+  ],
+  "answer": 3,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 91,
+  "q": "「MIPS」為何者之衡量單位？",
+  "options": [
+   "CPU 之處理速度",
+   "印表機之印字速度",
+   "螢幕之解析度",
+   "磁碟機之讀取速度"
+  ],
+  "answer": 1,
+  "page": 6,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 92,
+  "q": "「PPM（Page Per Minute）」為何者之衡量單位？",
+  "options": [
+   "磁碟機讀取速度",
+   "CPU 的處理速度",
+   "螢幕的解析度",
+   "印表機的列印速度"
+  ],
+  "answer": 4,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 93,
+  "q": "網路資料的傳輸速度之單位為何？",
+  "options": [
+   "bpi",
+   "cpi",
+   "cps",
+   "bps"
+  ],
+  "answer": 4,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 94,
+  "q": "第一代電腦使用的元件為何？",
+  "options": [
+   "真空管",
+   "電晶體",
+   "積體電路",
+   "超大型積體電路"
+  ],
+  "answer": 1,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 95,
+  "q": "何者為計算機的心臟，由控制單元與算術邏輯單元所組成？",
+  "options": [
+   "ALU",
+   "GPU",
+   "CPU",
+   "Register"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 96,
+  "q": "何者不是電腦使用的匯流排？",
+  "options": [
+   "位址匯流排",
+   "程式匯流排",
+   "資料匯流排",
+   "控制匯流排"
+  ],
+  "answer": 2,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 97,
+  "q": "所謂 64 位元個人電腦之 64 位元是指 CPU 的何者為 64 位元？",
+  "options": [
+   "控制匯流排",
+   "位址匯流排",
+   "資料匯流排",
+   "輸入／輸出匯流排"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 98,
+  "q": "CPU 的位址線有 16 條，最多可定址出多少實體記憶空間？",
+  "options": [
+   "16K",
+   "16M",
+   "64K",
+   "64M"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 99,
+  "q": "何者不是週邊設備？",
+  "options": [
+   "印表機",
+   "網路攝影機",
+   "鍵盤",
+   "中央處理器"
+  ],
+  "answer": 4,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 100,
+  "q": "資料在停電時不會立即消失的記憶體為何？",
+  "options": [
+   "揮發性記憶體",
+   "靜態隨機存取記憶體（SRAM）",
+   "動態隨機存取記憶體（DRAM）",
+   "快閃記憶體（Flash Memory）"
+  ],
+  "answer": 4,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 101,
+  "q": "將軟體程式儲存於 ROM、PROM 或 EPROM 內的元件稱之為何？",
+  "options": [
+   "晶體",
+   "韌體",
+   "軟體",
+   "硬體"
+  ],
+  "answer": 2,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 102,
+  "q": "何種儲存媒體內的資料會隨電源中斷而消失？",
+  "options": [
+   "VCD",
+   "ROM",
+   "RAM",
+   "DVD"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 103,
+  "q": "何者不是目前在 PC 上常見的記憶體種類？",
+  "options": [
+   "DRAM",
+   "DDR2",
+   "Flash ROM",
+   "DROM"
+  ],
+  "answer": 4,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 104,
+  "q": "電腦的記憶體容量為 128KB，其可儲存的資料有多少位元組？",
+  "options": [
+   "128",
+   "128000",
+   "131072",
+   "131000"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 105,
+  "q": "記憶體容量 1474560Bytes 約等於多少？",
+  "options": [
+   "1.44KB",
+   "144KB",
+   "1.44MB",
+   "1.44GB"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 106,
+  "q": "電源關掉後記憶體內容會隨著消失，即使再重新開機也無法再恢復其內容，此類記憶體稱之為何？",
+  "options": [
+   "ROM",
+   "RAM",
+   "EPROM",
+   "PROM"
+  ],
+  "answer": 2,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 107,
+  "q": "何種記憶體更新資料時不需使用燒錄器，而其寫入資料是以區塊為單位？",
+  "options": [
+   "Flash ROM",
+   "PROM",
+   "EEPROM",
+   "Mask ROM"
+  ],
+  "answer": 1,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 108,
+  "q": "記憶體讀取資料的速度何者最快？",
+  "options": [
+   "隨機存取記憶體（RAM）",
+   "L1 快取記憶體（Cache Memory Level 1）",
+   "L2 快取記憶體（Cache Memory Level 2）",
+   "快閃記憶體（Flash Memory）"
+  ],
+  "answer": 2,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 109,
+  "q": "記憶體讀取資料的速度何者最快？",
+  "options": [
+   "隨機存取記憶體（RAM）",
+   "唯讀光碟機（DVD-ROM）",
+   "快取記憶體（Cache Memory）",
+   "快閃記憶體（Flash Memory）"
+  ],
+  "answer": 3,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 110,
+  "q": "何種記憶體裝置存取資料的速度最快？",
+  "options": [
+   "唯讀記憶體",
+   "快取記憶體",
+   "隨機記憶體",
+   "虛擬記憶體"
+  ],
+  "answer": 2,
+  "page": 7,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 111,
+  "q": "何者為輔助記憶體？",
+  "options": [
+   "BIOS",
+   "RAM",
+   "SSD",
+   "ROM"
+  ],
+  "answer": 3,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 112,
+  "q": "硬式磁碟每一面都由很多同心圓圈組成，這些圓圈稱之為何？",
+  "options": [
+   "磁頭（Head）",
+   "磁區（Sector）",
+   "磁軌（Track）",
+   "磁柱（Cylinder）"
+  ],
+  "answer": 3,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 113,
+  "q": "磁帶採用何種方式存取資料？",
+  "options": [
+   "索引存取",
+   "直接存取",
+   "循序存取",
+   "隨機存取"
+  ],
+  "answer": 3,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 114,
+  "q": "何者為循序存取（Sequential Access）的輸出入媒體？",
+  "options": [
+   "硬碟（HDD）",
+   "光碟（DVD）",
+   "固態硬碟（SSD）",
+   "磁帶（Tape）"
+  ],
+  "answer": 4,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 115,
+  "q": "何者不是常用的記憶卡？",
+  "options": [
+   "CompactFlash 卡",
+   "SD 卡",
+   "NIC 卡",
+   "CFexpress 卡"
+  ],
+  "answer": 3,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 116,
+  "q": "利用光學原理製成的 DVD-ROM 數位影音光碟機，其單倍速為何？",
+  "options": [
+   "150KB/S",
+   "1350KB/S",
+   "18500KB/S",
+   "300KB/S"
+  ],
+  "answer": 2,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 117,
+  "q": "在商業銷售模式中，企業將商品進駐購物平台，而消費者再透過平台來下單消費；此一交易模式係屬於「電子商務」中的何種模式？",
+  "options": [
+   "B2C2B",
+   "B2B2C",
+   "O2O",
+   "OMO"
+  ],
+  "answer": 2,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 118,
+  "q": "在商業銷售模式中，透過線上的促銷或是資訊吸引消費者在線上購物與付款，進而將線上的消費者轉到線下；此一交易模式係屬於「電子商務」中的何種模式？",
+  "options": [
+   "B2C2B",
+   "B2B2C",
+   "O2O",
+   "OMO"
+  ],
+  "answer": 1,
+  "page": 8,
+  "figure": false,
+  "note": "原卷答案為 ①（B2C2B），但「線上促銷把消費者導到線下」一般稱為 O2O（③），原卷答案疑似有誤。"
+ },
+ {
+  "item": "01 作業準備",
+  "no": 119,
+  "q": "在商業銷售模式中，企業整合線上、線下的資料，供消費者不論在線上還是線下消費，皆以同一會員進行交易，以提升消費者體驗；此一交易模式係屬於「電子商務」中的何種模式？",
+  "options": [
+   "B2C2B",
+   "B2B2C",
+   "O2O",
+   "OMO"
+  ],
+  "answer": 4,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 120,
+  "q": "何者不屬於光碟原理之儲存設備？",
+  "options": [
+   "ZIP",
+   "CD-ROM",
+   "DVD-ROM",
+   "CD-R/W"
+  ],
+  "answer": 1,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 121,
+  "q": "輔助記憶裝置中，何者存取速度最快？",
+  "options": [
+   "固態硬碟",
+   "軟碟",
+   "光碟",
+   "磁帶"
+  ],
+  "answer": 1,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 122,
+  "q": "何種記憶裝置存取資料的速度最慢？",
+  "options": [
+   "傳統硬碟（HDD）",
+   "光碟",
+   "固態硬碟（SSD）",
+   "RAM"
+  ],
+  "answer": 2,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 123,
+  "q": "有關 Wi-Fi 6 之敘述，何者不正確？",
+  "options": [
+   "採用 IEEE 802.11ac 標準",
+   "採用的頻帶為 2.4 及 5 GHz",
+   "最大傳輸速率為 9.6 Gbps",
+   "不影響傳輸速度下，可同時處理更多裝置"
+  ],
+  "answer": 1,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 124,
+  "q": "何者同時是輸入及輸出裝置？",
+  "options": [
+   "印表機",
+   "數位板",
+   "鍵盤",
+   "隨身碟"
+  ],
+  "answer": 4,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 125,
+  "q": "何種裝置只能做輸出設備使用，無法作輸入設備使用？",
+  "options": [
+   "觸摸式螢幕",
+   "鍵盤",
+   "印表機",
+   "光筆"
+  ],
+  "answer": 3,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 126,
+  "q": "何者為撞擊式的印表機？",
+  "options": [
+   "點陣印表機",
+   "噴墨印表機",
+   "雷射印表機",
+   "繪圖機"
+  ],
+  "answer": 1,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 127,
+  "q": "噴墨印表機列印圖片檔時，採用何種輸出解析度，列印出來的圖片會比較大？",
+  "options": [
+   "150dpi",
+   "300dpi",
+   "600dpi",
+   "1200dpi"
+  ],
+  "answer": 1,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 128,
+  "q": "個人電腦想要列印需要哪一項設備？",
+  "options": [
+   "數據機",
+   "印表機",
+   "燒錄機",
+   "掃描機"
+  ],
+  "answer": 2,
+  "page": 8,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 129,
+  "q": "何者最不可能是印表機連接到主機的地方？",
+  "options": [
+   "LPT Port",
+   "HDMIPort",
+   "Lan Port",
+   "USB Port"
+  ],
+  "answer": 2,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 130,
+  "q": "若印表機的列印密度為 360dpi，其代表的意義為每一何種單位可列印 360 點數？",
+  "options": [
+   "公尺",
+   "英吋",
+   "英呎",
+   "公分"
+  ],
+  "answer": 2,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 131,
+  "q": "鍵盤是屬於哪類設備？",
+  "options": [
+   "輸入設備",
+   "輸入媒體",
+   "輸出設備",
+   "輸出媒體"
+  ],
+  "answer": 1,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 132,
+  "q": "螢幕的輸出品質取決於哪項標準？",
+  "options": [
+   "解析度",
+   "輸出速度",
+   "重量",
+   "大小"
+  ],
+  "answer": 1,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 133,
+  "q": "何者是計算螢幕（顯示器）對角線尺寸的向度？",
+  "options": [
+   "寬度",
+   "厚度",
+   "長度",
+   "深度"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 134,
+  "q": "何者僅能做輸入裝置？",
+  "options": [
+   "讀卡機",
+   "磁碟機",
+   "螢幕",
+   "列表機"
+  ],
+  "answer": 1,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 135,
+  "q": "能閱讀銀行支票上金額的輸入裝置為何？",
+  "options": [
+   "BCR",
+   "OMR",
+   "MICR",
+   "POS"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 136,
+  "q": "QR Code 在資料處理作業上係屬於何者？",
+  "options": [
+   "儲存設備",
+   "輸出設備",
+   "輸入媒體",
+   "輸出媒體"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 137,
+  "q": "條碼閱讀機屬於哪類設備？",
+  "options": [
+   "輸入設備",
+   "輸出設備",
+   "儲存設備",
+   "保密設備"
+  ],
+  "answer": 1,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 138,
+  "q": "在安裝介面卡時，若 PC 內已有其他介面卡存在，應該注意 I/O 位址、IRQ、以及何者是否相衝突？",
+  "options": [
+   "Baud Rate",
+   "Fra 2000 Size",
+   "Packet Size",
+   "DMA"
+  ],
+  "answer": 4,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 139,
+  "q": "何者可用來將數位訊號轉換成類比訊號？",
+  "options": [
+   "掃描器",
+   "數據機",
+   "印表機",
+   "數位相機"
+  ],
+  "answer": 2,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 140,
+  "q": "連接主機與週邊的介面卡需插於何處？",
+  "options": [
+   "CPU",
+   "電源",
+   "擴充槽",
+   "記憶單元"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 141,
+  "q": "IPv6 的每組數字是用哪個符號將其隔開的？",
+  "options": [
+   "，",
+   "：",
+   "；",
+   "."
+  ],
+  "answer": 1,
+  "page": 9,
+  "figure": false,
+  "note": "原卷答案為 ①，但 IPv6 以冒號「:」分隔（②），原卷答案疑似有誤。"
+ },
+ {
+  "item": "01 作業準備",
+  "no": 142,
+  "q": "同軸電纜線使用什麼編號來分級？",
+  "options": [
+   "NG-58",
+   "PG-58",
+   "RG-58",
+   "YG-58"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 143,
+  "q": "無遮蔽雙絞線使用類似電話電纜所用的接頭來附加到電腦上，此接頭稱之為何？",
+  "options": [
+   "MJ-45",
+   "PJ-45",
+   "RJ-45",
+   "WJ-45"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 144,
+  "q": "RJ-45 腳位在乙太網路 100 BASE-T Category 6 UTP 纜線中傳送和接收資料被使用的有 1 和 2 線，以及哪二條線？",
+  "options": [
+   "3 和 4",
+   "3 和 6",
+   "4 和 5",
+   "7 和 8"
+  ],
+  "answer": 2,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 145,
+  "q": "大量資料能以光速在極細的玻璃纖維中傳送的是哪一種媒介？",
+  "options": [
+   "同軸電纜",
+   "微波",
+   "光纖電纜",
+   "數據機"
+  ],
+  "answer": 3,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 146,
+  "q": "彙集星狀網路上各節點的裝備稱之為何？",
+  "options": [
+   "伺服器",
+   "集線器",
+   "路由器",
+   "橋接器"
+  ],
+  "answer": 2,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 147,
+  "q": "何者不是網路連線設備？",
+  "options": [
+   "數據機",
+   "路由器",
+   "橋接器",
+   "掃描器"
+  ],
+  "answer": 4,
+  "page": 9,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 148,
+  "q": "集線器（Hub）的網路接線屬於哪類型的網路？",
+  "options": [
+   "環狀型（Ring）",
+   "星狀型（Star）",
+   "直線型",
+   "曲線型（Curve）"
+  ],
+  "answer": 2,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 149,
+  "q": "何者不是常見的網路架構？",
+  "options": [
+   "環狀網路",
+   "球狀網路",
+   "星狀網路",
+   "匯流排狀網路"
+  ],
+  "answer": 2,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 150,
+  "q": "網際網路的網路拓樸為何？",
+  "options": [
+   "匯流排網路",
+   "星狀網路",
+   "網狀網路",
+   "環狀網路"
+  ],
+  "answer": 3,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 151,
+  "q": "何者不屬於區域網路的標準？",
+  "options": [
+   "Token Ring",
+   "HiNet",
+   "ARCnet",
+   "Ethernet"
+  ],
+  "answer": 2,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 152,
+  "q": "100Mb/50Mb 寬頻 ADSL 上網，上傳 100MB 大小的資料，理論上約需多少時間？",
+  "options": [
+   "1 秒",
+   "2 秒",
+   "8 秒",
+   "16 秒"
+  ],
+  "answer": 4,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 153,
+  "q": "100Mb/50Mb 寬頻 ADSL 上網，下載 100MB 大小的資料，理論上約需多少時間？",
+  "options": [
+   "1 秒",
+   "2 秒",
+   "8 秒",
+   "16 秒"
+  ],
+  "answer": 3,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 154,
+  "q": "何者不屬於「寬頻」上網？",
+  "options": [
+   "56K 數據機撥接上網",
+   "ADSL",
+   "Cable Modem",
+   "申請 T1 專線"
+  ],
+  "answer": 1,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 155,
+  "q": "何者負責將封包從電腦傳到網路上，並協調傳輸的速度和封包大小，以確保資料能正確的傳到目的地？",
+  "options": [
+   "CPU",
+   "RAM",
+   "網路卡",
+   "印表機"
+  ],
+  "answer": 3,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 156,
+  "q": "高速乙太網路（Fast Ethernet）最高傳輸的速率為何？",
+  "options": [
+   "2Mbps",
+   "10Mbps",
+   "16Mbps",
+   "100Mbps"
+  ],
+  "answer": 4,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 157,
+  "q": "何者不是優質的網路規劃條件？",
+  "options": [
+   "不需多費工夫就能連上網",
+   "有輕微的故障發生時，網路也不會中斷",
+   "具有必要的安全措施",
+   "超高的成本"
+  ],
+  "answer": 4,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 158,
+  "q": "根據 TIA/EIA 商業電信水平佈線標準，從集線器到任何工作站間的無遮蔽雙絞線（UTP）最遠距離須在多少公尺以內？",
+  "options": [
+   "50",
+   "100",
+   "150",
+   "200"
+  ],
+  "answer": 2,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 159,
+  "q": "電腦網路介面卡（NIC）的最主要功能為何？",
+  "options": [
+   "偵測電腦病毒",
+   "監測網路狀況",
+   "電腦主機資訊與網路訊號間的轉換",
+   "防止駭客入侵"
+  ],
+  "answer": 3,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 160,
+  "q": "某乙太網路卡的實體位置（Physical Address）為 00-14-2A-2D-A6-F9，它的網路卡製造商的代碼為何？",
+  "options": [
+   "00-14",
+   "00-14-2A",
+   "00-14-2A-2D",
+   "00-14-2A-2D-A6"
+  ],
+  "answer": 2,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 161,
+  "q": "何種網路媒介的傳輸距離最遠？",
+  "options": [
+   "同軸電纜",
+   "雙絞線",
+   "多模光纖",
+   "單模光纖"
+  ],
+  "answer": 4,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 162,
+  "q": "藍芽（Bluetooth）無線傳輸技術是使用哪一個頻道？",
+  "options": [
+   "1.8GHz",
+   "1.9GHz",
+   "2.4GHz",
+   "3GHz"
+  ],
+  "answer": 3,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 163,
+  "q": "何者對電腦的通訊效率影響最低？",
+  "options": [
+   "顯示卡處理速率",
+   "網路介面卡速率",
+   "主記憶體存取速率",
+   "主機板匯流排速率"
+  ],
+  "answer": 1,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 164,
+  "q": "網際網路涵蓋的範圍是屬於哪類型的網路？",
+  "options": [
+   "區域網路",
+   "校園網路",
+   "廣域網路",
+   "都會網路"
+  ],
+  "answer": 3,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 165,
+  "q": "網際網路上提供各式各樣服務的電腦主機稱之為何？",
+  "options": [
+   "PC",
+   "Sever",
+   "Workstation",
+   "Cloud"
+  ],
+  "answer": 2,
+  "page": 10,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 166,
+  "q": "關於網路之敘述何者錯誤？",
+  "options": [
+   "E-mail 可用以傳遞文字、影像、聲音等以電子信號儲存的檔案",
+   "TCP/IP 是目前 Internet 網際網路普遍採用的通訊協定",
+   "URL 是一種電腦網路的連接架構",
+   "TANet 是台灣學術網路"
+  ],
+  "answer": 3,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 167,
+  "q": "何者為一般無線網路上網的加密技術？",
+  "options": [
+   "SSL",
+   "HTTPs",
+   "Encode",
+   "WEP"
+  ],
+  "answer": 4,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 168,
+  "q": "何者並非網際網路（Internet）所提供之服務？",
+  "options": [
+   "E-mail",
+   "WWW",
+   "BBS",
+   "UPS"
+  ],
+  "answer": 4,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 169,
+  "q": "何者係利用家用電話線路作為資料傳遞的媒介，其上傳與下傳資料之速度並不相等？",
+  "options": [
+   "Cable Modem",
+   "ISDN",
+   "ATM",
+   "ADSL"
+  ],
+  "answer": 4,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 170,
+  "q": "個人電腦透過 ADSL 寬頻連上 Internet 時，何種設備在家中不需用到？",
+  "options": [
+   "電話線",
+   "Router",
+   "數據機",
+   "電腦"
+  ],
+  "answer": 2,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 171,
+  "q": "關於 ADSL 之敘述何者錯誤？",
+  "options": [
+   "中文稱為非對稱數位用戶線路",
+   "使用電話線做傳輸媒介",
+   "無法同時上網及講電話",
+   "上傳及下載資料時的傳輸速率不對稱"
+  ],
+  "answer": 3,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 172,
+  "q": "超高速乙太網路（Gigabit Ethernet）最高傳輸的速率為何？",
+  "options": [
+   "10Mbps",
+   "100Mbps",
+   "1Gbps",
+   "10Gbps"
+  ],
+  "answer": 3,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 173,
+  "q": "網際網路（Internet）是藉由何種技術來完成資料交換？",
+  "options": [
+   "電路交換",
+   "數位整合交換",
+   "分封交換",
+   "訊息交換"
+  ],
+  "answer": 3,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 174,
+  "q": "有關網路之敘述何者錯誤？",
+  "options": [
+   "廣域網路的範圍較區域網路為大",
+   "中繼器可用來串接兩個不同的網路",
+   "一般家庭用戶大部分是利用數據機連上 ISP",
+   "Telnet 是 Internet 提供的一種服務"
+  ],
+  "answer": 2,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 175,
+  "q": "何種設備可連接兩個（或以上）的 TCP/IP 網路，並具有路徑選擇的能力？",
+  "options": [
+   "Bridge",
+   "Router",
+   "Hub",
+   "Switch"
+  ],
+  "answer": 2,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 176,
+  "q": "MODEM 之功能為何？",
+  "options": [
+   "轉換 ASCII 碼與 EBCDIC 碼",
+   "轉換類比與數位訊號",
+   "轉換內碼與外碼",
+   "轉換原始碼與目的碼"
+  ],
+  "answer": 2,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 177,
+  "q": "使用 Category 6 的 UTP 纜線，用於乙太網路傳輸，其內部絞線共幾對？",
+  "options": [
+   "2",
+   "3",
+   "4",
+   "5"
+  ],
+  "answer": 3,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 178,
+  "q": "在 10 BASE T 架構中從 HUB 到工作站最大傳送距離是多少公尺？",
+  "options": [
+   "50",
+   "100",
+   "185",
+   "500"
+  ],
+  "answer": 2,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 179,
+  "q": "乙太網路中，使用 10 BASE T 規格的纜線時，它必須採用哪一種標準接頭？",
+  "options": [
+   "AUI",
+   "BNC",
+   "RJ-11",
+   "RJ-45"
+  ],
+  "answer": 4,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 180,
+  "q": "乙太網路的傳輸速度在 1Gbps 時，至少需採用哪一種等級的 UTP 纜線？",
+  "options": [
+   "Cat.4",
+   "Cat.5",
+   "Cat.5e",
+   "Cat.6"
+  ],
+  "answer": 3,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 181,
+  "q": "無線寬頻網路卡之制定標準為何？",
+  "options": [
+   "IEEE 802.11",
+   "IEEE 802.12",
+   "IEEE 802.13",
+   "IEEE 802.14"
+  ],
+  "answer": 1,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 182,
+  "q": "哪一個無線網路標準運作在 5GHz 傳送範圍且有 54Mbps 的資料傳送率？",
+  "options": [
+   "802.11",
+   "802.11a",
+   "802.11b",
+   "802.11g"
+  ],
+  "answer": 2,
+  "page": 11,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 183,
+  "q": "欲將有線的區域網路轉換成無線的乙太區域網路，何者必須改變？",
+  "options": [
+   "不需要任何改變",
+   "每台主機將需要新的 IP 位址",
+   "每台主機將需要適當的網路卡或轉接器",
+   "每台主機將需要升級作業系統"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 184,
+  "q": "何種網路傳輸媒體的訊號在超過 100 公尺需再生(Repeat)？",
+  "options": [
+   "10 BASE 2",
+   "10 BASE 5",
+   "100 BASE-T",
+   "100 BASE-FX"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 185,
+  "q": "乙太網路網段的 CSMA/CD 在碰撞發生後，如何管理訊框的重傳？",
+  "options": [
+   "偵測到碰撞的第一個設備有重傳的優先權",
+   "具較低 MAC 位址的設備決定重傳的優先權",
+   "網路上的設備舉行選舉以決定重傳資料的優先權",
+   "當碰撞發生時在傳送的設備沒有重傳的優先權"
+  ],
+  "answer": 4,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 186,
+  "q": "網路卡上的 MAC 位址是屬於 OSI 模式的哪一層？",
+  "options": [
+   "實體層",
+   "應用層",
+   "網路層",
+   "資料鏈結層"
+  ],
+  "answer": 4,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 187,
+  "q": "MAC 位址來源在哪裡？",
+  "options": [
+   "DHCP 伺服器資料庫",
+   "由管理者組態設定",
+   "燒在網路卡的 ROM",
+   "在電腦上的網路組態"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 188,
+  "q": "1000 BASE-T 如何使用 UTP 線對來完成傳輸？",
+  "options": [
+   "兩對線用來傳送，且兩對線用來接收",
+   "一對線用來傳送，一對線用來接收，一對線用作時脈，而一對線用作錯誤更正",
+   "所有四對線被兩台主機並行使用來同時傳輸和接收",
+   "兩對線被如 10 BASE-T 和 1000 BASE-TX 一樣地使用"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 189,
+  "q": "數位傳輸方式中，所謂的「傳輸速率」為何？",
+  "options": [
+   "傳輸線的粗細",
+   "每秒傳輸多少個位元",
+   "頻道的最高頻率和最低頻率的差",
+   "網路卡的傳輸能力"
+  ],
+  "answer": 2,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 190,
+  "q": "類比傳輸頻道中，所謂的「頻寬」為何？",
+  "options": [
+   "傳輸線的粗細",
+   "每秒傳輸多少個位元",
+   "頻道的最高頻率和最低頻率的差",
+   "網路卡的傳輸能力"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 191,
+  "q": "國際標準組織(ISO)所制定的開放式系統連結(OSI)參考模式中，何者與硬體最密切相關？",
+  "options": [
+   "資料鏈結層",
+   "會議層",
+   "實體層",
+   "網路層"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 192,
+  "q": "國際標準組織(ISO)所制定的開放式系統連結(OSI)參考模式中，何者的主要功能是負責傳送路徑的選擇？",
+  "options": [
+   "資料鏈結層",
+   "會議層",
+   "實體層",
+   "網路層"
+  ],
+  "answer": 4,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 193,
+  "q": "國際標準組織(ISO)所制定的開放式系統連結(OSI)參考模式中，Line 或 Instagram 是通信協定哪一層的功能？",
+  "options": [
+   "網路層",
+   "實體層",
+   "應用層",
+   "交談層"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 194,
+  "q": "何種網路設備，其主要運作層次為 OSI 七層中的「網路層」？",
+  "options": [
+   "網路卡(NIC)",
+   "橋接器(bridge)",
+   "路由器(router)",
+   "中繼器(repeater)"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 195,
+  "q": "可將數位訊號與類比訊號作相互轉換的裝置為何？",
+  "options": [
+   "前端處理機(Front-end processor)",
+   "數據機(Modem)",
+   "通訊閘道(Communication Channel)",
+   "終端機(Terminal)"
+  ],
+  "answer": 2,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 196,
+  "q": "只能單向傳送資料的傳輸方法稱之為何？",
+  "options": [
+   "多工",
+   "半雙工",
+   "單工",
+   "全雙工"
+  ],
+  "answer": 3,
+  "page": 12,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 197,
+  "q": "在不同時間可作雙向相傳輸，當某一方處於接收狀況時就不能傳送資料的方式稱之為何？",
+  "options": [
+   "區域網路(LAN)",
+   "單工(Simplex)",
+   "全雙工(Duplex)",
+   "半雙工(Half-Duplex)"
+  ],
+  "answer": 4,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 198,
+  "q": "在區域網路，一台工作站可同時傳送及接收資料，這是屬於何種方式的傳輸？",
+  "options": [
+   "混合式",
+   "半雙工",
+   "全雙工",
+   "多工"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 199,
+  "q": "無線電視台將信號傳輸至家中電視機，這是屬於何種方式的傳輸？",
+  "options": [
+   "全雙工(Full-duplex)",
+   "半雙工(Half-duplex)",
+   "全多工(Full-multiplexer)",
+   "單工(Simplex)"
+  ],
+  "answer": 4,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 200,
+  "q": "以電腦創造出多媒體的立體空間稱之為何？",
+  "options": [
+   "創造實境",
+   "電腦實境",
+   "虛擬實境",
+   "天外實境"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 201,
+  "q": "以數種媒體組合呈現資訊的方式稱之為何？",
+  "options": [
+   "單媒體",
+   "雙媒體",
+   "多媒體",
+   "大媒體"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 202,
+  "q": "\"熱插拔\"就是可以在不關機的情況下，任意加入或拔出週邊設備，哪種介面屬於\"熱插拔\"？",
+  "options": [
+   "USB 介面",
+   "PCI 介面",
+   "SCSI 介面",
+   "AGP 介面"
+  ],
+  "answer": 1,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 203,
+  "q": "哪一個十六進位的 RGB 顏色組合不是網頁安全顏色(Web Safe Color)？",
+  "options": [
+   "#CC00FF",
+   "#663399",
+   "#BB00EE",
+   "#9900CC"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 204,
+  "q": "在網際網路(Internet)上，用什麼來識別電腦？",
+  "options": [
+   "URL",
+   "IP Address",
+   "Computer ID",
+   "Computer Name"
+  ],
+  "answer": 2,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 205,
+  "q": "一部專門用來過濾內外部網路間通訊的設備稱之為何？",
+  "options": [
+   "熱站",
+   "疫苗",
+   "冷站",
+   "防火牆"
+  ],
+  "answer": 4,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 206,
+  "q": "何者不是網路防火牆的建置區域？",
+  "options": [
+   "交通網路",
+   "內部網路",
+   "外部網路",
+   "網際網路"
+  ],
+  "answer": 1,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 207,
+  "q": "何者不是網路防火牆的管理功能？",
+  "options": [
+   "支援遠端管理",
+   "存取控制",
+   "日誌記錄",
+   "價格管理"
+  ],
+  "answer": 4,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 208,
+  "q": "哪類伺服器提供網頁快取及防火牆的功能？",
+  "options": [
+   "FTP server",
+   "Proxy server",
+   "DHCP server",
+   "Web server"
+  ],
+  "answer": 2,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 209,
+  "q": "何者不是色彩配色與設計中必須考量的重要項目？",
+  "options": [
+   "對比",
+   "平衡",
+   "花俏",
+   "調和"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 210,
+  "q": "何者不是色彩的三屬性？",
+  "options": [
+   "色相(Hue)",
+   "明度(Brightness)",
+   "彩度(Saturation)",
+   "淡色(Tints)"
+  ],
+  "answer": 4,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 211,
+  "q": "何者不是網頁的檔案格式？",
+  "options": [
+   "dhtml",
+   "htm",
+   "html",
+   "pml"
+  ],
+  "answer": 4,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 212,
+  "q": "哪一個網頁瀏覽器的功能運用，可能對使用者的網路隱私權造成威脅？",
+  "options": [
+   "刪除瀏覽紀錄",
+   "以 Cookie 記錄上網動作與資訊",
+   "播放串流視訊",
+   "使用 HTTPS 的協定"
+  ],
+  "answer": 2,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 213,
+  "q": "何者不是行動支付(Mobile Payment)的特色？",
+  "options": [
+   "快速方便",
+   "無時間空間限制",
+   "可找現金零錢",
+   "應用範圍廣"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 214,
+  "q": "關於行動條碼(QRCode)之敘述何者正確？",
+  "options": [
+   "一般 GSM 的手機都支援行動條碼",
+   "行動條碼是由一長串數字組合而成",
+   "行動條碼內含許多服務資訊",
+   "行動條碼必須透過 Barcode 掃描器來讀取"
+  ],
+  "answer": 3,
+  "page": 13,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 215,
+  "q": "電子商務的四流不包括何者？",
+  "options": [
+   "資訊流",
+   "金流",
+   "服務流",
+   "物流"
+  ],
+  "answer": 3,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 216,
+  "q": "何者不是設計網頁時最主要考量的原則？",
+  "options": [
+   "購物網站的商品應做適當分類",
+   "網頁內容要條理分明方便使用者找尋資料",
+   "運用高解析度之動畫、影片及圖片以強調視覺效果",
+   "網頁內容易更新"
+  ],
+  "answer": 3,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 217,
+  "q": "何者為網頁圖片執行最佳化壓縮的主要目的？",
+  "options": [
+   "轉換檔案格式",
+   "縮短下載時間",
+   "調整圖片尺寸大小",
+   "增加影像解析度"
+  ],
+  "answer": 2,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 218,
+  "q": "哪一個表格寬度的設定方式，可以讓網頁內的表格隨著瀏覽器變化自動縮放？",
+  "options": [
+   "#",
+   "px",
+   "%",
+   "cm"
+  ],
+  "answer": 3,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 219,
+  "q": "網頁中建立電子郵件超連結，欲自動填入郵件主旨，需在哪一個參數中設定？",
+  "options": [
+   "cc",
+   "bcc",
+   "subject",
+   "body"
+  ],
+  "answer": 3,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 220,
+  "q": "物聯網的應用系統中，在居家環境中無線感測器於低頻寬的網路，主要的應用考量為哪一項？",
+  "options": [
+   "實現家庭自動化",
+   "居家保全監控",
+   "住戶健康照護",
+   "自由連結網路環境"
+  ],
+  "answer": 1,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 221,
+  "q": "物聯網的應用系統中，貼附 RFID 冷藏車的冷凍食品棧板，在開門收貨時讀取錯誤，最有可能造成原因為哪一項？",
+  "options": [
+   "棧板標籤上的水滴",
+   "棧板上的標籤不是設計為零度以下的溫度運作",
+   "棧板上的標籤因為低溫而毀壞",
+   "棧板標籤上有紙屑遮蔽"
+  ],
+  "answer": 1,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 222,
+  "q": "物聯網的應用系統中，利用 RFID 進行零售商店貨品追蹤管理的定義為哪一項？",
+  "options": [
+   "其定義為追蹤牲畜的動向，例如在動物園或農場，追蹤這些牲畜目前所在的位置",
+   "其定義包含追蹤公司的資產",
+   "其定義包含實時追蹤倉庫裡的貨品動向，包括進、出貨等",
+   "其定義包含追蹤零售商店的手推車及貨架，並輔助店內的自動付款系統及存貨管理等設備"
+  ],
+  "answer": 3,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 223,
+  "q": "物聯網的應用系統中，哪一項是自動收費系統的應用？",
+  "options": [
+   "包括追蹤像是在農場或動物園的動物並引導到適當的位置",
+   "包括追蹤並辨識在醫療中心或醫院的病人，與正確的醫類、醫生或護士做正確的連結，辨識沒有反應的病人等工作",
+   "包括追蹤供應鏈的物品與倉儲管理，供應鏈是早期主要採用 RFID 的案例",
+   "在高速公路架設 ETC 感應門架及讀取器，並於車輛妥適處設置 eTag 標籤，如此可以自動扣款，也免除必須停車與人工付費的動作"
+  ],
+  "answer": 4,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 224,
+  "q": "物聯網的應用系統中，哪一項不是感測節點須符合的條件？",
+  "options": [
+   "具低功率消耗",
+   "非獨立且需有人操作",
+   "能適應環境",
+   "能符合高節點密度的工作環境"
+  ],
+  "answer": 2,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 225,
+  "q": "造成 RFID Tag 讀取率不佳的因素中，哪一項情境不會影響讀取率？",
+  "options": [
+   "成衣賣場中，附有 EPC 標籤掛牌的服飾緊密的排列在衣架上",
+   "整箱紅酒每瓶均貼附 Near Field 的 UHF 標籤於瓶身",
+   "在無線網路密佈的廠房進行外箱及棧板上標籤的盤點",
+   "數條生產線上多部密集排列讀取器同時讀取大量標籤"
+  ],
+  "answer": 3,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 226,
+  "q": "何者不是巨量資料分析的核心資訊知識？",
+  "options": [
+   "雲端計算",
+   "資料探勘",
+   "平行化程式設計",
+   "電腦硬體裝修"
+  ],
+  "answer": 4,
+  "page": 14,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 227,
+  "q": "何者不是巨量資料運用的案例？",
+  "options": [
+   "電腦 AlphaGo 戰勝南韓棋王",
+   "銀行提供金融卡轉帳服務",
+   "Google 運用關鍵字預測流感爆發",
+   "Twitter 從發文中預測 Facebook 的股價"
+  ],
+  "answer": 2,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 228,
+  "q": "關於巨量資料特點之敘述何者錯誤？",
+  "options": [
+   "數據體量巨大",
+   "數據類型多樣",
+   "處理速度緩慢",
+   "價值密度低"
+  ],
+  "answer": 3,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 229,
+  "q": "關於「巨量資料」之敘述何者錯誤？",
+  "options": [
+   "大量(Volume)",
+   "快速(Velocity)",
+   "多樣性(Variety)",
+   "振動性(Vibration)"
+  ],
+  "answer": 4,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 230,
+  "q": "何者經常成為巨量資料計算的單位？",
+  "options": [
+   "KB",
+   "MB",
+   "GB",
+   "TB"
+  ],
+  "answer": 4,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 231,
+  "q": "關於「綠色環保電腦」之敘述何者錯誤？",
+  "options": [
+   "必須是省電的",
+   "必須符合人體工學",
+   "必須是低污染，低輻射",
+   "必須是木製外殼"
+  ],
+  "answer": 4,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 232,
+  "q": "在 CSS 樣式中，何者可用來偵測媒體裝置的尺寸與方向？",
+  "options": [
+   "CSS Media Queries",
+   "CSS Flex Box",
+   "CSS Box Model",
+   "CSS Pseudo Element"
+  ],
+  "answer": 1,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 233,
+  "q": "欲使網頁圖片具 70%透明效果，其 CSS 樣式屬性設定為何？",
+  "options": [
+   "opacity: 70",
+   "opacity: 30",
+   "opacity: 0.7",
+   "opacity:0.3"
+  ],
+  "answer": 4,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 234,
+  "q": "在 CSS 樣式中，何種設定可使用網路上的字型檔來顯示網頁中的文字，無需考慮用戶端的電腦是否有安裝字型？",
+  "options": [
+   "font family",
+   "@media",
+   "@font-face",
+   "font style"
+  ],
+  "answer": 3,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 235,
+  "q": "在 CSS 樣式中，何者不是絕對的度量單位？",
+  "options": [
+   "px",
+   "pt",
+   "em",
+   "in"
+  ],
+  "answer": 3,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 236,
+  "q": "在 CSS3 樣式中，何者不是色彩表示方式？",
+  "options": [
+   "HEX",
+   "RGBA",
+   "@HSLA",
+   "OCT"
+  ],
+  "answer": 4,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 237,
+  "q": "關於響應式網頁設計之敘述何者錯誤？",
+  "options": [
+   "英文全名為 Responsive Web Design，簡稱 RWD",
+   "又可稱為回應式網頁設計",
+   "是一種網頁設計開發的技術，使用 HTML 5 的語法，以百分比的設定方式及彈性的畫面設計",
+   "瀏覽器在不同解析度下，會自動改變網頁版面內的元件的佈局排版，讓不同的裝置設備都可以正常瀏覽同一網站，提供最佳的視覺效果體驗"
+  ],
+  "answer": 3,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 238,
+  "q": "關於響應式網頁設計之敘述何者錯誤？",
+  "options": [
+   "響應式網頁設計是一個網站除設計電腦版網頁外，再另設計一個內容一樣或接近的手機版網頁，此兩個網頁採不同的連結網址(Link)",
+   "網頁可以跨平台瀏覽，解決多種裝置的瀏覽的問題",
+   "網頁後台管理只需管理維護一個網站的內容，管理成本較節省",
+   "方便使用者瀏覽，改善使用者經驗，提升搜尋引擎曝光度及網頁排名(Page Rank)"
+  ],
+  "answer": 1,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 239,
+  "q": "響應式網站設計原理，主要是運用下列哪一個 CSS 的語法來指定不同螢幕寬度進行不同的樣式調整？",
+  "options": [
+   "@media only screen and (…)",
+   "selector",
+   "margin",
+   "padding"
+  ],
+  "answer": 1,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 240,
+  "q": "響應式網站設計指令「 」，何者敘述錯誤？（題幹中的指令為圖片/空白，應為 viewport meta 標籤）",
+  "options": [
+   "HTML 5 使用一種新的設定方式，讓網頁設計人員可透過標籤來控制瀏覽器如何呈現網頁內容",
+   "網頁版面的寬度不會跟隨設備螢幕寬度變動而變動",
+   "瀏覽器可控制檢視區寬度和縮放比例",
+   "於 CSS 像素和裝置獨立像素之間建立 1:1 的關係"
+  ],
+  "answer": 2,
+  "page": 15,
+  "figure": false
+ },
+ {
+  "item": "01 作業準備",
+  "no": 241,
+  "q": "下列響應式網頁設計指令，何者敘述錯誤？（圖：四行指令 @media only screen and (max-width: 600px) {...}；@media only screen and (min-width: 600px) {...}；@media only screen and (min-width: 768px) {...}；@media only screen and (min-width: 1200px) {...}）",
+  "options": [
+   "設定瀏覽器檢視區寬度小於 600px 時的版面顯示為同一種效果",
+   "設定瀏覽器檢視區寬度 600px 到 767px 時的版面顯示為同一種效果",
+   "設定瀏覽器檢視區寬度小於 768px 時的版面顯示為同一種效果",
+   "設定瀏覽器檢視區寬度等於或大於 1200px 時的版面顯示為同一種效果"
+  ],
+  "answer": 3,
+  "page": 16,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 1,
+  "q": "\"MariaDB\"是屬於哪類軟體？",
+  "options": [
+   "視訊編輯軟體",
+   "文書編輯軟體",
+   "圖形編輯軟體",
+   "資料庫軟體"
+  ],
+  "answer": 4,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 2,
+  "q": "\"After Effects\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "簡報軟體",
+   "視訊特效軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 3,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 3,
+  "q": "\"McAfee\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "防毒軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 4,
+  "q": "\"AutoCAD\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "簡報軟體",
+   "製圖軟體",
+   "資料庫軟體"
+  ],
+  "answer": 3,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 5,
+  "q": "\"Animation Desk\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "動畫製作軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 6,
+  "q": "\"WinZip\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "壓縮及解壓縮工具軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 7,
+  "q": "\"Adobe Director\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "多媒體軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 8,
+  "q": "\"Dreamweaver\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "網頁設計軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 9,
+  "q": "\"Excel\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "簡報軟體",
+   "試算表軟體",
+   "資料庫軟體"
+  ],
+  "answer": 3,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 10,
+  "q": "\"Premiere\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "視訊編輯軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 11,
+  "q": "\"Google Web Designer\"是屬於哪類軟體？",
+  "options": [
+   "彩繪軟體",
+   "網頁設計軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 12,
+  "q": "\"Illustrator\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "美工繪圖軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 16,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 13,
+  "q": "\"Word\"是屬於哪類軟體？",
+  "options": [
+   "視訊編輯軟體",
+   "文書編輯軟體",
+   "圖形編輯軟體",
+   "資料庫軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 14,
+  "q": "\"Maya\"是屬於哪類軟體？",
+  "options": [
+   "3D 視訊動畫工具軟體",
+   "程式語言",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 1,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 15,
+  "q": "\"Painter\"是屬於哪類軟體？",
+  "options": [
+   "彩繪軟體",
+   "程式語言",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 1,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 16,
+  "q": "\"PC-cillin\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "防毒及掃毒軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 17,
+  "q": "\"PhotoCap\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "影像處理軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 18,
+  "q": "\"PhotoImpact\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "影像處理軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 19,
+  "q": "\"Photoshop\"是屬於哪類軟體？",
+  "options": [
+   "視訊編輯軟體",
+   "文書編輯軟體",
+   "影像處理軟體",
+   "資料庫軟體"
+  ],
+  "answer": 3,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 20,
+  "q": "\"PowerPoint\"是屬於哪類軟體？",
+  "options": [
+   "視訊編輯軟體",
+   "簡報編輯軟體",
+   "圖形編輯軟體",
+   "資料庫軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 21,
+  "q": "\"Project\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "簡報軟體",
+   "專案管理軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 3,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 22,
+  "q": "\"JavaScript\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "腳本語言",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 23,
+  "q": "\"Python\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "程式語言",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 24,
+  "q": "\"Visual Basic.NET\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "程式語言",
+   "簡報軟體",
+   "資料庫軟體"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 25,
+  "q": "\"Oracle\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "簡報軟體",
+   "資料庫軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 3,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 26,
+  "q": "\"Visual Studio\"是屬於哪類軟體？",
+  "options": [
+   "作業系統",
+   "程式設計整合開發環境",
+   "多媒體開發環境",
+   "文書處理介面"
+  ],
+  "answer": 2,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 27,
+  "q": "\"C#\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "簡報軟體",
+   "程式語言",
+   "文書編輯軟體"
+  ],
+  "answer": 3,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 28,
+  "q": "\"Linux\"是屬於哪類軟體？",
+  "options": [
+   "系統軟體",
+   "繪圖軟體",
+   "簡報軟體",
+   "文書編輯軟體"
+  ],
+  "answer": 1,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 29,
+  "q": "Microsoft 的\"Edge\"是屬於哪類軟體？",
+  "options": [
+   "掃毒器",
+   "伺服器",
+   "瀏覽器",
+   "作業系統"
+  ],
+  "answer": 3,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 30,
+  "q": "何者是「製作動畫及透明圖」的應用軟體？",
+  "options": [
+   "Gif Animator",
+   "Media Player",
+   "Word",
+   "Win RAR"
+  ],
+  "answer": 1,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 31,
+  "q": "何者是「看圖及秀圖」的應用軟體？",
+  "options": [
+   "XnView",
+   "WinZip",
+   "WinRAR",
+   "7-Zip"
+  ],
+  "answer": 1,
+  "page": 17,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 32,
+  "q": "何者不是「網頁製作」的應用軟體？",
+  "options": [
+   "Dreamweaver",
+   "Bootstrap Studio",
+   "Chrome",
+   "Google Web Designer"
+  ],
+  "answer": 3,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 33,
+  "q": "何者是「應用軟體」？",
+  "options": [
+   "Linux",
+   "Word",
+   "Windows",
+   "MacOS"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 34,
+  "q": "英文名稱所對應之中文名稱何者錯誤？",
+  "options": [
+   "FTP「網站搜尋引擎」",
+   "TANet「台灣學術網路」",
+   "GenAI「生成式人工智慧」",
+   "Telnet「遠端登入」"
+  ],
+  "answer": 1,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 35,
+  "q": "中文名稱所對應之英文名稱何者錯誤？",
+  "options": [
+   "「檔案傳輸協定」FTP",
+   "「臉書」Facebook",
+   "「電子郵件」E-mail",
+   "「區域網路」WAN"
+  ],
+  "answer": 4,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 36,
+  "q": "當播放串流媒體時，檔案會在播放之前先部分下載，並儲存在電腦緩衝區(Buffer)中，此種處理方式稱為何？",
+  "options": [
+   "暫存處理",
+   "及時處理",
+   "緩衝處理",
+   "平行處理"
+  ],
+  "answer": 3,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 37,
+  "q": "何者是「網頁製作」所使用的標記(Tag)語言？",
+  "options": [
+   "C#",
+   "HTML",
+   "VB.NET",
+   "Python"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 38,
+  "q": "何者是「全球資訊網(World Wide Web)」使用最普遍的副檔名？",
+  "options": [
+   ".exe",
+   ".com",
+   ".sys",
+   ".htm"
+  ],
+  "answer": 4,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 39,
+  "q": "何者不是「向量檔」的副檔名？",
+  "options": [
+   ".ai",
+   ".pdf",
+   ".gif",
+   ".svg"
+  ],
+  "answer": 3,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 40,
+  "q": "何者不是「圖形檔」的副檔名？",
+  "options": [
+   ".mp4",
+   ".psd",
+   ".ai",
+   ".bmp"
+  ],
+  "answer": 1,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 41,
+  "q": "何者不是「壓縮檔」的副檔名？",
+  "options": [
+   ".arj",
+   ".zip",
+   ".rar",
+   ".bmp"
+  ],
+  "answer": 4,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 42,
+  "q": "何者不是「影音檔」的副檔名？",
+  "options": [
+   ".mp4",
+   ".mp3",
+   ".webm",
+   ".ogg"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 43,
+  "q": "何者不是「音效檔」的副檔名？",
+  "options": [
+   ".wav",
+   ".mp3",
+   ".ogg",
+   ".rar"
+  ],
+  "answer": 4,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 44,
+  "q": "何者是「動態圖形」的副檔名？",
+  "options": [
+   ".cgm",
+   ".bmp",
+   ".gif",
+   ".jpg"
+  ],
+  "answer": 3,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 45,
+  "q": "關於 JPG 圖檔格式之敘述何者錯誤？",
+  "options": [
+   "瀏覽器可直接開啟",
+   "是向量式的圖片格式",
+   "支援全彩顯示",
+   "採破壞性壓縮方式"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 46,
+  "q": "關於 GIF 圖檔格式之敘述何者錯誤？",
+  "options": [
+   "副檔名為 gif",
+   "存成交錯式與透明式的 GIF 格式，檔案大小大約相同",
+   "僅支援 256 色",
+   "可製作動畫圖片效果"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 47,
+  "q": "何種圖形適用於儲存網頁上的小型圖示或按鈕？",
+  "options": [
+   "GIF",
+   "TIF",
+   "BMP",
+   "WMF"
+  ],
+  "answer": 1,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 48,
+  "q": "何種圖形檔格式無法將圖片的某部分設成透明色？",
+  "options": [
+   "GIF",
+   "JPG",
+   "PNG",
+   "TIFF"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 49,
+  "q": "副檔名為 GIF 之檔案是何種資料？",
+  "options": [
+   "圖形",
+   "文字",
+   "程式",
+   "指令"
+  ],
+  "answer": 1,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 50,
+  "q": "何者非網頁文件的副檔名？",
+  "options": [
+   ".htm",
+   ".dwg",
+   ".aspx",
+   ".php"
+  ],
+  "answer": 2,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 51,
+  "q": "網站的第一頁稱之為何？",
+  "options": [
+   "黃頁",
+   "封面",
+   "首頁",
+   "目錄"
+  ],
+  "answer": 3,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 52,
+  "q": "製作動畫時，決定螢幕每秒鐘出現畫面數，屬於影像處理中的哪一項功能？",
+  "options": [
+   "取樣",
+   "辨識",
+   "編碼",
+   "複製"
+  ],
+  "answer": 1,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 53,
+  "q": "何者不是正確的網頁檔案名稱？",
+  "options": [
+   "homepage.htm",
+   "homepage.html",
+   "home*page.htm",
+   "home_page.htm"
+  ],
+  "answer": 3,
+  "page": 18,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 54,
+  "q": "何者不是在網頁設定標題(Title)的目的？",
+  "options": [
+   "顯示在瀏覽器標題列",
+   "顯示在瀏覽器的書籤",
+   "搜尋引擎用來分類並將網站加到它們的資料庫",
+   "加速網頁的開啟與執行"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 55,
+  "q": "一個 96×96 pixel 的 256 色圖示(icon)，共佔用電腦記憶體多少 KB？",
+  "options": [
+   "3",
+   "6",
+   "9",
+   "12"
+  ],
+  "answer": 3,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 56,
+  "q": "何者可用來檢視目前電腦上的資源被網路上其他使用者使用的狀況？",
+  "options": [
+   "網路安裝精靈",
+   "遠端桌面連線",
+   "超級終端機",
+   "網路監控程式"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 57,
+  "q": "在 Internet 的服務項目中，何者未提供網路使用者同時互動的功能？",
+  "options": [
+   "Wikipedia",
+   "Line",
+   "Instagram",
+   "Facebook"
+  ],
+  "answer": 1,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 58,
+  "q": "何者不是關聯式資料庫的優點？",
+  "options": [
+   "達成資料的一致性(Data Consistency)",
+   "達成資料的獨立性(Data Independence)",
+   "達成資料傳輸加速(Transfer Data Acceleration)",
+   "達成資料的安全性(Data Security)"
+  ],
+  "answer": 3,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 59,
+  "q": "當使用「搜尋引擎」執行資料搜尋時，若欲使用兩個以上的關鍵字做複合查詢，且希望被查詢到的文件或網站同時包含有這些關鍵字，應使用何種邏輯運算查詢？",
+  "options": [
+   "或(OR)",
+   "和(AND)",
+   "互斥(XOR)",
+   "反(NOT)"
+  ],
+  "answer": 2,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 60,
+  "q": "POP3 是設定網路連線時的何種伺服器？",
+  "options": [
+   "檔案伺服器",
+   "網站伺服器",
+   "收信伺服器",
+   "寄信伺服器"
+  ],
+  "answer": 3,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 61,
+  "q": "SMTP 是設定網路連線時的何種伺服器？",
+  "options": [
+   "檔案伺服器",
+   "網站伺服器",
+   "收信伺服器",
+   "寄信伺服器"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 62,
+  "q": "Telnet 是 Internet 上的一項服務，其功能為何？",
+  "options": [
+   "遠端登入",
+   "電子郵件服務",
+   "檔案傳輸服務",
+   "電傳視訊"
+  ],
+  "answer": 1,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 63,
+  "q": "何者不是 Google Gmail 的功能？",
+  "options": [
+   "回信",
+   "轉信",
+   "附加檔案",
+   "即時通訊"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 64,
+  "q": "寄送電子郵件後，預設狀況下會保留一份在何處？",
+  "options": [
+   "收件匣",
+   "寄件匣",
+   "草稿",
+   "寄件備份"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 65,
+  "q": "何者是「檔案傳送」所使用的通訊協定？",
+  "options": [
+   "HTTP",
+   "FTP",
+   "ISP",
+   "MAILTO"
+  ],
+  "answer": 2,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 66,
+  "q": "何者是「全球資訊網(WWW)」所使用的通訊協定？",
+  "options": [
+   "FTP",
+   "SMTP",
+   "HTTP",
+   "POP3"
+  ],
+  "answer": 3,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 67,
+  "q": "何者不是「網路」所使用的通訊協定？",
+  "options": [
+   "Zigbee",
+   "TCP/IP",
+   "HTTP",
+   "ASPX"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 68,
+  "q": "何者是電子郵件「內收郵件」所使用的通訊協定？",
+  "options": [
+   "FTP",
+   "POP3",
+   "SMTP",
+   "IPX"
+  ],
+  "answer": 2,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 69,
+  "q": "何者是電子郵件「外寄郵件」所使用的通訊協定？",
+  "options": [
+   "FTP",
+   "POP3",
+   "SMTP",
+   "IMAP"
+  ],
+  "answer": 3,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 70,
+  "q": "Internet 的 DNS 伺服器預設通訊埠為何？",
+  "options": [
+   "110",
+   "53",
+   "21",
+   "25"
+  ],
+  "answer": 2,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 71,
+  "q": "用瀏覽器瀏覽網頁時通常使用的通訊埠為何？",
+  "options": [
+   "21",
+   "23",
+   "25",
+   "80"
+  ],
+  "answer": 4,
+  "page": 19,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 72,
+  "q": "Internet 的 FTP 協定，其預設的通訊埠為何？",
+  "options": [
+   "80",
+   "21",
+   "25",
+   "443"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 73,
+  "q": "Internet 的 HTTPs 協定，其預設的通訊埠為何？",
+  "options": [
+   "80",
+   "21",
+   "25",
+   "443"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 74,
+  "q": "Internet 的 SMTP 協定，其預設的通訊埠為何？",
+  "options": [
+   "80",
+   "21",
+   "25",
+   "443"
+  ],
+  "answer": 3,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 75,
+  "q": "在電腦網路中，使用者與遠端伺服主機連線進行檔案傳輸，所使用的協定稱之為何者？",
+  "options": [
+   "DNS",
+   "BBS",
+   "FTP",
+   "TCP/IP"
+  ],
+  "answer": 3,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 76,
+  "q": "在網頁中設計動畫效果，其作用不包括何者？",
+  "options": [
+   "吸引目光",
+   "提升傳輸速度",
+   "模擬真實",
+   "豐富視覺形式"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 77,
+  "q": "何者不可能是 ISP(Internet Service Provider)所提供的服務？",
+  "options": [
+   "提供連網服務",
+   "提供網站空間",
+   "提供國安局機密資料全文免費查詢服務",
+   "提供電子郵件服務"
+  ],
+  "answer": 3,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 78,
+  "q": "關於 Internet 之敘述何者錯誤？",
+  "options": [
+   "TANet 是台灣學術網路",
+   "FTP 是一種電腦網路的連接架構",
+   "TCP/IP 是 Internet 常用的通訊協定",
+   "E-mail 可以傳遞文字、影像及聲音"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 79,
+  "q": "何種伺服器具有備份使用者拜訪過網站的功能？",
+  "options": [
+   "FTP Server(檔案傳輸伺服器)",
+   "Proxy Server(代理伺服器)",
+   "DNS Server(網域名稱伺服器)",
+   "News Server(新聞伺服器)"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 80,
+  "q": "何者不是 Internet 所提供的服務？",
+  "options": [
+   "SSH",
+   "WWW",
+   "MMS",
+   "CSS"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 81,
+  "q": "何者不是 WWW 的瀏覽器？",
+  "options": [
+   "Safari",
+   "Chrome",
+   "Firefox",
+   "Sniffer"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 82,
+  "q": "何者不是常見的網頁搜尋入口網站？",
+  "options": [
+   "http://ftp.twaren.net/",
+   "https://www.google.com.tw",
+   "https://www.bing.com",
+   "https://tw.yahoo.com"
+  ],
+  "answer": 1,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 83,
+  "q": "何者不是圖片超連結可以設定的功能？",
+  "options": [
+   "顯示低解析度圖片",
+   "替代顯示文字",
+   "指定圖片類型與品質",
+   "圖片排序"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 84,
+  "q": "何者無法用來架設 Web 伺服器？",
+  "options": [
+   "Nginx",
+   "IIS (Internet Information Services)",
+   "Apache Tomcat",
+   "FileZilla Server"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 85,
+  "q": "何者不屬於自由軟體？",
+  "options": [
+   "PHP-Nuke",
+   "Norton Internet Security",
+   "XOOPS",
+   "LibreOffice"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 86,
+  "q": "何者是匿名登入 FTP 站所使用的帳號？",
+  "options": [
+   "everyone",
+   "anyone",
+   "anonymous",
+   "root"
+  ],
+  "answer": 3,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 87,
+  "q": "何者是常用的 Web 伺服器？",
+  "options": [
+   "YouTube",
+   "IIS",
+   "SQL",
+   "App Store"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 88,
+  "q": "何者為 ASP.NET 的語法的起始符號？",
+  "options": [
+   "<!",
+   "<&",
+   "<#",
+   "<%"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 89,
+  "q": "何者為 TANet 之中文意義？",
+  "options": [
+   "全球資訊網",
+   "網際網路",
+   "電子郵件",
+   "台灣學術網路"
+  ],
+  "answer": 4,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 90,
+  "q": "提供檔案下載功能的是哪類伺服器？",
+  "options": [
+   "FTP server",
+   "Proxy server",
+   "DHCP server",
+   "DNS server"
+  ],
+  "answer": 1,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 91,
+  "q": "哪個 FTP 指令可以用來查看遠端 FTP 伺服器目前所在目錄之位置？",
+  "options": [
+   "get",
+   "pwd",
+   "put",
+   "bin"
+  ],
+  "answer": 2,
+  "page": 20,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 92,
+  "q": "哪個 FTP 指令可以將本地端機器的檔案傳輸至遠端 FTP 伺服器上？",
+  "options": [
+   "get",
+   "pwd",
+   "put",
+   "bin"
+  ],
+  "answer": 3,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 93,
+  "q": "FTP 是 Internet 上的一項服務，其功能為何？",
+  "options": [
+   "遠端登入",
+   "電子郵件服務",
+   "檔案傳輸服務",
+   "電傳視訊"
+  ],
+  "answer": 3,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 94,
+  "q": "何者為 PHP 語言的起始標記符號？",
+  "options": [
+   "<@",
+   "<?",
+   "<#",
+   "<$"
+  ],
+  "answer": 2,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 95,
+  "q": "內容管理系統(Content Management System, CMS)常用來製作入口網站，何者不屬於 CMS？",
+  "options": [
+   "XOOPS",
+   "Opera",
+   "Moodle",
+   "Joomla"
+  ],
+  "answer": 2,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 96,
+  "q": "何種語言可以編撰網頁的動態效果？",
+  "options": [
+   "BASIC",
+   "HTML 5",
+   "FORTRAN",
+   "COBOL"
+  ],
+  "answer": 2,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 97,
+  "q": "何者不是社群軟體或網站？",
+  "options": [
+   "Line",
+   "IG",
+   "Visio",
+   "Facebook"
+  ],
+  "answer": 3,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 98,
+  "q": "關於 E-mail 之敘述何者錯誤？",
+  "options": [
+   "寄發電子郵件必須要有收件人的 E-mail Address",
+   "E-mail 可以透過電話線來傳送",
+   "E-mail 傳送時，沒有指定主旨的信件一定無法傳送",
+   "發信人可以同時將信件傳送給二位以上的收信人"
+  ],
+  "answer": 3,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 99,
+  "q": "何種功能可使電子郵件的附件在寄送時，節省傳送的時間？",
+  "options": [
+   "壓縮",
+   "回傳給本人",
+   "加密",
+   "密件副本"
+  ],
+  "answer": 1,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 100,
+  "q": "何種功能可使電子郵件在寄送時，不想讓收件者知道何者收到此信件？",
+  "options": [
+   "壓縮",
+   "回傳給本人",
+   "加密",
+   "密件副本"
+  ],
+  "answer": 4,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 101,
+  "q": "網路日誌又稱為「部落格」，何者無法用來架設個人網路日誌？",
+  "options": [
+   "Medium",
+   "WordPad",
+   "WordPress",
+   "Blogger"
+  ],
+  "answer": 2,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 102,
+  "q": "關於圖形檔案格式之敘述何者錯誤？",
+  "options": [
+   "GIF89a 只能支援 256 色",
+   "PNG 格式支援全彩",
+   "TIF 格式必須轉換才能置於網頁上",
+   "GIF 檔案採用失真壓縮技術"
+  ],
+  "answer": 4,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 103,
+  "q": "以 Photoshop 去除圖片背景時，要快速選取背景顏色很接近的區域，最好使用何種工具按鈕？",
+  "options": [
+   "標準選取",
+   "貝茲曲線",
+   "索套",
+   "魔術棒"
+  ],
+  "answer": 4,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 104,
+  "q": "何種方法可以使用 Internet Explorer 瀏覽過的網站分類保存起來，讓下次可以快速地進入該網站？",
+  "options": [
+   "加到「搜尋」",
+   "加到「記錄」",
+   "加到「我的最愛」",
+   "加入到通訊錄中"
+  ],
+  "answer": 3,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 105,
+  "q": "在 Internet 上，何種伺服器可將網路主機名稱(如：www.mol.gov.tw)翻譯成 IP 位址？",
+  "options": [
+   "Mail Server",
+   "File Server",
+   "Proxy Server",
+   "DNS Server"
+  ],
+  "answer": 4,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 106,
+  "q": "Microsoft Word 軟體要將目前正在編輯的文件內容儲存成網頁，應如何完成？",
+  "options": [
+   "存成 RTF 格式檔案",
+   "存成 Word 文件檔案",
+   "存成網頁類型檔案",
+   "存成 XPS 類型檔案"
+  ],
+  "answer": 3,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 107,
+  "q": "網域名稱中表示「遊戲用途」的頂級域名(TLD)為何？",
+  "options": [
+   ".net",
+   ".club",
+   ".ebiz",
+   ".game"
+  ],
+  "answer": 4,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 108,
+  "q": "哪一個應用軟體所產生的檔案無法直接存成網頁格式？",
+  "options": [
+   "Word",
+   "Excel",
+   "PowerPoint",
+   "Access"
+  ],
+  "answer": 4,
+  "page": 21,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 109,
+  "q": "瀏覽器無法直接讀取的檔案格式，須藉由何種技術才能順利呈現？",
+  "options": [
+   "Widget",
+   "Plug-In",
+   "SSL",
+   "InPrivate"
+  ],
+  "answer": 2,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 110,
+  "q": "輸入哪個文字是無法建立超連結的？",
+  "options": [
+   "mailto:",
+   "https://",
+   "ftp://",
+   "TCP/IP"
+  ],
+  "answer": 4,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 111,
+  "q": "網頁中之 Applet 及 Servlet 是用何種語言來撰寫的？",
+  "options": [
+   "Java",
+   "R",
+   "Java Script",
+   "Golang"
+  ],
+  "answer": 1,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 112,
+  "q": "何者不是網頁 Client 端執行的程式？",
+  "options": [
+   "ActiveX",
+   "JavaScript",
+   "Html",
+   "Servlet"
+  ],
+  "answer": 4,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 113,
+  "q": "影像處理時，將圖片由全彩轉成 256 色灰階，該圖片的每一個像素使用多少位元來描述表示？",
+  "options": [
+   "2 位元",
+   "4 位元",
+   "8 位元",
+   "24 位元"
+  ],
+  "answer": 3,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 114,
+  "q": "替 ActiveX 控制項命名時，何者不可以使用？",
+  "options": [
+   "英文字母",
+   "空格",
+   "阿拉伯數字",
+   "大寫文字"
+  ],
+  "answer": 2,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 115,
+  "q": "網頁中的表單處理程式，在使用者按下傳送鈕後，無法將結果傳送到何處？",
+  "options": [
+   "指定的檔案",
+   "指定的資料庫",
+   "指定電子郵件地址",
+   "指定的 CD-ROM"
+  ],
+  "answer": 4,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 116,
+  "q": "網頁表單處理程式無法使用何種語言來撰寫？",
+  "options": [
+   "ASP.NET",
+   "PHP",
+   "JSP",
+   "FORTRAN"
+  ],
+  "answer": 4,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 117,
+  "q": "關於超連結之敘述何者錯誤？",
+  "options": [
+   "圖片可以設定超連結",
+   "可以使用書籤連結網頁內其它位置",
+   "超連結只能使用絕對路徑連結",
+   "E-mail 位址也可以設定連結"
+  ],
+  "answer": 3,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 118,
+  "q": "網頁之影像地圖具有何種功能？",
+  "options": [
+   "文字超連結",
+   "圖片超連結",
+   "資料夾超連結",
+   "不屬於超連結功能"
+  ],
+  "answer": 2,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 119,
+  "q": "何者不屬於可以添加在網頁上的動畫元件？",
+  "options": [
+   "跑馬燈",
+   "廣告橫幅",
+   "計數器",
+   "CAD 圖檔"
+  ],
+  "answer": 4,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 120,
+  "q": "何者是傳遞填寫表單資料的控制項？",
+  "options": [
+   "提交（Submit）",
+   "重新設定（Reset）",
+   "核取方塊（Checkbox）",
+   "文字欄位（Text）"
+  ],
+  "answer": 1,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 121,
+  "q": "設定同一網頁內的超連結，需事先設定何者？",
+  "options": [
+   "頁首",
+   "id 屬性",
+   "頁尾",
+   "圖形"
+  ],
+  "answer": 2,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 122,
+  "q": "設定的超連結文字在預設狀態下為何？",
+  "options": [
+   "加上底線的文字",
+   "變成斜體字的文字",
+   "變成浮動的文字",
+   "加上動態閃爍效果的字"
+  ],
+  "answer": 1,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 123,
+  "q": "運用何種方式可以節省網頁設計所佔的空間？",
+  "options": [
+   "將網頁分類",
+   "使用動態 GIF 檔案",
+   "將圖片排序",
+   "降低圖片的大小及解析度"
+  ],
+  "answer": 4,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 124,
+  "q": "何者具備網頁製作及網站內容管理的功能？",
+  "options": [
+   "Dreamweaver",
+   "WordPad",
+   "Word",
+   "PowerPoint"
+  ],
+  "answer": 1,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 125,
+  "q": "在製作網頁時，當滑鼠移入某個連結點將呈現設計好的效果，其相應事件（Event）應選用何者？",
+  "options": [
+   "onClick",
+   "onDblClick",
+   "onMouseOver",
+   "onMouseOut"
+  ],
+  "answer": 3,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 126,
+  "q": "關於 Dreamweaver 之敘述何者錯誤？",
+  "options": [
+   "可使用 CSS 樣式",
+   "可建立表單",
+   "可影音剪輯",
+   "可製作行為特效"
+  ],
+  "answer": 3,
+  "page": 22,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 127,
+  "q": "建立網頁表單文字輸入欄位時，maxlength 屬性值為 10，下列敘述何者最符合？",
+  "options": [
+   "最多允許輸入 10 個字元",
+   "欄位寬度 10 個字元",
+   "預設值長度為 10 個字元",
+   "最多允許輸入 5 個中文字"
+  ],
+  "answer": 1,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 128,
+  "q": "Dreamweaver 建立內部 CSS 樣式表時，應將 CSS 語法寫在哪個標記內？",
+  "options": [
+   "<style>與</style>",
+   "<img>",
+   "<link>",
+   "<p>與</p>"
+  ],
+  "answer": 1,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 129,
+  "q": "Dreamweaver 建立網頁時，新增一個行為，其實是套用何種語法？",
+  "options": [
+   "ASP",
+   "Java Script",
+   "PHP",
+   "VBScript"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 130,
+  "q": "製作合表單的網頁時，何種表單控制項適合單一選項的應用？",
+  "options": [
+   "選項按鈕",
+   "選取清單",
+   "文字欄位",
+   "一般按鈕"
+  ],
+  "answer": 1,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 131,
+  "q": "設計文字或圖片連結的目標可以是網址、檔案、網頁等。如果連結的目標尚未確定，可將其設定成空（虛）連結，此時需要在 href 屬性中輸入哪個內容？",
+  "options": [
+   "!",
+   "@",
+   "#",
+   "%"
+  ],
+  "answer": 3,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 132,
+  "q": "Dreamweaver 中要連續繪製多個 AP 元素，需按住哪個快速鍵不放並拖曳？",
+  "options": [
+   "Alt 鍵",
+   "Ctrl 鍵",
+   "Shift 鍵",
+   "Tab 鍵"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 133,
+  "q": "Dreamweaver 繪製 AP 元素時，產生對應的 HTML 標記為何？",
+  "options": [
+   "<ap></ap>",
+   "<div></div>",
+   "<span></span>",
+   "<style></style>"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 134,
+  "q": "哪個軟體較不適合用來製作網頁？",
+  "options": [
+   "Visual Studio Code",
+   "GIMP",
+   "Sublime Text",
+   "Dreamweaver"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 135,
+  "q": "安裝何種軟體可以架設及管理網站伺服器？",
+  "options": [
+   "Edge",
+   "XAMPP",
+   "Writer",
+   "Impress"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 136,
+  "q": "生成式 AI（GenAI）無法進行何種應用？",
+  "options": [
+   "產生文案",
+   "變更網路頻寬配置",
+   "產生圖片",
+   "產生網頁"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 137,
+  "q": "在網頁連結設定中，「開新視窗」的目標設定為何？",
+  "options": [
+   "_blank",
+   "_top",
+   "_parent",
+   "_home"
+  ],
+  "answer": 1,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 138,
+  "q": "欲在同一張圖片上製作多個超連結到多個目的網頁之作法為何？",
+  "options": [
+   "建立文字超連結",
+   "建立書籤超連結",
+   "建立影像地圖超連結",
+   "建立電子郵件超連結"
+  ],
+  "answer": 3,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 139,
+  "q": "Google Web Designer 製作網頁之敘述何者錯誤？",
+  "options": [
+   "若將圖片縮小，並不會使得圖檔佔用空間變小",
+   "若進行圖片的裁剪，也會使得圖檔佔用空間變小",
+   "GIF 檔案不支援透明色",
+   "您可以使文字方塊在插入的圖片上編輯文字"
+  ],
+  "answer": 3,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 140,
+  "q": "哪一種語言是專門用來撰寫全球資訊網（World Wide Web）中的網頁？",
+  "options": [
+   "Assembly Language",
+   "Data Control Language",
+   "Hypertext Markup Language",
+   "Structured Query Language"
+  ],
+  "answer": 3,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 141,
+  "q": "何者不是常用的網頁標記格式？",
+  "options": [
+   "HTML",
+   "DHTML",
+   "JavaScript",
+   "XHTML"
+  ],
+  "answer": 3,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 142,
+  "q": "HTML（HyperText Markup Language）標準是由哪一個單位制定的？",
+  "options": [
+   "IEEE",
+   "W3C",
+   "ISO",
+   "EIA"
+  ],
+  "answer": 2,
+  "page": 23,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 143,
+  "q": "首頁的檔案名稱通常預設為何？",
+  "options": [
+   "index.htm",
+   "first.htm",
+   "start.htm",
+   "head.htm"
+  ],
+  "answer": 1,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 144,
+  "q": "何者語言無法展現在網頁文件上？",
+  "options": [
+   "CSS",
+   "HTML 語言",
+   "BASIC 語言",
+   "JavaScript"
+  ],
+  "answer": 3,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 145,
+  "q": "表格的製作上，HTML 原始碼所使用的標記為何？",
+  "options": [
+   "tab",
+   "table",
+   "tag",
+   "表格"
+  ],
+  "answer": 2,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 146,
+  "q": "HTML 的標記是以何種符號標示？",
+  "options": [
+   "{ … }",
+   "( … )",
+   "< … >",
+   "[ … ]"
+  ],
+  "answer": 3,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 147,
+  "q": "HTML 的語法中，哪個標記名稱（Tag）用來表示文件的主體？",
+  "options": [
+   "html",
+   "title",
+   "head",
+   "body"
+  ],
+  "answer": 4,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 148,
+  "q": "HTML 的語法中，哪個標記名稱（Tag）用來設定對齊方式的？",
+  "options": [
+   "align",
+   "style",
+   "width",
+   "div"
+  ],
+  "answer": 1,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 149,
+  "q": "HTML 的語法中，哪個標記名稱（Tag）是用來加入超連結？",
+  "options": [
+   "a",
+   "font",
+   "img",
+   "align"
+  ],
+  "answer": 1,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 150,
+  "q": "HTML 的語法中，<a>標記裡哪個屬性是用來設定指向的 URL",
+  "options": [
+   "href",
+   "target",
+   "rel",
+   "media"
+  ],
+  "answer": 1,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 151,
+  "q": "HTML 的語法中，哪個標記可以設定背景聲音？",
+  "options": [
+   "<video>",
+   "<form>",
+   "<table>",
+   "<audio>"
+  ],
+  "answer": 4,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 152,
+  "q": "HTML 的語法中，哪個標記無法設定播放聲音？",
+  "options": [
+   "<embed src=\"hi.wav\">",
+   "<body onload=\"location.href='hi.wav'\">",
+   "<img src=\"hi.wav\">",
+   "<audio src=\"hi.wav\">"
+  ],
+  "answer": 3,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 153,
+  "q": "HTML 5 的語法 <video width=\"320\" height=\"240\" autoplay><source src=\"movie.mp4\" type=\"video/mp4\"><source src=\"movie.ogg\" type=\"video/ogg\">目前瀏覽器沒有支援視訊播放</video>，何者敘述有誤？",
+  "options": [
+   "影片會自動播放",
+   "影片寬度為 320",
+   "會輪流播放 movie.mp4 及 movie.ogg 兩段影片",
+   "瀏覽器沒有支援視訊播放時會出現文字「目前瀏覽器沒有支援視訊播放」"
+  ],
+  "answer": 3,
+  "page": 24,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 154,
+  "q": "HTML 5 的語法 <audio controls><source src=\"dog1.ogg\" type=\"audio/ogg\"><source src=\"dog2.mp3\" type=\"audio/mpeg\">目前瀏覽器沒有支援聲音播放</audio>，何者敘述有誤？",
+  "options": [
+   "聲音會自動播放",
+   "網頁會出現聲音播放控制按鈕",
+   "瀏覽器會優先嘗試播放 dog1.ogg，若無支援再嘗試 dog2.mp3，但只會播放其中一個聲音",
+   "瀏覽器沒有支援聲音播放時會出現文字「目前瀏覽器沒有支援聲音播放」"
+  ],
+  "answer": 1,
+  "page": 24,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 155,
+  "q": "何者為 HTML 5 文件的根元素（Root Element）？",
+  "options": [
+   "<!doctype>",
+   "<html>",
+   "<head>",
+   "<body>"
+  ],
+  "answer": 2,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 156,
+  "q": "哪個 HTML 5 的元素最適合用來標示獨立的內容？",
+  "options": [
+   "<article>",
+   "<hgroup>",
+   "<nav>",
+   "<section>"
+  ],
+  "answer": 1,
+  "page": 24,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 157,
+  "q": "哪個 HTML 5 的元素最適合用來標示擁有著資訊、建議瀏覽器解析度、版權聲明、隱私權政策等內容？",
+  "options": [
+   "<aside>",
+   "<header>",
+   "<hgroup>",
+   "<footer>"
+  ],
+  "answer": 4,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 158,
+  "q": "哪個 HTML 5 的元素最適合用來建立一個繪圖區，供繪製圖形與文字、填入色彩與漸層或設計動畫？",
+  "options": [
+   "<canvas>",
+   "<figure>",
+   "<progress>",
+   "<output>"
+  ],
+  "answer": 1,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 159,
+  "q": "哪個元素可讓支援 HTML 5 的瀏覽器無需再外掛程式即能播放影片？",
+  "options": [
+   "<audio>",
+   "<embed>",
+   "<output>",
+   "<video>"
+  ],
+  "answer": 4,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 160,
+  "q": "哪個元素可讓支援 HTML 5 的瀏覽器無需再外掛程式即能播放聲音？",
+  "options": [
+   "<audio>",
+   "<embed>",
+   "<output>",
+   "<video>"
+  ],
+  "answer": 1,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 161,
+  "q": "哪個 HTML 5 的元素會產生一對金鑰，其中公鑰將傳送至伺服器，而私鑰會被存放在用戶端？",
+  "options": [
+   "<keygen>",
+   "<meter>",
+   "<mark>",
+   "<output>"
+  ],
+  "answer": 1,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 162,
+  "q": "哪個 HTML 5 的元素用來嵌入外掛程式？",
+  "options": [
+   "<canvas>",
+   "<embed>",
+   "<output>",
+   "<progress>"
+  ],
+  "answer": 2,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 163,
+  "q": "哪個 HTML 5 的元素最適合用來顯示程式碼？",
+  "options": [
+   "<p>",
+   "<div>",
+   "<code>",
+   "<cite>"
+  ],
+  "answer": 3,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 164,
+  "q": "HTML 5 的語法中，要使元素成為可拖曳的元素，需設定哪一屬性？",
+  "options": [
+   "drag",
+   "draggable",
+   "ondragstart",
+   "ondragover"
+  ],
+  "answer": 2,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 165,
+  "q": "全球資訊網聯盟（W3C）不再推薦使用的標記不包括何者？",
+  "options": [
+   "<font>",
+   "<bgsound>",
+   "<center>",
+   "<hr>"
+  ],
+  "answer": 4,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 166,
+  "q": "HTML 的語法<html>…</html>其作用為何？",
+  "options": [
+   "宣告 HTML 文件的開始與結束",
+   "宣告 HTML 文件的開頭部分",
+   "宣告 HTML 的主體部分",
+   "宣告 HTML 文件的結尾部分"
+  ],
+  "answer": 1,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 167,
+  "q": "HTML 的語法<body>…</body>其作用為何？",
+  "options": [
+   "宣告 HTML 文件的開始與結束",
+   "宣告 HTML 文件的開頭部分",
+   "宣告 HTML 的主體部分",
+   "宣告 HTML 文件的結尾部分"
+  ],
+  "answer": 3,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 168,
+  "q": "HTML 的語法<head>…</head>其作用為何？",
+  "options": [
+   "宣告 HTML 文件的開始與結束",
+   "宣告 HTML 文件的開頭部分",
+   "宣告 HTML 的主體部分",
+   "宣告 HTML 文件的結尾部分"
+  ],
+  "answer": 2,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 169,
+  "q": "HTML 的語法<table>…</table>其作用為何？",
+  "options": [
+   "插入水平分隔線",
+   "插入圖片",
+   "插入背景",
+   "插入表格"
+  ],
+  "answer": 4,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 170,
+  "q": "HTML 的語法<hr>其作用為何？",
+  "options": [
+   "插入水平分隔線",
+   "插入圖片",
+   "插入背景",
+   "插入表格"
+  ],
+  "answer": 1,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 171,
+  "q": "HTML 的語法<img src=\"samatha.jpg\" style=\"border: 3px solid #ddd; width: 400px;\">其作用為何？",
+  "options": [
+   "插入水平分隔線",
+   "插入圖片",
+   "插入背景",
+   "插入表格"
+  ],
+  "answer": 2,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 172,
+  "q": "HTML 的<a>…</a>語法中，連結的網頁欲在原視窗開啟，target 屬性應設為何？",
+  "options": [
+   "_self",
+   "_blank",
+   "_top",
+   "_parent"
+  ],
+  "answer": 1,
+  "page": 25,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 173,
+  "q": "HTML 的語法<title>…</title>其作用為何？",
+  "options": [
+   "設定標題",
+   "設定框架",
+   "設定文字",
+   "設定表格"
+  ],
+  "answer": 1,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 174,
+  "q": "根據美國國家標準與技術研究院（NIST）對雲端的定義，何者非雲端運算（Cloud Computing）之布署模式？",
+  "options": [
+   "私有雲（Private Cloud）",
+   "公有雲（Public Cloud）",
+   "企業雲（Business Cloud）",
+   "社群雲（Community Cloud）"
+  ],
+  "answer": 3,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 175,
+  "q": "CSS 語法 a:active {color: #00F;}，其功能表示何種連結的顏色為藍色？",
+  "options": [
+   "原始的超連結",
+   "點選過的超連結",
+   "作用中的超連結",
+   "不能作用的超連結"
+  ],
+  "answer": 3,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 176,
+  "q": "根據美國國家標準與技術研究院（NIST）對雲端的定義，何者非雲端運算（Cloud Computing）之服務模式？",
+  "options": [
+   "內容即服務（Content as a Service, CaaS）",
+   "基礎架構即服務（Infrastructure as a Service, IaaS）",
+   "平台即服務（Platform as a Service, PaaS）",
+   "軟體即服務（Software as a Service, SaaS）"
+  ],
+  "answer": 1,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 177,
+  "q": "CSS 語法 a:visited {color: #F00;}，其功能表示何種連結的顏色為紅色？",
+  "options": [
+   "原始的超連結",
+   "點選過的超連結",
+   "作用中的超連結",
+   "不能作用的超連結"
+  ],
+  "answer": 2,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 178,
+  "q": "何種網頁設計技術可使頁面具有統一的外觀？",
+  "options": [
+   "CSS",
+   "URL",
+   "HTML",
+   "DHTML"
+  ],
+  "answer": 1,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 179,
+  "q": "CSS 語法定義新的 class 樣式名稱，其前面須加上何種符號？",
+  "options": [
+   "&",
+   ".",
+   " ?",
+   "#"
+  ],
+  "answer": 2,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 180,
+  "q": "CSS 語法 mycss: hover{color: #0000FF;}，表示該超連結文字做何種操作時會讓超連結文字變成藍色？",
+  "options": [
+   "滑鼠左鍵按下且未放開時",
+   "滑鼠游標離開時",
+   "滑鼠游標移到該連結上",
+   "滑鼠游標點選連結後"
+  ],
+  "answer": 3,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 181,
+  "q": "何種 CSS 語法可設定字體顏色的屬性？",
+  "options": [
+   "color",
+   "text-color",
+   "font-color",
+   "foreground-color"
+  ],
+  "answer": 1,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 182,
+  "q": "CSS 屬性設定何者不正確？",
+  "options": [
+   "color: #00FF00;",
+   "font-type: Arial;",
+   "font-style: italic;",
+   "font-weight: 600;"
+  ],
+  "answer": 2,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 183,
+  "q": "CSS 屬性何者可設定英文字首為大寫？",
+  "options": [
+   "text-indent: capitalize;",
+   "text-transform: capitalize;",
+   "text-decoration: capitalize;",
+   "CSS 無法做到"
+  ],
+  "answer": 2,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 184,
+  "q": "何種 CSS 語法可使網頁捲動時，背景圖案會跟著移動？",
+  "options": [
+   "{background-attachment: move;}",
+   "{background-attachment: scroll;}",
+   "{background-image: scroll;}",
+   "{background-repeat: repeat;}"
+  ],
+  "answer": 2,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 185,
+  "q": "何種 CSS 語法屬性可設定樣式表之內容與邊框的留白範圍？",
+  "options": [
+   "margin",
+   "border",
+   "padding",
+   "blank"
+  ],
+  "answer": 3,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 186,
+  "q": "何種 CSS 語法屬性可設定樣式表的邊界？",
+  "options": [
+   "border",
+   "margin",
+   "padding",
+   "form"
+  ],
+  "answer": 2,
+  "page": 26,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 187,
+  "q": "關於 CSS 屬性設定圖片加上外框的效果何者不正確？",
+  "options": [
+   "使用 border-width 設定圖片框線的寬度",
+   "使用 area 設定圖片與邊框的留白範圍",
+   "使用 border-style 設定圖片框線的樣式",
+   "使用 background 設定圖片的底色"
+  ],
+  "answer": 2,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 188,
+  "q": "社群網站 Facebook 屬於何種雲端部署模式？",
+  "options": [
+   "公有雲（Public Cloud）",
+   "私有雲（Private Cloud）",
+   "混合雲（Hybrid Cloud）",
+   "社群雲（Community Cloud）"
+  ],
+  "answer": 1,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 189,
+  "q": "何者不是 CSS 樣式表的主要特點？",
+  "options": [
+   "連結資料庫",
+   "易於管理",
+   "可重新定義 HTML 標記",
+   "在不同的物件套用相同的樣式設定"
+  ],
+  "answer": 1,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 190,
+  "q": "哪一個 CSS 樣式表記不需要設定指定值？",
+  "options": [
+   "margin",
+   "font-size",
+   "color",
+   "br"
+  ],
+  "answer": 4,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 191,
+  "q": "HTML 的語法中，要連結至 id 屬性「myphoto」時，何者正確？",
+  "options": [
+   "<a name=\"myphoto\">",
+   "<a href=\"#myphoto\">",
+   "<a href=\"https://www.myphoto.gov.tw\">",
+   "<a link=\"myphoto\">"
+  ],
+  "answer": 2,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 192,
+  "q": "HTML 的語法中，何者可以在文字上加入粗體及斜體的效果？",
+  "options": [
+   "<b><i>",
+   "<b><p>",
+   "<em><strong>",
+   "<em><tt>"
+  ],
+  "answer": 1,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 193,
+  "q": "HTML 的語法中，何者可以將文字的段落和字元按照原本的編排樣式顯示出來（即換行字元及空白字元完全被保留）？",
+  "options": [
+   "<body>",
+   "<p>",
+   "<em>",
+   "<pre>"
+  ],
+  "answer": 4,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 194,
+  "q": "在利用「HTML 語言」撰寫網頁時，若撰寫此行<title>勞動部全球資訊網</title>的語法，則「勞動部全球資訊網」將會被顯示在何處？",
+  "options": [
+   "瀏覽視窗內",
+   "瀏覽器的標題列或分頁標籤",
+   "在這份文件內容的最上面",
+   "狀態列"
+  ],
+  "answer": 2,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 195,
+  "q": "何者是 HTML 所使用的註解格式？",
+  "options": [
+   "//網頁註解",
+   "<!--網頁註解-->",
+   "'網頁註解",
+   "/*網頁註解*/"
+  ],
+  "answer": 2,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 196,
+  "q": "何者為 HTML 語法的起始與結束標記？",
+  "options": [
+   "<html>與</html>",
+   "<body>與</body>",
+   "<title>與</title>",
+   "<p>與</p>"
+  ],
+  "answer": 1,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 197,
+  "q": "HTML 的語法中，哪個標記可以在網頁上顯示 labor.jpg 的圖形檔？",
+  "options": [
+   "<img src=\"labor.jpg\">",
+   "<input src=\"labor.jpg\">",
+   "<object=\"labor.jpg\">",
+   "<name=\"labor.jpg\">"
+  ],
+  "answer": 1,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 198,
+  "q": "若在網頁中加入 HTML 語言：<a href=\"taiwan.jpg\"><img src=\"taiwan.gif\" alt=\"按我可以放大\"></a>，則訪客在圖形上按下滑鼠時，執行結果為何？",
+  "options": [
+   "超連結到 taiwan.jpg 圖形上",
+   "出現文字\"按我可以放大\"",
+   "將 taiwan.gif 圖片存檔",
+   "將 taiwan.jpg 圖片存檔"
+  ],
+  "answer": 1,
+  "page": 27,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 199,
+  "q": "JavaScript 程式執行結果為何？（程式碼：<Script> document.write (9 << 2); </Script>）",
+  "options": [
+   "2",
+   "4",
+   "18",
+   "36"
+  ],
+  "answer": 4,
+  "page": 27,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 200,
+  "q": "JavaScript 程式執行結果為何？（程式碼：<Script> var x = 15; var y = 6; document.write(\"<LI>x % y=\", x % y); </Script>）",
+  "options": [
+   "LI=2",
+   "LI=3",
+   "．x%y=2",
+   "．x%y=3"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 201,
+  "q": "何者不是 HTML 5 規範的視語格式？",
+  "options": [
+   "OGG",
+   "MP4",
+   "WebM",
+   "WAV"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 202,
+  "q": "何種媒體無法透過電腦與朋友線上影音交談？",
+  "options": [
+   "Line",
+   "Instagram",
+   "TeamViewer",
+   "Media Player"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 203,
+  "q": "電子郵件信箱 E-mail 帳號中必須有哪一個符號？",
+  "options": [
+   "!",
+   "&",
+   "*",
+   "@"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 204,
+  "q": "網頁色彩之 RGB 值為（255,255,0）時，其顯示的顏色為何？",
+  "options": [
+   "淡藍色",
+   "綠色",
+   "紫色",
+   "黃色"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 205,
+  "q": "網頁色彩之 RGB 值為（255,255,255）時，其顯示的顏色為何？",
+  "options": [
+   "黑色",
+   "白色",
+   "灰色",
+   "金色"
+  ],
+  "answer": 2,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 206,
+  "q": "何者不是安裝 Web Server 的軟體？",
+  "options": [
+   "Apache Tomcat",
+   "Google Web Server",
+   "IIS",
+   "DHCP"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 207,
+  "q": "用 Java 語言編寫的伺服器端程式稱為？",
+  "options": [
+   "MIDlet",
+   "Spotlet",
+   "Servlet",
+   "Applet"
+  ],
+  "answer": 3,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 208,
+  "q": "用來服務用戶端網頁瀏覽的伺服器為何？",
+  "options": [
+   "FTP server",
+   "Proxy server",
+   "DHCP server",
+   "Web server"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 209,
+  "q": "何者不是伺服端（Server Side）的腳本語言（Script）？",
+  "options": [
+   "JavaScript",
+   "ASP.NET",
+   "JSP",
+   "PHP"
+  ],
+  "answer": 1,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 210,
+  "q": "何者不是所見即所得（What you see is what you get）的網頁編輯軟體？",
+  "options": [
+   "Notepad",
+   "Pingendo",
+   "Dreamweaver",
+   "Google Web Designer"
+  ],
+  "answer": 1,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 211,
+  "q": "何種圖形檔案格式最不適合使用在網頁上？",
+  "options": [
+   "TIF",
+   "GIF",
+   "JPG",
+   "PNG"
+  ],
+  "answer": 1,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 212,
+  "q": "何種視訊檔案格式最不適合使用在網頁上？",
+  "options": [
+   "QuickTime",
+   "MPEG",
+   "AVI",
+   "WMV"
+  ],
+  "answer": 3,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 213,
+  "q": "何者為電子郵件應用軟體通常使用的連接埠？",
+  "options": [
+   "21",
+   "23",
+   "25",
+   "80"
+  ],
+  "answer": 3,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 214,
+  "q": "電子郵件的位址格式何者正確？",
+  "options": [
+   "https://www.google.com.tw",
+   "ftp://210.85.82.20",
+   "amis@wda.gov.tw",
+   "gopher://gopher.ntnu.edu.tw"
+  ],
+  "answer": 3,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 215,
+  "q": "何者不是 Internet 上使用的瀏覽器？",
+  "options": [
+   "Google Chrome",
+   "Mozilla Firefox",
+   "Opera",
+   "Fedora"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 216,
+  "q": "Microsoft 發行之軟體 Edge 是屬於哪一用途之軟體？",
+  "options": [
+   "文書編輯器",
+   "網頁瀏覽器",
+   "統計分析",
+   "電腦輔助設計"
+  ],
+  "answer": 2,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 217,
+  "q": "定義網頁資料顯示、格式化、特殊效果的標準稱之為何？",
+  "options": [
+   "GIS",
+   "CCS",
+   "SSL",
+   "CSS"
+  ],
+  "answer": 4,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 218,
+  "q": "何種軟體無法播放 MPEG 影片？",
+  "options": [
+   "Media Player",
+   "Adobe Acrobat",
+   "PowerDVD",
+   "RealPlayer"
+  ],
+  "answer": 2,
+  "page": 28,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 219,
+  "q": "何者不是用在網頁中以增強網頁效果或功能？",
+  "options": [
+   "PHP",
+   "QQ",
+   "CSS",
+   "ASP.NET"
+  ],
+  "answer": 2,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 220,
+  "q": "在設計網頁時，欲使用聲音效果，何種聲音檔案格式最不利網路傳輸速度的考量？",
+  "options": [
+   "WAV",
+   "MIDI",
+   "MP3",
+   "WMA"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 221,
+  "q": "Windows Media Player 無法播放何種影音檔案？",
+  "options": [
+   "fla",
+   "cda",
+   "wma",
+   "mp4"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 222,
+  "q": "PuTTY/PieTTY 軟體其功能為何？",
+  "options": [
+   "伺服器連線工具",
+   "電子郵件服務",
+   "簡報製作",
+   "部落格"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 223,
+  "q": "何者常見於網頁設計，用來呈現網頁動態效果的程式語言；例如在購物網站進行購物，將商品選取並加入購物車時，頁面顯示「您選擇的商品已進入購物車」的訊息提示效果？",
+  "options": [
+   "JavaScript",
+   "R",
+   "Swift",
+   "Kotlin"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 224,
+  "q": "JavaScript 部分程式如下圖，其 sum 函式透過 return 的功能將運算值回傳，執行 sum（5,4）結果為何？（圖：function sum(a,b){ result=a+b; return result; } sum(5,4);）",
+  "options": [
+   "9",
+   "5",
+   "4",
+   "20"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 225,
+  "q": "JavaScript 部分程式如下圖，其 div 函式透過 return 的功能將運算值回傳，執行 div（4,2）結果為何？（圖：function div(a,b){ result=a/b; return result; } div(4,2);）",
+  "options": [
+   "2",
+   "4",
+   "8",
+   "6"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": true
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 226,
+  "q": "JavaScript 程式中「&」符號表示？",
+  "options": [
+   "賦值運算子",
+   "算數運算子",
+   "比較運算子",
+   "邏輯運算子"
+  ],
+  "answer": 4,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 227,
+  "q": "JavaScript 程式中「=」符號表示？",
+  "options": [
+   "賦值運算子",
+   "算數運算子",
+   "比較運算子",
+   "邏輯運算子"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 228,
+  "q": "JavaScript 程式中「*」符號表示？",
+  "options": [
+   "賦值運算子",
+   "算數運算子",
+   "比較運算子",
+   "邏輯運算子"
+  ],
+  "answer": 2,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 229,
+  "q": "JavaScript 程式中「>」符號表示？",
+  "options": [
+   "賦值運算子",
+   "算數運算子",
+   "比較運算子",
+   "邏輯運算子"
+  ],
+  "answer": 3,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 230,
+  "q": "關於 HTML5 之敘述，下列何者錯誤？",
+  "options": [
+   "HTML5 以 cookie 取代 localStorage",
+   "HTML5 減少瀏覽器對於需要外掛程式的豐富性網路應用服務(RIA)的需求",
+   "HTML5 是一套 HTML、CSS 和 JavaScript 技術之組合",
+   "HTML5 新增<video>、<audio>和<canvas>等語法"
+  ],
+  "answer": 1,
+  "page": 29,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 231,
+  "q": "關於 HTML5 之敘述，下列何者錯誤？",
+  "options": [
+   "目前各大主流瀏覽器均支援 HTML5 的語法",
+   "HTML5 新增許多功能，可以完全取代 JavaScript、VBScript 等語言，使得網頁設計更簡單",
+   "HTML5 的標記不區分大小寫",
+   "HTML5 可以省略如 html、head、body 等元素的起始和結束標記"
+  ],
+  "answer": 2,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 232,
+  "q": "關於 CSS 之敘述，下列何者錯誤？",
+  "options": [
+   "整份 CSS 文件必須嵌入在 HTML5 的網頁文件中，瀏覽器方可正確讀取",
+   "CSS 是一種專門描述結構文件的表示方式，可描述如何在螢幕上顯示，亦可描述列印及聲音效果",
+   "HTML5 已經刪除了傳統的 font、big、strike、…等控制頁面的標記，將這些控制交由 CSS 處理",
+   "CSS 除了可控制 HTML 文件的顯示外，亦可用於控制 XML 文件的顯示格式"
+  ],
+  "answer": 1,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 233,
+  "q": "何種技術或工具不支援多媒體網頁的功能？",
+  "options": [
+   "HTML5",
+   "HTML2",
+   "Java",
+   "JavaScript"
+  ],
+  "answer": 2,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "02 應用軟體安裝及使用",
+  "no": 234,
+  "q": "相較於傳統的 Cookie，HTML5 結合 JavaScript 儲存功能，其優點不包括下列哪一項？",
+  "options": [
+   "容量更大，儲存更具彈性",
+   "可快取部分常用的網頁",
+   "提供本地端資料庫",
+   "運用 Key-Value 來快速存取遠端資料庫"
+  ],
+  "answer": 4,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 1,
+  "q": "作業系統的主要功能為記憶體管理、處理機管理、設備管理，以及哪一項？",
+  "options": [
+   "I/O 管理",
+   "資料管理",
+   "程式管理",
+   "中文管理"
+  ],
+  "answer": 1,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 2,
+  "q": "何者為行動裝置的作業系統？",
+  "options": [
+   "Windows Server",
+   "Unix",
+   "Mac OS",
+   "Android"
+  ],
+  "answer": 4,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 3,
+  "q": "何種作業系統之檔案名稱對英文字母大小寫不區分？",
+  "options": [
+   "Solaris",
+   "Unix",
+   "Windows",
+   "Linux"
+  ],
+  "answer": 3,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 4,
+  "q": "何種作業系統最不可能具有遠端登入的功能？",
+  "options": [
+   "MS-DOS",
+   "Solaris",
+   "Windows Server",
+   "Linux"
+  ],
+  "answer": 1,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 5,
+  "q": "何者不是多人多工的作業系統？",
+  "options": [
+   "Mac OS X",
+   "Linux",
+   "Solaris",
+   "Windows 11"
+  ],
+  "answer": 4,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 6,
+  "q": "程式多工處理（Multi-processing）的工作原理為何？",
+  "options": [
+   "處理完一件工作後，才處理下一件工作",
+   "電腦同時段內可處理多件工作",
+   "同時段內處理所有工作的輸出入動作（I/O operation）",
+   "電腦可處理多個工作（process），但同一時段內只處理一件"
+  ],
+  "answer": 4,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 7,
+  "q": "何者不是網路作業系統（NOS）？",
+  "options": [
+   "Windows Server",
+   "MS DOS",
+   "Unix",
+   "Linux"
+  ],
+  "answer": 2,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 8,
+  "q": "哪一種作業系統不支援長檔名？",
+  "options": [
+   "MS DOS",
+   "OS/2",
+   "Windows 10",
+   "Unix"
+  ],
+  "answer": 1,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 9,
+  "q": "何種作業系統無法安裝在實體 PC 上被使用？",
+  "options": [
+   "Linux",
+   "iOS",
+   "Windows Server",
+   "Mac OS"
+  ],
+  "answer": 2,
+  "page": 30,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 10,
+  "q": "何者不是一般的作業系統可以提供的功能？",
+  "options": [
+   "分時（Time-sharing）作業",
+   "多工（Multi-tasking）作業",
+   "硬碟管理",
+   "程式翻譯（Language Translation）作業"
+  ],
+  "answer": 4,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 11,
+  "q": "安裝 Linux 時，若主記憶體為 8GB 則建立 SWAP 分區的大小為多少最適當？",
+  "options": [
+   "2GB",
+   "4GB",
+   "8GB",
+   "16GB"
+  ],
+  "answer": 4,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 12,
+  "q": "Windows 執行哪一個指令可以查詢本地電腦的 IP 組態？",
+  "options": [
+   "ipconfig",
+   "tracert",
+   "route",
+   "ping"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 13,
+  "q": "Windows 執行哪一個指令可以查詢本地電腦傳送資料到遠端電腦的路徑？",
+  "options": [
+   "ipconfig",
+   "tracert",
+   "netstat",
+   "ping"
+  ],
+  "answer": 2,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 14,
+  "q": "何者是 Windows 預設的通訊協定？",
+  "options": [
+   "TCP/IP",
+   "IPX/SPX 相容通訊協定",
+   "NetBEUI",
+   "AppleTalk"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 15,
+  "q": "Windows11「裝置管理員」中，無法依哪些分類方式來檢視電腦中的硬體裝置？",
+  "options": [
+   "依裝置類型",
+   "依資源連線",
+   "依裝置位置",
+   "依資源類型"
+  ],
+  "answer": 3,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 16,
+  "q": "在 Windows 系統中，若要更改顯示器的解析度，應在哪一個項目下設定？",
+  "options": [
+   "調整亮度",
+   "調整背景",
+   "調整解析度",
+   "調整大小"
+  ],
+  "answer": 3,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 17,
+  "q": "筆記型電腦安裝 Windows 11 系統，其「電源和電池」的「節能模式」不可設定哪一項目？",
+  "options": [
+   "一律使用節能模式",
+   "當電池電量達到下列值（如：10%、20%、30%…）時，自動開啟節能模式",
+   "使用節能模式時，降低螢幕亮度",
+   "設定關閉顯示器的時機"
+  ],
+  "answer": 4,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 18,
+  "q": "Windows 的「搜尋」功能，若選擇「檔案或資料夾」的選項，何者敘述錯誤？",
+  "options": [
+   "可以指定要尋找檔案的屬性",
+   "可以指定要尋找檔案的大小範圍",
+   "可以指定要尋找檔案的資料夾",
+   "可以指定要尋找檔案的修改日期範圍"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 19,
+  "q": "Windows 11 要查詢一個中文字的內碼，可使用何種方式達成？",
+  "options": [
+   "「控制台」中的「字型」",
+   "「控制台」中的「鍵盤」",
+   "「控制台」中的「地區」",
+   "字元對應表"
+  ],
+  "answer": 4,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 20,
+  "q": "Windows 系統中，預設滑鼠左鍵點一下不放，並移動滑鼠是要執行什麼動作？",
+  "options": [
+   "選取",
+   "拖曳",
+   "執行",
+   "點選"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false,
+  "note": "原卷答案為 ①（選取），一般認為按住左鍵移動是「拖曳」（②），僅供參考。"
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 21,
+  "q": "Windows 系統中，預設滑鼠左鍵點一下是要執行什麼動作？",
+  "options": [
+   "選單",
+   "拖曳",
+   "執行",
+   "點選"
+  ],
+  "answer": 4,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 22,
+  "q": "Windows 系統中，使用何種介面的技術，可讓電腦能夠更容易辨識出其硬體裝置？",
+  "options": [
+   "Plug&Play",
+   "IDE",
+   "SCSI",
+   "PCIe"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 23,
+  "q": "Windows 要「更改檔案屬性」，在選取該檔案後，再按一下滑鼠右鍵，然後在「快顯功能表」中選取哪一個選項去完成？",
+  "options": [
+   "更名",
+   "內容",
+   "建立捷徑",
+   "傳送到"
+  ],
+  "answer": 2,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 24,
+  "q": "Windows 要偵測本端主機和遠端主機間的網路是否為連通狀態時，則應執行哪一個指令？",
+  "options": [
+   "ping",
+   "ipconfig",
+   "telnet",
+   "route"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 25,
+  "q": "Windows 要連上全球資訊網，必須在網路中設定哪一種通訊協定？",
+  "options": [
+   "TCP/IP",
+   "PPP",
+   "NetBEUI",
+   "IPX/SPX"
+  ],
+  "answer": 1,
+  "page": 31,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 26,
+  "q": "Windows 要截取「某一個工作中的視窗」成為一個圖案時，應按哪一組按鍵？",
+  "options": [
+   "PrintScreen",
+   "Shift+PrintScreen",
+   "Alt+PrintScreen",
+   "Ctrl+PrintScreen"
+  ],
+  "answer": 3,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 27,
+  "q": "Windows 要截取「整個螢幕」成為一個圖案時，應按哪一組按鍵？",
+  "options": [
+   "PrintScreen",
+   "Shift+PrintScreen",
+   "Alt+PrintScreen",
+   "Ctrl+PrintScreen"
+  ],
+  "answer": 1,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 28,
+  "q": "Windows 內的「媒體播放程式(Windows Media Player)」，無法播放哪一種格式的檔案？",
+  "options": [
+   "mp3",
+   "wmv",
+   "swf",
+   "mid"
+  ],
+  "answer": 3,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 29,
+  "q": "關於 Windows 檔案與資料夾設定，何者為正確？",
+  "options": [
+   "檔案可共用，資料夾可共用",
+   "檔案不可共用，資料夾可共用",
+   "檔案可共用，資料夾不可共用",
+   "檔案不可共用，資料夾不可共用"
+  ],
+  "answer": 2,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 30,
+  "q": "Windows 要切換不同的輸入法，其預設值為按下哪一組按鍵？",
+  "options": [
+   "Ctrl+Alt",
+   "Ctrl+Shift",
+   "Ctrl+Space",
+   "Shift+Space"
+  ],
+  "answer": 2,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 31,
+  "q": "Windows 要開啟和關閉「中文輸入法」，其預設值為按下哪一組按鍵？",
+  "options": [
+   "Ctrl+Alt",
+   "Ctrl+Shift",
+   "Ctrl+Space",
+   "Shift+Space"
+  ],
+  "answer": 3,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 32,
+  "q": "Windows 的「裝置管理員」中，若有未安裝驅動程式的裝置，則會在該裝置前面顯示什麼符號？",
+  "options": [
+   "?",
+   "!",
+   "X",
+   "$"
+  ],
+  "answer": 2,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 33,
+  "q": "Windows 設定「電腦超過 5 分鐘未被使用」時，要自動關閉顯示器，可以在「控制台」下哪一個功能選項設定？",
+  "options": [
+   "系統",
+   "程式和功能",
+   "使用者帳戶",
+   "電源選項"
+  ],
+  "answer": 4,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 34,
+  "q": "Windows 要「移除一個硬體的設定值」，應在「控制台」下哪一個選項執行？",
+  "options": [
+   "程式和功能",
+   "裝置管理員",
+   "使用者帳戶",
+   "行動作業中心"
+  ],
+  "answer": 2,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 35,
+  "q": "Windows 要「要觀看 CPU 的使用率」，應在哪一個選項執行？",
+  "options": [
+   "工作管理員",
+   "裝置管理員",
+   "認證管理員",
+   "行動作業中心"
+  ],
+  "answer": 1,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 36,
+  "q": "Windows「工作管理員」無法執行哪一個工作？",
+  "options": [
+   "觀看 CPU 的使用率",
+   "觀看執行中的應用程式列表及狀態",
+   "觀看使用者的處理程序列表及記憶體使用情形",
+   "觀看共用資料夾遠端使用者使用的情形"
+  ],
+  "answer": 4,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 37,
+  "q": "Windows「工作管理員」中「資源監視器」無法執行哪一個工作？",
+  "options": [
+   "觀看 CPU 的使用率",
+   "觀看記憶體的使用情形",
+   "觀看程式對磁碟的讀寫速度",
+   "觀看使用者的登入登出情形"
+  ],
+  "answer": 4,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 38,
+  "q": "何者不是 Windows「重組並最佳化磁碟機」的目的？",
+  "options": [
+   "重組目錄",
+   "重組檔案",
+   "重組可用空間",
+   "同時重組檔案及可用空間"
+  ],
+  "answer": 1,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 39,
+  "q": "Windows 系統中，「網路」若要顯示本機的電腦名稱為「HAPPY」，應該在哪一功能選項去設定？",
+  "options": [
+   "電腦說明",
+   "電腦名稱",
+   "組態",
+   "工作群組"
+  ],
+  "answer": 2,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 40,
+  "q": "Windows 中，若先選取 C 磁碟中的一個檔案或資料夾，成功地拖曳至 D 磁碟中，其執行的動作為何？",
+  "options": [
+   "複製",
+   "搬移",
+   "刪除",
+   "剪下"
+  ],
+  "answer": 1,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 41,
+  "q": "Windows 中，若先選取 D 磁碟中的一個檔案或資料夾，成功地拖曳至 D 磁碟的另一個資料夾中，其執行的動作為何？",
+  "options": [
+   "複製",
+   "搬移",
+   "刪除",
+   "剪下"
+  ],
+  "answer": 2,
+  "page": 32,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 42,
+  "q": "Windows 11 的「檔案總管」中，若先選取某一個檔案後，再選取「傳送到」的「抽取式磁碟(F:)」選項，其執行的動作為何？",
+  "options": [
+   "在 F:磁碟機中建立一個指到該檔案的捷徑",
+   "將該檔案由 F:磁碟複製到硬碟內",
+   "將該檔案複製到 F:磁碟",
+   "將該檔案搬移到 F:磁碟"
+  ],
+  "answer": 3,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 43,
+  "q": "Windows 11 的「檔案總管」中，使用者對於某一個 abc 資料夾及該同一層所有資料具有存取的權限，若選取 abc 資料夾後，再選取「傳送到」的「壓縮的(zipped)資料夾」選項，其執行的動作為何？",
+  "options": [
+   "在桌面上建立 abc.zip 壓縮檔",
+   "在桌面上建立 abc 資料夾的捷徑",
+   "在與 abc 資料夾同一層目錄下建立 abc.zip 壓縮檔",
+   "在 Downloads 目錄下建立 abc.zip 壓縮檔"
+  ],
+  "answer": 3,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 44,
+  "q": "Windows 11 的「檔案總管」中，使用者對於某一個 abc 資料夾及該同一層所有資料具有存取的權限，若選取 abc 資料夾後，再選取「傳送到」的「桌面(建立捷徑)」選項，其執行的動作為何？",
+  "options": [
+   "在桌面上建立 abc.zip 壓縮檔",
+   "在桌面上建立指向 abc 資料夾的捷徑",
+   "在與 abc 資料夾同一層目錄下建立指向 abc 資料夾的捷徑",
+   "在桌面上建立 abc 資料夾"
+  ],
+  "answer": 2,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 45,
+  "q": "Windows 中，若在執行刪除檔案時，想讓檔案不經「資源回收筒」而直接被刪除，應按哪一個組合鍵？",
+  "options": [
+   "Shift+Del",
+   "Ctrl+Alt+Del",
+   "Alt+Del",
+   "Ctrl+Del"
+  ],
+  "answer": 1,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 46,
+  "q": "Windows 11 中，若要顯示檔案名稱的副檔名，應在「控制台」哪一個選項設定？",
+  "options": [
+   "Windows 工具/組合管理",
+   "工作資料夾/檢視",
+   "裝置管理員/檢視",
+   "檔案總管選項/檢視"
+  ],
+  "answer": 4,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 47,
+  "q": "Windows 系統中，若選取 C:磁碟中的檔案，按住 Ctrl+Shift 鍵後並拖曳至桌面上，會進行哪一個動作？",
+  "options": [
+   "在桌面上建立一個該檔案的捷徑",
+   "在桌面上顯示該檔案的內容",
+   "將該檔案刪除",
+   "此動作不被允許"
+  ],
+  "answer": 1,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 48,
+  "q": "Windows 登入時，若鍵入的密碼其「大小寫不正確」會導致什麼結果？",
+  "options": [
+   "仍可以進入 Windows",
+   "進入 Windows 的安全模式",
+   "要求重新輸入密碼",
+   "Windows 將先關閉，並重新開機"
+  ],
+  "answer": 3,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 49,
+  "q": "Windows 要同時檢視檔案的「名稱、修改日期、類型、大小…」，應使用哪一個選項的模式？",
+  "options": [
+   "清單",
+   "小圖示",
+   "大圖示",
+   "詳細資料"
+  ],
+  "answer": 4,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 50,
+  "q": "電腦系統經常執行「複製及刪除檔案」的動作，應定期執行何種程式，以讓硬碟空間剩餘區塊可呈現更連續？",
+  "options": [
+   "磁碟掃瞄程式",
+   "磁碟重組程式",
+   "磁碟壓縮程式",
+   "病毒掃描程式"
+  ],
+  "answer": 2,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 51,
+  "q": "Windows 系統中，要將某一資料夾與在網路上的使用者分享使用，可先在該資料夾的圖示下按滑鼠右鍵一下，再選擇「快顯功能表」中的何項功能即可完成？",
+  "options": [
+   "開啟",
+   "建立捷徑",
+   "搜尋",
+   "內容"
+  ],
+  "answer": 4,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 52,
+  "q": "Windows 系統中，要移除 Microsoft Office 應用軟體程式，可利用「控制台」中的何項功能即可完成？",
+  "options": [
+   "外觀和主題",
+   "系統/裝置管理員",
+   "預設程式/解除安裝或變更程式",
+   "程式和功能/解除安裝或變更程式"
+  ],
+  "answer": 4,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 53,
+  "q": "Windows 將「滑鼠」設定成「慣用左手」後，按幾下滑鼠左鍵將會顯示快顯功能表？",
+  "options": [
+   "一下",
+   "兩下",
+   "三下",
+   "四下"
+  ],
+  "answer": 1,
+  "page": 33,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 54,
+  "q": "Windows 的「桌面」要出現快顯功能表，滑鼠應如何操作？",
+  "options": [
+   "左鍵一下",
+   "左鍵兩下",
+   "右鍵一下",
+   "右鍵兩下"
+  ],
+  "answer": 3,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 55,
+  "q": "Windows 11「設定/時間及語言」中的哪個選項功能，可用以「新增/移除」某一種中文輸入法？",
+  "options": [
+   "日期和時間",
+   "語言與地區",
+   "輸入",
+   "語音"
+  ],
+  "answer": 2,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 56,
+  "q": "Windows 11「設定」中的何項功能，可用以執行「新增印表機」的動作？",
+  "options": [
+   "系統",
+   "藍牙與裝置",
+   "網路和網際網路",
+   "協助工具"
+  ],
+  "answer": 2,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 57,
+  "q": "Windows 若要以滑鼠選取多個連續的檔案，可先以滑鼠點選第一個檔案，然後按住任何項功能鍵後，再以滑鼠選取最後一個檔案即可？",
+  "options": [
+   "Ctrl",
+   "Enter",
+   "Ctrl+Shift",
+   "Shift"
+  ],
+  "answer": 4,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 58,
+  "q": "Windows 若要以滑鼠選取多個不連續的檔案，可先以滑鼠點選第一個檔案，然後按住任何項功能鍵後，再以滑鼠逐一選取其他檔案即可？",
+  "options": [
+   "Ctrl",
+   "Enter",
+   "Ctrl+Shift",
+   "Shift"
+  ],
+  "answer": 1,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 59,
+  "q": "影音分享平台 YouTube 屬於何種類型的雲端服務？",
+  "options": [
+   "IaaS(Infrastructure as a Service)",
+   "PaaS(Platform as a Service)",
+   "SaaS(Software as a Service)",
+   "CaaS(Content as a Service)"
+  ],
+  "answer": 3,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 60,
+  "q": "使用 Gmail 或 Hotmail 收發電子郵件，屬於哪一項類型雲端服務？",
+  "options": [
+   "IaaS(Infrastructure as a Service)",
+   "PaaS(Platform as a Service)",
+   "SaaS(Software as a Service)",
+   "CaaS(Content as a Service)"
+  ],
+  "answer": 3,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 61,
+  "q": "雲端運算的資料不會儲存在何種設備中？",
+  "options": [
+   "本機設備",
+   "網路硬碟",
+   "雲端伺服器",
+   "區域網路儲存設備"
+  ],
+  "answer": 1,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 62,
+  "q": "雲端運算用「雲(Cloud)」表示的目的，何者最妥適？",
+  "options": [
+   "表示此技術無需使用硬體設備",
+   "表示此技術需建置在空中",
+   "表示使用此技術，無需了解底層架構方式，只要會使用即可",
+   "表示此技術絕對安全"
+  ],
+  "answer": 3,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 63,
+  "q": "有關 Linux Shell Script 之敘述，何者最適當？",
+  "options": [
+   "簡報軟體",
+   "文書編輯軟體",
+   "繪圖指令碼",
+   "直譯式程式化指令碼"
+  ],
+  "answer": 4,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 64,
+  "q": "欲查詢 Linux 本地電腦的 IP 組態，可執行哪一個指令？",
+  "options": [
+   "ifconfig",
+   "ipconfig",
+   "route",
+   "ping"
+  ],
+  "answer": 1,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 65,
+  "q": "欲檢查 Linux 網路連線狀態與品質，可執行哪一個指令？",
+  "options": [
+   "ping",
+   "apt",
+   "read",
+   "clear"
+  ],
+  "answer": 1,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 66,
+  "q": "LAMP 是由多套自由軟體一起整合運作，用來執行動態網站或者網站伺服器的解決方案，其自由軟體名稱首字母的縮寫不包含何者？",
+  "options": [
+   "Linux",
+   "PHP",
+   "AJAX",
+   "MySQL 或 MariaDB"
+  ],
+  "answer": 3,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 67,
+  "q": "何者較適合使用於開發跨平台網頁設計？",
+  "options": [
+   "HTML 5 + CSS + JavaScript",
+   "VBScript + Oracle",
+   "Assembly + MySQL",
+   "Fortran + SQL Server"
+  ],
+  "answer": 1,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 68,
+  "q": "何者是開放資料(Open Data)常用的資料交換格式？",
+  "options": [
+   "JSON",
+   "RAR",
+   "RTF",
+   "AAC"
+  ],
+  "answer": 1,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 69,
+  "q": "JSON 是行動裝置中最常被使用的資料格式，何者敘述不正確？",
+  "options": [
+   "JSON 陣列以「[」開頭，「]」結束",
+   "JSON 的每一個欄位是以 key-value 的方式決定",
+   "電話欄位資料(如：0422595700)宜用整數型別",
+   "JSON 格式可使用巢狀結構，即 JSON 物件內可以再有 JSON 物件"
+  ],
+  "answer": 3,
+  "page": 34,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 70,
+  "q": "跨平台網頁在連結雲端服務時，何者最不適宜作為資料交換的格式？",
+  "options": [
+   "HTML",
+   "XML",
+   "JSON",
+   "CSV"
+  ],
+  "answer": 1,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "03 系統軟體安裝及使用",
+  "no": 71,
+  "q": "透過 AJAX 方式交換 JSON 資料，使用者在網頁中點選連線上產品縮圖時，用以連結產品資料，系統執行下列動作順序為何？ (圖/清單內容) a. JavaScript 透過 AJAX 方式將產品 ID 傳送給伺服器端。 b. 伺服器端收到 ID，將產品資料(如：價格、說明)編碼(Encode)成 JSON 資料，並且回傳給瀏覽器。 c. JavaScript 收到 JSON 資料，將其解碼(Decode)並顯示在網頁上。",
+  "options": [
+   "abc",
+   "acd",
+   "bca",
+   "cab"
+  ],
+  "answer": 1,
+  "page": 35,
+  "figure": true
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 1,
+  "q": "關於資料安全之敘述何者不重要？",
+  "options": [
+   "變更光碟機速度",
+   "檔案的機密等級分類",
+   "消防設備",
+   "門禁管制"
+  ],
+  "answer": 1,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 2,
+  "q": "關於資訊安全的威脅，何種類型最難預防？",
+  "options": [
+   "人為過失",
+   "蓄意破壞",
+   "停電",
+   "電腦病毒"
+  ],
+  "answer": 2,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 3,
+  "q": "何者對於預防電腦犯罪最有效？",
+  "options": [
+   "裝設空調設備",
+   "裝設不斷電設置",
+   "定期保養電腦",
+   "建置資訊安全管制系統"
+  ],
+  "answer": 4,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 4,
+  "q": "何者不是資訊安全的防護措施？",
+  "options": [
+   "備份軟體",
+   "採用合法軟體",
+   "小問題組合成大問題",
+   "可確認檔案的傳輸"
+  ],
+  "answer": 3,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 5,
+  "q": "關於「防治天然災害威脅資訊安全措施」之敘述何者最不適宜？",
+  "options": [
+   "設置防災監視中心",
+   "經常清潔，不用除濕",
+   "設置不斷電設備",
+   "設置空調設備"
+  ],
+  "answer": 2,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 6,
+  "q": "何者無法有效避免電腦災害的資料安全防護？",
+  "options": [
+   "不定期格式化硬碟",
+   "資料經常備份",
+   "常駐防毒/防駭程式",
+   "備份資料存放於不同地點"
+  ],
+  "answer": 1,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 7,
+  "q": "何種措施不利於資訊系統的安全？",
+  "options": [
+   "設置高強度密碼",
+   "資料定期備份",
+   "每個使用者的使用權限相同",
+   "定期保存日誌檔"
+  ],
+  "answer": 3,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 8,
+  "q": "為避免電腦中資料遺失，何種方法最適當？",
+  "options": [
+   "電腦專人操作",
+   "安裝防毒軟體",
+   "設定密碼",
+   "定期備份"
+  ],
+  "answer": 4,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 9,
+  "q": "資訊系統之安全與管理，除了可藉由密碼控制使用者之權限外，最積極之例行工作為何？",
+  "options": [
+   "定期備份",
+   "經常變更密碼",
+   "硬體設鎖",
+   "監控系統使用人員"
+  ],
+  "answer": 1,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 10,
+  "q": "何者是網路安全之使用原則？",
+  "options": [
+   "寫下你的密碼",
+   "密碼中最好包含字母及非字母字元",
+   "用你名字或帳號當作密碼",
+   "用你個人的資料當作密碼"
+  ],
+  "answer": 2,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 11,
+  "q": "何者是錯誤的系統安全措施？",
+  "options": [
+   "系統操作者統一保管密碼",
+   "資料加密",
+   "密碼變更",
+   "公布之電子文件設定成唯讀檔"
+  ],
+  "answer": 1,
+  "page": 35,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 12,
+  "q": "關於密碼之敘述何者較不妥？",
+  "options": [
+   "利用亂數產生",
+   "密碼越長越安全",
+   "常更換密碼",
+   "用電話當密碼"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 13,
+  "q": "何者對於預防電腦犯罪無效？",
+  "options": [
+   "設定使用權限",
+   "設定高強度密碼",
+   "設置防火牆",
+   "裝設空調設備"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 14,
+  "q": "關於資料備份，尋找第二個儲存空間的安全作法之敘述何者不適宜？",
+  "options": [
+   "存放在另一棟建築物內",
+   "與專業儲存公司合作",
+   "儲存在防火除溼之保險櫃",
+   "儲存在同一部電腦的不同硬碟中"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 15,
+  "q": "關於「電腦安全防護措施」之敘述，何者是同時針對「實體」及「資料」來做的防護措施？",
+  "options": [
+   "人員定期輪調",
+   "保留日誌檔",
+   "不斷電系統",
+   "管制上機次數與時間"
+  ],
+  "answer": 3,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 16,
+  "q": "關於防範電腦犯罪之敘述何者錯誤？",
+  "options": [
+   "未設定使用權限",
+   "加強機房門禁管制",
+   "資料檔案加密",
+   "明確劃分使用者權限"
+  ],
+  "answer": 1,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 17,
+  "q": "我國身分證字號的第一個數值是用來進行何種檢驗？",
+  "options": [
+   "正確性",
+   "一致性",
+   "性別",
+   "地區別"
+  ],
+  "answer": 3,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 18,
+  "q": "我國身分證字號的最前面的英文字母是用來進行何種檢驗？",
+  "options": [
+   "正確性",
+   "一致性",
+   "性別",
+   "地區別"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 19,
+  "q": "我國身分證字號的最後一碼是用來檢查號碼的何種檢驗？",
+  "options": [
+   "正確性",
+   "一致性",
+   "性別",
+   "地區別"
+  ],
+  "answer": 1,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 20,
+  "q": "程式設計師在某一系統中插入一段程式，只要他的姓名從公司的人事檔案中被刪除時，該程式會將公司整個檔案破壞掉，這是屬於何種電腦犯罪行為？",
+  "options": [
+   "資料竄改(Data diddling)",
+   "制壓(Super zapping)",
+   "邏輯炸彈(Logic bombs)",
+   "特洛依木馬(Trojan horse)"
+  ],
+  "answer": 3,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 21,
+  "q": "何者是兩大國際信用卡發卡機構 Visa 及 Master Card 聯合制定的網路信用卡安全交易標準？",
+  "options": [
+   "私人通訊技術(PCT)協定",
+   "安全超文字傳輸協定(S-HTTP)",
+   "BBS 傳輸協定",
+   "安全電子交易(SET)協定"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 22,
+  "q": "網際網路上用來防止駭客入侵的裝置為何？",
+  "options": [
+   "防火牆",
+   "防毒軟體",
+   "閘道器",
+   "路由器"
+  ],
+  "answer": 1,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 23,
+  "q": "關於網路防火牆之敘述何者錯誤？",
+  "options": [
+   "外部防火牆無法防止內部網路使用者對內部的入侵",
+   "防火牆能管制封包的流向",
+   "防火牆可以管制外部網路進入內部系統",
+   "防火牆可以防止任何病毒的入侵"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 24,
+  "q": "何者不是選購網路防火牆的重要考慮因素？",
+  "options": [
+   "安全",
+   "效能",
+   "價格",
+   "體積"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 25,
+  "q": "何者不是病毒侵入家庭中的個人電腦後，所造成的損害？",
+  "options": [
+   "電腦故障",
+   "無法開機",
+   "無法上網",
+   "停電"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 26,
+  "q": "何者可能會造成電腦程式執行的速度愈來愈慢？",
+  "options": [
+   "主記憶體容量太大",
+   "中央處理器等級太高",
+   "螢幕太小",
+   "感染病毒"
+  ],
+  "answer": 4,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 27,
+  "q": "關於電腦防毒措施之敘述何者錯誤？",
+  "options": [
+   "系統安裝防毒軟體",
+   "可隨意拷貝他人軟體",
+   "不下載來路不明的軟體",
+   "定期更新病毒碼"
+  ],
+  "answer": 2,
+  "page": 36,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 28,
+  "q": "何者無法辨識病毒感染？",
+  "options": [
+   "檔案儲存容量改變",
+   "檔案儲存日期改變",
+   "螢幕出現亂碼",
+   "電源電壓變小"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 29,
+  "q": "一部電腦最多可能會感染幾種病毒？",
+  "options": [
+   "一種病毒",
+   "二種病毒",
+   "三種病毒",
+   "多種病毒"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 30,
+  "q": "何者與避免病毒災害無關？",
+  "options": [
+   "使用原版軟體",
+   "公司集中電腦操作",
+   "定期備份",
+   "勤於更新病毒碼"
+  ],
+  "answer": 2,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 31,
+  "q": "何種途徑可能會感染病毒？",
+  "options": [
+   "螢幕解析度設定",
+   "傳送電子郵件",
+   "圖形輸出",
+   "資料列印"
+  ],
+  "answer": 2,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 32,
+  "q": "關於電腦感染病毒的過程之敘述何者錯誤？",
+  "options": [
+   "侵入",
+   "潛伏",
+   "發作",
+   "自我消失"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 33,
+  "q": "何種裝置會傳染電腦病毒？",
+  "options": [
+   "印表機",
+   "鍵盤",
+   "隨身碟",
+   "滑鼠"
+  ],
+  "answer": 3,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 34,
+  "q": "何種裝置不會感染電腦病毒？",
+  "options": [
+   "個人電腦",
+   "手機",
+   "平板電腦",
+   "滑鼠"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 35,
+  "q": "關於電腦病毒之敘述何者錯誤？",
+  "options": [
+   "能使檔案不能執行",
+   "能使操作者中毒",
+   "能自我複製",
+   "能破壞硬碟資料"
+  ],
+  "answer": 2,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 36,
+  "q": "若程式具有自行複製的能力，且會破壞資料檔案，此程式稱之為何？",
+  "options": [
+   "電腦病毒",
+   "電腦遊戲",
+   "電腦試算表",
+   "電腦文書處理"
+  ],
+  "answer": 1,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 37,
+  "q": "個人電腦如果已感染病毒時，何者較為適宜？",
+  "options": [
+   "進行解毒",
+   "按 Ctrl+Alt+Del 鍵重新開機",
+   "更換光碟機",
+   "更換主記憶體"
+  ],
+  "answer": 1,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 38,
+  "q": "病毒入侵電腦發作後，會隱藏在電腦的哪個元件中？",
+  "options": [
+   "ROM",
+   "PROM",
+   "EPROM",
+   "RAM"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 39,
+  "q": "程式若已中毒，在執行時，病毒會被載入記憶體中發作，此病毒稱之為何？",
+  "options": [
+   "混合型病毒",
+   "開機型病毒",
+   "網路型病毒",
+   "檔案型病毒"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 40,
+  "q": "電子郵件在傳輸時，加入哪個動作有助於防止被竊取資料？",
+  "options": [
+   "壓縮",
+   "回傳給本人",
+   "加密",
+   "副本"
+  ],
+  "answer": 3,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 41,
+  "q": "電腦病毒不會造成何種現象？",
+  "options": [
+   "破壞硬體",
+   "破壞軟體",
+   "潛伏記憶體中",
+   "隨身碟燒毀"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 42,
+  "q": "電腦病毒的侵入是屬於何種災害？",
+  "options": [
+   "機件故障",
+   "天然災害",
+   "惡意破壞",
+   "交通事故"
+  ],
+  "answer": 3,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 43,
+  "q": "「電腦病毒」為？",
+  "options": [
+   "破壞硬體的細菌",
+   "破壞電腦運作的程式",
+   "感染黴菌的資料",
+   "毒藥"
+  ],
+  "answer": 2,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 44,
+  "q": "系統資料安全之威脅，輕則致使作業中斷、短路，重則造成資料損毀，設備傾覆，因此加強事前之預防措施乃是避免遭受損壞的重要手段之一，因此面對日益嚴重的「電腦犯罪」，何項預防措施錯誤？",
+  "options": [
+   "內部管制、稽核",
+   "絕對不使用網路",
+   "技術性管制",
+   "警衛、門禁"
+  ],
+  "answer": 2,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 45,
+  "q": "一般資訊中心為確保電腦作業而採取各種防護的措施，何者不在防護的項目之內？",
+  "options": [
+   "實體設備",
+   "資料",
+   "軟體系統",
+   "差假記錄"
+  ],
+  "answer": 4,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 46,
+  "q": "何者是數位簽名的功能？",
+  "options": [
+   "確認發信人身分",
+   "回傳給本人",
+   "加密",
+   "密件副本"
+  ],
+  "answer": 1,
+  "page": 37,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 47,
+  "q": "將原執行檔程式的程序中斷，布下陷阱後，再回頭繼續原始程式的病毒為何種？",
+  "options": [
+   "記憶體病毒",
+   "開機型病毒",
+   "檔案型病毒",
+   "CPU 病毒"
+  ],
+  "answer": 3,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 48,
+  "q": "何者不是電腦病毒的特性？",
+  "options": [
+   "病毒一旦病發就一定無法解毒",
+   "電腦病毒寄生在正常程式中，伺機將自己複製並感染給其它正常程式",
+   "有些病毒發作時會降低 CPU 的執行速度",
+   "當病毒感染正常程式中，並不一定會立即發作，有時須條件成立時，才會發病"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 49,
+  "q": "關於「防治電腦病毒」之敘述何者正確？",
+  "options": [
+   "一般電腦病毒可以分為開機型、檔案型及混合型三種",
+   "電腦病毒只存在記憶體、開機磁區及執行檔中",
+   "受病毒感染的檔案，不執行也會發作",
+   "遇到開機型病毒，只要無毒的開機隨身碟重新開機後即可清除"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 50,
+  "q": "資訊安全管理制度依循哪個標準？",
+  "options": [
+   "ISO 27001",
+   "ISO 45001",
+   "ISO 15408",
+   "ISO 21434"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 51,
+  "q": "關於「電腦病毒防治方式」之敘述何者錯誤？",
+  "options": [
+   "只要將被感染之程式刪除就不會再被感染",
+   "用乾淨無毒的開機系統開機",
+   "不使用來路不明之軟體",
+   "電腦上加裝防毒軟體"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 52,
+  "q": "硬式磁碟機(HDD)/固態硬碟(SSD)為防資料流失或中毒，應常定期執行何種工作？",
+  "options": [
+   "查檔",
+   "備份",
+   "規格化",
+   "用清潔片清洗"
+  ],
+  "answer": 2,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 53,
+  "q": "關於「電腦病毒」之敘述何者錯誤？",
+  "options": [
+   "開機型病毒，開機後，即有病毒侵入記憶體",
+   "中毒的檔案，由於病毒程式的寄居，檔案通常會變大",
+   "主記憶體無毒，此時 COPY 無毒的檔案到 USB 隨身碟，將使其中毒",
+   "檔案型病毒，將隨著檔案的執行，載入記憶體"
+  ],
+  "answer": 3,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 54,
+  "q": "電腦病毒的發作起因為何？",
+  "options": [
+   "操作不當",
+   "程式產生",
+   "記憶體突變",
+   "細菌感染"
+  ],
+  "answer": 2,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 55,
+  "q": "何種程式軟體是以竊取資料為主，並不希望被駭客發現它的存在，才能繼續躲藏，並藉由網路將被竊資料傳送給駭客？",
+  "options": [
+   "間諜程式",
+   "電腦病毒",
+   "P2P 軟體",
+   "備份程式"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 56,
+  "q": "關於「電腦設備」之管理何者錯誤？",
+  "options": [
+   "所有設備專人管理",
+   "定期保養設備",
+   "允許使用者因個人方便隨意搬移設備",
+   "使用電源穩壓器"
+  ],
+  "answer": 3,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 57,
+  "q": "何種系統可以確保穩定的電腦電源？",
+  "options": [
+   "不斷電系統",
+   "網路系統",
+   "廣播系統",
+   "保全系統"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 58,
+  "q": "不斷電系統(UPS)的主要功能為何？",
+  "options": [
+   "防毒",
+   "傳送檔案",
+   "維護電源品質",
+   "通訊協定"
+  ],
+  "answer": 3,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 59,
+  "q": "學校的電腦中心若發生火災時，使用何種滅火器材最適宜？",
+  "options": [
+   "二氧化碳滅火器",
+   "泡沫滅火器",
+   "水",
+   "乾粉滅火器"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 60,
+  "q": "集線器(Hub)的網路運作是屬於 OSI 七層的哪一層？",
+  "options": [
+   "實體層",
+   "應用層",
+   "網路層",
+   "資料鏈結層"
+  ],
+  "answer": 1,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 61,
+  "q": "交換器(L2 Switch)的網路運作是屬於 OSI 七層的哪一層？",
+  "options": [
+   "實體層",
+   "應用層",
+   "傳輸層",
+   "資料鏈結層"
+  ],
+  "answer": 4,
+  "page": 38,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 62,
+  "q": "SSH(Secure SHell protocol)伺服器為較為安全的遠端連線伺服器，其預設通訊埠號為何？",
+  "options": [
+   "22",
+   "53",
+   "80",
+   "110"
+  ],
+  "answer": 1,
+  "page": 39,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 63,
+  "q": "何者不屬於資訊安全管理的層次？",
+  "options": [
+   "資安治理",
+   "資安管理",
+   "財務管理",
+   "技術管理"
+  ],
+  "answer": 3,
+  "page": 39,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 64,
+  "q": "根據美國國家安全局(NSA)、國家標準技術研究所(NIST)所提出的資安指南，何者不是主要的資訊安全三大要素？",
+  "options": [
+   "流通性(Liquidity)",
+   "機密性(Confidentiality)",
+   "完整性(Integrity)",
+   "可用性(Availability)"
+  ],
+  "answer": 1,
+  "page": 39,
+  "figure": false
+ },
+ {
+  "item": "04 資訊及安全",
+  "no": 65,
+  "q": "發現電腦受勒索軟體攻擊時，第一時間如何緊急處置較妥適？",
+  "options": [
+   "中斷網路連線",
+   "電腦關機",
+   "電腦重灌",
+   "啟用備份資料"
+  ],
+  "answer": 1,
+  "page": 39,
+  "figure": false
+ }
+]

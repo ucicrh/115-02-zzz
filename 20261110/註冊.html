@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const register = (account, password) => {
+      try {
+        // 1. 帳號不能空白
+        if (!account || account.trim() === '') {
+          throw new Error('帳號不能空白')
+        }
+        // 2. 帳號長度需為 4 ~ 20 個字
+        if (account.length < 4 || account.length > 20) {
+          throw new Error('帳號長度需為 4 ~ 20 個字')
+        }
+        // 3. 密碼至少需要 8 個字
+        if (!password || password.length < 8) {
+          throw new Error('密碼至少需要 8 個字')
+        }
+        // 4. 密碼不能和帳號相同
+        if (password === account) {
+          throw new Error('密碼不能和帳號相同')
+        }
+
+        return '註冊成功'
+      } catch (error) {
+        return '驗證失敗: ' + error.message
+      }
+    }
+
+    console.log(register(prompt('帳號'), prompt('密碼')))
+  </script>
+</body>
+</html>

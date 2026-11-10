@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch practice</title>
+</head>
+
+<body>
+    <script>
+        const register = (account, password) => {
+            try {
+                account = (account ?? '').trim()
+                password = (password ?? '').trim()
+                if (account === '') {
+                    throw new Error('驗證失敗: 帳號不能空白')
+                } else if (account.length < 4 || account.length > 20) {
+                    throw new Error('驗證失敗: 帳號長度需為 4 ~ 20 個字')
+                } else if (password.length < 8) {
+                    throw new Error('驗證失敗: 密碼至少需要 8 個字')
+                } else if (account === password) {
+                    throw new Error('驗證失敗: 密碼不能和帳號相同')
+                }
+                return '註冊成功'
+            }
+            catch (error) {
+                return error.message
+            }
+        }
+        console.log(register(prompt('帳號'), prompt('密碼')))
+    </script>
+</body>
+
+</html>

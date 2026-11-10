@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        table {
+            td {
+                padding: 0.2em;
+                border: 1px solid black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody id="tbody">
+        </tbody>
+    </table>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.21.1/axios.min.js'
+        integrity='sha512-YiweniDPqprdTP7mvKVpKWv3jMGTY9frHzOTmDqbutoqcypYCRo8nfKhhDKnSiXTTMN0kBrDtTozIlM11wqcAg=='
+        crossorigin='anonymous'></script>
+    <script>
+        const tbody = document.getElementById('tbody')
+        axios.get('https://kktix.com/events.json')
+            .then(function (response) {
+                const events = response.data.entry
+                for (let i = 0; i < events.length - 1; i++) {
+                    const event = events[i]
+                    const url = event.url
+                    const title = event.title
+                    const summary = event.summary
+                    const content = event.content.replaceAll('(+0800)', '')
+                    const published = event.published
+                    const authorUrl = event.author.uri
+                    const authorName = event.author.name
+                    tbody.innerHTML +=
+                        `<tr>
+                <td><a href="${url}" target="_blank">${title}</a></td>
+                <td>${summary}</td>
+                <td>${content}</td>
+                <td><a href="${authorUrl}" target="_blank">${authorName}</a></td>
+                <td>${new Date(published).toLocaleString('zh-TW')}</td >
+                </tr >`
+                }
+            })
+    </script>
+</body>
+
+</html>

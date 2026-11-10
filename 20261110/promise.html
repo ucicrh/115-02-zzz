@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const pass = false
+
+    // 設定 Promise 的邏輯
+    // resolve = 成功 = .then()
+    // reject  = 失敗 = .catch()
+    const money = new Promise((resolve, reject) => {
+      if (pass) {
+        resolve('5000')
+      } else {
+        reject(new Error('0'))
+      }
+    })
+
+    money
+      // result 是 resolve 傳出的東西
+      .then(result => {
+        console.log(result)
+      })
+      // error 是 reject 傳出的東西
+      .catch(error => {
+        console.log(error)
+      })
+      // 不管成功失敗都執行
+      .finally(() => {
+        console.log('finally')
+      })
+  </script>
+</body>
+</html>

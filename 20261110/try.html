@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    try {
+      // 發生錯誤的時候，會直接跳到 catch
+      alertt('abc')
+      // 不會執行
+      console.log(123456)
+    } catch (error) {
+      // error 代表 try 發生的錯誤
+      console.error(error)
+    }
+    // 正常執行
+    console.log('abcdefg')
+  </script>
+</body>
+</html>

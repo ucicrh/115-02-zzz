@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const xhr = new XMLHttpRequest()
+    // 設定請求方式和網址
+    xhr.open('get', 'https://kktix.com/events.json')
+    // 成功
+    xhr.onload = () => {
+      const data = JSON.parse(xhr.responseText)
+      console.log(data.title)
+    }
+    // 失敗處理
+    xhr.onerror = error => {
+      console.error(error)
+    }
+    // 送出
+    xhr.send()
+  </script>
+</body>
+</html>

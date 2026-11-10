@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 50px;
+            height: 90px;
+            position: relative;
+            margin: 10px;
+            float: left;
+            /* 設定内層元素在3d裏面 */
+            transform-style: preserve-3d;
+        }
+
+        .card-front {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(./1H.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            backface-visibility: hidden;
+        }
+
+        .card-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-image: url(./Red_back.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            backface-visibility: hidden;
+            transform: rotateY('180deg');
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-front"></div>
+        <div class="card-back"></div>
+    </div>
+    <!-- jQuery -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'
+        integrity='sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=='
+        crossorigin='anonymous'></script>
+
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    try {
+      console.log('try')
+      alertt('abc')
+    } catch {
+      console.log('catch')
+    } finally {
+      // 不管有沒有錯誤，try catch 跑完後一定會執行
+      console.log('finally')
+    }
+    */
+
+    const test = () => {
+      try {
+        alertt()
+        return 1
+      } catch {
+        return 2
+      } finally {
+        // 不管有沒有錯誤，try catch 跑完後一定會執行
+        // 會覆蓋 try 和 catch 的 return
+        return 3
+      }
+    }
+    console.log( test() )
+  </script>
+</body>
+</html>

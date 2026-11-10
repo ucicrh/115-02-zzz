@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const validate = input => {
+      try {
+        if (!input) {
+          throw new Error('沒有輸入內容')
+        } else if (typeof input !== 'number') {
+          throw new Error('不是數字')
+        } else if (input < 1) {
+          throw new Error('太小')
+        } else if (input > 9) {
+          throw new Error('太大')
+        }
+        return true
+      } catch (error) {
+        console.error(error)
+        console.error(error.message)
+        return false
+      }
+    }
+    validate()
+    validate('abc')
+    validate(8)
+  </script>
+</body>
+</html>
