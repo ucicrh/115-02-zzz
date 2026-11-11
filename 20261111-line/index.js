@@ -4,6 +4,7 @@ import { askGemini, clearHistory, QuotaError } from './gemini.js'
 import { TASKS, HELP_TEXT, parseCommand } from './commands.js'
 import { getWeather, getWeatherByCoords, getRates, parseRateQuery, getNews } from './services.js'
 import { weatherCard, rateOverviewCard, rateConvertCard, newsCard } from './flex.js'
+import { isInParty, startParty, endParty, partyReply } from './party.js'
 
 const bot = linebot({
   channelId: process.env.CHANNEL_ID,
@@ -17,9 +18,18 @@ const messageButton = (label, text = label) => ({
   action: { type: 'message', label, text },
 })
 
-const DEFAULT_BUTTONS = ['OCR', '翻譯', '解題', '摘要', '改寫', '天氣', '匯率', '新聞', 'help'].map(
-  (label) => messageButton(label),
-)
+const DEFAULT_BUTTONS = [
+  'OCR',
+  '翻譯',
+  '解題',
+  '摘要',
+  '改寫',
+  '天氣',
+  '匯率',
+  '新聞',
+  '聚會',
+  'help',
+].map((label) => messageButton(label))
 
 // messages 可以是字串、訊息物件或陣列；快速按鈕會掛在最後一則訊息下方
 const reply = (event, messages, buttons = DEFAULT_BUTTONS) => {
@@ -120,7 +130,24 @@ const pendingTask = new Map()
 
 const NOT_A_PLACE = /今天|明天|後天|現在|最近|這幾天|什麼|如何|怎樣|怎麼|好|嗎/
 
+const PARTY_BUTTONS = [messageButton('結束聚會')]
+
 const handleText = async (event, userId, text) => {
+  // 聚會模式：進行中時，所有文字都交給聚會，其他指令暫時不作用
+  if (/^(結束聚會|離開聚會|散會)$/.test(text)) {
+    const wasInParty = endParty(userId)
+    await reply(event, wasInParty ? '聚會結束，大家下次見！' : '目前沒有在聚會中。')
+    return
+  }
+  if (text === '聚會') {
+    await reply(event, startParty(userId), PARTY_BUTTONS)
+    return
+  }
+  if (isInParty(userId)) {
+    await reply(event, await partyReply(userId, text), PARTY_BUTTONS)
+    return
+  }
+
   if (/^(help|說明|幫助|\?|？)$/i.test(text)) {
     await reply(event, HELP_TEXT)
     return
