@@ -1,6 +1,6 @@
 import 'dotenv/config'
 import linebot from 'linebot'
-import { askGemini, clearHistory, QuotaError } from './gemini.js'
+import { askAI, clearHistory } from './OpenAI.js'
 import { TASKS, HELP_TEXT, parseCommand } from './commands.js'
 import { getWeather, getWeatherByCoords, getRates, parseRateQuery, getNews } from './services.js'
 import { weatherCard, rateOverviewCard, rateConvertCard, newsCard } from './flex.js'
@@ -100,7 +100,7 @@ const inlinePart = async (event, mimeType) => {
   return { inlineData: { mimeType, data: buffer.toString('base64') } }
 }
 
-// 把訊息內容轉成 Gemini 的 part，並決定沒選功能時的預設功能；不支援時回傳 { error }
+// 把訊息內容轉成給 AI 的 part，並決定沒選功能時的預設功能；不支援時回傳 { error }
 const readMedia = async (event) => {
   const { type, fileName = '', fileSize = 0 } = event.message
   if (type === 'image') {
@@ -190,12 +190,12 @@ const handleText = async (event, userId, text) => {
   if (!command) {
     // 一般對話
     pendingTask.delete(userId)
-    await reply(event, await askGemini(userId, [{ text }]))
+    await reply(event, await askAI(userId, [{ text }]))
   } else if (command.rest) {
     // 指令後面直接帶文字：直接處理
     pendingTask.delete(userId)
     const instruction = TASKS[command.task].build(command.option)
-    await reply(event, await askGemini(userId, [{ text: `${instruction}\n\n${command.rest}` }]))
+    await reply(event, await askAI(userId, [{ text: `${instruction}\n\n${command.rest}` }]))
   } else {
     // 只有指令：等使用者傳圖片、語音或檔案
     pendingTask.set(userId, command)
@@ -216,7 +216,7 @@ const handleMedia = async (event, userId) => {
   const pending = pendingTask.get(userId) || { task: media.defaultTask }
   pendingTask.delete(userId)
   const instruction = TASKS[pending.task].build(pending.option)
-  await reply(event, await askGemini(userId, [media.part, { text: instruction }]))
+  await reply(event, await askAI(userId, [media.part, { text: instruction }]))
 }
 
 bot.on('follow', async (event) => {
@@ -243,11 +243,7 @@ bot.on('message', async (event) => {
     }
   } catch (error) {
     console.error(error)
-    const message =
-      error instanceof QuotaError
-        ? '今天的 AI 免費額度用完了，請晚點再試。天氣、匯率、新聞卡片仍然可以使用。'
-        : '處理時發生錯誤，請稍後再試。'
-    await reply(event, message).catch(() => {})
+    await reply(event, '處理時發生錯誤，請稍後再試。').catch(() => { })
   }
 })
 

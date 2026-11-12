@@ -1,5 +1,5 @@
 // 外部資料：天氣（Open-Meteo）、匯率（open.er-api.com）、新聞（Google 新聞 RSS），都不需要 API key
-import { generate } from './gemini.js'
+import { generate } from './OpenAI.js'
 
 const getJson = async (url) => {
   const res = await fetch(url)
