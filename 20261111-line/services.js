@@ -1,9 +1,18 @@
 // 外部資料：天氣（Open-Meteo）、匯率（open.er-api.com）、新聞（Google 新聞 RSS），都不需要 API key
 import { generate } from './OpenAI.js'
 
+// 對外查詢最多等多久。沒有上限的話，對方不回應時這則訊息會一直卡住
+const FETCH_TIMEOUT_MS = 8 * 1000
+
+// 錯誤訊息只留網址的主機和路徑：查詢參數裡有使用者輸入的地名或座標，不該寫進日誌
+const describeUrl = (url) => {
+  const { origin, pathname } = new URL(url)
+  return `${origin}${pathname}`
+}
+
 const getJson = async (url) => {
-  const res = await fetch(url)
-  if (!res.ok) throw new Error(`${url} ${res.status}`)
+  const res = await fetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) })
+  if (!res.ok) throw new Error(`${describeUrl(url)} ${res.status}`)
   return res.json()
 }
 
@@ -46,7 +55,8 @@ const searchPlace = async (name) => {
   }
 }
 
-const geocode = async (input) => {
+// aiOptions：用到 AI 時的期限與取消開關（見 OpenAI.js 的 generate）
+const geocode = async (input, aiOptions) => {
   const key = input.replace(/臺/g, '台').replace(/[市縣]$/, '')
   if (TAIWAN_CITIES[key]) {
     const [latitude, longitude] = TAIWAN_CITIES[key]
@@ -57,6 +67,7 @@ const geocode = async (input) => {
   // 中文查不到時，請 AI 把地名轉成英文再查一次
   const english = await generate(
     `請把地名「${input}」翻成英文地名，只輸出英文地名本身，不要任何其他文字。`,
+    aiOptions,
   )
   return english ? searchPlace(english) : null
 }
@@ -88,8 +99,8 @@ export const getWeatherByCoords = async (latitude, longitude, name) => {
 }
 
 // 找不到地點時回傳 null
-export const getWeather = async (placeName) => {
-  const place = await geocode(placeName)
+export const getWeather = async (placeName, aiOptions) => {
+  const place = await geocode(placeName, aiOptions)
   if (!place) return null
   return getWeatherByCoords(place.latitude, place.longitude, place.name)
 }
@@ -195,7 +206,7 @@ export const getNews = async (keyword, count = 5) => {
   const url = keyword
     ? `https://news.google.com/rss/search?q=${encodeURIComponent(keyword)}&${locale}`
     : `https://news.google.com/rss?${locale}`
-  const res = await fetch(url)
+  const res = await fetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) })
   if (!res.ok) throw new Error(`Google 新聞 ${res.status}`)
   const xml = await res.text()
   return [...xml.matchAll(/<item>([\s\S]*?)<\/item>/g)]
