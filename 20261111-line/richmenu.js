@@ -12,7 +12,7 @@ const WIDTH = 1200
 const HEIGHT = 810
 const COLUMNS = 3
 const ROWS = 3
-const BUTTONS = ['OCR', '翻譯', '解題', '摘要', '改寫', '天氣', '匯率', '新聞', 'help']
+const BUTTONS = ['OCR', '翻譯', '解題', '摘要', '改寫', '聚會', '匯率', '新聞', 'help']
 
 const call = async (url, options = {}) => {
   const res = await fetch(url, {

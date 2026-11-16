@@ -3,8 +3,8 @@ import { createHash, randomUUID } from 'node:crypto'
 import linebot from 'linebot'
 import { askAI, clearHistory, markUndelivered, warmUp } from './OpenAI.js'
 import { TASKS, HELP_TEXT, parseCommand } from './commands.js'
-import { getWeather, getWeatherByCoords, getRates, parseRateQuery, getNews } from './services.js'
-import { weatherCard, rateOverviewCard, rateConvertCard, newsCard } from './flex.js'
+import { getRates, parseRateQuery, getNews } from './services.js'
+import { rateOverviewCard, rateConvertCard, newsCard } from './flex.js'
 import {
   isInParty,
   isPartyClosing,
@@ -58,7 +58,6 @@ const DEFAULT_BUTTONS = [
   '解題',
   '摘要',
   '改寫',
-  '天氣',
   '匯率',
   '新聞',
   '聚會',
@@ -180,33 +179,7 @@ const showLoading = (event) => {
   })
 }
 
-// ---------- 天氣、匯率、新聞 ----------
-// 穿著與帶傘建議用規則產生，不呼叫 AI，省下免費額度
-const adviseWeather = ({ current, days }) => {
-  const today = days[0]
-  const feels = current.feelsLike
-  let clothing = '天氣炎熱，穿短袖並注意防曬、多補充水分。'
-  if (feels < 12) clothing = '天氣寒冷，建議穿厚外套。'
-  else if (feels < 18) clothing = '有點涼，建議穿外套。'
-  else if (feels < 24) clothing = '氣溫舒適，薄長袖或加件薄外套就可以。'
-  else if (feels < 29) clothing = '天氣溫暖，穿短袖即可。'
-
-  let umbrella = '降雨機率低，不用帶傘。'
-  if (today.rainChance >= 60) umbrella = '降雨機率高，出門記得帶傘。'
-  else if (today.rainChance >= 30) umbrella = '可能會下雨，建議帶把傘備用。'
-
-  const gap = today.max - today.min >= 8 ? '早晚溫差大，留意保暖。' : ''
-  return `${clothing}${umbrella}${gap}`
-}
-
-const replyWeather = async (event, weather) => {
-  if (!weather) {
-    await reply(event, '找不到這個地點，請換個寫法試試，例如「天氣 台北」。')
-    return
-  }
-  await reply(event, weatherCard(weather, adviseWeather(weather)))
-}
-
+// ---------- 匯率、新聞 ----------
 const replyRate = async (event, query) => {
   const rateData = await getRates()
   const parsed = parseRateQuery(query, rateData.rates)
@@ -398,8 +371,6 @@ const takePending = (userId) => {
   return entry && Date.now() - entry.at <= PENDING_TTL_MS ? entry.command : null
 }
 
-const NOT_A_PLACE = /今天|明天|後天|現在|最近|這幾天|什麼|如何|怎樣|怎麼|好|嗎/
-
 const PARTY_BUTTONS = [messageButton('結束聚會')]
 
 const END_PARTY = /^(結束聚會|離開聚會|散會)$/
@@ -422,20 +393,11 @@ const answerWithAI = async (event, userId, parts, note = '') => {
 }
 
 // ---------- 快速指令 ----------
-// help、天氣、匯率、新聞不需要 AI（查不到的地名例外），也不讀寫對話記憶。
+// help、匯率、新聞不需要 AI，也不讀寫對話記憶。
 // 這段文字是不是快速指令：是的話回傳要做什麼，不是就回傳 null。
 // 「要不要排隊」和「實際怎麼處理」都用這同一個函式判斷，兩邊不會不一致。
 const parseQuickCommand = (text) => {
   if (/^(help|說明|幫助|\?|？)$/i.test(text)) return { kind: 'help' }
-
-  // 「天氣」「天氣 台北」「台北天氣」
-  const weatherMatch = text.match(/^天氣(?:\s+(.+))?$/) || text.match(/^()(.{1,10}?)的?天氣$/)
-  if (weatherMatch) {
-    const place = weatherMatch[1] || weatherMatch[2] || ''
-    if (!place) return { kind: 'weather', place: '' }
-    // 「今天天氣」這類不是地名的說法不算指令，往下交給一般對話
-    if (!(weatherMatch[2] && NOT_A_PLACE.test(place))) return { kind: 'weather', place }
-  }
 
   const rateMatch = text.match(/^匯率(?:\s+(.+))?$/)
   if (rateMatch) return { kind: 'rates', query: rateMatch[1] || '' }
@@ -448,13 +410,6 @@ const parseQuickCommand = (text) => {
 const handleQuick = async (event, quick) => {
   if (quick.kind === 'help') {
     await reply(event, HELP_TEXT)
-  } else if (quick.kind === 'weather' && !quick.place) {
-    await reply(event, '想查哪裡的天氣？請輸入「天氣 城市」，或按下方按鈕傳送位置。', [
-      { type: 'action', action: { type: 'location', label: '傳送我的位置' } },
-      ...['台北', '台中', '高雄'].map((city) => messageButton(city, `天氣 ${city}`)),
-    ])
-  } else if (quick.kind === 'weather') {
-    await replyWeather(event, await getWeather(quick.place, aiOptions(event)))
   } else if (quick.kind === 'rates') {
     await replyRate(event, quick.query)
   } else {
@@ -490,7 +445,7 @@ const handleText = async (event, userId, text) => {
   }
   // 聚會進行中的其他文字都交給聚會（見 handlePartyTurn），不會走到下面
 
-  // help、天氣、匯率、新聞
+  // help、匯率、新聞
   const quick = parseQuickCommand(text)
   if (quick) {
     await handleQuick(event, quick)
@@ -575,11 +530,8 @@ const handleEvent = async (event, userId) => {
     await handleText(event, userId, event.message.text.trim())
   } else if (type === 'image' || type === 'audio' || type === 'file') {
     await handleMedia(event, userId)
-  } else if (type === 'location') {
-    const { latitude, longitude, title } = event.message
-    await replyWeather(event, await getWeatherByCoords(latitude, longitude, title || '你的位置'))
   } else {
-    await reply(event, '我看不懂這種訊息，請傳文字、圖片、文字檔或位置給我。')
+    await reply(event, '我看不懂這種訊息，請傳文字、圖片或文字檔給我。')
   }
 }
 
@@ -722,12 +674,11 @@ const willBeInParty = (userId) => {
   return isInParty(userId) && !isPartyClosing(userId)
 }
 
-// 可以收到就處理的訊息：位置訊息（查天氣），以及不在聚會中時的 help、天氣、匯率、新聞。
+// 可以收到就處理的訊息：不在聚會中時的 help、匯率、新聞。
 // 它們不讀寫對話記憶、不改變聚會狀態，所以不必等同一位使用者前面的 AI 工作做完，
 // 也不會影響正在進行的那些工作。聚會進行中的文字照舊都算聊天內容，要排隊交給聚會。
 const isQuickEvent = (event, userId) => {
   const { type, text } = event.message
-  if (type === 'location') return true
   return type === 'text' && !willBeInParty(userId) && parseQuickCommand(text.trim()) !== null
 }
 
@@ -841,7 +792,7 @@ bot.on('message', (event) => {
   if (event.message.type === 'text' && END_PARTY.test(event.message.text.trim())) {
     interruptParty(userId)
   }
-  // help、天氣、匯率、新聞、位置訊息：不排在同一位使用者的 AI 工作後面，收到就處理。
+  // help、匯率、新聞：不排在同一位使用者的 AI 工作後面，收到就處理。
   // 每個事件只會走「立刻處理」或「排隊」其中一條路，所以回覆權杖不會被用兩次。
   if (isQuickEvent(event, userId)) {
     run(event, userId, () => handleEvent(event, userId))

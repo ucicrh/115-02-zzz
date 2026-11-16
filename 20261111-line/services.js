@@ -1,10 +1,9 @@
-// 外部資料：天氣（Open-Meteo）、匯率（open.er-api.com）、新聞（Google 新聞 RSS），都不需要 API key
-import { generate } from './OpenAI.js'
+// 外部資料：匯率（open.er-api.com）、新聞（Google 新聞 RSS），都不需要 API key
 
 // 對外查詢最多等多久。沒有上限的話，對方不回應時這則訊息會一直卡住
 const FETCH_TIMEOUT_MS = 8 * 1000
 
-// 錯誤訊息只留網址的主機和路徑：查詢參數裡有使用者輸入的地名或座標，不該寫進日誌
+// 錯誤訊息只留網址的主機和路徑：查詢參數裡可能有使用者輸入的內容，不該寫進日誌
 const describeUrl = (url) => {
   const { origin, pathname } = new URL(url)
   return `${origin}${pathname}`
@@ -14,95 +13,6 @@ const getJson = async (url) => {
   const res = await fetch(url, { signal: AbortSignal.timeout(FETCH_TIMEOUT_MS) })
   if (!res.ok) throw new Error(`${describeUrl(url)} ${res.status}`)
   return res.json()
-}
-
-// ---------- 天氣 ----------
-// Open-Meteo 的地名查詢對中文不可靠（「台北」查不到、「高雄」會查到四川），台灣縣市直接內建座標
-const TAIWAN_CITIES = {
-  台北: [25.033, 121.5654],
-  新北: [25.012, 121.4657],
-  基隆: [25.1276, 121.7392],
-  桃園: [24.9936, 121.301],
-  新竹: [24.8138, 120.9675],
-  苗栗: [24.5602, 120.8214],
-  台中: [24.1477, 120.6736],
-  彰化: [24.0809, 120.5385],
-  南投: [23.9096, 120.6839],
-  雲林: [23.7117, 120.543],
-  嘉義: [23.4801, 120.4491],
-  台南: [22.9999, 120.227],
-  高雄: [22.6273, 120.3014],
-  屏東: [22.669, 120.4862],
-  宜蘭: [24.757, 121.7533],
-  花蓮: [23.9911, 121.6112],
-  台東: [22.7583, 121.1444],
-  澎湖: [23.5711, 119.5793],
-  金門: [24.4493, 118.3767],
-  馬祖: [26.1608, 119.9517],
-  連江: [26.1608, 119.9517],
-}
-
-const searchPlace = async (name) => {
-  const data = await getJson(
-    `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(name)}&count=1&language=zh`,
-  )
-  const place = data.results?.[0]
-  if (!place) return null
-  return {
-    name: place.country ? `${place.name}（${place.country}）` : place.name,
-    latitude: place.latitude,
-    longitude: place.longitude,
-  }
-}
-
-// aiOptions：用到 AI 時的期限與取消開關（見 OpenAI.js 的 generate）
-const geocode = async (input, aiOptions) => {
-  const key = input.replace(/臺/g, '台').replace(/[市縣]$/, '')
-  if (TAIWAN_CITIES[key]) {
-    const [latitude, longitude] = TAIWAN_CITIES[key]
-    return { name: key, latitude, longitude }
-  }
-  const found = await searchPlace(input)
-  if (found) return found
-  // 中文查不到時，請 AI 把地名轉成英文再查一次
-  const english = await generate(
-    `請把地名「${input}」翻成英文地名，只輸出英文地名本身，不要任何其他文字。`,
-    aiOptions,
-  )
-  return english ? searchPlace(english) : null
-}
-
-export const getWeatherByCoords = async (latitude, longitude, name) => {
-  const data = await getJson(
-    `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}` +
-      '&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m' +
-      '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max' +
-      '&timezone=auto&forecast_days=3',
-  )
-  return {
-    name,
-    current: {
-      temperature: data.current.temperature_2m,
-      feelsLike: data.current.apparent_temperature,
-      humidity: data.current.relative_humidity_2m,
-      wind: data.current.wind_speed_10m,
-      code: data.current.weather_code,
-    },
-    days: data.daily.time.map((date, i) => ({
-      date,
-      code: data.daily.weather_code[i],
-      max: data.daily.temperature_2m_max[i],
-      min: data.daily.temperature_2m_min[i],
-      rainChance: data.daily.precipitation_probability_max[i],
-    })),
-  }
-}
-
-// 找不到地點時回傳 null
-export const getWeather = async (placeName, aiOptions) => {
-  const place = await geocode(placeName, aiOptions)
-  if (!place) return null
-  return getWeatherByCoords(place.latitude, place.longitude, place.name)
 }
 
 // ---------- 匯率 ----------

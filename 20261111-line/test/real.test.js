@@ -464,22 +464,12 @@ if (!available) {
     assert.ok(minutes > 25 && minutes < 31)
   })
 
-  test('原有功能（真實網路）：天氣、匯率、新聞卡片', options, async (t) => {
+  test('原有功能（真實網路）：匯率、新聞卡片', options, async (t) => {
     const user = userId()
-    for (const text of ['天氣 台北', '東京天氣', '匯率', '匯率 100 美金 日幣', '新聞']) {
+    for (const text of ['匯率', '匯率 100 美金 日幣', '新聞']) {
       const reply = await answered(t, await say(user, text))
       if (reply.messages[0].type !== 'flex') {
-        // 沒有拿到卡片：直接連一次天氣服務，分辨是機器人的問題，還是對方這時候沒有回應
         t.diagnostic(`  機器人的回覆：${reply.messages[0].text}`)
-        const startedAt = Date.now()
-        const direct = await fetch(
-          'https://api.open-meteo.com/v1/forecast?latitude=25.033&longitude=121.5654&current=temperature_2m',
-          { signal: AbortSignal.timeout(8000) },
-        ).then(
-          (res) => `HTTP ${res.status}`,
-          (error) => error.name,
-        )
-        t.diagnostic(`  不經過機器人、直接連 open-meteo：${direct}（${Date.now() - startedAt}ms）`)
       }
       assert.equal(reply.messages[0].type, 'flex', `「${text}」回的是卡片`)
       t.diagnostic(`  ${reply.messages[0].altText}`)

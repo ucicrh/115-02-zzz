@@ -26,7 +26,7 @@ const logs = captureLogs()
 const line = await startFakeLine()
 const ollama = await startFakeOllama()
 
-// ---------- 天氣、匯率、新聞用假的回應，不連到網路 ----------
+// ---------- 匯率、新聞用假的回應，不連到網路 ----------
 const external = { hang: false, status: 0, calls: [] }
 const realFetch = globalThis.fetch
 const json = (body) =>
@@ -46,36 +46,6 @@ globalThis.fetch = (input, init) => {
   }
   // 對方回 HTTP 錯誤（例如 500）
   if (external.status) return Promise.resolve(new Response('error', { status: external.status }))
-  if (url.hostname === 'geocoding-api.open-meteo.com') {
-    const found = !url.searchParams.get('name').includes('火星')
-    return Promise.resolve(
-      json(
-        found
-          ? { results: [{ name: '東京', country: '日本', latitude: 35.68, longitude: 139.69 }] }
-          : {},
-      ),
-    )
-  }
-  if (url.hostname === 'api.open-meteo.com') {
-    return Promise.resolve(
-      json({
-        current: {
-          temperature_2m: 24,
-          apparent_temperature: 25,
-          relative_humidity_2m: 70,
-          weather_code: 1,
-          wind_speed_10m: 8,
-        },
-        daily: {
-          time: ['2026-11-12', '2026-11-13', '2026-11-14'],
-          weather_code: [1, 2, 61],
-          temperature_2m_max: [26, 25, 22],
-          temperature_2m_min: [19, 18, 17],
-          precipitation_probability_max: [10, 40, 80],
-        },
-      }),
-    )
-  }
   if (url.hostname === 'open.er-api.com') {
     return Promise.resolve(
       json({
@@ -231,7 +201,7 @@ test('1. 一般文字對話', async () => {
   const reply = await replyOf(event)
   assert.equal(reply.delivered, true)
   assert.deepEqual(textsOf(reply), ['答覆0'])
-  assert.equal(reply.messages[0].quickReply.items.length, 10, '一般回覆下方有 10 個快速按鈕')
+  assert.equal(reply.messages[0].quickReply.items.length, 9, '一般回覆下方有 9 個快速按鈕')
 
   const [request] = requests()
   assert.equal(request.body.model, FAKE_MODEL)
@@ -1101,7 +1071,7 @@ test('20. 先選功能再傳圖片：五分鐘內有效（測試縮短為 1 秒�
   )
 })
 
-test('21. 原有功能：help、天氣、匯率、新聞、位置、看不懂的訊息、加入好友', async () => {
+test('21. 原有功能：help、匯率、新聞、看不懂的訊息、加入好友', async () => {
   await fresh()
   const user = newUser()
   assert.deepEqual(textsOf(await replyOf(await say(user, 'help'))), [HELP_TEXT])
@@ -1112,8 +1082,6 @@ test('21. 原有功能：help、天氣、匯率、新聞、位置、看不懂的
     assert.equal(reply.messages[0].type, 'flex', `「${text}」回的是卡片`)
     return reply.messages[0]
   }
-  await flex('天氣 台北')
-  await flex('東京天氣')
   await flex('匯率')
   await flex('匯率 100 美金 日幣')
   await flex('新聞')
@@ -1122,11 +1090,10 @@ test('21. 原有功能：help、天氣、匯率、新聞、位置、看不懂的
   assert.deepEqual(textsOf(await replyOf(await say(user, '新聞 查無此事'))), [
     '找不到「查無此事」的相關新聞。',
   ])
-  assert.match(textsOf(await replyOf(await say(user, '天氣')))[0], /^想查哪裡的天氣/)
   assert.match(textsOf(await replyOf(await say(user, '匯率 100 XYZ')))[0], /^不認得貨幣「XYZ」/)
 
-  // 查不到的地名會請 AI 翻成英文再查一次
-  await flex('天氣 火星基地')
+  // 天氣功能已經移除：「天氣 台北」不再是指令，當成一般對話交給 AI
+  assert.deepEqual(textsOf(await replyOf(await say(user, '天氣 台北'))), ['答覆0'])
   assert.equal(requests().length, 1)
 
   const location = makeEvent(user, {
@@ -1135,12 +1102,16 @@ test('21. 原有功能：help、天氣、匯率、新聞、位置、看不懂的
     longitude: 121.56,
     title: '我家',
   })
-  assert.equal((await replyOf(await send(location))).messages[0].type, 'flex')
+  // 位置訊息不再查天氣，和其他看不懂的訊息一樣處理
+  assert.deepEqual(textsOf(await replyOf(await send(location))), [
+    '我看不懂這種訊息，請傳文字、圖片或文字檔給我。',
+  ])
 
   const sticker = makeEvent(user, { type: 'sticker', packageId: '1', stickerId: '1' })
   assert.deepEqual(textsOf(await replyOf(await send(sticker))), [
-    '我看不懂這種訊息，請傳文字、圖片、文字檔或位置給我。',
+    '我看不懂這種訊息，請傳文字、圖片或文字檔給我。',
   ])
+  assert.equal(requests().length, 1, '位置和貼圖都沒有用到模型')
 
   const follow = {
     type: 'follow',
@@ -1159,16 +1130,16 @@ test('21b. 對外查詢逾時：8 秒後放棄並告知，不會一直卡住', a
   const user = newUser()
   external.hang = true
   const event = await say(user, '匯率 5 歐元 日幣')
-  // 匯率有快取（上一個測試查過），所以改用天氣來測逾時
+  // 匯率有快取（上一個測試查過），所以改用新聞來測逾時
   await replyOf(event)
-  const slow = await say(user, '首爾天氣')
+  const slow = await say(user, '新聞 首爾')
   const reply = await replyOf(slow, 12000)
   assert.deepEqual(textsOf(reply), ['查詢資料逾時，請稍後再試。'])
   const elapsed = reply.at - slow.sentAt
   assert.ok(elapsed >= 7900 && elapsed < 9500, `約 8 秒逾時，實際 ${elapsed}ms`)
   external.hang = false
   assert.equal(
-    (await replyOf(await say(user, '天氣 台中'))).messages[0].type,
+    (await replyOf(await say(user, '新聞 台中'))).messages[0].type,
     'flex',
     '之後照常運作',
   )
@@ -1203,7 +1174,7 @@ test('23. 記憶清理：太久沒互動的對話記憶與聚會會被清掉', a
 // ======================================================================
 // 第二批修正的專項測試
 // ======================================================================
-test('25. 快速指令：文字檔摘要還在跑的時候，help、天氣、匯率、新聞、位置訊息都立刻回覆', async () => {
+test('25. 快速指令：文字檔摘要還在跑的時候，help、匯率、新聞都立刻回覆', async () => {
   await fresh()
   const user = newUser()
   ollama.state.plan.push({ hang: true }) // 摘要會跑到期限（測試裡是 5.5 秒）
@@ -1211,14 +1182,10 @@ test('25. 快速指令：文字檔摘要還在跑的時候，help、天氣、匯
   await waitFor(() => requests().length === 1, { label: '摘要開始' })
 
   const quick = []
-  for (const text of ['help', '天氣 台北', '匯率', '新聞']) {
+  for (const text of ['help', '匯率', '新聞', '新聞 人工智慧']) {
     const event = await say(user, text)
     quick.push({ text, event, reply: await replyOf(event, 3000) })
   }
-  const location = await send(
-    makeEvent(user, { type: 'location', latitude: 25.03, longitude: 121.56, title: '我家' }),
-  )
-  const locationReply = await replyOf(location, 3000)
 
   for (const { text, event, reply } of quick) {
     assert.ok(reply.at - event.sentAt < 1000, `「${text}」${reply.at - event.sentAt}ms 就回覆`)
@@ -1229,11 +1196,10 @@ test('25. 快速指令：文字檔摘要還在跑的時候，help、天氣、匯
     quick.slice(1).map((item) => item.reply.messages[0].type),
     ['flex', 'flex', 'flex'],
   )
-  assert.equal(locationReply.messages[0].type, 'flex')
   assert.equal(line.replyTo(file), undefined, '這時候摘要還沒有回覆')
   assert.equal(requests().length, 1, '快速指令沒有用到模型')
   // 快速指令的回覆會讓聊天室的載入動畫消失，所以每回一則，就替還在跑的摘要把動畫補回來
-  await waitFor(() => line.state.loading.length === 6, { label: '原本 1 次，加上補回的 5 次動畫' })
+  await waitFor(() => line.state.loading.length === 5, { label: '原本 1 次，加上補回的 4 次動畫' })
   assert.ok(
     line.state.loading.every((item) => item.chatId === user && item.loadingSeconds % 5 === 0),
   )
@@ -1243,7 +1209,7 @@ test('25. 快速指令：文字檔摘要還在跑的時候，help、天氣、匯
   // 沒有工作在跑的時候，快速指令不會多顯示動畫
   await replyOf(await say(user, 'help'))
   await sleep(100)
-  assert.equal(line.state.loading.length, 6)
+  assert.equal(line.state.loading.length, 5)
   // 對話記憶裡沒有被插進任何快速指令
   await replyOf(await say(user, '檔案失敗之後的一般對話'))
   assert.equal(sentTo(1).length, 4, '這次請求只有：系統提示、那個檔案、沒回覆的標記、這一句')
@@ -1294,12 +1260,12 @@ test('25b. 快速指令：一般對話和圖片正在處理時也立刻回覆，
 test('26. 快速指令不會誤入 AI 或聚會；聚會中的文字照舊交給聚會', async () => {
   await fresh()
   const user = newUser()
-  for (const text of ['help', '天氣', '匯率', '新聞']) {
+  for (const text of ['help', '匯率', '新聞']) {
     assert.equal((await replyOf(await say(user, text))).delivered, true)
   }
-  assert.equal(requests().length, 0, '不在聚會中：四個指令都不呼叫模型')
+  assert.equal(requests().length, 0, '不在聚會中：三個指令都不呼叫模型')
 
-  // 看起來像指令但不是（「今天」不是地名）：照舊交給一般對話
+  // 看起來像指令但不是（天氣已經不是指令）：交給一般對話
   assert.deepEqual(textsOf(await replyOf(await say(user, '今天天氣'))), ['答覆0'])
   assert.equal(requests()[0].body.response_format, undefined)
 
@@ -1341,7 +1307,7 @@ test('26b. 佇列裡還有沒處理的「聚會」或「結束聚會」時，快
   assert.equal(requests().length, 5)
 })
 
-test('26c. 聚會正在生成時傳位置訊息：立刻回天氣卡片，這一輪聚會照常完成', async () => {
+test('26c. 聚會正在生成時傳位置訊息：不會被當成聊天內容，這一輪聚會照常完成', async () => {
   await fresh()
   const user = newUser()
   await startParty(user)
@@ -1351,13 +1317,13 @@ test('26c. 聚會正在生成時傳位置訊息：立刻回天氣卡片，這一
   const location = await send(
     makeEvent(user, { type: 'location', latitude: 25.03, longitude: 121.56, title: '我家' }),
   )
-  const card = await replyOf(location, 2000)
-  assert.equal(card.messages[0].type, 'flex')
-  assert.equal(line.replyTo(talk), undefined, '位置訊息先回，聚會這一輪還在生成')
 
   const turn = await replyOf(talk)
   assert.equal(turn.messages.length, 3, '聚會這一輪照常由三位成員回應')
   assert.ok(turn.messages.every((message) => message.sender))
+  assert.deepEqual(textsOf(await replyOf(location, 3000)), [
+    '我看不懂這種訊息，請傳文字、圖片或文字檔給我。',
+  ])
   assert.equal(requests().length, 3, '位置訊息沒有用到模型，也沒有被當成聊天內容')
   assert.equal(party.isInParty(user), true)
   assert.deepEqual(textsOf(await replyOf(await say(user, '結束聚會'))), ['聚會結束，大家下次見！'])
@@ -1370,15 +1336,15 @@ test('27. 同一個人連續送出很多快速指令：每一則都有回覆，�
     'help',
     '匯率',
     '新聞',
-    '天氣',
+    '說明',
     '匯率 100 美金 日幣',
     '新聞 人工智慧',
     '？',
-    '天氣 台北',
+    '新聞 科技',
     '匯率',
     '新聞',
     'help',
-    '天氣 台中',
+    '匯率 50 歐元 美金',
   ]
   const events = texts.map((text) => textEvent(user, text))
   await sendWebhook(port, events) // 同一次 webhook 送來 12 則
@@ -1404,23 +1370,23 @@ test('28. 重複送達的快速指令只處理一次', async () => {
   assert.equal(line.state.replies.length, 1)
 })
 
-test('29. 天氣查詢逾時：8 秒後告知；等待期間不擋住其他指令，也不擋住一般對話', async () => {
+test('29. 新聞查詢逾時：8 秒後告知；等待期間不擋住其他指令，也不擋住一般對話', async () => {
   await fresh()
   const user = newUser()
-  external.hang = true // 外部的天氣服務不回應
-  const weather = await say(user, '首爾天氣')
+  external.hang = true // 外部的新聞服務不回應
+  const slow = await say(user, '新聞 首爾')
   await sleep(200)
   const help = await say(user, 'help')
-  const chat = await say(user, '天氣還沒查到時的一般對話')
+  const chat = await say(user, '外部查詢還沒回來時的一般對話')
   const helpReply = await replyOf(help, 2000)
   assert.ok(helpReply.at - help.sentAt < 1000)
   assert.deepEqual(textsOf(await replyOf(chat, 3000)), ['答覆0'])
-  assert.equal(line.replyTo(weather), undefined, '天氣這時候還在等外部服務')
+  assert.equal(line.replyTo(slow), undefined, '新聞這時候還在等外部服務')
 
-  const reply = await replyOf(weather, 12000)
+  const reply = await replyOf(slow, 12000)
   external.hang = false
   assert.deepEqual(textsOf(reply), ['查詢資料逾時，請稍後再試。'])
-  const elapsed = reply.at - weather.sentAt
+  const elapsed = reply.at - slow.sentAt
   assert.ok(elapsed >= 7900 && elapsed < 9500, `約 8 秒逾時，實際 ${elapsed}ms`)
   assert.ok(
     logs.some((item) => /處理失敗｜TimeoutError/.test(item)),
@@ -1433,10 +1399,10 @@ test('29b. 快速指令遇到預期之外的錯誤（外部服務回 HTTP 500）
   const user = newUser()
   external.status = 500
   const before = logs.length
-  const weather = await say(user, '天氣 台北')
+  const search = await say(user, '新聞 人工智慧')
   const news = await say(user, '新聞')
   const help = await say(user, 'help')
-  assert.deepEqual(textsOf(await replyOf(weather)), ['處理時發生錯誤，請稍後再試。'])
+  assert.deepEqual(textsOf(await replyOf(search)), ['處理時發生錯誤，請稍後再試。'])
   assert.deepEqual(textsOf(await replyOf(news)), ['處理時發生錯誤，請稍後再試。'])
   assert.deepEqual(textsOf(await replyOf(help)), [HELP_TEXT], '同時送出的 help 不受影響')
   external.status = 0
@@ -1447,15 +1413,14 @@ test('29b. 快速指令遇到預期之外的錯誤（外部服務回 HTTP 500）
     /^\[t=[0-9a-f]{8} u=[0-9a-f]{8}\] 處理失敗｜Error｜/.test(item),
   )
   assert.equal(summaries.length, 2)
-  assert.ok(summaries.some((item) => item.endsWith('https://api.open-meteo.com/v1/forecast 500')))
-  assert.ok(summaries.some((item) => item.endsWith('Google 新聞 500')))
+  assert.ok(summaries.every((item) => item.endsWith('Google 新聞 500')))
   // 預期之外的錯誤另外印出完整內容（含發生的位置），方便找問題
   assert.equal(failed.filter((item) => /^Error: .* 500\n\s+at /.test(item)).length, 2)
-  // 查詢參數裡有地名或座標，不能寫進日誌
-  assert.ok(!failed.some((item) => item.includes('latitude') || item.includes('?')))
+  // 查詢參數裡有使用者輸入的關鍵字，不能寫進日誌
+  assert.ok(!failed.some((item) => item.includes('人工智慧') || item.includes('?')))
 
   // 外部服務恢復後照常運作
-  assert.equal((await replyOf(await say(user, '天氣 台北'))).messages[0].type, 'flex')
+  assert.equal((await replyOf(await say(user, '新聞'))).messages[0].type, 'flex')
 })
 
 test('30. 文字檔失敗後不把整份內容留在記憶裡，之後的一般對話恢復正常', async () => {
