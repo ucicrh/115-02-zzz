@@ -1,79 +1,156 @@
-// 聚會模式：AI 扮演六位朋友，使用者每說一句話，就輪最多三位出來聊天。
+// 聚會模式：AI 扮演一群老同學，使用者每說一句話，就輪最多三位出來聊天。
+// 角色放在 prompts/personas.json，共用的提示詞放在 prompts/party_mode_prompt.md，
+// 這支程式裡沒有任何角色的文字。改了這兩個檔案要重新啟動機器人才會生效。
 // 有兩種產生方式，用 .env 的 PARTY_MODE 切換：
 //   sequential：每位角色各呼叫一次 AI，後面的人看得到前面的人剛說的話（對話比較連貫，但比較慢）
 //   single：一次呼叫產生三個人的話（比較快）
 // 沒設定時用 sequential。
 //
 // 這裡的聊天紀錄是「聚會」專用的，和一般對話的記憶（OpenAI.js）完全分開。
+import { readFileSync } from 'node:fs'
+import { join, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { generateJsonDetailed, isModelLoaded, MODEL } from './OpenAI.js'
 
-// 頭像放在 GitHub 上（LINE 需要公開的 https 圖片網址），可用環境變數換成別的位置
-const AVATAR_BASE_URL =
-  process.env.AVATAR_BASE_URL ||
-  'https://raw.githubusercontent.com/ucicrh/115-02-zzz/main/20261111-line/avatars'
+// ---------- 載入角色與共用提示詞 ----------
+// 可用環境變數 PARTY_PROMPTS_DIR 換成別的資料夾（測試用）
+const PROMPTS_DIR = process.env.PARTY_PROMPTS_DIR
+  ? resolve(process.env.PARTY_PROMPTS_DIR)
+  : fileURLToPath(new URL('./prompts', import.meta.url))
+const PERSONAS_FILE = 'personas.json'
+const TEMPLATE_FILE = 'party_mode_prompt.md'
+const PLACEHOLDERS = ['role_instruction', 'persona_cards', 'tool_result', 'banned_phrases']
+const PLACEHOLDER_PATTERN = /\{([a-z_]+)\}/g
+const MIN_MEMBERS = 3
+const MAX_NAME_LENGTH = 20 // LINE 發話者名稱的上限
 
-// 想改人設就改這裡；name 會顯示成訊息的發話者（上限 20 字）
-export const MEMBERS = [
-  {
-    name: '阿哲',
-    avatar: 'zhe.png',
-    intro: '健身教練',
-    persona:
-      '大嗓門、自來熟的健身教練。講話直白不修飾，情緒都寫在臉上，什麼話題都能扯到運動和吃蛋白質，第一次見面就想揪人出去。神經大條，常沒發現別人尷尬。',
-  },
-  {
-    name: '小雯',
-    avatar: 'wen.png',
-    intro: '護理師',
-    persona:
-      '內向怕生的護理師。話很少、很客氣，常說「不好意思」「那個…」，不敢反駁別人，被點名會緊張。但一聽到有人不舒服或太累，就會忍不住小聲關心。',
-  },
-  {
-    name: 'Kevin',
-    avatar: 'kevin.png',
-    intro: '工程師',
-    persona:
-      '冷淡、惜字如金的軟體工程師。只講事實和數據，愛糾正別人說錯的地方，完全不會看氣氛，也不會安慰人。句子很短、沒有語氣詞和表情符號，偶爾冒出一句很冷的笑話。',
-  },
-  {
-    name: '美玲姐',
-    avatar: 'meiling.png',
-    intro: '行銷主管',
-    persona:
-      '強勢、嘴快的行銷主管，年紀最大。習慣主導話題和幫大家做決定，愛打聽別人的工作、收入和感情狀況，像在面試人。有話直說、愛吐槽，但其實是刀子嘴豆腐心。',
-  },
-  {
-    name: '小宇',
-    avatar: 'yu.png',
-    intro: '大學生',
-    persona:
-      '年紀最小的大學生，屁孩一個。滿口網路梗和表情符號，愛起鬨、愛亂接話，沒大沒小，最愛抓別人剛說的話來吐槽。窮學生，聽到要花錢就哀號。',
-  },
-  {
-    name: '艾莉',
-    avatar: 'ellie.png',
-    intro: '插畫家',
-    persona:
-      '慢半拍、活在自己世界的插畫家。說話輕飄飄的，常用「…」，看事情的角度很怪，別人在講實際的事，她注意到的是那件事的顏色、氣味或感覺。對錢和計畫沒概念，不喜歡人多和吵鬧。',
-  },
-]
+// 每位角色的輸出上限：照字數範圍的上限估算（中文大約一個字一個 token），再留一點餘裕。
+// 角色可以在 personas.json 用 max_tokens 另外指定。JSON 的其他欄位另外計算（見 JSON_OVERHEAD_TOKENS）。
+const MIN_SPEECH_TOKENS = 60
+const MAX_SPEECH_TOKENS = 160
+const speechTokens = (length) =>
+  Math.min(
+    MAX_SPEECH_TOKENS,
+    Math.max(MIN_SPEECH_TOKENS, length.sentences[1] * length.chars[1] + 10),
+  )
 
-// 每位角色的稱呼、說話長度與輸出上限（sequential 模式用）
-const SPEECH = {
-  阿哲: { call: '阿哲', length: '一到兩句，音量大、驚嘆號多', maxTokens: 110 },
-  小雯: { call: '小雯', length: '一句，很短，常欲言又止', maxTokens: 70 },
-  Kevin: { call: 'Kevin', length: '一句，短而平，用句號結尾', maxTokens: 60 },
-  美玲姐: { call: '美玲', length: '一到兩句，語速快、直接下結論', maxTokens: 110 },
-  小宇: { call: '小宇', length: '一到兩句，可以用一個表情符號', maxTokens: 110 },
-  艾莉: { call: '艾莉', length: '一句，慢慢的，可以用「…」', maxTokens: 90 },
+const fail = (message) => {
+  throw new Error(message)
 }
-const callName = (member) => SPEECH[member.name].call
+const isText = (value) => typeof value === 'string' && value.trim() !== ''
+const isRange = (value) =>
+  Array.isArray(value) &&
+  value.length === 2 &&
+  value.every((n) => Number.isInteger(n) && n > 0) &&
+  value[0] <= value[1]
+const textList = (value, where) => {
+  if (value === undefined) return []
+  if (!Array.isArray(value) || !value.every(isText)) fail(`${where} 必須是文字陣列`)
+  return value.map((item) => item.trim())
+}
 
-// 原本就認識的成員；沒列到的都是今天第一次見面
-const ACQUAINTED = [
-  ['阿哲', '小宇', '只見過一次（小宇上過阿哲的健身體驗課），認識但不熟'],
-  ['美玲姐', 'Kevin', '以前待過同一家公司的不同部門，只是點頭之交'],
-]
+const toMember = (raw, index) => {
+  const where = `${PERSONAS_FILE} 第 ${index + 1} 位角色`
+  if (!raw || typeof raw !== 'object') fail(`${where} 不是物件`)
+  for (const field of ['id', 'name', 'intro', 'identity', 'tone', 'wants']) {
+    if (!isText(raw[field])) fail(`${where} 缺少 ${field}`)
+  }
+  const name = raw.name.trim()
+  if (name.length > MAX_NAME_LENGTH) fail(`${where} 的 name 超過 ${MAX_NAME_LENGTH} 個字`)
+  if (/[：:\n]/.test(name) || name === '我') fail(`${where} 的 name 不能是「我」，也不能有冒號或換行`)
+  if (!isRange(raw.length?.sentences) || !isRange(raw.length?.chars_per_sentence)) {
+    fail(`${where} 的 length 要有 sentences 與 chars_per_sentence，各是 [最少, 最多]`)
+  }
+  const length = { sentences: raw.length.sentences, chars: raw.length.chars_per_sentence }
+  if (raw.max_tokens !== undefined && !(Number.isInteger(raw.max_tokens) && raw.max_tokens > 0)) {
+    fail(`${where} 的 max_tokens 必須是正整數`)
+  }
+  if (raw.avatar !== undefined && !isText(raw.avatar)) fail(`${where} 的 avatar 必須是檔名`)
+  const relations = raw.relations ?? {}
+  if (typeof relations !== 'object' || !Object.values(relations).every(isText)) {
+    fail(`${where} 的 relations 必須是「角色 id：關係描述」`)
+  }
+  return {
+    id: raw.id.trim(),
+    name,
+    intro: raw.intro.trim(),
+    identity: raw.identity.trim(),
+    tone: raw.tone.trim(),
+    wants: raw.wants.trim(),
+    length,
+    maxTokens: raw.max_tokens ?? speechTokens(length),
+    catchphrases: textList(raw.catchphrases, `${where} 的 catchphrases`),
+    doesntKnow: textList(raw.doesnt_know, `${where} 的 doesnt_know`),
+    examples: textList(raw.examples, `${where} 的 examples`),
+    antiExamples: textList(raw.anti_examples, `${where} 的 anti_examples`),
+    mentionExclude: textList(raw.mention_exclude, `${where} 的 mention_exclude`),
+    relations,
+    avatar: raw.avatar?.trim() || null,
+  }
+}
+
+// 讀取並檢查角色檔與共用提示詞，回傳 { members, template, avatarBaseUrl }；有問題就丟出說明原因的錯誤
+export const loadPartyPrompts = (folder = PROMPTS_DIR) => {
+  const read = (file) => {
+    try {
+      return readFileSync(join(folder, file), 'utf8')
+    } catch (error) {
+      return fail(`讀不到 ${file}（${error.code || error.message}）`)
+    }
+  }
+  let data
+  try {
+    data = JSON.parse(read(PERSONAS_FILE).replace(/^\uFEFF/, ''))
+  } catch (error) {
+    if (error instanceof SyntaxError) fail(`${PERSONAS_FILE} 不是合法的 JSON（${error.message}）`)
+    throw error
+  }
+  if (!Array.isArray(data?.personas)) fail(`${PERSONAS_FILE} 裡沒有 personas 陣列`)
+  const avatarBaseUrl = data.avatar_base_url
+  if (avatarBaseUrl !== undefined && !/^https:\/\/\S+$/.test(avatarBaseUrl)) {
+    fail(`${PERSONAS_FILE} 的 avatar_base_url 必須是 https 網址`)
+  }
+  const members = data.personas.map(toMember)
+  if (members.length < MIN_MEMBERS) fail(`${PERSONAS_FILE} 至少要有 ${MIN_MEMBERS} 位角色`)
+  for (const field of ['id', 'name']) {
+    const values = members.map((member) => member[field])
+    const repeated = values.find((value, index) => values.indexOf(value) !== index)
+    if (repeated) fail(`${PERSONAS_FILE} 有重複的 ${field}：${repeated}`)
+  }
+  for (const member of members) {
+    for (const id of Object.keys(member.relations)) {
+      if (id === member.id || !members.some((other) => other.id === id)) {
+        fail(`${PERSONAS_FILE}：${member.name} 的 relations 提到不存在的角色 id「${id}」`)
+      }
+    }
+  }
+
+  const template = read(TEMPLATE_FILE).replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').trim()
+  const used = [...template.matchAll(PLACEHOLDER_PATTERN)].map((match) => match[1])
+  const unknown = used.find((name) => !PLACEHOLDERS.includes(name))
+  if (unknown) fail(`${TEMPLATE_FILE} 有不認得的佔位符 {${unknown}}`)
+  const missing = PLACEHOLDERS.find((name) => !used.includes(name))
+  if (missing) fail(`${TEMPLATE_FILE} 缺少佔位符 {${missing}}`)
+  return { members, template, avatarBaseUrl: avatarBaseUrl?.replace(/\/+$/, '') ?? null }
+}
+
+// 啟動時載入一次。失敗只寫日誌、讓聚會無法開始，不影響機器人的其他功能
+let loaded = { members: [], template: '', avatarBaseUrl: null }
+let loadError = null
+try {
+  loaded = loadPartyPrompts()
+} catch (error) {
+  loadError = error.message
+  console.error(`[聚會] 角色設定載入失敗，聚會模式無法使用：${loadError}`)
+}
+export const MEMBERS = loaded.members
+const TEMPLATE = loaded.template
+// 頭像網址是這個位置加上角色的 avatar 檔名（LINE 需要公開的 https 圖片網址）。
+// 位置寫在 personas.json 的 avatar_base_url，也可以用環境變數 AVATAR_BASE_URL 蓋過去。
+// 沒設定 avatar 的角色、或兩邊都沒給位置時不帶頭像，LINE 會顯示官方帳號自己的頭像。
+const AVATAR_BASE_URL = (process.env.AVATAR_BASE_URL || loaded.avatarBaseUrl || '').replace(/\/+$/, '')
+// 角色設定載入失敗的原因；正常時是 null
+export const getPartyLoadError = () => loadError
 
 const envMs = (name, fallback) => {
   const value = Number(process.env[name])
@@ -89,36 +166,97 @@ const RESERVE_MS = envMs('PARTY_RESERVE_MS', 7 * 1000) // 替後面每一位發�
 const MIN_STAGE_MS = envMs('PARTY_MIN_STAGE_MS', 5 * 1000) // 剩下的時間比這個少就不再呼叫
 const DEFAULT_TURN_MS = 45 * 1000 // 呼叫端沒給期限時的整輪時限
 const PARTY_TTL_MS = 6 * 60 * 60 * 1000 // 聚會這麼久沒人說話就自動結束
-const WARM_UP_TURNS = 6 // 聊了這麼多輪之後，初次見面的人才不那麼拘謹
 const JSON_OVERHEAD_TOKENS = 120 // 訊息以外的欄位（焦點、承接檢查）大約會用掉的 token
 
-// ---------- single 模式：一次產生三個人的話 ----------
-const SINGLE_SYSTEM_PROMPT = `你要扮演一場朋友聚會裡的多位成員，和使用者在 LINE 群組聊天。成員如下：
-${MEMBERS.map((member) => `- ${member.name}：${member.persona}`).join('\n')}
+// ---------- 提示詞組裝（sequential 與 single 共用） ----------
+const range = ([min, max], unit) => (min === max ? `${min} ${unit}` : `${min}–${max} ${unit}`)
 
-彼此的關係：
-- 這場聚會是使用者約的。每位成員都是使用者的朋友，跟使用者很熟，但來自不同的圈子，成員之間並不熟。
-- 阿哲和小宇只見過一次（小宇去上過阿哲的健身體驗課），算認識但不熟。
-- 美玲姐和 Kevin 以前待過同一家公司的不同部門，只是點頭之交。
-- 小雯和艾莉是第一次見到其他所有成員。其餘沒提到的成員之間也都是第一次見面。
-- 不熟的人之間會比較客氣、有距離：會問對方做什麼工作、怎麼認識使用者，偶爾接不上話或有點尷尬，不會亂取綽號，也不會提到共同的往事（因為沒有）。
-- 聊天紀錄越長，成員之間可以慢慢變熟一點，但不要突然變成老朋友。
+// 兩個人的關係：雙方在 personas.json 寫的都算數；都沒寫就是一般的老同學
+const relationOf = (member, other) => {
+  const mine = member.relations[other.id]
+  const theirs = other.relations[member.id]
+  if (mine && theirs && mine !== theirs) return `${mine}；他對你：${theirs}`
+  if (mine || theirs) return mine || `他對你：${theirs}`
+  return '老同學，很熟'
+}
 
-規則：
-- 使用者在聊天紀錄裡標示為「我」。
-- 每位成員一則訊息，一到兩句話，越短越像真人，不要寫成完整的書面句子。
-- 用台灣人平常在 LINE 上跟朋友聊天的口語：多用「欸」「啦」「吧」「耶」「喔」「齁」「蛤」「真的假的」「超」「有夠」「傻眼」「笑死」這類語氣詞和說法，可以省略主詞。
-- 不要像客服、老師或文章那樣說話：不要用「建議你」「記得要」「根據」「如果…的話」這種說教或條列式的句型，也不要每句都給建議。
-- 只用台灣的繁體字和台灣用語，不可以出現簡體字或中國用語（例如要說「影片」不說「視頻」、「品質」不說「質量」、「超讚」不說「給力」）。
-- 英文最多夾一兩個單字，不要整句英文。
-- 每個人的語氣、句子長短和關注的事情要差很多，光看內容就猜得出是誰說的，不要每個人都熱情又健談。
+// 一位角色的角色卡
+const describe = (member) =>
+  [
+    `【${member.name}】${member.intro}`,
+    `身分：${member.identity}`,
+    `語氣：${member.tone}`,
+    `長度：${range(member.length.sentences, '句')}，每句約 ${range(member.length.chars, '字')}`,
+    ...(member.catchphrases.length
+      ? [`常用語（每三句最多一次）：${member.catchphrases.join('、')}`]
+      : []),
+    `此刻想要：${member.wants}`,
+    ...(member.doesntKnow.length ? [`不懂的：${member.doesntKnow.join('、')}`] : []),
+    ...(member.examples.length
+      ? [`範例台詞（只是示範語氣，不要照抄）：\n${member.examples.map((line) => `- ${line}`).join('\n')}`]
+      : []),
+    ...(member.antiExamples.length ? [`不要這樣：${member.antiExamples.join('；')}`] : []),
+    `跟其他人的關係：\n${MEMBERS.filter((other) => other !== member)
+      .map((other) => `- ${other.name}（${other.intro}）—— ${relationOf(member, other)}`)
+      .join('\n')}`,
+  ].join('\n')
+
+const roleInstruction = (speakers, all) => {
+  if (all) return `這一次你要依序扮演下面 ${speakers.length} 位角色，每人各寫一則訊息。`
+  return speakers.length === 1
+    ? `這一次你扮演「${speakers[0].name}」。`
+    : `這一次你要從下面 ${speakers.length} 位候選人裡選一位來扮演。`
+}
+
+// 組出一次呼叫要用的提示詞，回傳 { system, context }。
+//   speakers        這次呼叫用得到的角色：只有一位就是扮演他；有多位時由 AI 從裡面選一位，
+//                   all 為 true 則是每一位都要發言（single 模式）。角色卡只放這幾位的。
+//   recentDialogue  聊天紀錄（['我：…', '老周：…']）；topicState：目前的話題焦點
+//   userTexts       使用者這一輪說的話；said：這一輪已經發言的人（[{ member, text }]）
+//   bannedPhrases   禁用片語；toolResult：查詢結果。沒有就填固定的說明文字，不會留下佔位符。
+// system 放共用世界觀、規則和角色卡（每一輪都一樣的部分），context 放會變動的對話內容。
+export const buildPartyPrompt = ({
+  speakers,
+  all = false,
+  recentDialogue = [],
+  topicState = '',
+  userTexts = [],
+  said = null,
+  bannedPhrases = [],
+  toolResult = '',
+}) => {
+  const values = {
+    role_instruction: roleInstruction(speakers, all),
+    persona_cards: speakers.map(describe).join('\n\n'),
+    tool_result: String(toolResult || '').trim() || '（這一輪沒有查詢結果）',
+    banned_phrases: bannedPhrases.length
+      ? bannedPhrases.map((phrase) => `- ${phrase}`).join('\n')
+      : '（目前沒有）',
+  }
+  const context = [
+    `聊天紀錄（舊到新）：\n${recentDialogue.length ? recentDialogue.join('\n') : '（聚會剛開始，還沒有紀錄）'}`,
+    `目前的話題焦點：${topicState || '（還沒有）'}`,
+    `使用者最新訊息：\n${userTexts.map((text) => `我：${text}`).join('\n')}`,
+    ...(said === null
+      ? []
+      : [
+          said.length
+            ? `這一輪已經發言（依序）：\n${said.map((item) => `${item.member.name}：${item.text}`).join('\n')}`
+            : '這一輪還沒有人發言。',
+        ]),
+  ].join('\n\n')
+  // 一次換完所有佔位符，填進去的內容不會再被當成佔位符處理
+  return { system: TEMPLATE.replace(PLACEHOLDER_PATTERN, (_, name) => values[name]), context }
+}
+
+// single 模式（一次產生所有人的話）的任務說明
+const singleTask = (speakers) =>
+  `你的任務：產生接下來的訊息，依序由「${speakers.map((member) => member.name).join('、')}」發言，每人一則，name 欄位填角色的名字。
 - 這是一段連貫的對話，不是每個人各自回答使用者。每一輪只圍繞一個焦點：使用者剛剛說的那件事。
-- 第一位發言者直接回應使用者說的話。第二位要接第一位的話（附和、反駁、吐槽或追問），第三位再接前面兩位的話，三則連起來要像同一段對話，讀得出誰在回誰。
-- 接話時要提到前一個人說的具體內容，不要只是各自發表對主題的看法，也不要重複別人說過的內容。
-- 不要自己開新話題。聊天紀錄裡正在聊的事要延續下去，前面說過的細節（地點、決定、誰說了什麼）要記得、不要矛盾，直到使用者換話題為止。
-- 個性要表現在「怎麼回應這個話題」上，不是各說各話。例如艾莉會用她奇怪的角度看同一件事，Kevin 會挑這件事裡的數據或錯誤。
-- 每一輪最多一個人向使用者提問，而且要跟正在聊的事有關。其他人不要用問句結尾。
-- 用繁體中文，不要用 Markdown，訊息開頭不要寫自己的名字。`
+- 第一位直接回應使用者說的話。第二位要接第一位的話（附和、反駁、吐槽或追問），第三位再接前面兩位的話，連起來要像同一段對話，讀得出誰在回誰。
+- 接話時要提到前一個人說的具體內容，不要只是各自發表看法，也不要重複別人說過的內容。
+- 不要自己開新話題。聊天紀錄裡正在聊的事要延續下去，前面說過的細節要記得、不要矛盾，直到使用者換話題為止。
+- 每一輪最多一個人向使用者提問，而且要跟正在聊的事有關。其他人不要用問句結尾。`
 
 const SINGLE_SCHEMA = {
   type: 'ARRAY',
@@ -129,83 +267,19 @@ const SINGLE_SCHEMA = {
   },
 }
 
-// ---------- sequential 模式：每位角色各呼叫一次 ----------
-const STYLE_RULES = `稱呼規則：
-- 初次見面：只用名字稱呼對方，不加「哥」「姐」「親愛的」「寶貝」這類親密稱呼，不取綽號，語氣比較客氣、有點距離。
-- 一般熟悉：用名字，或聊天紀錄裡已經出現過的稱呼。
-- 熟識：可以用暱稱，但只能用聊天紀錄裡出現過的。
-- 稱呼使用者一律用「你」。
-- 不可以捏造不存在的共同經歷或親密關係（例如「上次我們一起…」），除非聊天紀錄裡真的有。
-
-說話方式：
-- 用台灣人平常在 LINE 上跟朋友聊天的口語，越短越像真人，不要寫成完整的書面句子，可以省略主詞。語氣詞（欸、啦、齁、蛤、耶、喔）用多用少照人設決定。
-- 不要像客服、老師或文章那樣說話：不要用「建議你」「記得要」「如果…的話」這種說教句型，也不要每次都給建議。
-- 只用台灣的繁體字和台灣用語，不可以出現簡體字或中國用語（例如要說「影片」不說「視頻」、「品質」不說「質量」）。
-- 不要夾英文。只有本來就用英文講的專有名詞可以（例如 AI、LINE、WiFi、App）。
-- 不要用「我覺得」開頭，也不要用「確實」「沒錯」「說得對」「對啊」這類附和當開場，直接講內容。
-- 不要用 Markdown，不要加引號，訊息開頭不要寫名字。`
-
-const relation = (a, b, turns) => {
-  const known = ACQUAINTED.find(
-    ([x, y]) => (x === a.name && y === b.name) || (x === b.name && y === a.name),
-  )
-  if (known) return `一般熟悉：${known[2]}`
-  return turns >= WARM_UP_TURNS
-    ? '一般熟悉：今天才認識，已經聊了一陣子，沒那麼拘謹了'
-    : '初次見面：今天第一次見到'
-}
-
-const describe = (member, turns) =>
-  `【${member.name}】
-人設：${member.persona}
-說話長度：${SPEECH[member.name].length}
-跟其他人的熟悉程度：
-- 使用者 —— 熟識：是你的好朋友
-${MEMBERS.filter((other) => other !== member)
-  .map((other) => `- ${callName(other)}（${other.intro}）—— ${relation(member, other, turns)}`)
-  .join('\n')}`
-
-// candidates 只有一位時就是扮演那一位；有多位時由 AI 選一位
-const buildSystem = (candidates, turns) =>
-  `${
-    candidates.length === 1
-      ? `你正在扮演「${candidates[0].name}」`
-      : `你要從下面 ${candidates.length} 位候選人裡選一位來扮演`
-  }，在一場朋友聚會的 LINE 群組裡聊天。這場聚會是使用者約的，使用者在聊天紀錄裡標示為「我」；成員來自不同的圈子，彼此大多不熟。
-你只能寫這一位角色自己的一則訊息，不可以替其他人發言，也不可以改寫或捏造別人說過的話。
-
-${candidates.map((member) => describe(member, turns)).join('\n\n')}
-
-${STYLE_RULES}`
-
-// 紀錄裡的發話者改用稱呼（美玲姐 → 美玲），免得不熟的人跟著叫「姐」
-const asCalled = (line) => {
-  const member = MEMBERS.find((item) => line.startsWith(`${item.name}：`))
-  return member ? callName(member) + line.slice(member.name.length) : line
-}
-
-// texts 是使用者這一輪說的話（連續傳來的幾則會合併成一輪）
-const buildContext = (party, texts, said, focus) =>
-  [
-    `聊天紀錄（舊到新）：\n${party.lines.length ? party.lines.map(asCalled).join('\n') : '（聚會剛開始，還沒有紀錄）'}`,
-    `目前的話題焦點：${focus || '（還沒有）'}`,
-    `使用者最新訊息：\n${texts.map((text) => `我：${text}`).join('\n')}`,
-    said.length
-      ? `這一輪已經發言（依序）：\n${said.map((item) => `${callName(item.member)}：${item.text}`).join('\n')}`
-      : '這一輪還沒有人發言。',
-  ].join('\n\n')
-
 const isQuestion = (text) => /[?？]/.test(text)
 
 // ---------- 由程式把關的規則（不是只寫在提示詞裡請 AI 自己遵守） ----------
 
-// 使用者訊息裡點到名字的成員，照出現的先後排列（「小宇宙」不算點到小宇）
-const MENTION_PATTERNS = MEMBERS.map((member) => ({
-  member,
-  pattern: member.name === '小宇' ? /小宇(?!宙)/ : new RegExp(callName(member), 'i'),
-}))
+// 使用者訊息裡點到名字的成員，照出現的先後排列。
+// 角色可以用 mention_exclude 列出「含有名字但不是在叫他」的詞，這些詞先遮掉再找名字
+const mentionIndex = (member, text) => {
+  let masked = text
+  for (const word of member.mentionExclude) masked = masked.replaceAll(word, '\n'.repeat(word.length))
+  return masked.toLowerCase().indexOf(member.name.toLowerCase())
+}
 const mentionedMembers = (text) =>
-  MENTION_PATTERNS.map(({ member, pattern }) => ({ member, index: text.search(pattern) }))
+  MEMBERS.map((member) => ({ member, index: mentionIndex(member, text) }))
     .filter((item) => item.index >= 0)
     .sort((a, b) => a.index - b.index)
     .map((item) => item.member)
@@ -260,7 +334,7 @@ const dropLastQuestion = (text) => {
   let start = end
   while (start > 0 && !SENTENCE_BREAK.test(text[start - 1])) start -= 1
   const question = text.slice(start, end)
-  if (MEMBERS.some((member) => question.includes(callName(member)))) return text
+  if (MEMBERS.some((member) => question.includes(member.name))) return text
   const kept = text
     .slice(0, start)
     .trim()
@@ -306,7 +380,7 @@ const buildTask = (position, candidates, said, focus, canAsk) => {
   }
 
   const speaker = candidates[0]
-  const previous = said.map((item) => callName(item.member))
+  const previous = said.map((item) => item.member.name)
   const last = previous[previous.length - 1]
   const askRule = canAsk
     ? '可以問使用者一個跟焦點有關的問題，也可以不問。'
@@ -368,9 +442,8 @@ ${checks}`,
   }
 }
 
-const NAME_PATTERN = [...MEMBERS.flatMap((member) => [member.name, callName(member)]), '我'].join(
-  '|',
-)
+const escapeRegExp = (text) => text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+const NAME_PATTERN = [...MEMBERS.map((member) => escapeRegExp(member.name)), '我'].join('|')
 
 // 去掉模型多寫的名字開頭、引號；如果接著寫了別人的台詞，從那裡截斷
 const cleanText = (text) => {
@@ -492,12 +565,18 @@ const generateCharacterReply = async (
 
   const { schema, task } = buildTask(position, candidates, said, focus, canAsk)
   const label = `第${'一二三'[position]}位 ${candidates.map((member) => member.name).join('/')}`
+  const { system, context } = buildPartyPrompt({
+    speakers: candidates,
+    recentDialogue: turn.party.lines,
+    topicState: focus,
+    userTexts: turn.texts,
+    said,
+  })
   const request = {
-    system: buildSystem(candidates, turn.party.turns),
-    prompt: `${buildContext(turn.party, turn.texts, said, focus)}\n\n${task}`,
+    system,
+    prompt: `${context}\n\n${task}`,
     schema,
-    maxTokens:
-      Math.max(...candidates.map((member) => SPEECH[member.name].maxTokens)) + JSON_OVERHEAD_TOKENS,
+    maxTokens: Math.max(...candidates.map((member) => member.maxTokens)) + JSON_OVERHEAD_TOKENS,
     retry,
   }
   let result = await callModel(turn, label, { ...request, ...plan })
@@ -578,11 +657,17 @@ const sequentialReply = async (turn, cast, named) => {
 }
 
 const singleReply = async (turn, candidates) => {
-  const lines = [...turn.party.lines, ...turn.texts.map((text) => `我：${text}`)]
   const label = `單次 ${candidates.map((member) => member.name).join('/')}`
+  const { system, context } = buildPartyPrompt({
+    speakers: candidates,
+    all: true,
+    recentDialogue: turn.party.lines,
+    topicState: turn.party.focus,
+    userTexts: turn.texts,
+  })
   const request = {
-    system: SINGLE_SYSTEM_PROMPT,
-    prompt: `聊天紀錄：\n${lines.join('\n')}\n\n請產生接下來的訊息，依序由「${candidates.map((member) => member.name).join('、')}」發言，每人一則。`,
+    system,
+    prompt: `${context}\n\n${singleTask(candidates)}`,
     schema: SINGLE_SCHEMA,
   }
   // 一次呼叫就要產生所有人的話，整輪剩下的時間都給它；暫時性的失敗重試一次
@@ -615,7 +700,7 @@ const singleReply = async (turn, candidates) => {
 const partyMode = () => process.env.PARTY_MODE || 'sequential'
 
 // userId -> 一場聚會的狀態：
-//   lines     聊天紀錄 ['我：…', '阿哲：…']
+//   lines     聊天紀錄 ['我：…', '老周：…']
 //   order     成員索引，越前面越久沒發言
 //   focus     目前的話題焦點；turns：已經聊了幾輪
 //   asked     上一輪有沒有人問使用者問題
@@ -641,9 +726,15 @@ export const interruptParty = (userId) => {
   return true
 }
 
+// 開始一場聚會，回傳開場白。角色設定載入失敗時不會開始，回傳的是說明文字（isInParty 仍是 false）
 export const startParty = (userId) => {
   // 重新開始時，舊聚會還在生成的那一輪作廢
   interruptParty(userId)
+  if (loadError) {
+    parties.delete(userId)
+    console.error(`[聚會] 無法開始聚會：${loadError}`)
+    return '聚會模式目前無法啟動：角色設定檔讀取失敗（原因寫在機器人的日誌裡）。其他功能不受影響。'
+  }
   parties.set(userId, {
     lines: [],
     order: MEMBERS.map((_, i) => i),
@@ -654,7 +745,7 @@ export const startParty = (userId) => {
     current: null,
     updatedAt: Date.now(),
   })
-  return `🎉 聚會開始！今天來的有：\n${MEMBERS.map((member) => `・${member.name}（${member.intro}）`).join('\n')}\n\n他們都是你的朋友，但彼此還不太熟，有些人是第一次見面。隨便說句話，大家就會輪流回你。想離開時傳「結束聚會」。`
+  return `🎉 聚會開始！今天來的有：\n${MEMBERS.map((member) => `・${member.name}（${member.intro}）`).join('\n')}\n\n都是多年的老同學，彼此很熟。隨便說句話，大家就會輪流回你。想離開時傳「結束聚會」。`
 }
 
 // 結束聚會（正在生成的那一輪也一起作廢）；本來不在聚會中則回傳 false
@@ -687,7 +778,12 @@ setInterval(sweepParties, 10 * 60 * 1000).unref()
 const toMessage = (member, text) => ({
   type: 'text',
   text: text.slice(0, 5000),
-  sender: { name: member.name, iconUrl: `${AVATAR_BASE_URL}/${member.avatar}` },
+  sender: {
+    name: member.name,
+    ...(member.avatar && AVATAR_BASE_URL
+      ? { iconUrl: `${AVATAR_BASE_URL}/${member.avatar}` }
+      : {}),
+  },
 })
 
 // 這一輪是不是還有效：聚會還在、使用者沒說要結束、也沒被取消。

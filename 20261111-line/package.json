@@ -13,7 +13,7 @@
     "dev": "nodemon index.js",
     "start": "node index.js",
     "richmenu": "node richmenu.js",
-    "test": "node --test test/bot.test.js test/compat.test.js test/startup.test.js test/clock.test.js",
+    "test": "node --test test/bot.test.js test/compat.test.js test/startup.test.js test/clock.test.js test/party-prompts.test.js",
     "test:real": "node --test --test-concurrency=1 test/real.test.js test/real-recovery.test.js"
   },
   "dependencies": {

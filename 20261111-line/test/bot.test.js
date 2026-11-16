@@ -597,44 +597,44 @@ test('12. 三位角色正常串行生成：後面的人看得到前面的發言�
   assert.equal(requests().length, 3)
   assert.deepEqual(
     reply.messages.map((message) => message.sender.name),
-    ['阿哲', '小雯', 'Kevin'],
+    ['老周', '老馮', '小楷'],
   )
   for (const message of reply.messages) {
-    assert.match(message.sender.iconUrl, /^https:\/\/.+\.png$/)
+    assert.match(message.sender.iconUrl, /^https:\/\/.+\/avatars\/[a-z]+\.png$/)
   }
   const [first, second] = textsOf(reply)
   // 選角：第一位從三位候選人裡選，第二位從剩下兩位裡選，第三位就是剩下那一位
-  assert.deepEqual(enumOf(0, 'speaker'), ['阿哲', '小雯', 'Kevin'])
-  assert.deepEqual(enumOf(1, 'speaker'), ['小雯', 'Kevin'])
+  assert.deepEqual(enumOf(0, 'speaker'), ['老周', '老馮', '小楷'])
+  assert.deepEqual(enumOf(1, 'speaker'), ['老馮', '小楷'])
   assert.equal(enumOf(2, 'speaker'), undefined)
   // 承接：第二位的提示詞裡有第一位說的話，第三位有前兩位說的話
-  assert.ok(promptOf(1).includes(`這一輪已經發言（依序）：\n阿哲：${first}`))
-  assert.ok(promptOf(2).includes(`阿哲：${first}\n小雯：${second}`))
+  assert.ok(promptOf(1).includes(`這一輪已經發言（依序）：\n老周：${first}`))
+  assert.ok(promptOf(2).includes(`老周：${first}\n老馮：${second}`))
   assert.ok(promptOf(0).includes('這一輪還沒有人發言。'))
 
   // 下一輪換另外三位（剛說過話的排到後面）
   const next = await replyOf(await say(user, '那如果下雨怎麼辦呢'))
-  assert.deepEqual(enumOf(3, 'speaker'), ['美玲姐', '小宇', '艾莉'])
+  assert.deepEqual(enumOf(3, 'speaker'), ['阿湛', '小蔡', '老錢'])
   assert.equal(next.messages.length, 3)
-  assert.ok(promptOf(3).includes(`阿哲：${first}`), '下一輪看得到上一輪的聊天紀錄')
+  assert.ok(promptOf(3).includes(`老周：${first}`), '下一輪看得到上一輪的聊天紀錄')
 })
 
 test('12b. 聚會：被點名的成員一定會回，而且優先發言', async () => {
   await fresh()
   const user = newUser()
   await startParty(user)
-  await replyOf(await say(user, '先聊一輪讓大家輪替')) // 阿哲、小雯、Kevin 說完排到後面
-  const reply = await replyOf(await say(user, 'Kevin 你覺得這樣可行嗎'))
-  assert.deepEqual(enumOf(3, 'speaker'), ['Kevin'], '第一位只能是被點名的 Kevin')
-  assert.equal(reply.messages[0].sender.name, 'Kevin')
-  assert.deepEqual(enumOf(4, 'speaker'), ['美玲姐', '小宇'], '其餘照最久沒發言的順序')
+  await replyOf(await say(user, '先聊一輪讓大家輪替')) // 老周、老馮、小楷 說完排到後面
+  const reply = await replyOf(await say(user, '小楷 你覺得這樣可行嗎'))
+  assert.deepEqual(enumOf(3, 'speaker'), ['小楷'], '第一位只能是被點名的小楷')
+  assert.equal(reply.messages[0].sender.name, '小楷')
+  assert.deepEqual(enumOf(4, 'speaker'), ['阿湛', '小蔡'], '其餘照最久沒發言的順序')
 
-  await replyOf(await say(user, '我的小宇宙要爆發了啦'))
-  assert.equal(enumOf(6, 'speaker').length, 3, '「小宇宙」不算點到小宇')
-  await replyOf(await say(user, '美玲姐跟艾莉怎麼看這件事'))
-  assert.deepEqual(enumOf(9, 'speaker'), ['美玲姐', '艾莉'], '點到兩位時，第一位從這兩位裡選')
+  await replyOf(await say(user, '我的老錢包不見了啦'))
+  assert.equal(enumOf(6, 'speaker').length, 3, '「老錢包」不算點到老錢')
+  await replyOf(await say(user, '阿湛跟老錢怎麼看這件事'))
+  assert.deepEqual(enumOf(9, 'speaker'), ['阿湛', '老錢'], '點到兩位時，第一位從這兩位裡選')
   assert.equal(enumOf(10, 'speaker'), undefined, '第二位就是另一位被點名的人')
-  assert.ok(promptOf(10).includes('你是艾莉'))
+  assert.ok(promptOf(10).includes('你是老錢'))
 })
 
 test('12c. 聚會：發言人數、提前收尾、重複發言、提問上限都由程式把關', async () => {
@@ -666,13 +666,13 @@ test('12c. 聚會：發言人數、提前收尾、重複發言、提問上限都
   ollama.state.plan.push(
     { result: { text: '走啊去打球！你平常有在運動嗎？' } },
     { result: { text: '陽明山的公車很好搭。你會暈車嗎？' } },
-    { result: { text: '太熱了吧。阿哲你不怕中暑嗎？' } },
+    { result: { text: '太熱了吧。老周你不怕中暑嗎？' } },
   )
   const asked = textsOf(await replyOf(await say(user, '我想找個地方走走散散心')))
   assert.deepEqual(asked, [
     '走啊去打球！你平常有在運動嗎？',
     '陽明山的公車很好搭。',
-    '太熱了吧。阿哲你不怕中暑嗎？', // 問的是其他成員，不是使用者，保留
+    '太熱了吧。老周你不怕中暑嗎？', // 問的是其他成員，不是使用者，保留
   ])
   const base = requests().length
   assert.ok(promptOf(base - 2).includes('這一輪已經有人提問了'))
@@ -692,9 +692,9 @@ test('12d. 聚會 single 模式（一次呼叫產生三人的話）仍然可用'
   try {
     ollama.state.plan.push({
       result: [
-        { name: '阿哲', text: '走啊去運動' },
-        { name: '小雯', text: '那個…我可以嗎' },
-        { name: 'Kevin', text: '先看行事曆。' },
+        { name: '老周', text: '走啊去運動' },
+        { name: '老馮', text: '那個…我可以嗎' },
+        { name: '小楷', text: '先看行事曆。' },
       ],
     })
     const reply = await replyOf(await say(user, '單次模式的這一輪'))
@@ -833,7 +833,7 @@ test('15c. 聚會的回覆沒送達：成員的發言不寫進聊天紀錄，輪
   const prompt = promptOf(3)
   assert.ok(prompt.includes('我：這一輪的回覆送不出去'), '使用者說的話有留下來')
   for (const text of lost) assert.ok(!prompt.includes(text), '沒送達的成員發言不在紀錄裡')
-  assert.deepEqual(enumOf(3, 'speaker'), ['阿哲', '小雯', 'Kevin'], '沒送達的人不算說過話')
+  assert.deepEqual(enumOf(3, 'speaker'), ['老周', '老馮', '小楷'], '沒送達的人不算說過話')
 })
 
 test('16. 聚會取消：生成到一半說「結束聚會」，那一輪立刻停止，之後不再發言', async () => {

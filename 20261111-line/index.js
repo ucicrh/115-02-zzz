@@ -424,7 +424,9 @@ const handleText = async (event, userId, text) => {
     return
   }
   if (text === '聚會') {
-    await reply(event, startParty(userId), PARTY_BUTTONS)
+    // 角色設定載入失敗時聚會不會開始，這時回的是說明文字，按鈕照一般的顯示
+    const greeting = startParty(userId)
+    await reply(event, greeting, isInParty(userId) ? PARTY_BUTTONS : DEFAULT_BUTTONS)
     return
   }
   // 清除記憶：聚會的聊天紀錄和一般對話的記憶是分開的，人在哪裡就清哪一邊

@@ -230,9 +230,9 @@ if (!available) {
     assert.ok(turn.calls <= 4, `三則訊息只用了 ${turn.calls} 次呼叫`)
 
     // 點名的成員一定會回
-    const named = await answered(t, await say(user, 'Kevin 你覺得呢？'))
+    const named = await answered(t, await say(user, '小楷 你覺得呢？'))
     show(t, named)
-    assert.equal(named.messages[0].sender.name, 'Kevin')
+    assert.equal(named.messages[0].sender.name, '小楷')
 
     // 道別時不用三個人都出來說話
     const bye = await answered(t, await say(user, '我先走囉，掰掰'))
